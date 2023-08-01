@@ -1,3 +1,94 @@
 //====================================================================================================
+@use "sass:math";
+@import "base/mixins";
+.footer {
+  background: #F6F5F4;
+  @include adaptiveValue("padding-top", 80, 45);
+  @include adaptiveValue("padding-bottom", 80, 45);
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:em(898)) {
+      flex-wrap: wrap;
+      row-gap: rem(20);
+      column-gap: rem(40);
+    }
+  }
 
+  &__text {
+    padding-top: rem(24);
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+        margin-bottom: em(24, 14);
+    }
+    @media (min-width:em(898)) {
+      max-width: rem(288);
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__social {
+    font-size: rem(20);
+    color: #767676;
+    transition: color .3s linear;
+    @media (any-hover: hover){
+        &:hover {
+            color: $greenColor;
+        }
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+    &:not(:last-child) {
+        margin-bottom: em(24, 16);
+    }
+  }
+  &__copy {
+    @include adaptiveValue("padding-top", 60, 40);
+  }
+}
+
+.nav-footer {
+  &__item {
+    &:not(:last-child) {
+        margin-bottom: rem(12);
+     }
+  }
+  &__link {
+    color: #484848;
+    line-height: math.div(20 , 14);
+    margin-bottom: em(12, 14);
+    transition: color .3s linear;
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+    @media (any-hover: hover){
+      &:hover {
+        color: $greenColor;
+      }
+    }
+  }
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+  color: #767676;
+  font-size: rem(12);
+  line-height: math.div(16 , 12);
+  @media (max-width:$mobileSmall) { 
+    flex-direction: column;
+    gap: rem(15);
+  }
+  &__text {
+    flex: 1 1 auto;
+  }
+}
 //====================================================================================================

@@ -4,7 +4,8 @@
 @import "base/mixins";
 
 // Підключення шрифтів ===========================================================================================================================================================================================================================================================================
-@import url(https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
 //&display=swap - добавти при підключенні шрифтів
 
 // Подключити якщо є локальні шрифти
@@ -62,10 +63,9 @@ $responsiveType: 1;
 
 body {
 	// Скролл заблокирован
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-	}
+&.lock {
+	overflow: hidden;
+}
 	// Сайт загружен
 	.loaded & {
 	}
@@ -146,3 +146,13 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "find";
+@import "details";
+@import "login";
+
+.section {
+	&__login {
+		@include adaptiveValue("padding-top", 48, 20);
+		@include adaptiveValue("padding-bottom", 62, 40);
+	}
+}

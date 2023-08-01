@@ -1,0 +1,420 @@
+@use "sass:math";
+@import "base/mixins";
+.details {
+  padding-top: rem(24);
+  @include adaptiveValue("padding-bottom", 96 , 50);
+  border-top: 1px solid #E6E6E6;
+  &__path {
+    color: #767676;
+    padding-bottom: rem(16);
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(24);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    @media (min-width:em(1260)) {
+      flex: 0 0 rem(392);
+    }
+  }
+}
+
+.cars {
+  &__link {
+    padding-top: rem(8);
+    @media (any-hover: hover){
+        &:hover {
+            svg {
+              transform: translateY(0%) rotate(-90deg);
+            }
+        }
+    }
+  }
+  &__description {
+    padding-top: rem(32);
+  }
+  &__text {
+    padding-top: rem(24);
+    line-height: math.div(20 , 14);
+
+  }
+}
+
+.list-cars {
+  padding-top: rem(32);
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: $mobileSmall) {
+    gap: rem(24); 
+  }
+  @media (max-width:em(1200)) {
+    flex-direction: column;
+  }
+  &__column {
+    @media (min-width:em(1200)) {
+      flex: 0 0 rem(392);
+    }
+  }
+  &__item {
+    display: flex;
+    padding: rem(10) 0;
+    align-items: center;
+    border-bottom: 1px solid #E6E6E6;
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      gap: rem(10);
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    flex: 1 1 auto;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+  }
+  &__text {
+    @media (min-width:$mobileSmall) {
+      flex: 0 0 rem(240);
+    }
+  }
+}
+
+.features-cars {
+  padding-top: rem(32);
+  &__body {
+    display: flex;
+    @media (max-width:em(657)) {
+      justify-content: space-evenly;
+    }
+    @media (max-width:$mobileSmall) { 
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__column {
+    @media (min-width:em(657)) {
+      flex: 0 0 rem(392);
+    }
+  }
+  &__name {
+    font-weight: 600;
+    padding-top: rem(24);
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+  }
+  &__list {
+    padding-top: rem(12);
+  }
+  &__item {
+    line-height: math.div(20 , 14);
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    &:not(:last-child) {
+      margin-bottom: em(4, 14);
+    }
+    svg {
+      font-size: rem(20);
+      color: #767676;
+    }
+  }
+}
+
+.questions-cars {
+  box-shadow: 0 8px 16px 0 #1C1E2214;
+  margin-top: rem(32);
+  justify-content: space-between;
+  padding: rem(16);
+  display: flex;
+  align-items: center;
+  @media (max-width:em(1260)) {
+    flex-direction: column;
+    gap: rem(30);
+  }
+  &__body {
+    @media (min-width:em(1260)) {
+      flex: 0 0 rem(617);
+    }
+  }
+  &__title {
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: math.div(26.4 , 22);
+    &:not(:last-child) {
+        margin-bottom: em(12, 22);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+  }
+  &__button {
+    font-size: rem(16);
+    @media (max-width:em(1260)) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.links-cars {
+  padding-top: rem(32);
+  &__title {
+    font-size: rem(22);
+    line-height: math.div(24.6 , 22);
+    font-weight: 600;
+  }
+  &__body {
+    padding-top: rem(24);
+    display: flex;
+    @media (max-width:em(620)) {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    @media (min-width:em(600)) {
+      flex: 0 0 rem(392);
+    }
+  }
+  &__link {
+    color: $greenColor;
+    transition: all .3s linear;
+    &:not(:last-child) {
+        margin-bottom: rem(8);
+     }
+    @media (any-hover: hover){
+        &:hover {
+          color: #1f3b23;
+          font-weight: 500;
+        }
+    }
+  }
+}
+.info-details {
+  @media (max-width:$mobile) {
+    padding-top: rem(20);
+  }
+  &__date {
+    padding-top: rem(24);
+    color: #767676;
+    text-align: center;
+
+  }
+}
+
+.sell-details {
+  border: 1px solid #E6E6E6;
+  border-radius: rem(8);
+  &__top {
+    border-radius: rem(8) rem(8) 0 0;
+    background: #FFF;
+    padding: rem(16);
+  }
+  &__possibility {
+    color: #767676;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color .3s linear;
+    @media (any-hover: hover){
+      &:hover {
+        color: #3a3838;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    line-height: math.div(20 , 14);
+    svg {
+      font-size: rem(16);
+    }
+  }
+  &__title {
+    padding-top: rem(16);
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: math.div(26.4 , 22);
+    &:not(:last-child) {
+        margin-bottom: em(16, 22);
+    }
+  }
+  &__price {
+    font-size: rem(26);
+    line-height: math.div(30 , 26);
+    color: $greenColor;
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(16, 26);
+    }
+  }
+  &__list {
+  }
+  &__property {
+    display: flex;
+    align-items: center;
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+        margin-bottom: rem(12);
+     }
+  }
+  &__name {
+    flex: 0 0 rem(160);
+    font-weight: 600;
+  }
+}
+
+.bottom-sell {
+  background: #F6F5F4;
+  padding: rem(16);
+  display: flex;
+  border-top: rem(1) solid #E6E6E6;
+  border-radius: 0 0 rem(8) rem(8);
+  flex-direction: column;
+  &__title {
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+    font-weight: 600;
+    &:not(:last-child) {
+        margin-bottom: em(8, 16);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+        margin-bottom: rem(16);
+    }
+  }
+  &__button {
+    text-align: center;
+    width: 100%;
+    margin-bottom: rem(12);
+  }
+  &__contacts {
+    border: rem(1) solid #D1D1D1;
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__link {
+    padding: rem(14);
+    text-align: center;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
+    gap: rem(6);
+    @media (any-hover: hover){
+        &:hover {
+            background: #d5d3d3;
+            &:first-child {
+              border-radius: rem(8) rem(8) 0 0;
+            }
+          &:last-child {
+            border-radius: 0 0 rem(8) rem(8);
+          }
+        }
+    }
+    svg {
+      font-size: rem(18);
+    }
+    &:not(:last-child) {
+        border-bottom: rem(1) solid #D1D1D1;
+     }
+  }
+}
+
+.inspection-details {
+  margin-top: rem(24);
+  border-radius: rem(8);
+  padding: rem(16);
+  background: linear-gradient(0deg, #FFEDD3, #FFEDD3),
+  linear-gradient(0deg, #FFF7EB, #FFF7EB);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #FFEDD3;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: rem(30);
+  }
+  &__title {
+    font-size: rem(22);
+    line-height: math.div(26.4 , 22);
+    font-weight: 600;
+  }
+  &__check {
+    background: #E49A49;
+    padding: rem(4) rem(8);
+    border-radius: rem(8);
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+    color: #000000;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: rem(20);
+    }
+  }
+  &__item {
+    display: flex;
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+        margin-bottom: rem(12);
+     }
+  }
+  &__name {
+    font-weight: 600;
+    flex: 0 0 rem(160);
+  }
+  &__link {
+    gap: rem(8);
+    padding-top: rem(18);
+    color: $greenColor;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+    transition: color .3s linear;
+    @media (any-hover: hover){
+        &:hover {
+            color: #1f3b23;
+        }
+    }
+    svg {
+      font-size: rem(18);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+  }
+  &__full {
+    font-size: rem(16);
+    padding-top: rem(24);
+    font-weight: 600;
+    line-height: math.div(20 , 16);
+    &:not(:last-child) {
+        margin-bottom: em(12, 16);
+    }
+  }
+  &__button {
+      text-align: center;
+      margin-top: rem(12);
+  }
+  &__more {
+    padding-top: rem(12);
+    display: flex;
+    justify-content:  center;
+  }
+}

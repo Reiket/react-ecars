@@ -40,6 +40,7 @@
 	transition-property: transform;
 	box-sizing: content-box;
 }
+
 .swiper-android .swiper-slide,
 .swiper-wrapper {
 	transform: translate3d(0px, 0, 0);
@@ -299,7 +300,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
 	margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
-	display: block;
+	//display: block;
 }
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {

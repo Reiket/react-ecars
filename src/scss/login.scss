@@ -1,0 +1,118 @@
+@use "sass:math";
+@import "base/mixins";
+.login {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__body {
+    flex: 0 0 rem(392);
+    @media (max-width:$mobileSmall) {
+      flex: 1 1 auto;
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+        margin-bottom: em(32, 32);
+    }
+  }
+  &__form {
+
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin-bottom: rem(24);
+     }
+    span {
+      line-height: math.div(20 , 14);
+      &:not(:last-child) {
+          margin-bottom: em(8, 14);
+      }
+    }
+  }
+  &__input {
+    padding: rem(14) rem(12);
+    border: 1px solid #D1D1D1;
+    border-radius: rem(8);
+    outline: none;
+    &::placeholder {
+      color: #A3A3A3;
+
+    }
+  }
+  &__forgot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link {
+    color: $greenColor;
+    line-height: math.div(20 , 14);
+    transition: color .3s linear;
+    @media (any-hover: hover){
+        &:hover {
+            color: #1f3b23;
+        }
+    }
+  }
+  &__button {
+    width: 100%;
+    text-align: center;
+  }
+  &__content {
+    padding-top: rem(24);
+    line-height: math.div(20 ,14);
+    text-align: center;
+    a {
+      font-weight: 600;
+      color: $greenColor;
+      transition: color .3s linear;
+      @media (any-hover: hover){
+          &:hover {
+              color: #1f3b23;
+          }
+      }
+    }
+  }
+  &__or {
+    text-align: center;
+    color: #767676;
+    line-height: math.div(20 , 14);
+    padding: rem(24) 0;
+    position: relative;
+    &::before, &::after {
+        content:'';
+        top: rem(33);
+        position: absolute;
+        border: rem(1) solid #E6E6E6;
+        width: rem(181);
+    }
+    &::before {
+      right: 0;
+    }
+    &::after {
+      left: 0;
+     }
+  }
+  &__authorize {
+    padding: rem(12) rem(24);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    font-weight: 600;
+    line-height: math.div(24 , 14);
+    justify-content: center;
+    border: 1px solid #E6E6E6;
+    border-radius: rem(8);
+    transition: background .3s linear;
+    width: 100%;
+    @media (any-hover: hover){
+        &:hover {
+            background: #fafafa;
+        }
+    }
+  }
+}

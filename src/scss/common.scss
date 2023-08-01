@@ -1,1 +1,177 @@
-// Заголовки, общие БЄМ блоки и проче...
+@use "sass:math";
+@import "base/mixins";
+
+.header-menu {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @media (any-hover: hover) {
+    &:hover {
+      .header-menu__arrow {
+        transform: rotate(180deg);
+      }
+      > .header-menu__list {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &_nav {
+    color: $mainColor;
+  }
+  &__arrow {
+    transition: all 0.3s ease 0s;
+  }
+  &__list {
+    transition: all 0.3s ease 0s;
+    top: rem(15);
+    right: rem(8);
+    position: absolute;
+    padding-top: rem(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    z-index: 999;
+    visibility: hidden;
+    cursor: pointer;
+    &_burger {
+      padding-top: rem(10);
+    }
+  }
+  &__point {
+    background: $backgroundColor;
+    &:first-child {
+      border-radius: rem(8) rem(8) 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 rem(8) rem(8);
+    }
+    padding: rem(10);
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+    img {
+      width: rem(20);
+      height: rem(20);
+      border-radius: rem(5);
+    }
+    @media (any-hover: hover){
+      &:hover {
+        background: #413e3b;
+      }
+    }
+  }
+}
+
+.header-contacts {
+  &__social {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 16, 8);
+  }
+  &__item {
+
+  }
+  &__link {
+    display: flex;
+    gap: rem(6);
+    align-items: center;
+    color: #fff;
+    opacity: 70%;
+    transition: opacity 0.3s ease 0s;
+    svg {
+      font-size: rem(20);
+    }
+    @media (max-width:em(850)) {
+      span {
+        display: none;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}
+
+.green-button {
+  padding: rem(6) rem(12) rem(6) rem(12);
+  background: $greenColor;
+  border-radius: rem(8);
+  color: #ffffff;
+  font-weight: 600;
+  line-height: math.div(24 , 14);
+  transition: background 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover {
+      background: #244d29;
+    }
+  }
+  &_big {
+    padding: rem(12) rem(29.5) rem(12) rem(29.5);
+  }
+  &_white {
+    background: #ffffff;
+    color: $greenColor;
+    @media (any-hover: hover){
+        &:hover {
+          background: #d3d3d3;
+        }
+    }
+  }
+}
+
+.title {
+  @include adaptiveValue("font-size", 38, 25);
+  font-weight: 600;
+  line-height: math.div(43.7 , 38);
+  flex: 1 1 auto;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  color: $greenColor;
+  font-weight: 600;
+  line-height: math.div(20 , 14);
+  transition: color .3s ease-in;
+  svg {
+    transition: transform .3s ease-in;
+  }
+  @media (any-hover: hover){
+    &:hover {
+      color: #244d29;
+      svg {
+        transform: translateX(20%);
+      }
+
+    }
+  }
+}
+
+.slider-button {
+  width: rem(40);
+  height: rem(40);
+  border-radius: 50%;
+  transition: all .3s ease-in;
+  @media (any-hover: hover){
+    &:hover {
+      color: #fff;
+      background: $greenColor;
+    }
+  }
+  @media (any-hover: none){
+    color: #fff;
+    background: $greenColor;
+  }
+  svg {
+    transform: translateY(10%);
+  }
+}
