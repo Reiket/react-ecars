@@ -172,7 +172,6 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
   }
 
   .image-gallery-slide .image-gallery-image {
-    max-height: calc(100vh - 80px); // 80 px for the thumbnail space
   }
 
   &.image-gallery-thumbnails-left,

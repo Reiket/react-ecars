@@ -10,7 +10,7 @@ import About from "./About/About";
 import Blog from "./Blog/Blog";
 import Communication from "./Communication/Communication";
 
-const Sections = () => {
+const Home = () => {
     return (
        <>
            <Intro/>
@@ -27,4 +27,4 @@ const Sections = () => {
     );
 };
 
-export default Sections;
+export default Home;

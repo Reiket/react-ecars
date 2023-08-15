@@ -149,10 +149,15 @@ body {
 @import "find";
 @import "details";
 @import "login";
+@import "news";
 
 .section {
-	&__login {
+	&__auth {
 		@include adaptiveValue("padding-top", 48, 20);
 		@include adaptiveValue("padding-bottom", 62, 40);
+	}
+	&__news {
+		@include adaptiveValue("padding-top", 48, 20);
+		@include adaptiveValue("padding-bottom", 48, 20);
 	}
 }

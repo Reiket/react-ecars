@@ -11,7 +11,7 @@ const Blog = () => {
                     <a href="/" className="blog__all all">All articles <RiArrowRightLine/></a>
                 </div>
                 <div className="blog__body">
-                    <BlogItem/>
+                    <BlogItem isMoving={true}/>
                 </div>
             </div>
         </section>

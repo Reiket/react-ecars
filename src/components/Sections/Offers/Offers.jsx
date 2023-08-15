@@ -9,7 +9,7 @@ const Offers = () => {
             <div className="section-offers__container">
                 <div className="section-offers__top">
                     <h2 className="section-offers__title title">Special offers</h2>
-                    <div className="section-offers__navigation">
+                    <div className="section-offers__navigation navigation">
                         <button className="section-offers__button slider-button section-offers__prev"><MdOutlineKeyboardArrowLeft/></button>
                         <button className="section-offers__button slider-button section-offers__next"><MdOutlineKeyboardArrowRight/></button>
                     </div>

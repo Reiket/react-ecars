@@ -192,10 +192,10 @@
     height: 100%;
     &::before {
         content:'';
-        position: absolute;
+        position: fixed;
         background: #000;
         top: 0;
-        left: 0;
+        left: -100%;
         opacity: 60%;
         width: 100%;
         display: block;

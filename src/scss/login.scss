@@ -1,6 +1,6 @@
 @use "sass:math";
 @import "base/mixins";
-.login {
+.auth {
   &__container {
     display: flex;
     justify-content: center;
@@ -11,9 +11,22 @@
       flex: 1 1 auto;
     }
   }
+  &__top {
+    padding-bottom: rem(16);
+  }
   &__title {
     &:not(:last-child) {
-        margin-bottom: em(32, 32);
+      margin-bottom: em(32, 32);
+    }
+    &_reset {
+      @include adaptiveValue("font-size", 32, 20);
+      line-height: math.div(36.8 , 32);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+        margin-bottom: em(32, 16);
     }
   }
   &__form {
@@ -58,6 +71,7 @@
     }
   }
   &__button {
+    display: block;
     width: 100%;
     text-align: center;
   }
@@ -66,15 +80,27 @@
     line-height: math.div(20 ,14);
     text-align: center;
     a {
+      gap: rem(6);
       font-weight: 600;
       color: $greenColor;
       transition: color .3s linear;
+      svg {
+        transition: transform .3s linear;
+      }
       @media (any-hover: hover){
           &:hover {
               color: #1f3b23;
+              svg {
+                transform: translateX(-10%);
+              }
           }
       }
     }
+  }
+  &_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__or {
     text-align: center;

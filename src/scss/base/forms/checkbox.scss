@@ -1,4 +1,4 @@
-
+@use "sass:math";
 .checkbox {
 	position: relative;
 	&:not(:last-child) {
@@ -40,5 +40,9 @@
 	}
 	// .checkbox__text
 	&__text {
+		line-height: math.div(20 , 14);
+		span {
+			color: $greenColor;
+		}
 	}
 }

@@ -65,6 +65,10 @@
         background: #413e3b;
       }
     }
+    &.active {
+      background: #413e3b;
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -72,6 +76,7 @@
   &__social {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     @include adaptiveValue("gap", 16, 8);
   }
   &__item {
@@ -174,4 +179,11 @@
   svg {
     transform: translateY(10%);
   }
+}
+
+
+.navigation {
+  font-size: rem(20);
+  display: flex;
+  gap: rem(16);
 }

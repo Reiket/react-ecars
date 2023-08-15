@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from "./Navbar/Navbar";
 import HeaderUtils from "./HeaderUtils";
+import {AiOutlineClose} from "react-icons/ai";
 
 const HeaderBottom = () => {
     const [isBurger, setIsBurger] = React.useState(false);
@@ -21,6 +22,10 @@ const HeaderBottom = () => {
                     <HeaderUtils/>
                     <a href="/" className="header-bottom__btn green-button">Get a quote</a>
                 </div>
+                <form action="" className={"header-bottom__form header-bottom__form_bottom"}>
+                    <input className={"header-bottom__input"} type="text" placeholder={"Search"}/>
+                    <button className="header-bottom__btn"><AiOutlineClose/></button>
+                </form>
             </div>
         </div>
     );

@@ -74,6 +74,8 @@
   }
   &__info {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     @include adaptiveValue("gap", 18, 10);
     @media (max-width:$mobileSmall) {
       flex-direction: column;
@@ -673,6 +675,10 @@
 .item-blog {
   box-shadow: 0 8px 16px 0 #1C1E2214;
   background: #ffffff;
+  &_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
   &__image {
     img {
       width: 100%;

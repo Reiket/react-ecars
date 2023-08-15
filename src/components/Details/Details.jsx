@@ -1,14 +1,22 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
-import {MdKeyboardArrowDown, MdOutlineFavoriteBorder} from "react-icons/md";
+import {MdKeyboardArrowDown} from "react-icons/md";
 import {BsCheck} from "react-icons/bs";
-import {AiOutlineShareAlt} from "react-icons/ai";
-import {IoLogoWhatsapp} from "react-icons/io";
-import {BiDownload, BiSolidEnvelope} from "react-icons/bi";
 import '../../scss/base/gallery.scss'
 import DetailsInfo from "./DetailsInfo";
 
 const Details = () => {
+    const [isMoving, setIsMoving] = React.useState(false);
+    React.useEffect(() => {
+        const handleResize = () => {
+            setIsMoving(window.innerWidth < 991);
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
     const images = [
         {
             original: '/assets/image/details/01.png',
@@ -31,7 +39,7 @@ const Details = () => {
                     <div className="details__cars cars">
                         <ImageGallery items={images} showIndex={true}/>
                         <a href="/" className={"cars__link all"}>Show all 14 images <MdKeyboardArrowDown/></a>
-                        {window.innerWidth < 767.98 && <DetailsInfo/>}
+                        {isMoving && <DetailsInfo/>}
                         <div className="cars__list list-cars">
                             <ul className="list-cars__column">
                                 <li className="list-cars__item">
@@ -172,7 +180,7 @@ const Details = () => {
                             </div>
                         </div>
                     </div>
-                    {window.innerWidth > 767.98 && <DetailsInfo/>}
+                    { !isMoving && <DetailsInfo/>}
                 </div>
             </div>
         </section>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const BlogItem = () => {
+const BlogItem = ({isMoving}) => {
     return (
         <>
-            <div className="blog__item item-blog">
+            <div className={isMoving ? "blog__item item-blog" : "blog__item item-blog item-blog_big"}>
                 <div className="item-blog__image">
                     <img src="/assets/image/blog/01.png" alt="Blog"/>
                 </div>
