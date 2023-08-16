@@ -135,19 +135,24 @@
     transform: translateX(35%);
     transition: all .3s linear;
     &_none {
-      @media (max-width:$mobile) {
+      @media (max-width: em(635)) {
         display: none;
       }
     }
     &.active {
       transform: translateX(0%);
       visibility: visible;
+      &_bottom {
+        visibility: visible;
+        transform: translateX(0%);
+        @media (max-width:em(635)) {
+          display: flex;
+        }
+      }
     }
     &_bottom {
-      display: flex;
+      display: none;
       margin-top: rem(15);
-      visibility: visible;
-      transform: translateX(0%);
       input {
         flex: 1 1 auto;
       }

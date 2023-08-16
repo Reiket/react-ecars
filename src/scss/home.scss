@@ -2,42 +2,7 @@
 @use "sass:math";
 @import "base/mixins";
 
-.section {
-  &__intro {
 
-  }
-  &__offers {
-    @include adaptiveValue("padding-top", 66, 40);
-  }
-  &__brands {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__send {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__works {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__why {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__about {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__blog {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-  &__communication {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
-}
 
 .intro {
   background: url("../../public/assets/image/intro/intro.png") no-repeat center / cover;
@@ -74,7 +39,6 @@
   }
   &__info {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     @include adaptiveValue("gap", 18, 10);
     @media (max-width:$mobileSmall) {

@@ -5,6 +5,10 @@ import {AiOutlineClose} from "react-icons/ai";
 
 const HeaderBottom = () => {
     const [isBurger, setIsBurger] = React.useState(false);
+    const [isSearch, setIsSearch] = React.useState(false);
+    const onClickToSearch = () => {
+        setIsSearch((prev) => !prev);
+    }
 
     const onClickBurger = () => {
         setIsBurger(prev => !prev);
@@ -19,10 +23,10 @@ const HeaderBottom = () => {
                         <a href="/"><img src="/assets/image/logo-site/logo.svg" alt="Logo"/></a>
                     </div>
                     <Navbar isBurger={isBurger}/>
-                    <HeaderUtils/>
+                    <HeaderUtils onClickToSearch={onClickToSearch} isSearch={isSearch}/>
                     <a href="/" className="header-bottom__btn green-button">Get a quote</a>
                 </div>
-                <form action="" className={"header-bottom__form header-bottom__form_bottom"}>
+                <form action="" className={isSearch ? "header-bottom__form header-bottom__form_bottom active_bottom" : "header-bottom__form header-bottom__form_bottom"}>
                     <input className={"header-bottom__input"} type="text" placeholder={"Search"}/>
                     <button className="header-bottom__btn"><AiOutlineClose/></button>
                 </form>

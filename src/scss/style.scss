@@ -160,4 +160,39 @@ body {
 		@include adaptiveValue("padding-top", 48, 20);
 		@include adaptiveValue("padding-bottom", 48, 20);
 	}
+	&__intro {
+
+	}
+	&__offers {
+		@include adaptiveValue("padding-top", 66, 40);
+	}
+	&__brands {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__send {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__works {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__why {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__about {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__blog {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__communication {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
 }
+
