@@ -2,8 +2,8 @@ import React from 'react';
 import { BiUserCircle} from "react-icons/bi";
 import {RiMailFill, RiWhatsappFill} from "react-icons/ri";
 import ShipPopup from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/Popup/ShipPopup";
-import CurrencyPopup from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/Popup/CurrencyPopup";
 import MenuContacts from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/Popup/MenuContacts";
+import MenuCurrency from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/MenuCurrency";
 
 const NavbarMenu = ({isBurger}) => {
     return (
@@ -15,7 +15,7 @@ const NavbarMenu = ({isBurger}) => {
                 </li>
                 <li className="nav-menu__ship">
 
-                    <CurrencyPopup isBurger={isBurger}/>
+                    <MenuCurrency isBurger={isBurger}/>
                 </li>
             </div>
             <div className="nav-menu__contacts header-contacts">

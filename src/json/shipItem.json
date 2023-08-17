@@ -1,0 +1,11 @@
+[
+  { "img": "/assets/image/icons/flags/canada.svg",
+    "country": "Canada"
+  } ,
+  { "img": "/assets/image/icons/flags/usa.svg",
+    "country": "USA"
+  } ,
+  { "img": "/assets/image/icons/flags/europe.svg",
+    "country": "EU"
+  }
+]

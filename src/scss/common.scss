@@ -20,9 +20,15 @@
   }
   &_nav {
     color: $mainColor;
+    .header-menu__arrow {
+      color: $mainColor;
+    }
   }
   &__arrow {
     transition: all 0.3s ease 0s;
+    &.active {
+      transform: rotate(180deg);
+    }
   }
   &__list {
     transition: all 0.3s ease 0s;
@@ -37,8 +43,10 @@
     z-index: 999;
     visibility: hidden;
     cursor: pointer;
-    &_burger {
-      padding-top: rem(10);
+    &.active {
+      visibility: visible;
+      opacity: 1;
+
     }
   }
   &__point {
