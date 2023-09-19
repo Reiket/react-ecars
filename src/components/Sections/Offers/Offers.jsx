@@ -3,7 +3,9 @@ import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-ico
 import {RiArrowRightLine} from "react-icons/ri";
 import OffersSlider from "./OffersSlider";
 import '../../../scss/libs/swiper.scss';
-const Offers = () => {
+import {Link} from "react-router-dom";
+const Offers = ({items, isLoading, isFetching, currency, fetchAddToFav, favorites, fetchRemoveFromFav, fetchFavorites}) => {
+
     return (
         <section className="section__offers section-offers">
             <div className="section-offers__container">
@@ -13,12 +15,20 @@ const Offers = () => {
                         <button className="section-offers__button slider-button section-offers__prev"><MdOutlineKeyboardArrowLeft/></button>
                         <button className="section-offers__button slider-button section-offers__next"><MdOutlineKeyboardArrowRight/></button>
                     </div>
-                    <a href="/" className="section-offers__all all">See all cars <RiArrowRightLine/></a>
+                    <Link to={"/catalog"} className="section-offers__all all">See all cars <RiArrowRightLine/></Link>
                 </div>
-                <OffersSlider/>
+                <OffersSlider isLoading={isLoading} fetchFavorites={fetchFavorites} fetchRemoveFromFav={fetchRemoveFromFav} favorites={favorites} fetchAddToFav={fetchAddToFav} items={items} isFetching={isFetching} currency={currency}/>
             </div>
         </section>
     );
 };
 
 export default Offers;
+
+
+
+
+
+
+
+

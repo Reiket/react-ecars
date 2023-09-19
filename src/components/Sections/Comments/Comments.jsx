@@ -1,8 +1,8 @@
 import React from 'react';
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md";
-import AboutSlider from "./AboutSlider";
+import CommentsSlider from "./CommentsSlider";
 
-const About = () => {
+const Comments = ({items}) => {
     return (
         <section className="section__about about">
             <div className="about__container">
@@ -15,7 +15,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="about__inner">
-                       <AboutSlider/>
+                       <CommentsSlider items={items}/>
                     </div>
                 </div>
             </div>
@@ -23,4 +23,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Comments;

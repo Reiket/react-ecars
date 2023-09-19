@@ -1,21 +1,22 @@
 import React from 'react';
 import { BiUserCircle} from "react-icons/bi";
 import {RiMailFill, RiWhatsappFill} from "react-icons/ri";
-import ShipPopup from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/Popup/ShipPopup";
-import MenuContacts from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/Popup/MenuContacts";
+import MenuContacts from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/MenuContacts";
 import MenuCurrency from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/MenuCurrency";
+import MenuShip from "../../HeaderTopBar/HeaderTopBarMenu/TopBarMenuItem/MenuShip";
 
-const NavbarMenu = ({isBurger}) => {
+const NavbarMenu = ({isBurger, changeCurrency, changeShipNumber, shipNumber, currency}) => {
     return (
         <div className={"nav-menu__bottom"}>
             <div className="nav-menu__info">
-                <li className="nav-menu__item"><a href="/" className={"nav-menu__link"}><BiUserCircle className="header-bottom__icon"/>Sign in</a></li>
-                <li className="nav-menu__ship">
-                    <ShipPopup isBurger={isBurger}/>
+                <li className="nav-menu__item">
+                    <a href="/" className={"nav-menu__link"}><BiUserCircle className="header-bottom__icon"/>Sign in</a>
                 </li>
                 <li className="nav-menu__ship">
-
-                    <MenuCurrency isBurger={isBurger}/>
+                    <MenuShip isBurger={isBurger} changeShipNumber={changeShipNumber} shipNumber={shipNumber}/>
+                </li>
+                <li className="nav-menu__ship">
+                    <MenuCurrency isBurger={isBurger} changeCurrency={changeCurrency} currency={currency}/>
                 </li>
             </div>
             <div className="nav-menu__contacts header-contacts">

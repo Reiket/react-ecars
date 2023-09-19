@@ -1,29 +1,12 @@
 import React from 'react';
 
-const WorksItem = () => {
+const WorksItem = ({name, text, number}) => {
     return (
-        <>
-            <div className="works__item">
-                <div className="works__number">1</div>
-                <h3 className="works__name">Find a car </h3>
-                <div className="works__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</div>
-            </div>
-            <div className="works__item">
-                <div className="works__number">1</div>
-                <h3 className="works__name">Find a car </h3>
-                <div className="works__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</div>
-            </div>
-            <div className="works__item">
-                <div className="works__number">1</div>
-                <h3 className="works__name">Find a car </h3>
-                <div className="works__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</div>
-            </div>
-            <div className="works__item">
-                <div className="works__number">1</div>
-                <h3 className="works__name">Find a car </h3>
-                <div className="works__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</div>
-            </div>
-        </>
+        <div className="works__item">
+            <div className="works__number">{number}</div>
+            <h3 className="works__name">{name}</h3>
+            <div className="works__text">{text}</div>
+        </div>
     );
 };
 

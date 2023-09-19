@@ -1,14 +1,14 @@
 import React from 'react';
-import NavbarMenu from "./NavbarMenu";
+import {Link} from "react-router-dom";
+import navbar from "../../../../json/navbar.json"
+import NavbarMenuContainer from "./NavbarMenuContainer";
 const Navbar = ({isBurger}) => {
+
     return (
         <nav className="header-bottom__menu nav-menu">
             <ul className={isBurger ? "nav-menu__list active" : "nav-menu__list"}>
-                <li className="nav-menu__item"><a href="/" className="nav-menu__link">All Cars</a></li>
-                <li className="nav-menu__item"><a href="/" className="nav-menu__link">About Us</a></li>
-                <li className="nav-menu__item"><a href="/" className="nav-menu__link">Blog</a></li>
-                <li className="nav-menu__item"><a href="/" className="nav-menu__link">Contact</a></li>
-                <NavbarMenu isBurger={isBurger}/>
+                {navbar.map((item, id) => <li key={id} className="nav-menu__item"><Link to={item.url} className="nav-menu__link">{item.name}</Link></li>)}
+                <NavbarMenuContainer isBurger={isBurger}/>
             </ul>
         </nav>
     );

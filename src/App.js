@@ -1,32 +1,30 @@
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer";
 import React from 'react';
-import BlogItem from "./components/Sections/Blog/BlogItem";
 import "./scss/base/swiper.scss"
 import News from "./components/News/News";
 import Home from "./components/Sections/Home";
 import Find from "./components/Find/Find";
-import Details from "./components/Details/Details";
 import Login from "./components/Login/Login";
-
+import {Route, Routes} from "react-router-dom";
+import MainLayout from "./components/MainLayout";
+import {Provider} from "react-redux";
+import store from "../src/redux/store"
+import FavoritesContainer from "./components/Favorites/FavoritesContainer";
 
 function App() {
   return (
-    <div className="wrapper">
-        <Header/>
-        <Home/>
-        {/*<Find/>*/}
-        {/*<Details/>*/}
-        {/*<Login/>*/}
-        {/*<Register/>*/}
-        {/*<ForgotPass/>*/}
-        {/*<CheckEmail/>*/}
-        {/*<NewPass/>*/}
-        {/*<Reset/>*/}
-        {/*<News/>*/}
+      <Provider store={store}>
+          <Routes>
+              <Route element={<MainLayout/>} path={"/"}>
+                  <Route element={<Home/>} path={"/"}/>
+                  <Route element={<Find/>} path={"/catalog"}/>
+                  <Route element={<Login/>} path={"/login"}/>
+                  <Route element={<News/>} path={"/news"}/>
 
-        <Footer/>
-    </div>
+                  <Route element={<FavoritesContainer/>} path={"/favorites"}/>
+
+              </Route>
+          </Routes>
+      </Provider>
   );
 }
 

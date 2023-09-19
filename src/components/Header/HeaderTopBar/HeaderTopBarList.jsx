@@ -1,6 +1,6 @@
 import React from 'react';
 import {RiMailFill, RiWhatsappFill} from "react-icons/ri";
-import MenuContacts from "./HeaderTopBarMenu/TopBarMenuItem/Popup/MenuContacts";
+import MenuContacts from "./HeaderTopBarMenu/TopBarMenuItem/MenuContacts";
 
 function HeaderTopBarList() {
     return (

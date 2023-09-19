@@ -1,12 +1,12 @@
 import React from 'react';
 import HeaderTopBar from "./HeaderTopBar/HeaderTopBar";
-import HeaderBottom from "./HeaderBottom/HeaderBottom";
+import HeaderBottomContainer from "./HeaderBottom/HeaderBottomContainer";
 
 const Header = () => {
     return (
         <header className="header">
             <HeaderTopBar/>
-            <HeaderBottom/>
+            <HeaderBottomContainer/>
         </header>
     );
 };

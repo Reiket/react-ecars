@@ -150,6 +150,7 @@ body {
 @import "details";
 @import "login";
 @import "news";
+@import "favorites";
 
 .section {
 	&__auth {
@@ -191,6 +192,10 @@ body {
 		@include adaptiveValue("padding-bottom", 96, 50);
 	}
 	&__communication {
+		@include adaptiveValue("padding-top", 96, 50);
+		@include adaptiveValue("padding-bottom", 96, 50);
+	}
+	&__favorites {
 		@include adaptiveValue("padding-top", 96, 50);
 		@include adaptiveValue("padding-bottom", 96, 50);
 	}

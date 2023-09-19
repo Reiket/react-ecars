@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderTopBarList from "./HeaderTopBarList";
-import HeaderTopBarMenu from "./HeaderTopBarMenu/HeaderTopBarMenu";
+import HeaderTopBarMenuContainer from "./HeaderTopBarMenu/HeaderTopBarMenuContainer";
 
 const HeaderTopBar = () => {
     return (
@@ -10,7 +10,7 @@ const HeaderTopBar = () => {
                     <div className="header-top__contacts header-contacts">
                         <HeaderTopBarList/>
                     </div>
-                    <HeaderTopBarMenu/>
+                    <HeaderTopBarMenuContainer/>
                 </div>
             </div>
         </div>

@@ -1,0 +1,74 @@
+@use "sass:math";
+@import "base/mixins";
+
+.favorites {
+ &__body {
+   padding-top: rem(30);
+   display: flex;
+   align-items: center;
+   gap: rem(24);
+   flex-wrap: wrap;
+   @media (max-width:em(630)) {
+     display: grid;
+     svg {
+       width: 100%;
+     }
+   }
+ }
+  &__item {
+    box-shadow: 0px 8px 16px 0px #1C1E2214;
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 rem(288);
+    @media (min-width:em(630)) {
+      min-height: rem(330);
+    }
+    .item-offers__image {
+      @media (max-width:em(630)) {
+        img {
+          height: rem(250);
+        }
+      }
+      @media (max-width:em(550)) {
+        img {
+          height: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+.not-found-fav {
+  display: flex;
+
+  &__container {
+    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-bottom", 120, 80);
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  &__title {
+    &:not(:last-child) {
+        margin-bottom: rem(15);
+     }
+  }
+  &__text {
+    font-size: rem(16);
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+    span {
+      font-weight: 700;
+      color: $greenColor;
+    }
+  }
+  &__btn {
+      padding: rem(8) rem(60);
+    @media (max-width:$mobileSmall) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

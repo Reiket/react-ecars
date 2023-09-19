@@ -23,15 +23,22 @@
   display: flex;
   flex-wrap: wrap;
   @include adaptiveValue("gap",24 , 14);
+  .info-header-top__item {
+    @media (max-width:$mobile) {
+      &:nth-child(1), &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
 
   &__item {
     display: flex;
     position: relative;
     align-items: center;
     gap: rem(6);
-    &_none {
-      @media (max-width:$mobile) {
-        display: none;
+    &_burger {
+      .info-header-top__text, svg {
+        color: $mainColor !important;
       }
     }
     svg {
@@ -57,10 +64,6 @@
     color: #fff;
     opacity: 70%;
     position: relative;
-   &_burger {
-     color: $mainColor;
-     opacity: 100%;
-   }
 
   }
   &__tippy {
@@ -108,7 +111,7 @@
     &::before {
       content:'';
       display: block;
-      width: 45%;
+      width: 38%;
       height: rem(110);
       position: absolute;
       background: #ffffff;
@@ -117,8 +120,8 @@
       visibility: hidden;
       opacity: 0;
       z-index: 8;
-      @media (max-width: em(360)) {
-        width: 100%;
+      @media (max-width: em(500)) {
+        width: 70%;
       }
       -webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
     }

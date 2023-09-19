@@ -1,45 +1,13 @@
 import React from 'react';
 
-const BrandsCard = () => {
+const BrandsCard = ({name, imageUrl}) => {
     return (
-        <>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
+        <div className="brands__item">
+            <div className="brands__image">
+                <img src={imageUrl} alt="Brands"/>
             </div>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
-            </div>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
-            </div>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
-            </div>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
-            </div>
-            <div className="brands__item">
-                <div className="brands__image">
-                    <img src="/assets/image/brands/01.png" alt="Brands"/>
-                </div>
-                <h4 className="brands__name">Ford</h4>
-            </div>
-        </>
+            <h4 className="brands__name">{name}</h4>
+        </div>
     );
 };
 

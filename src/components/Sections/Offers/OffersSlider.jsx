@@ -1,23 +1,36 @@
 import React from 'react';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, Navigation} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 import '../../../scss/libs/swiper.scss';
-import {AiOutlineHeart} from "react-icons/ai";
-import {MdOutlineKeyboardArrowRight} from "react-icons/md";
-const OffersSlider = () => {
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import OfferLoader from "../../Loader/OfferLoader";
+import {checkInFavorites} from "../../../utils/checkInFavorites";
+
+const OffersSlider = ({ isLoading, items, isFetching, currency, fetchAddToFav, favorites, fetchRemoveFromFav }) => {
+    const onClickToFavorite = (item) => {
+        if (checkInFavorites(item.id, favorites)) {
+            fetchRemoveFromFav(item.id)
+        } else {
+            fetchAddToFav(item);
+        }
+    };
+
+
     return (
+
         <div className="section-offers__body">
             <Swiper
-                modules={[Navigation,  Autoplay]}
-                spaceBetween={24}
+                modules={[Navigation, Autoplay]}
+                spaceBetween={0}
                 autoplay
-                slidesPerView={4}
+                slidesPerView={Math.ceil(items.length / 2)}
                 breakpoints={{
                     320: {
                         slidesPerView: 1,
                         spaceBetween: 20
                     },
-                    500: {
+                    550: {
                         slidesPerView: 2,
                         spaceBetween: 20
                     },
@@ -39,105 +52,26 @@ const OffersSlider = () => {
                     nextEl: '.section-offers__next',
                 }}
             >
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <button className="item-offers__favorite"><AiOutlineHeart/></button>
-                        <img src="/assets/image/offer/01.png" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2021 Genesis GV80 2.5T</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/02.png" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2021 Genesis GV80 2.5T</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/03.png" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2021 Genesis GV80 2.5T 2021 Genesis GV80 2.5T 2021 Genesis GV80 2.5T</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/04.png" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2021 Genesis GV80 2.5T</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/05.jpg" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2022 Kia K5 GT</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/06.jpg" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2021 Toyota Camry 2.5 D-4S</h4>
-                        <div className="item-offers__description">Used • 27,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$45,995</div>
-                            <div className="item-offers__discount">$51,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={"section-offers__item item-offers"}>
-                    <div className="item-offers__image">
-                        <img src="/assets/image/offer/07.jpg" alt="Car"/>
-                    </div>
-                    <div className="item-offers__info">
-                        <h4 className="item-offers__name">2018 Lexus LX570</h4>
-                        <div className="item-offers__description">Used • 16,057 mi • Petrol</div>
-                        <div className="item-offers__bottom">
-                            <div className="item-offers__price">$32,995</div>
-                            <div className="item-offers__discount">$49,490</div>
-                            <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight/></a>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                {isFetching ? [...Array(4)].map((_, id) => <SwiperSlide key={id}><OfferLoader /></SwiperSlide>) :
+                    items.map((slide) => (
+                        <SwiperSlide key={slide.id} className={items.length > 4 ? "section-offers__item item-offers" : "section-offers__item item-offers flex"}>
+                            <div className="item-offers__image">
+                                <button disabled={isLoading} type={"button"} onClick={() => onClickToFavorite(slide)} className="item-offers__favorite">
+                                    {checkInFavorites(slide.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}
+                                </button>
+                                <img src={slide.imageUrl} alt="Car" />
+                            </div>
+                            <div className="item-offers__info">
+                                <h4 className="item-offers__name">{slide.name}</h4>
+                                <div className="item-offers__description">{slide.description}</div>
+                                <div className="item-offers__bottom">
+                                    <div className="item-offers__price">{Object.values(slide.price)[currency]}</div>
+                                    <div className="item-offers__discount">{slide.discount}</div>
+                                    <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight /></a>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
             </Swiper>
         </div>
     );

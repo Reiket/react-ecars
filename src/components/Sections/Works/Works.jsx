@@ -1,5 +1,6 @@
 import React from 'react';
 import WorksItem from "./WorksItem";
+import items from "../../../json/WorksItem.json";
 
 const Works = () => {
     return (
@@ -11,7 +12,7 @@ const Works = () => {
                         <div className="works__text works__text_width">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</div>
                     </div>
                     <div className="works__inner">
-                        <WorksItem/>
+                        {items.map((item) => <WorksItem key={item.id} number={item.id} name={item.name} text={item.text}/>)}
                     </div>
                 </div>
             </div>
