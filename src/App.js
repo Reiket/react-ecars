@@ -9,6 +9,7 @@ import MainLayout from "./components/MainLayout";
 import {Provider} from "react-redux";
 import store from "../src/redux/store"
 import FavoritesContainer from "./components/Favorites/FavoritesContainer";
+import DetailsContainer from "./components/Details/DetailsContainer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
               <Route element={<MainLayout/>} path={"/"}>
                   <Route element={<Home/>} path={"/"}/>
+                  <Route element={<DetailsContainer/>} path={"/:id"}/>
                   <Route element={<Find/>} path={"/catalog"}/>
                   <Route element={<Login/>} path={"/login"}/>
                   <Route element={<News/>} path={"/news"}/>

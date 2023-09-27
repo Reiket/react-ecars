@@ -13,24 +13,22 @@
       },
       "discount": "51,490",
       "ship": 0,
-      "make": "Genesis",
-      "model": "GV80 2.5T",
-      "year": 2021,
-      "color": "Black",
-      "type": "Crossover",
-      "kilometers": "15, 000",
       "added": "Aug 22, 2023",
-      "views": 150
+      "views": 150,
+      "properties": {
+        "make": "Genesis",
+        "model": "GV80 2.5T",
+        "year": 2021,
+        "color": "Black",
+        "type": "Crossover",
+        "kilometers": "15,000",
+        "wheels": "18´"
+      }
     },
     {
       "id": 2,
       "imageUrl": "/assets/image/offers/02.png",
       "name": "2019 Mitsubishi Outlander Sport 2.0 SE",
-      "model": "Outlander Sport",
-      "year": 2019,
-      "color": "Black",
-      "make": "Mitsubishi",
-      "type": "Crossover",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 40,995",
@@ -39,19 +37,23 @@
       },
       "discount": "48,490",
       "ship": 0,
-      "kilometers": "20, 000",
       "added": "Aug 15, 2023",
-      "views": 200
+      "views": 200,
+      "properties": {
+        "make": "Mitsubishi",
+        "model": "Outlander Sport",
+        "year": 2019,
+        "color": "Black",
+        "type": "Crossover",
+        "kilometers": "9,000",
+        "wheels": "18´"
+
+      }
     },
     {
       "id": 3,
       "imageUrl": "/assets/image/offers/03.png",
       "name": "2019 BMW 640 Gran Turismo i xDrive",
-      "model": "640 Gran Turismo",
-      "year": 2019,
-      "color": "Black",
-      "make": "BMW",
-      "type": "Sedan",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 48,995",
@@ -60,20 +62,22 @@
       },
       "discount": "57,490",
       "ship": 0,
-      "kilometers": "25, 000",
       "added": "Jun 22, 2023",
-      "views": 170
+      "views": 170,
+      "properties": {
+        "make": "BMW",
+        "model": "640 Gran Turismo",
+        "year": 2019,
+        "color": "Black",
+        "type": "Sedan",
+        "kilometers": "25,000",
+        "wheels": "18´"
+      }
     },
-
     {
       "id": 4,
       "imageUrl": "/assets/image/offers/04.png",
       "name": "2020 Subaru Ascent Touring 7-Passenger",
-      "model": "Ascent Touring",
-      "year": 2020,
-      "color": "White",
-      "make": "Subaru",
-      "type": "Minivan",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 40,995",
@@ -81,22 +85,23 @@
         "GBP": "£ 48,995"
       },
       "discount": "48,490",
-      "favorite": false,
       "ship": 0,
-      "kilometers": "30, 000",
-      "dateAdded": "Dec 22, 2023",
-      "views": 420
+      "added": "Dec 22, 2023",
+      "views": 420,
+      "properties": {
+        "make": "Subaru",
+        "model": "Ascent Touring",
+        "year": 2020,
+        "color": "White",
+        "type": "Minivan",
+        "kilometers": "30,000",
+        "wheels": "18´"
+      }
     },
-
     {
       "id": 5,
       "imageUrl": "/assets/image/offers/05.jpg",
       "name": "2022 Kia K5 GT",
-      "model": "K5 GT",
-      "year": 2022,
-      "color": "Grey",
-      "make": "Kia",
-      "type": "Sedan",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 41,995",
@@ -105,20 +110,23 @@
       },
       "discount": "50,490",
       "ship": 0,
-      "kilometers": "17, 000",
-      "dateAdded": "Jul 22, 2023",
-      "views": 210
-    },
+      "added": "Jul 22, 2023",
+      "views": 210,
+      "properties": {
+        "make": "Kia",
+        "model": "K5 GT",
+        "year": 2022,
+        "color": "Grey",
+        "type": "Sedan",
+        "kilometers": "17, 000",
+        "wheels": "18´"
 
+      }
+    },
     {
       "id": 6,
       "imageUrl": "/assets/image/offers/06.jpg",
       "name": "2021 Toyota Camry 2.5 D-4S",
-      "model": "Camry",
-      "year": 2021,
-      "color": "Black",
-      "make": "Toyota",
-      "type": "2.5 D-4S",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 42,995",
@@ -127,20 +135,23 @@
       },
       "discount": "49,290",
       "ship": 0,
-      "kilometers": "25, 000",
-      "dateAdded": "Jul 22, 2023",
-      "views": 242
-    },
+      "added": "Jul 22, 2023",
+      "views": 242,
+      "properties": {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2021,
+        "color": "Black",
+        "type": "Sedan",
+        "kilometers": "25,000",
+        "wheels": "18´"
 
+      }
+    },
     {
       "id": 7,
       "imageUrl": "/assets/image/offers/07.jpg",
       "name": "2018 Lexus LX570",
-      "model": "LX570",
-      "year": 2018,
-      "color": "Silver",
-      "make": "Lexus",
-      "type": "Crossover",
       "description": "Used • 27,057 mi • Petrol",
       "price": {
         "USD": "$ 38,995",
@@ -149,20 +160,23 @@
       },
       "discount": "47,290",
       "ship": 0,
-      "kilometers": "27, 000",
-      "dateAdded": "Sep 22, 2023",
-      "views": 230
-    },
+      "added": "Sep 22, 2023",
+      "views": 230,
+      "properties": {
+        "model": "LX570",
+        "year": 2018,
+        "color": "Silver",
+        "make": "Lexus",
+        "type": "Crossover",
+        "kilometers": "27,000",
+        "wheels": "18´"
 
+      }
+    },
     {
       "id": 8,
       "imageUrl": "/assets/image/offers/08.jpg",
       "name": "2020 Tesla Model S",
-      "model": "Model S",
-      "year": 2020,
-      "color": "Black",
-      "make": "Tesla",
-      "type": "Electric",
       "description": "Used • 27,057 mi • Electric",
       "price": {
         "USD": "$ 43,995",
@@ -171,9 +185,16 @@
       },
       "discount": "56,290",
       "ship": 0,
-      "kilometers": "2, 000",
-      "dateAdded": "Dec 22, 2023",
-      "views": 580
+      "added": "Dec 22, 2023",
+      "views": 580,
+      "properties" : {
+        "model": "Model S",
+        "year": 2020,
+        "color": "Black",
+        "make": "Tesla",
+        "type": "Electric",
+        "kilometers": "2,000"
+      }
     },
     {
       "id": 9,

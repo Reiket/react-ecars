@@ -4,6 +4,9 @@ export const offerAPI = {
     getOffersCard (number = 0, searchValue = "") {
         return axios.get(`http://localhost:3000/offers?ship=${number}&q=${searchValue}`)
     },
+    getOfferCardById(id) {
+        return axios.get("http://localhost:3000/offers/" + id);
+    }
 }
 
 export const carsAPI = {

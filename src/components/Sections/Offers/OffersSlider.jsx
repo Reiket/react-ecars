@@ -6,6 +6,7 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import OfferLoader from "../../Loader/OfferLoader";
 import {checkInFavorites} from "../../../utils/checkInFavorites";
+import {Link} from "react-router-dom";
 
 const OffersSlider = ({ isLoading, items, isFetching, currency, fetchAddToFav, favorites, fetchRemoveFromFav }) => {
     const onClickToFavorite = (item) => {
@@ -67,7 +68,7 @@ const OffersSlider = ({ isLoading, items, isFetching, currency, fetchAddToFav, f
                                 <div className="item-offers__bottom">
                                     <div className="item-offers__price">{Object.values(slide.price)[currency]}</div>
                                     <div className="item-offers__discount">{slide.discount}</div>
-                                    <a href={"/"} className="item-offers__details">Details <MdOutlineKeyboardArrowRight /></a>
+                                    <Link to={`/${slide.id}`} className="item-offers__details">Details <MdOutlineKeyboardArrowRight /></Link>
                                 </div>
                             </div>
                         </SwiperSlide>

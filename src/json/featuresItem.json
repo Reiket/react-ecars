@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Interior",
+    "items": [
+      "Air conditioning", "Bluetooth system", "Climate control", "Cooled front seats", "Cruise control", "Heated seats", "Leather seats", "Sunroof", "Navigation system", "Power locks", "Power seats", "Power windows", "Premium sound system", "Tuner/radio", "Rear camera"
+    ]
+  },
+  {
+    "name": "Exterior",
+    "items": ["Fog lights", "Keyless go", "Performance tires", "Premium paint"]
+  },
+  {
+    "name": "Security & Environment",
+    "items": ["4WD", "ABS", "Adaptive lighting", "Airbags (front and side)", "Tinted windows", "All wheel drive", "Adaptive cruise control", "Traction control", "Differential lock"]
+  }
+]

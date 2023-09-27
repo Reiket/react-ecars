@@ -4,8 +4,12 @@ import {AiOutlineShareAlt} from "react-icons/ai";
 import {IoLogoWhatsapp} from "react-icons/io";
 import {BiDownload, BiSolidEnvelope} from "react-icons/bi";
 import {BsCheck} from "react-icons/bs";
+import inspectionItem from "../../json/inspectionItem.json";
+import {useLocation} from "react-router-dom";
 
-const DetailsInfo = () => {
+const DetailsInfo = ({itemById, currency}) => {
+    const location = useLocation();
+    console.log(location)
     return (
         <div className="details__info info-details">
             <div className="info-details__sell sell-details">
@@ -14,16 +18,16 @@ const DetailsInfo = () => {
                         <a href={"/"} className="sell-details__item"><MdOutlineFavoriteBorder/>Save</a>
                         <a href={"/"} className="sell-details__item"><AiOutlineShareAlt/>Share</a>
                     </div>
-                    <h3 className="sell-details__title">Toyota Land Cruiser 2017 ZX-G Frontier Face-Lifted Petrol 4.6L Sunroof 4WD</h3>
-                    <div className="sell-details__price">$45,995</div>
+                    <h3 className="sell-details__title">{itemById.name}</h3>
+                    <div className="sell-details__price">{itemById.price && Object.values(itemById.price)[currency]}</div>
                     <ul className="sell-details__list">
                         <li className="sell-details__property">
                             <h5 className="sell-details__name">Year</h5>
-                            <div className="sell-details__text">2017</div>
+                            <div className="sell-details__text">{itemById?.properties?.year}</div>
                         </li>
                         <li className="sell-details__property">
                             <h5 className="sell-details__name">Kilometers</h5>
-                            <div className="sell-details__text">15,000</div>
+                            <div className="sell-details__text">{itemById?.properties?.kilometers}</div>
                         </li>
                         <li className="sell-details__property">
                             <h5 className="sell-details__name">Location</h5>
@@ -51,22 +55,12 @@ const DetailsInfo = () => {
                     <div className="inspection-details__check"><BsCheck/> Inspected</div>
                 </div>
                 <ul className="inspection-details__list">
-                    <li className="inspection-details__item">
-                        <h4 className="inspection-details__name">Accidents or damage</h4>
-                        <div className="inspection-details__text">None reported</div>
-                    </li>
-                    <li className="inspection-details__item">
-                        <h4 className="inspection-details__name">Mileage comparison</h4>
-                        <div className="inspection-details__text">15,000 km</div>
-                    </li>
-                    <li className="inspection-details__item">
-                        <h4 className="inspection-details__name">1-owner vehicle</h4>
-                        <div className="inspection-details__text">Yes</div>
-                    </li>
-                    <li className="inspection-details__item">
-                        <h4 className="inspection-details__name">Basic maintenance</h4>
-                        <div className="inspection-details__text">Passed</div>
-                    </li>
+                    {inspectionItem.map((item, index) => (
+                        <li key={index} className="inspection-details__item">
+                            <h4 className="inspection-details__name">{item.name}</h4>
+                            <div className="inspection-details__text">{item.text}</div>
+                        </li>
+                    ))}
                 </ul>
                 <a href={"/"} className="inspection-details__link"><BiDownload/> Download the basic report</a>
                 <h4 className="inspection-details__full">Full Inspection</h4>
@@ -74,7 +68,7 @@ const DetailsInfo = () => {
                 <a href="/" className="inspection-details__button green-button green-button_big">Book a full inspection</a>
                 <a href="/" className="inspection-details__more all">Learn more about the full inspection</a>
             </div>
-            <div className="info-details__date">Added: Jan 6, 2023 • Views: 38</div>
+            <div className="info-details__date">Added: {itemById.added} • Views: {itemById.views}</div>
         </div>
     );
 };

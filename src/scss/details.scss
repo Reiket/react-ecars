@@ -418,3 +418,11 @@
     justify-content:  center;
   }
 }
+
+.details__loader {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100% !important;
+  height: 45vh !important;
+}

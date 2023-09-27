@@ -261,6 +261,8 @@
     font-weight: 600;
     line-height: math.div(20 , 14);
     transition: color .3s ease-in;
+    position: relative;
+    z-index: 10;
     svg {
       transition: transform .3s ease-in;
     }

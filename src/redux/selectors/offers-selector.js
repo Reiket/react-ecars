@@ -2,6 +2,10 @@ export const selectItems = (state) => {
     return state.offers.items;
 }
 
+export const selectItemById = (state) => {
+    return state.offers.itemById;
+}
+
 export const selectIsFetchingOffers = (state) => {
     return state.offers.isFetching;
 }
@@ -18,3 +22,7 @@ export const selectShipNumber = (state) => {
 export const selectSearchValue = (state) => {
     return state.offers.searchValue;
 }
+export const selectIsFetchingItemsById = (state) => {
+    return state.offers.isFetchingItemsById;
+}
+

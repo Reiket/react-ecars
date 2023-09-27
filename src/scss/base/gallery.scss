@@ -220,8 +220,11 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
   }
 
   .image-gallery-image {
-    width: 100%;
     object-fit: contain;
+    width: 808px;
+    @media (max-width: 760px) {
+      width: 100%;
+    }
   }
 
   .image-gallery-description {
@@ -437,4 +440,8 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
     font-size: .8em;
     padding: 5px 10px;
   }
+}
+
+.image-gallery-swipe {
+  flex: 1 1 auto;
 }
