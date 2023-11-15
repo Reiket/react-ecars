@@ -2,7 +2,7 @@ import React from 'react';
 import {AiFillLinkedin, AiOutlineCalendar, AiOutlineEye, AiOutlineLink, AiOutlineTwitter} from "react-icons/ai";
 import {RiPriceTag3Line} from "react-icons/ri";
 import {BiLogoFacebook} from "react-icons/bi";
-import BlogItem from "../Sections/Blog/BlogItem";
+import BlogItem from "../Pages/components/Home/components/Blog/components/BlogItem";
 
 const NewsCard = () => {
     return (

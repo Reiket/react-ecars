@@ -1,0 +1,106 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+.nav-menu {
+  flex: 1 1 auto;
+
+  &__list {
+    @media (min-width: em(930)) {
+      flex-wrap: wrap;
+    }
+    display: flex;
+    column-gap: rem(32);
+    row-gap: rem(10);
+    align-items: center;
+    position: relative;
+    @media (max-width: rem(930)) {
+      position: fixed;
+      flex-direction: column;
+      left: -100%;
+      top: 0;
+      gap: rem(15);
+      padding-top: rem(115);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      z-index: 7;
+      align-items: flex-start;
+      padding-left: rem(32);
+      overflow-y: auto;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+
+      &::after {
+        position: fixed;
+        content: '';
+        height: 100%;
+        top: 0;
+        left: -100%;
+        width: rem(360);
+        background: #ffffff;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        content: '';
+        position: fixed;
+        z-index: 2;
+        background: #000;
+        opacity: 60%;
+        width: 64%;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+      }
+      &.active {
+        left: 0;
+
+        &::after {
+          left: 0;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__item {
+    @media (max-width:em(930)) {
+      a {
+        font-size: rem(20);
+
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    z-index: 10;
+    font-weight: 600;
+    line-height: math.div(24 , 16);
+    font-size: rem(16);
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover {
+        color: $greenColor;
+      }
+    }
+  }
+}
+
+@import "../components/NavbarMenu/styles/navbar-menu";

@@ -118,40 +118,7 @@
   }
 }
 
-.section-offers {
-  &__container {}
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include adaptiveValue("column-gap", 40, 25, 480, 320, 1 );
-    row-gap: rem(15);
-    flex-wrap: wrap;
-  }
-  &__title {
 
-  }
-  &__navigation {
-    font-size: rem(20);
-    display: flex;
-    gap: rem(16);
-  }
-
-  &__prev {}
-  &__next {}
-  &__all {
-
-  }
-  &__body {
-    padding-top: rem(48);
-    padding-bottom: rem(76);
-    display: flex;
-    align-items: stretch;
-  }
-  &__item {
-
-  }
-}
 
 .item-offers {
   box-shadow: 0 8px 16px 0 #1C1E2214;
@@ -582,6 +549,7 @@
 
   &__inner {
     padding-top: rem(48);
+    display: flex;
   }
   &__slider {
 

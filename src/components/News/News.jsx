@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogItem from "../Sections/Blog/BlogItem";
+import BlogItem from "../Pages/components/Home/components/Blog/components/BlogItem";
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";

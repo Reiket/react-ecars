@@ -1,0 +1,9 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+.info-header-top {
+  display: flex;
+  flex-wrap: wrap;
+  @include adaptiveValue("gap", 24, 14);
+}
+
+@import "../../../../../shared/components/Menu/styles/menu";

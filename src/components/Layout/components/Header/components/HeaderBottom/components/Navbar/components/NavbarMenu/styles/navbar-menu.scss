@@ -1,0 +1,65 @@
+@use "sass:math";
+@import "../../../../../../../../../../../scss/base/mixins";
+.nav-menu {
+  &__bottom {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    @media (min-width:em(930)) {
+      display: none;
+    }
+  }
+  &__contacts {
+    padding-top: rem(24);
+    border-top: rem(1) solid #E6E6E6;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    padding-bottom: rem(24);
+  }
+  &__sign {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(16 , 14);
+    color: $mainColor;
+  }
+  &__popup {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+  }
+  &__social {
+    display: flex;
+    padding-top: rem(24);
+    align-items: center;
+    gap: rem(20);
+    padding-bottom: rem(32);
+    li {
+      a {
+        color: $mainColor;
+        transition: color .3s ease-in;
+        @media (any-hover: hover){
+          &:hover {
+            color: $greenColor;
+          }
+        }
+        svg {
+          font-size: rem(20);
+        }
+      }
+    }
+  }
+}

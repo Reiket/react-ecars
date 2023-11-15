@@ -1,0 +1,16 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.header-top {
+  background: $backgroundColor;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(10) 0;
+    font-weight: 500;
+    font-size: rem(13);
+    line-height: math.div(13 , 16);
+  }
+}
+
+@import "../components/HeaderTopList/styles/header-top-list";
+@import "../components/HeaderTopMenu/styles/header-top-menu";

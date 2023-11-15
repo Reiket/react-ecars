@@ -1,0 +1,145 @@
+@use "sass:math";
+@import "../../../../../../../../scss/base/mixins";
+.info-header-top {
+  .info-header-top__item {
+    @media (max-width:$mobile) {
+      &:nth-child(1), &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: rem(6);
+    &_burger {
+      .info-header-top__text, svg {
+        color: $mainColor !important;
+      }
+    }
+    svg {
+      color: #fff;
+      opacity: 70%;
+      font-size: rem(16);
+      cursor: pointer;
+    }
+    &_help {
+      svg {
+        @media (any-hover: hover){
+          &:hover {
+            ~ .info-header-top__tippy {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__text {
+    color: #fff;
+    opacity: 70%;
+    position: relative;
+
+  }
+  &__tippy {
+    position: absolute;
+    color: #FFFFFF;
+    top: rem(25);
+    z-index: 5;
+    transition: all .3s linear;
+    background: #767676;
+    visibility: hidden;
+    opacity: 0;
+    right: -100%;
+    padding: rem(8);
+    width: rem(130);
+    border-radius: rem(8);
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      right: 0;
+    }
+  }
+}
+
+.header-menu {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @media (any-hover: hover) {
+    &:hover {
+      .header-menu__arrow {
+        transform: rotate(180deg);
+      }
+      > .header-menu__list {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &_nav {
+    color: $mainColor;
+    .header-menu__arrow {
+      color: $mainColor;
+    }
+  }
+  &__arrow {
+    transition: all 0.3s ease 0s;
+    &.active {
+      transform: rotate(180deg);
+    }
+  }
+  &__list {
+    transition: all 0.3s ease 0s;
+    top: rem(15);
+    right: rem(8);
+    position: absolute;
+    padding-top: rem(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    z-index: 999;
+    visibility: hidden;
+    cursor: pointer;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+
+    }
+  }
+  &__point {
+    background: $backgroundColor;
+    &:first-child {
+      border-radius: rem(8) rem(8) 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 rem(8) rem(8);
+    }
+    padding: rem(10);
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+    img {
+      width: rem(20);
+      height: rem(20);
+      border-radius: rem(5);
+    }
+    @media (any-hover: hover){
+      &:hover {
+        background: #413e3b;
+      }
+    }
+    &.active {
+      background: #413e3b;
+      cursor: not-allowed;
+    }
+  }
+}

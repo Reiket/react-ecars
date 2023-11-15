@@ -1,0 +1,32 @@
+@import "../../../../../../../../scss/base/mixins";
+
+.header-bottom {
+  &__form {
+    border: rem(1) solid #767676;
+    border-radius: rem(8);
+    padding: rem(5) rem(8);
+    visibility: hidden;
+    transform: translateX(35%);
+    transition: all .3s linear;
+    &.active {
+      transform: translateX(0%);
+      visibility: visible;
+      &_bottom {
+        visibility: visible;
+        transform: translateX(0%);
+        @media (max-width:em(635)) {
+          display: flex;
+        }
+      }
+    }
+  }
+  &__input {
+    outline: none;
+  }
+  &__btn {
+
+    svg {
+      transform: translateY(20%);
+    }
+  }
+}

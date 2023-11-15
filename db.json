@@ -47,7 +47,6 @@
         "type": "Crossover",
         "kilometers": "9,000",
         "wheels": "18´"
-
       }
     },
     {
@@ -120,7 +119,6 @@
         "type": "Sedan",
         "kilometers": "17, 000",
         "wheels": "18´"
-
       }
     },
     {
@@ -145,7 +143,6 @@
         "type": "Sedan",
         "kilometers": "25,000",
         "wheels": "18´"
-
       }
     },
     {
@@ -170,7 +167,6 @@
         "type": "Crossover",
         "kilometers": "27,000",
         "wheels": "18´"
-
       }
     },
     {
@@ -187,7 +183,7 @@
       "ship": 0,
       "added": "Dec 22, 2023",
       "views": 580,
-      "properties" : {
+      "properties": {
         "model": "Model S",
         "year": 2020,
         "color": "Black",

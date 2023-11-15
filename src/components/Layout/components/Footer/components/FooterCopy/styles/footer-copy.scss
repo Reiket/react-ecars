@@ -1,0 +1,22 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.footer {
+  &__copy {
+    @include adaptiveValue("padding-top", 60, 40);
+  }
+}
+.copy {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+  color: #767676;
+  font-size: rem(12);
+  line-height: math.div(16 , 12);
+  @media (max-width:$mobileSmall) {
+    flex-direction: column;
+    gap: rem(15);
+  }
+  &__text {
+    flex: 1 1 auto;
+  }
+}

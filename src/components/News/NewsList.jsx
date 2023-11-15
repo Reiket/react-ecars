@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogItem from "../Sections/Blog/BlogItem";
+import BlogItem from "../Pages/components/Home/components/Blog/components/BlogItem";
 
 const NewsList = ({isMoving}) => {
     return (

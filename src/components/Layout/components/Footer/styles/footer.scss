@@ -1,0 +1,21 @@
+@use "sass:math";
+@import "../../../../../scss/base/mixins";
+.footer {
+  background: #F6F5F4;
+  @include adaptiveValue("padding-top", 80, 45);
+  @include adaptiveValue("padding-bottom", 80, 45);
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: em(898)) {
+      flex-wrap: wrap;
+      row-gap: rem(20);
+      column-gap: rem(40);
+    }
+  }
+}
+
+//imports style with footer components
+@import "../components/FooterCopy/styles/footer-copy";
+@import "../components/FooterItem/styles/footer-item";

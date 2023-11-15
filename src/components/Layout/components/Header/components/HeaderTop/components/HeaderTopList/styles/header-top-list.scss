@@ -1,0 +1,31 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+.header-contacts {
+  &__social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 16, 8);
+  }
+  &__link {
+    display: flex;
+    gap: rem(6);
+    align-items: center;
+    color: #fff;
+    opacity: 70%;
+    transition: opacity 0.3s ease 0s;
+    svg {
+      font-size: rem(20);
+    }
+    @media (max-width:em(850)) {
+      span {
+        display: none;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}
