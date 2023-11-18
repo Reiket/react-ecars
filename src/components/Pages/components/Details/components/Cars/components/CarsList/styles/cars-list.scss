@@ -1,0 +1,41 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+
+
+.list-cars {
+  padding-top: rem(32);
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: $mobileSmall) {
+    gap: rem(24);
+  }
+  @media (max-width:em(1200)) {
+    flex-direction: column;
+  }
+  &__column {
+    @media (min-width:em(1200)) {
+      flex: 0 0 rem(392);
+    }
+  }
+  &__item {
+    display: flex;
+    padding: rem(10) 0;
+    align-items: center;
+    border-bottom: 1px solid #E6E6E6;
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      gap: rem(10);
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    flex: 1 1 auto;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+  }
+  &__text {
+    @media (min-width:$mobileSmall) {
+      flex: 0 0 rem(240);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+import React from 'react';
+import {SellDetailsPropsType} from "../../types/sell-details.types";
+// todo: позирити до offfers там всіх властивостей не треба, зробити окремий тип
+const SellList: React.FC<SellDetailsPropsType> = ({itemById}) => {
+    const checkValue = (value: string | number | boolean) => {
+        if (typeof value === "boolean") {
+            if (value) {
+                return "Can be export"
+            } else {
+                return "Not can be export"
+            }
+        } else {
+            return value
+        }
+    }
+    return <ul className="sell-details__list">
+        {itemById.properties && Object.entries(itemById.properties).slice(-4).map(([key, value]) => (
+            <li key={key} className="sell-details__property">
+                <h5 className="sell-details__name">{typeof value === 'boolean' ? "Export type" : key.charAt(0).toUpperCase() + key.slice(1)}</h5>
+                <div className="sell-details__text">{checkValue(value)}</div>
+            </li>
+        ))}
+    </ul>
+}
+
+export default SellList;

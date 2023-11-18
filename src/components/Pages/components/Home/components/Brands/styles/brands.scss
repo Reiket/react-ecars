@@ -1,0 +1,33 @@
+
+@import "../../../../../../../scss/base/mixins";
+.brands {
+  background: #F6F5F4;
+  &__body {
+    padding-top: rem(48);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(184), 1fr));
+    gap: rem(24);
+    &.loader {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__all {
+    padding-top: rem(16);
+    @media (any-hover: hover){
+      &:hover {
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    &.less {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+@import "../components/styles/brands-card";

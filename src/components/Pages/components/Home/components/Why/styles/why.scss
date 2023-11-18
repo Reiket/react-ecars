@@ -1,0 +1,82 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.why {
+  border-top: rem(1) solid #E6E6E6;
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(24);
+    @media (max-width:$mobile) {
+      flex-direction: column-reverse;
+      gap: rem(35);
+    }
+  }
+
+  &__image {
+    @media (max-width:$tablet) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+    @include adaptiveValue("padding-right", 104, 30, 1920, 991, 1);
+    @include adaptiveValue("padding-left", 104, 30, 1920, 991, 1);
+    @media (max-width:$tablet) {
+      flex: 0 0 rem(345);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(24, 38);
+    }
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(24 , 16);
+    @media (min-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: em(48, 16);
+      }
+    }
+    p {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+.advantages-why {
+  &__item {
+    margin-left: rem(20);
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: em(8, 16);
+    }
+    &::before {
+      content:'';
+      position: absolute;
+      width: rem(16);
+      height: rem(2);
+      background: #E49A49;
+      top: rem(9);
+      left: rem(-36);
+    }
+  }
+}

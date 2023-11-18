@@ -1,0 +1,28 @@
+@use "sass:math";
+@import "../../../../../scss/base/mixins";
+.details {
+  padding-top: rem(24);
+  @include adaptiveValue("padding-bottom", 96 , 50);
+  border-top: 1px solid #E6E6E6;
+  &__path {
+    color: #767676;
+    padding-bottom: rem(16);
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(24);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    @media (min-width:em(1260)) {
+      flex: 0 0 rem(392);
+    }
+  }
+}
+
+@import "../components/Cars/styles/cars";
+@import "../components/Cars/styles/gallery";
+

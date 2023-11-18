@@ -1,0 +1,53 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.send {
+  background: $backgroundColor;
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    @media (max-width:em(850)) {
+      flex-direction: column;
+      gap: rem(30);
+    }
+    @media (min-width:em(850)) {
+      align-items: center;
+    }
+  }
+
+  &__content {
+    color: #ffffff;
+    @media (min-width:em(850)) {
+      flex: 0 0 rem(470);
+    }
+  }
+  &__get {
+    display: flex;
+    justify-content: flex-end;
+    @media (min-width:em(850)) {
+      flex: 0 0 rem(338);
+    }
+  }
+  &__title {
+    font-size: rem(22);
+    line-height: math.div(24.6 ,22 );
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(24, 22);
+    }
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(24 , 16);
+  }
+
+  &__button {
+    @media (max-width:em(850)) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

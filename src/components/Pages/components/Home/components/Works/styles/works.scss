@@ -1,0 +1,35 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.works {
+  &__top {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(24, 38);
+    }
+  }
+
+  &__text {
+    color: #484848;
+    font-size: rem(16);
+    line-height: math.div(24 , 16);
+    &_width {
+      max-width: rem(600);
+    }
+  }
+  &__inner {
+    display: grid;
+    padding-top: rem(48);
+    grid-template-columns: repeat(auto-fit, minmax(rem(288), 1fr));
+    gap: rem(24);
+  }
+}
+
+@import "../components/styles/works-item";
+
+

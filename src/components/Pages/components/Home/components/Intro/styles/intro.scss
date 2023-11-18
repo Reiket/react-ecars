@@ -1,0 +1,59 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.intro {
+  background: url("../../../../../../../../public/assets/image/intro/intro.png") no-repeat center / cover;
+  @include adaptiveValue("height", 600, 400);
+  &__body {
+    @include adaptiveValue("padding-top", 120, 40);
+    @include adaptiveValue("padding-bottom", 120, 40);
+    @include adaptiveValue("max-width",600 , 300);
+  }
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 60, 35);
+    line-height: math.div(69 , 60);
+    &:not(:last-child) {
+      margin-bottom: em(32, 60);
+    }
+  }
+  &__contacts {
+    display: flex;
+    @include adaptiveValue("gap", 32, 20);
+    align-items: center;
+    @media (max-width:$tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+      max-width: rem(344);
+    }
+  }
+  &__button {
+    @media (max-width:$tablet) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 18, 10);
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+    }
+
+  }
+  &__item {
+    a {
+      display: flex;
+      align-items: center;
+      gap: rem(6);
+      font-weight: 600;
+      line-height: math.div(20 , 14);
+      transition: color .3s ease-in;
+      @media (any-hover: hover){
+        &:hover {
+          color: $greenColor;
+        }
+      }
+    }
+  }
+}

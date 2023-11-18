@@ -44,27 +44,6 @@
     background: #FFF;
     padding: rem(16);
   }
-  &__possibility {
-    color: #767676;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: color .3s linear;
-    @media (any-hover: hover){
-      &:hover {
-        color: #3a3838;
-      }
-    }
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: rem(4);
-    line-height: math.div(20 , 14);
-    svg {
-      font-size: rem(16);
-    }
-  }
   &__title {
     padding-top: rem(16);
     font-size: rem(22);

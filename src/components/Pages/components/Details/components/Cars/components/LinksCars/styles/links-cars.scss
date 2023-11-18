@@ -1,0 +1,39 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+
+.links-cars {
+  padding-top: rem(32);
+  &__title {
+    font-size: rem(22);
+    line-height: math.div(24.6 , 22);
+    font-weight: 600;
+  }
+  &__body {
+    padding-top: rem(24);
+    display: flex;
+    @media (max-width:em(620)) {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    @media (min-width:em(600)) {
+      flex: 0 0 rem(392);
+    }
+  }
+  &__link {
+    color: $greenColor;
+    transition: all .3s linear;
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+    @media (any-hover: hover){
+      &:hover {
+        color: #1f3b23;
+        font-weight: 500;
+      }
+    }
+  }
+}

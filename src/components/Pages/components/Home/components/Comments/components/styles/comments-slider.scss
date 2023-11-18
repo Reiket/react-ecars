@@ -1,0 +1,53 @@
+@use "sass:math";
+@import "../../../../../../../../scss/base/mixins";
+.comments-slider {
+  &__item {
+    box-shadow: 0 8px 16px 0 #1C1E2214;
+    padding: rem(32);
+    background: #ffffff;
+
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__avatar {
+  }
+
+  &__info {
+    flex: 1 1 auto;
+  }
+
+  &__fullname {
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+
+  }
+
+  &__brand {
+    color: #767676;
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+  }
+
+  &__rating {
+    color: #E49A49;
+    font-size: rem(16);
+    display: flex;
+    align-items: center;
+    gap: rem(2);
+  }
+
+  &__text {
+    padding-top: rem(24);
+    font-size: rem(15);
+    line-height: math.div(24 , 16);
+  }
+}

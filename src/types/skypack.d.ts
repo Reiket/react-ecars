@@ -9,3 +9,4 @@ declare module 'https://cdn.skypack.dev/preact' {
 declare module 'https://cdn.skypack.dev/preact-router' {
     export * from 'preact-router';
 }
+declare module 'react-copy-to-clipboard/src';

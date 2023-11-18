@@ -1,0 +1,61 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+
+.communication {
+  background: $backgroundColor;
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width:em(800)) {
+      flex-direction: column;
+      gap: rem(40);
+    }
+  }
+
+  &__item {
+    @include adaptiveValue("padding-right", 104, 30);
+    @include adaptiveValue("padding-left", 104, 30);
+    @media (min-width:em(800)) {
+      &:not(:last-child) {
+        border-right: rem(1) solid #ffffff;
+      }
+    }
+    color: #ffffff;
+  }
+
+  &__icon {
+    font-size: rem(38);
+    &:not(:last-child) {
+      margin-bottom: em(24, 38);
+    }
+  }
+
+  &__title {
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: math.div(24.6 , 22);
+    &:not(:last-child) {
+      margin-bottom: em(24, 22);
+    }
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(24 , 16);
+    &:not(:last-child) {
+      margin-bottom: em(48, 16);
+    }
+  }
+
+  &__button {
+    @media (max-width:em(800)) {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

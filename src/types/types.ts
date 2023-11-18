@@ -6,6 +6,8 @@ type PropertiesType = {
     type: string
     kilometers: string
     wheels: string
+    location: string
+    isExport: boolean
 }
 export type ItemsType = {
     id: number

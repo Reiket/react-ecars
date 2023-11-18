@@ -22,7 +22,9 @@
         "color": "Black",
         "type": "Crossover",
         "kilometers": "15,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Dubai",
+        "isExport": true
       }
     },
     {
@@ -46,7 +48,9 @@
         "color": "Black",
         "type": "Crossover",
         "kilometers": "9,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Mexico",
+        "isExport": false
       }
     },
     {
@@ -70,7 +74,9 @@
         "color": "Black",
         "type": "Sedan",
         "kilometers": "25,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Paris",
+        "isExport": true
       }
     },
     {
@@ -94,7 +100,9 @@
         "color": "White",
         "type": "Minivan",
         "kilometers": "30,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Barcelona",
+        "isExport": false
       }
     },
     {
@@ -118,7 +126,9 @@
         "color": "Grey",
         "type": "Sedan",
         "kilometers": "17, 000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "London",
+        "isExport": true
       }
     },
     {
@@ -142,7 +152,9 @@
         "color": "Black",
         "type": "Sedan",
         "kilometers": "25,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Kiev",
+        "isExport": true
       }
     },
     {
@@ -166,7 +178,9 @@
         "make": "Lexus",
         "type": "Crossover",
         "kilometers": "27,000",
-        "wheels": "18´"
+        "wheels": "18´",
+        "location": "Dublin",
+        "isExport": false
       }
     },
     {
@@ -189,7 +203,9 @@
         "color": "Black",
         "make": "Tesla",
         "type": "Electric",
-        "kilometers": "2,000"
+        "kilometers": "2,000",
+        "location": "Rome",
+        "isExport": true
       }
     },
     {

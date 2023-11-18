@@ -1,0 +1,26 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.bottom-intro {
+  &__container {
+    background: #ffffff;
+    border-radius: rem(16);
+    box-shadow: 0 12px 32px 0 #1C1E2214;
+    @media (min-width:em(820)) {
+      transform: translateY(rem(-80));
+    }
+  }
+
+  &__body {
+    padding: rem(40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(40);
+    @media (max-width:em(800)) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: rem(20) 0;
+    }
+  }
+}
+@import "../components/styles/bottom-intro-item";

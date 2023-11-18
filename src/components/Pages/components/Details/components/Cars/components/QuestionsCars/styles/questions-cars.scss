@@ -1,0 +1,37 @@
+@use "sass:math";
+@import "../../../../../../../../../scss/base/mixins";
+.questions-cars {
+  box-shadow: 0 8px 16px 0 #1C1E2214;
+  margin-top: rem(32);
+  justify-content: space-between;
+  padding: rem(16);
+  display: flex;
+  align-items: center;
+  @media (max-width:em(1260)) {
+    flex-direction: column;
+    gap: rem(30);
+  }
+  &__body {
+    @media (min-width:em(1260)) {
+      flex: 0 0 rem(617);
+    }
+  }
+  &__title {
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: math.div(26.4 , 22);
+    &:not(:last-child) {
+      margin-bottom: em(12, 22);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+  }
+  &__button {
+    font-size: rem(16);
+    @media (max-width:em(1260)) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

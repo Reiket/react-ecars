@@ -1,0 +1,25 @@
+import React from 'react';
+import {MdKeyboardArrowDown} from "react-icons/md";
+import {CarsDescriptionPropsType} from "./types/cars-description.types";
+
+const CarsDescription: React.FC<CarsDescriptionPropsType> = ({itemById}) => {
+    const [isMoreOpen, setIsMoreOpen] = React.useState(false);
+    const onClickToMore = () => {
+        setIsMoreOpen(prev => !prev)
+    }
+    return <div className="cars__description">
+        <h2 className="cars__title title">Description</h2>
+        <div className="cars__text">
+            <p>{itemById.name} Electric Leather Seats [RHD Japan Import] Premium Condition.</p>
+            <p> ----------------------------------------------------------------------------------------------------------------------</p>
+            <p> Quis blandit turpis cursus in hac. In hendrerit gravida rutrum quisque. Pellentesque habitant morbi tristique senectus et. Eget gravida cum sociis natoque. Pharetra diam sit amet nisl suscipit adipiscing bibendum.</p>
+            <p> Porttitor massa id neque aliquam. In fermentum posuere urna nec. Rhoncus aenean vel elit scelerisque mauris pellentesque. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Consequat id porta nibh venenatis cras sed.</p>
+        </div>
+        {isMoreOpen && <div className="cars__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eos fugit, inventore minus modi quos ratione. Aut enim illum modi neque nesciunt quasi qui quidem quo repellat rerum. Culpa, quas?</p>
+        </div>}
+        <button onClick={onClickToMore} className="cars__link all">{isMoreOpen ? "Hide More" : "More"} <MdKeyboardArrowDown/></button>
+    </div>
+}
+
+export default CarsDescription;

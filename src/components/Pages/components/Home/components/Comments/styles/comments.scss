@@ -1,0 +1,45 @@
+@use "sass:math";
+@import "../../../../../../../scss/base/mixins";
+.about {
+  background: #F6F5F4;
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+
+  &__title {
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    @media (max-width:$mobileSmall) {
+      align-self: flex-start;
+    }
+  }
+
+  &__button {
+  }
+
+  &__inner {
+    padding-top: rem(48);
+    display: flex;
+  }
+  &__slider {
+
+  }
+}
+
+@import "../components/styles/comments-slider";

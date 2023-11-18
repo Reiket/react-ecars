@@ -1,0 +1,21 @@
+
+@import "../../../../../../../../scss/base/mixins";
+.brands {
+  &__item {
+    background: #ffffff;
+    box-shadow: 0px 8px 16px 0px #1C1E2214;
+    border-radius: rem(8);
+    padding: rem(16) rem(52);
+    text-align: center;
+  }
+  &__image {
+    img {
+      width: rem(80);
+      height: rem(60);
+    }
+  }
+  &__name {
+    padding-top: rem(12);
+    font-weight: 600;
+  }
+}

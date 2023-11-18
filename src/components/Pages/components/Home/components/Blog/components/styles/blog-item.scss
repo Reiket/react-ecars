@@ -1,0 +1,48 @@
+@use "sass:math";
+@import "../../../../../../../../scss/base/mixins";
+.item-blog {
+  box-shadow: 0 8px 16px 0 #1C1E2214;
+  background: #ffffff;
+  &_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    padding: rem(16);
+  }
+  &__category {
+    padding: rem(2) rem(6) rem(2) rem(6);
+    border-radius: rem(4);
+    font-size: rem(12);
+    font-weight: 600;
+    line-height: math.div(16 , 12);
+    &_blue {
+      background: #E6F4FF;
+      color: #0394FC;
+    }
+    &_orange {
+      background: #FFF1E8;
+      color: #DD7437;
+    }
+  }
+  &__title {
+    padding-top: rem(12);
+    font-size: rem(18);
+    line-height: math.div(21.6 , 18);
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(12, 18);
+    }
+  }
+  &__text {
+    color: #484848;
+    line-height: math.div(20 , 14);
+
+  }
+}
