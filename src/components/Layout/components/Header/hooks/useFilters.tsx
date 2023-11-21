@@ -23,10 +23,12 @@ export const useFilters = () => {
     }, []);
 
     React.useEffect(() => {
-        navigateSearch("/", {
-            ship: `${filters.shipNumber}`,
-            currency: `${filters.currency}`
-        });
+        if (location.pathname === "/") {
+            navigateSearch("/", {
+                ship: `${filters.shipNumber}`,
+                currency: `${filters.currency}`
+            });
+        }
     }, [filters]);
 
     const onClickToFilters = (shipNumber: number, currency: number) => {

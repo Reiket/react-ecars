@@ -1,0 +1,15 @@
+@import "../../../../../../../../../scss/base/mixins";
+
+.info-details {
+  @media (max-width:$mobile) {
+    padding-top: rem(20);
+  }
+  &__date {
+    padding-top: rem(24);
+    color: #767676;
+    text-align: center;
+
+  }
+}
+@import "../components/SellDetails/styles/sell-details";
+@import "../components/InspectionDetails/styles/inspection-details";

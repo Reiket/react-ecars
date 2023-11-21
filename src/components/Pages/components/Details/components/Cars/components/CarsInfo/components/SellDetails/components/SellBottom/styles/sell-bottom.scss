@@ -1,0 +1,66 @@
+@use "sass:math";
+@import "../../../../../../../../../../../../../scss/base/mixins";
+.bottom-sell {
+  background: #F6F5F4;
+  padding: rem(16);
+  display: flex;
+  border-top: rem(1) solid #E6E6E6;
+  border-radius: 0 0 rem(8) rem(8);
+  flex-direction: column;
+  &__title {
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(8, 16);
+    }
+  }
+  &__text {
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+  &__button {
+    text-align: center;
+    width: 100%;
+    margin-bottom: rem(12);
+  }
+  &__contacts {
+    border: rem(1) solid #D1D1D1;
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__link {
+    padding: rem(14);
+    text-align: center;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
+    gap: rem(6);
+    @media (any-hover: hover){
+      &:hover {
+        background: #d5d3d3;
+        &:first-child {
+          border-radius: rem(8) rem(8) 0 0;
+        }
+        &:last-child {
+          border-radius: 0 0 rem(8) rem(8);
+        }
+      }
+    }
+    svg {
+      font-size: rem(18);
+    }
+    &:not(:last-child) {
+      border-bottom: rem(1) solid #D1D1D1;
+    }
+  }
+}
+
+@import "../components/DetailsPopup/styles/details-popup";

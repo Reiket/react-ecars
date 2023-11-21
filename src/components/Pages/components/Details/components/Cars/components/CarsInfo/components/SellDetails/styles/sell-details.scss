@@ -1,0 +1,33 @@
+@use "sass:math";
+@import "../../../../../../../../../../../scss/base/mixins";
+.sell-details {
+  border: rem(1) solid #E6E6E6;
+  border-radius: rem(8);
+  &__top {
+    border-radius: rem(8) rem(8) 0 0;
+    background: #FFF;
+    padding: rem(16);
+  }
+  &__title {
+    padding-top: rem(16);
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: math.div(26.4 , 22);
+    &:not(:last-child) {
+      margin-bottom: em(16, 22);
+    }
+  }
+  &__price {
+    font-size: rem(26);
+    line-height: math.div(30 , 26);
+    color: $greenColor;
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(16, 26);
+    }
+  }
+}
+
+@import "../components/SellPosibility/styles/sell-possibility";
+@import "../components/SellList/styles/sell-list";
+@import "../components/SellBottom/styles/sell-bottom";

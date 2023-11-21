@@ -1,0 +1,15 @@
+@import "../../../../../../../../../../../scss/base/mixins";
+.inspection-details {
+  margin-top: rem(24);
+  border-radius: rem(8);
+  padding: rem(16);
+  background: linear-gradient(0deg, #FFEDD3, #FFEDD3),
+  linear-gradient(0deg, #FFF7EB, #FFF7EB);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #FFEDD3;
+}
+
+@import "../components/InspectionContent/styles/inspection-content";
+@import "../components/InspectionList/styles/inspection-list";
+@import "../components/InspectionTop/styles/inspection-top";

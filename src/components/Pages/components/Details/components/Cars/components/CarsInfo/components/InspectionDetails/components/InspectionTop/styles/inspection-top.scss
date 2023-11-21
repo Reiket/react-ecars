@@ -1,0 +1,29 @@
+@use "sass:math";
+@import "../../../../../../../../../../../../../scss/base/mixins";
+.inspection-details {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: rem(30);
+  }
+  &__title {
+    font-size: rem(22);
+    line-height: math.div(26.4 , 22);
+    font-weight: 600;
+  }
+  &__check {
+    background: #E49A49;
+    padding: rem(4) rem(8);
+    border-radius: rem(8);
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+    color: #000000;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: rem(20);
+    }
+  }
+}

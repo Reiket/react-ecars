@@ -1,0 +1,56 @@
+@import "../../../../../../../../../../../../../../../scss/base/mixins";
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: rem(20);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .3s linear;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  &__body {
+
+  }
+  &__content {
+    visibility: visible;
+    background-color: #fff;
+    padding: rem(20);
+    width: 100%;
+    max-width: rem(900);
+    border-radius: rem(20);
+    text-align: center;
+    .lock & {
+      visibility: visible;
+    }
+  }
+  &__check {
+    img {
+      width: rem(130);
+      height: rem(130);
+    }
+  }
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 25, 20);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+  &__text {
+    font-weight: 500;
+    font-size: rem(16);
+  }
+}

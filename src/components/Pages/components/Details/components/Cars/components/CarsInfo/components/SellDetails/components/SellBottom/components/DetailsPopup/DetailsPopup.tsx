@@ -1,8 +1,6 @@
 import React from 'react';
-type PropsType = {
-    isOpenPopup: boolean
-}
-const DetailsPopup: React.FC<PropsType> = ({isOpenPopup}) => {
+import {DetailsPopupPropsType} from "./types/details-popup.types";
+const DetailsPopup: React.FC<DetailsPopupPropsType> = ({isOpenPopup}) => {
     return (
         <div className={isOpenPopup ? "popup active": "popup"}>
             <div className="popup__body">

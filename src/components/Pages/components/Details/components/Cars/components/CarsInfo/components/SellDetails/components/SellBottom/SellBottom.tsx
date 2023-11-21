@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailsPopup from "../../../../../../../../../../../Other/Popup/DetailsPopup";
+import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
 import {useClickOutside} from "../../../../../../../../../../../../utils/hooks/useClickOutside";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
 

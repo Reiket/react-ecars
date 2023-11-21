@@ -1,0 +1,15 @@
+@use "sass:math";
+@import "../../../../../../../../../../../../../scss/base/mixins";
+.inspection-details {
+  &__item {
+    display: flex;
+    line-height: math.div(20 , 14);
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+  &__name {
+    font-weight: 600;
+    flex: 0 0 rem(160);
+  }
+}
