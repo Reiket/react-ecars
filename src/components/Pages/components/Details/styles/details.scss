@@ -1,11 +1,11 @@
 @use "sass:math";
-@import "../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .details {
   padding-top: rem(24);
   @include adaptiveValue("padding-bottom", 96 , 50);
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid $color-border-white;
   &__path {
-    color: #767676;
+    color: $color-light-gray;
     padding-bottom: rem(16);
   }
   &__body {
@@ -22,7 +22,6 @@
     }
   }
 }
-
 .details__loader {
   display: flex;
   justify-content: center;
@@ -30,7 +29,7 @@
   width: 100% !important;
   height: 45vh !important;
 }
-
+//Imports children components
 @import "../components/Cars/styles/cars";
 @import "../components/Cars/styles/gallery";
 

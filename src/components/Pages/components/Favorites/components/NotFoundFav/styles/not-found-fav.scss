@@ -1,0 +1,33 @@
+@import "../../../../../../../utils/styles/base/mixins";
+.not-found-fav {
+  display: flex;
+
+  &__container {
+    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-bottom", 120, 80);
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+  &__text {
+    font-size: rem(16);
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+    span {
+      font-weight: 700;
+      color: $greenColor;
+    }
+  }
+  &__btn {
+    padding: rem(8) rem(60);
+    @media (max-width:$mobileSmall) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

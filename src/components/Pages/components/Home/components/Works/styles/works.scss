@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .works {
   &__top {
     display: grid;
@@ -15,7 +15,7 @@
   }
 
   &__text {
-    color: #484848;
+    color: $color-gray;
     font-size: rem(16);
     line-height: math.div(24 , 16);
     &_width {

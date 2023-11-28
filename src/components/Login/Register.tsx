@@ -1,12 +1,13 @@
 import React from 'react';
 import {BsCheck} from "react-icons/bs";
+import Title from "../Shared/components/Title";
 
 const Register: React.FC = () => {
     return (
         <section className="section__auth auth">
             <div className="auth__container">
                 <div className="auth__body">
-                    <h2 className="auth__title title">Sing up</h2>
+                    <Title text={"Sing up"} classnames={"auth__title"}/>
                     <form className="auth__form">
                         <label className="auth__label">
                             <span>Full name</span>

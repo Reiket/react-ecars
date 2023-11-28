@@ -3,6 +3,7 @@ import {AiFillLinkedin, AiOutlineCalendar, AiOutlineEye, AiOutlineLink, AiOutlin
 import {RiPriceTag3Line} from "react-icons/ri";
 import {BiLogoFacebook} from "react-icons/bi";
 import BlogItem from "../Pages/components/Home/components/Blog/components/BlogItem";
+import Title from "../Shared/components/Title";
 
 const NewsCard = () => {
     return (
@@ -10,7 +11,7 @@ const NewsCard = () => {
             <div className="news-card__container">
                 <div className="news-card__url">Home Blog Guides 7 tips when buying a new car in UAE</div>
                 <div className="news-card__body">
-                    <h2 className="news-card__title title">7 tips when buying a new car in UAE</h2>
+                    <Title text={"7 tips when buying a new car in UAE"} classnames={"news-card__title"}/>
                     <ul className="news-card__list">
                         <button className="item-blog__category item-blog__category_guide">Guides</button>
                         <li className="news-card__text"><AiOutlineCalendar/>Jan 14, 2023</li>

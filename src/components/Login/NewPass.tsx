@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from "../Shared/components/Title";
 
 const NewPass: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const NewPass: React.FC = () => {
             <div className="auth__container">
                 <div className="auth__body">
                     <div className="auth__top">
-                        <h2 className="auth__title title">Set a new password</h2>
+                        <Title text={"Set a new password"} classnames={"auth__title"}/>
                     </div>
                     <div className="auth__text">Your new password must be different from your previously used passwords.</div>
                     <form className="auth__form">

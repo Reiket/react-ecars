@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 .section-offers {
   &__container {}
   &__top {
@@ -9,9 +9,6 @@
     @include adaptiveValue("column-gap", 40, 25, 480, 320, 1 );
     row-gap: rem(15);
     flex-wrap: wrap;
-  }
-  &__title {
-
   }
   &__navigation {
     font-size: rem(20);

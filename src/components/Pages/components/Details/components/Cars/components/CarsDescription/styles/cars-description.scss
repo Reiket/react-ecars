@@ -1,6 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../../scss/base/mixins";
-
+@import "/src/utils/styles/base";
 .cars {
   &__description {
     padding-top: rem(32);

@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from "../Shared/components/Title";
 
 const Reset: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const Reset: React.FC = () => {
             <div className="auth__container">
                 <div className="auth__body">
                     <div className="auth__top">
-                        <h2 className="auth__title title auth__title_reset">Password has been reset</h2>
+                        <Title text={"Password has been reset"} classnames={"Password has been reset"}/>
                     </div>
                     <div className="auth__text">Your password has been successfully reset. Click the button below to log in.</div>
                     <form className="auth__form">

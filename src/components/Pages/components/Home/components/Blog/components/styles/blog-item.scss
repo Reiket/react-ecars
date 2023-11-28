@@ -1,8 +1,8 @@
 @use "sass:math";
-@import "../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .item-blog {
-  box-shadow: 0 8px 16px 0 #1C1E2214;
-  background: #ffffff;
+  box-shadow: 0 rem(8) rem(16) 0 #1C1E2214;
+  background: $color-white;
   &_big {
     grid-column: span 2;
     grid-row: span 2;
@@ -41,7 +41,7 @@
     }
   }
   &__text {
-    color: #484848;
+    color: $color-gray;
     line-height: math.div(20 , 14);
 
   }

@@ -4,6 +4,8 @@ import CommentsSlider from "./components/CommentsSlider";
 import {fetchComments} from "../../../../../../redux/reducers/comments-reducer";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../../../../../../redux/store";
+import NavigationBtn from "../../../../../Shared/components/NavigationBtn";
+import Title from "../../../../../Shared/components/Title";
 
 const Comments: React.FC = () => {
     const dispatch: AppDispatch = useDispatch()
@@ -15,11 +17,8 @@ const Comments: React.FC = () => {
             <div className="comments__container">
                 <div className="comments__body">
                     <div className="comments__top">
-                        <h2 className="comments__title title">Our happy clients say about us</h2>
-                        <div className="comments__navigation">
-                            <button className="comments__button slider-button comments__prev"><MdOutlineKeyboardArrowLeft/></button>
-                            <button className="comments__button slider-button comments__next"><MdOutlineKeyboardArrowRight/></button>
-                        </div>
+                        <Title text={"Our happy clients say about us"}/>
+                        <NavigationBtn classnames={"comments"}/>
                     </div>
                     <div className="comments__inner">
                        <CommentsSlider/>

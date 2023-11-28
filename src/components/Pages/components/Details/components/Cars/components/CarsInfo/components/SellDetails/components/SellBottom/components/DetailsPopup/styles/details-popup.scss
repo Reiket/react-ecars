@@ -1,4 +1,4 @@
-@import "../../../../../../../../../../../../../../../scss/base/mixins";
+@import "../../../../../../../../../../../../../../../utils/styles/base/mixins";
 .popup {
   position: fixed;
   top: 0;
@@ -26,7 +26,7 @@
   }
   &__content {
     visibility: visible;
-    background-color: #fff;
+    background-color: $color-white;
     padding: rem(20);
     width: 100%;
     max-width: rem(900);

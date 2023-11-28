@@ -1,8 +1,8 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 .bottom-intro {
   &__container {
-    background: #ffffff;
+    background: $color-white;
     border-radius: rem(16);
     box-shadow: 0 12px 32px 0 #1C1E2214;
     @media (min-width:em(820)) {

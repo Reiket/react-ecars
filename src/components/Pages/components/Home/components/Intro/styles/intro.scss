@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 .intro {
   background: url("../../../../../../../../public/assets/image/intro/intro.png") no-repeat center / cover;
   @include adaptiveValue("height", 600, 400);

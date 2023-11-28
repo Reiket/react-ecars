@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 .send {
-  background: $backgroundColor;
+  background: $color-background-dark;
   &__container {
   }
 
@@ -18,7 +18,7 @@
   }
 
   &__content {
-    color: #ffffff;
+    color: $color-white;
     @media (min-width:em(850)) {
       flex: 0 0 rem(470);
     }

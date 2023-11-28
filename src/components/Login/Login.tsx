@@ -1,11 +1,12 @@
 import React from 'react';
+import Title from "../Shared/components/Title";
 
 const Login: React.FC = () => {
     return (
         <section className="section__auth auth">
             <div className="auth__container">
                 <div className="auth__body">
-                    <h2 className="auth__title title">Login</h2>
+                    <Title text={"Login"} classnames={"auth__title"}/>
                     <form className="auth__form">
                         <label className="auth__label">
                             <span>Email address</span>

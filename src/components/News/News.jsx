@@ -5,6 +5,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import NewsList from "./NewsList";
 import NewsPost from "./NewsPost";
+import Title from "../Shared/components/Title";
 
 const News = () => {
     const [isMoving, setIsMoving] = React.useState(false);
@@ -22,7 +23,7 @@ const News = () => {
         <section className="section__news news">
             <div className="news__container">
                 <div className="news__top">
-                    <h2 className="news__title title">Blog & News</h2>
+                    <Title text={"Blog & News"} classnames={"news__title"}/>
                     <div className="news__text">Company and car market news, as well as car selection guides and car reviews from our authors.</div>
                 </div>
                 <div className="news__body">

@@ -1,4 +1,4 @@
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 .header-bottom {
   padding: rem(12) rem(0);
   &__body {
@@ -23,7 +23,7 @@
       width: 38%;
       height: rem(110);
       position: absolute;
-      background: #ffffff;
+      background: $color-white;
       top: 0;
       left: -100%;
       visibility: hidden;

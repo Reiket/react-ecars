@@ -1,0 +1,44 @@
+@use "sass:math";
+@import "/src/utils/styles/base";
+
+.favorites {
+  &__body {
+    padding-top: rem(30);
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    flex-wrap: wrap;
+    @media (max-width:em(630)) {
+      display: grid;
+      svg {
+        width: 100%;
+      }
+    }
+  }
+  &__item {
+    box-shadow: 0 rem(8) rem(16) 0 $color-shadow;
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 rem(288);
+    @media (min-width:em(630)) {
+      min-height: rem(330);
+    }
+    .card__image {
+      @media (max-width:em(630)) {
+        img {
+          height: rem(250);
+        }
+      }
+      @media (max-width:em(550)) {
+        img {
+          height: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+//Imports children components
+@import "../components/NotFoundFav/styles/not-found-fav";

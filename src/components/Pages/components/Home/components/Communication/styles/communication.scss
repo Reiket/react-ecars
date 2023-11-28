@@ -1,8 +1,8 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "../../../../../../../utils/styles/base/mixins";
 
 .communication {
-  background: $backgroundColor;
+  background: $color-background-dark;
   &__container {
   }
 
@@ -17,14 +17,14 @@
   }
 
   &__item {
+    color: $color-white;
     @include adaptiveValue("padding-right", 104, 30);
     @include adaptiveValue("padding-left", 104, 30);
     @media (min-width:em(800)) {
       &:not(:last-child) {
-        border-right: rem(1) solid #ffffff;
+        border-right: rem(1) solid $color-white;
       }
     }
-    color: #ffffff;
   }
 
   &__icon {

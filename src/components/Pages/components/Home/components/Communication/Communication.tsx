@@ -28,7 +28,7 @@ const Communication: React.FC = () => {
                             <div className="communication__icon">{item.icon}</div>
                             <h3 className="communication__title">{item.title}</h3>
                             <div className="communication__text">{item.text}</div>
-                            <a href="/" className={item.btnText !== "Contact Us" ? attributes : attributes + "green-button_white"}>{item.btnText}</a>
+                            <a href="/" className={item.btnText !== "Contact Us" ? attributes : attributes + " green-button_white"}>{item.btnText}</a>
                         </div>
                     ))}
                 </div>

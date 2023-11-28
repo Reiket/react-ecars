@@ -1,4 +1,4 @@
-@import "../../../../../scss/base/mixins";
+@import "../../../../../utils/styles/base/mixins";
 .section {
   &__auth {
     @include adaptiveValue("padding-top", 48, 20);

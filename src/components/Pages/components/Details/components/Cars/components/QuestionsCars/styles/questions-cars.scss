@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .questions-cars {
-  box-shadow: 0 8px 16px 0 #1C1E2214;
+  box-shadow: 0 rem(8) rem(16) 0 $color-shadow;
   margin-top: rem(32);
   justify-content: space-between;
   padding: rem(16);

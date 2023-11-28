@@ -1,11 +1,12 @@
 @use "sass:math";
-@import "../../../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base/mixins";
+@import "/src/utils/styles/base/colors";
 .sell-details {
-  border: rem(1) solid #E6E6E6;
+  border: rem(1) solid $color-border-white;
   border-radius: rem(8);
   &__top {
     border-radius: rem(8) rem(8) 0 0;
-    background: #FFF;
+    background: $color-white;
     padding: rem(16);
   }
   &__title {

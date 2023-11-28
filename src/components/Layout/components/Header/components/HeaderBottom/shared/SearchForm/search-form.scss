@@ -1,8 +1,8 @@
-@import "../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 
 .header-bottom {
   &__form {
-    border: rem(1) solid #767676;
+    border: rem(1) solid $color-light-gray;
     border-radius: rem(8);
     padding: rem(5) rem(8);
     visibility: hidden;
@@ -24,7 +24,6 @@
     outline: none;
   }
   &__btn {
-
     svg {
       transform: translateY(20%);
     }

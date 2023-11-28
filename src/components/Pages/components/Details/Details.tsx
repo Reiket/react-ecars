@@ -8,8 +8,11 @@ import {AppDispatch} from "../../../../redux/store";
 import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
 import Cars from "./components/Cars/Cars";
 import Loader from "../../../Shared/components/Loader";
+import {useNavigateSearch} from "../../../../utils/hooks/useSearchNavigate";
 
 const Details: React.FC = () => {
+    const navigateSearch = useNavigateSearch();
+
     const {id} = useParams();
     const dispatch: AppDispatch = useDispatch();
     const {shipNumber, currency} = useSelector(selectFilters)

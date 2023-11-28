@@ -10,7 +10,7 @@ type PropsType = {
 const HeaderUtils: React.FC<PropsType> = ({isSearch, onClickToSearch}) => {
     return (
         <div className="header-bottom__utils">
-            <SearchForm isSearch={window.innerWidth > 560 ? isSearch : false}/>
+            {/*<SearchForm isSearch={window.innerWidth > 560 ? isSearch : false}/>*/}
             <AiOutlineSearch onClick={onClickToSearch} className="header-bottom__icon header-bottom__icon_none"/>
             <Link to={"/favorites"}><AiOutlineHeart className="header-bottom__icon header-bottom__icon_none"/></Link>
             <Link to={"/login"}><BiUserCircle className="header-bottom__icon header-bottom__icon_none"/></Link>

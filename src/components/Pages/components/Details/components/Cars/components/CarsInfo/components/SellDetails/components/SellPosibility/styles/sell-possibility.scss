@@ -1,15 +1,15 @@
 @use "sass:math";
-@import "../../../../../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .sell-details {
   &__possibility {
-    color: #767676;
+    color: $color-light-gray;
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: color .3s linear;
     @media (any-hover: hover){
       &:hover {
-        color: #3a3838;
+        color: $color-sell-possibility;
       }
     }
   }

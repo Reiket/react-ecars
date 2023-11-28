@@ -1,7 +1,7 @@
 
-@import "../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .brands {
-  background: #F6F5F4;
+  background: $color-background-white;
   &__body {
     padding-top: rem(48);
     display: grid;

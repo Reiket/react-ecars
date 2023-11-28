@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaArrowLeftLong} from "react-icons/fa6";
+import Title from "../Shared/components/Title";
 
 const ForgotPass: React.FC = () => {
     return (
@@ -7,7 +8,7 @@ const ForgotPass: React.FC = () => {
             <div className="auth__container">
                 <div className="auth__body">
                     <div className="auth__top">
-                        <h2 className="auth__title title">Forgot password</h2>
+                        <Title text={"Forgot password"} classnames={"auth__title"}/>
                     </div>
                     <div className="auth__text">No worries, we'll send you reset instructions.</div>
                     <form className="auth__form">

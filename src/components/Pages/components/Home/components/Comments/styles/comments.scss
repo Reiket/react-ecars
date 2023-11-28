@@ -1,13 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
-.about {
-  background: #F6F5F4;
-  &__container {
-  }
-
-  &__body {
-  }
-
+@import "/src/utils/styles/base";
+.comments {
+  background: $color-background-white;
   &__top {
     display: flex;
     align-items: center;
@@ -17,10 +11,6 @@
       gap: rem(20);
     }
   }
-
-  &__title {
-  }
-
   &__navigation {
     display: flex;
     align-items: center;
@@ -29,17 +19,12 @@
       align-self: flex-start;
     }
   }
-
-  &__button {
-  }
-
   &__inner {
     padding-top: rem(48);
     display: flex;
   }
-  &__slider {
-
-  }
 }
 
+
+//Imports children components
 @import "../components/styles/comments-slider";

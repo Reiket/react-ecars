@@ -1,6 +1,7 @@
 import React from 'react';
 import {BsCheck} from "react-icons/bs";
 import {features, FeaturesCarsTypes} from "./types/features-cars.types";
+import Title from "../../../../../../../Shared/components/Title";
 const splitFeatures = [
     [...features].slice(0, 1),
     [...features].slice(1)
@@ -24,7 +25,7 @@ const FeaturesCars = () => {
         </div>
     );
     return <div className="cars__features features-cars">
-        <h2 className="features-cars__title title">Features</h2>
+        <Title text={"Features"}/>
         <div className="features-cars__body">
             {splitFeatures.map((items, index) => (
                 <React.Fragment key={index}>

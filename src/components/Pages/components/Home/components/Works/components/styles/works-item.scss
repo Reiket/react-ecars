@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .works {
   &__item {
     text-align: center;
@@ -10,7 +10,7 @@
       &:not(:last-child) {
         &::before {
           content:'';
-          border: rem(1) dashed #D1D1D1;
+          border: rem(1) dashed $color-border-pale;
           display: inline-block;
           width: rem(184);
           position: absolute;
@@ -26,7 +26,7 @@
     width: rem(56);
     height: rem(56);
     border-radius: 50%;
-    background: #E49A49;
+    background: $color-yellow;
     font-weight: 600;
     font-size: rem(18);
     line-height: math.div(24 , 18);

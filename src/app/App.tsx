@@ -8,7 +8,7 @@ import {Route, Routes} from "react-router-dom";
 import MainLayout from "../components/Layout/MainLayout";
 import {Provider} from "react-redux";
 import store from "../redux/store"
-import Favorites from "../components/Favorites/Favorites";
+import Favorites from "../components/Pages/components/Favorites/Favorites";
 import Details from "../components/Pages/components/Details/Details";
 
 function App() {
@@ -21,9 +21,7 @@ function App() {
                   <Route element={<Find/>} path={"/catalog"}/>
                   <Route element={<Login/>} path={"/login"}/>
                   <Route element={<News/>} path={"/news"}/>
-
                   <Route element={<Favorites/>} path={"/favorites"}/>
-
               </Route>
           </Routes>
       </Provider>

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 
 .links-cars {
   padding-top: rem(32);
@@ -31,7 +31,7 @@
     }
     @media (any-hover: hover){
       &:hover {
-        color: #1f3b23;
+        color: $color-dark-green;
         font-weight: 500;
       }
     }

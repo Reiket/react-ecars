@@ -1,5 +1,6 @@
 @use "sass:math";
-@import "../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base/mixins";
+@import "/src/utils/styles/base/colors";
 .nav-menu {
   flex: 1 1 auto;
 
@@ -39,7 +40,7 @@
         top: 0;
         left: -100%;
         width: rem(360);
-        background: #ffffff;
+        background: $color-white;
         z-index: 2;
         visibility: hidden;
         opacity: 0;
@@ -53,7 +54,7 @@
         content: '';
         position: fixed;
         z-index: 2;
-        background: #000;
+        background: $color-black;
         opacity: 60%;
         width: 64%;
         top: 0;

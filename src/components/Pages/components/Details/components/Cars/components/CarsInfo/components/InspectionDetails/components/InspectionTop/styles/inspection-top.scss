@@ -1,5 +1,6 @@
 @use "sass:math";
-@import "../../../../../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base/mixins";
+@import "/src/utils/styles/base/colors";
 .inspection-details {
   &__top {
     display: flex;
@@ -13,13 +14,13 @@
     font-weight: 600;
   }
   &__check {
-    background: #E49A49;
+    background: $color-yellow;
     padding: rem(4) rem(8);
     border-radius: rem(8);
     font-weight: 600;
     font-size: rem(12);
     line-height: math.div(16 , 12);
-    color: #000000;
+    color: $color-black;
     display: flex;
     align-items: center;
     svg {

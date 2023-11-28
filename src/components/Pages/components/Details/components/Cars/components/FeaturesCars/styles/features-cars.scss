@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .features-cars {
   padding-top: rem(32);
   &__body {
@@ -36,7 +36,7 @@
     }
     svg {
       font-size: rem(20);
-      color: #767676;
+      color: $color-light-gray;
     }
   }
 }

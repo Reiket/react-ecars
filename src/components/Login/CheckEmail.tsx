@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from "../Shared/components/Title";
 
 const CheckEmail: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const CheckEmail: React.FC = () => {
             <div className="auth__container">
                 <div className="auth__body">
                     <div className="auth__top">
-                        <h2 className="auth__title title">Forgot password</h2>
+                        <Title text={"auth__title"} classnames={"Forgot password"}/>
                     </div>
                     <div className="auth__text">We sent a password reset link to user777@gmail.com</div>
                     <form className="auth__form">

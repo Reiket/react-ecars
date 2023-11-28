@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .why {
-  border-top: rem(1) solid #E6E6E6;
+  border-top: rem(1) solid $color-border-white;
   &__container {
   }
 
@@ -74,7 +74,7 @@
       position: absolute;
       width: rem(16);
       height: rem(2);
-      background: #E49A49;
+      background: $color-yellow;
       top: rem(9);
       left: rem(-36);
     }

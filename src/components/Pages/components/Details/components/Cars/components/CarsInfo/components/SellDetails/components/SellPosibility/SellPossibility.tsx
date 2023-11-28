@@ -11,7 +11,7 @@ import {AppDispatch} from "../../../../../../../../../../../../redux/store";
 import {SellDetailsPropsType} from "../../types/sell-details.types";
 
 const SellPossibility: React.FC<SellDetailsPropsType> = ({itemById}) => {
-    const {pathname} = useLocation()
+    const {pathname, search} = useLocation()
     const dispatch: AppDispatch = useDispatch()
     const favorites = useSelector(selectFavorites)
     const isLoading = useSelector(selectIsLoading)
@@ -28,7 +28,7 @@ const SellPossibility: React.FC<SellDetailsPropsType> = ({itemById}) => {
     };
     return <div className="sell-details__possibility">
         <button disabled={isLoading} onClick={() => onClickToFavorite(itemById)} className="sell-details__item">{checkInFavorites(itemById.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}Save</button>
-        <CopyToClipboard text={`http://localhost:3001` + pathname}>
+        <CopyToClipboard text={`http://localhost:3001` + pathname + search }>
             <button onClick={onClickToShare} className="sell-details__item"><AiOutlineShareAlt/>{!copied ? "Share" : "Copied!"}</button>
         </CopyToClipboard>
     </div>

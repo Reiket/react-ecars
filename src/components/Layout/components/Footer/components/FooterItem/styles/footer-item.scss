@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../scss/base/mixins";
+@import "/src/utils/styles/base";
 .footer {
   &__text {
     padding-top: rem(24);
@@ -19,7 +19,7 @@
 
   &__social {
     font-size: rem(20);
-    color: #767676;
+    color: $color-light-gray;
     transition: color .3s linear;
     @media (any-hover: hover){
       &:hover {
@@ -44,7 +44,7 @@
     }
   }
   &__link {
-    color: #484848;
+    color: $color-gray;
     line-height: math.div(20 , 14);
     margin-bottom: em(12, 14);
     transition: color .3s linear;

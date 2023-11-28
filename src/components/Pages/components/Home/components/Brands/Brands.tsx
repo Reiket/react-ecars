@@ -6,6 +6,7 @@ import {AppDispatch} from "../../../../../../redux/store";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchBrands} from "../../../../../../redux/reducers/cars-reducer";
 import {selectBrands} from "../../../../../../redux/selectors/brands-selector";
+import Title from "../../../../../Shared/components/Title";
 const Brands: React.FC = () => {
     const [isShowAll, setIsShowAll] = React.useState(false);
     const brands = useSelector(selectBrands)
@@ -23,7 +24,7 @@ const Brands: React.FC = () => {
         <section className="section__brands brands">
             <div className="brands__container">
                 <div className="brands__top">
-                    <h2 className="brands__title title">Browse by brand</h2>
+                    <Title text={"Browse by brand"}/>
                 </div>
                 <div className={brands.length === 0 ? "brands__body loader": "brands__body"}>
                     {brands.length === 0 ? <BrandsLoader/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} name={item.name} imageUrl={item.imageUrl}/>)}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {CarsDescriptionPropsType} from "./types/cars-description.types";
+import Title from "../../../../../../../Shared/components/Title";
 
 const CarsDescription: React.FC<CarsDescriptionPropsType> = ({itemById}) => {
     const [isMoreOpen, setIsMoreOpen] = React.useState(false);
@@ -8,7 +9,7 @@ const CarsDescription: React.FC<CarsDescriptionPropsType> = ({itemById}) => {
         setIsMoreOpen(prev => !prev)
     }
     return <div className="cars__description">
-        <h2 className="cars__title title">Description</h2>
+        <Title text={"Description"}/>
         <div className="cars__text">
             <p>{itemById.name} Electric Leather Seats [RHD Japan Import] Premium Condition.</p>
             <p> ----------------------------------------------------------------------------------------------------------------------</p>
