@@ -1,0 +1,35 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+.title {
+  @include adaptiveValue("font-size", 38, 25);
+  font-weight: 600;
+  line-height: math.div(43.7 , 38);
+  flex: 1 1 auto;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  color: $color-green;
+  font-weight: 600;
+  line-height: math.div(20 , 14);
+  transition: color .3s ease-in;
+  svg {
+    transition: transform .3s ease-in;
+  }
+  @media (any-hover: hover){
+    &:hover {
+      color: $hover-green-btn;
+      svg {
+        transform: translateX(20%);
+      }
+
+    }
+  }
+}
+
+//Imports children components
+@import "../components/Card/styles/card";
+@import "../components/GreenButton/styles/green-btn";
+@import "../components/NavigationBtn/styles/navigation-btn";

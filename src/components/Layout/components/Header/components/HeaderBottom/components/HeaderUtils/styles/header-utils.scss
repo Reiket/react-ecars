@@ -1,4 +1,4 @@
-@import "../../../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .header-bottom {
   &__utils {
     display: flex;
@@ -16,7 +16,7 @@
     }
     @media (any-hover: hover){
       &:hover {
-        color: $greenColor;
+        color: $color-green;
       }
     }
   }

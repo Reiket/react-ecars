@@ -4,7 +4,7 @@ import {SellDetailsPropsType} from "./types/sell-details.types";
 import SellList from "./components/SellList/SellList";
 import SellBottom from "./components/SellBottom/SellBottom";
 import {useSelector} from "react-redux";
-import {selectFilters} from "../../../../../../../../../../redux/selectors/offers-selector";
+import {selectFilters} from "../../../../../../../Home/components/Offers/store/selector/offers-selector";
 
 const SellDetails: React.FC<SellDetailsPropsType> = ({itemById}) => {
     const filters = useSelector(selectFilters)

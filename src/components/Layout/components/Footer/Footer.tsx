@@ -1,8 +1,7 @@
 import React from 'react';
 import FooterItem from "./components/FooterItem/FooterItem";
 import FooterCopy from "./components/FooterCopy/FooterCopy";
-import {contacts} from "../../../../shared/Contacts/contacts-aray";
-import {ContactsArrayType} from "../../../../shared/Contacts/contacts-array.types";
+import {contacts, ContactsArrayType} from "../../../../shared/Contacts/contacts-aray";
 const companyLinks = [
     { url: "/", text: "About Us" },
     { url: "/", text: "Blog" },

@@ -2,12 +2,12 @@ import React from 'react';
 import NotFoundFav from "./components/NotFoundFav/NotFoundFav";
 import FavoritesLoader from "../../../Other/Loader/FavoritesLoader";
 import {useDispatch, useSelector} from "react-redux";
-import {selectFavorites, selectIsLoading} from "../../../../redux/selectors/favorites-selector";
-import {selectFilters} from "../../../../redux/selectors/offers-selector";
-import {fetchFavorites} from "../../../../redux/reducers/favorites-reducer";
-import {AppDispatch} from "../../../../redux/store";
-import Card from "../../../Shared/components/CarsCard/Card";
-import Title from "../../../Shared/components/Title";
+import {selectFavorites, selectIsLoading} from "./store/selector/favorites-selector";
+import {selectFilters} from "../Home/components/Offers/store/selector/offers-selector";
+import Title from "../../../../shared/components/Title/Title";
+import Card from "../../../../shared/components/Card/Card";
+import {AppDispatch} from "../../../../app/store/types/store.types";
+import {fetchFavorites} from "./store/thunks/fetchFavorites";
 
 const Favorites: React.FC = () => {
     const favItems = useSelector(selectFavorites)

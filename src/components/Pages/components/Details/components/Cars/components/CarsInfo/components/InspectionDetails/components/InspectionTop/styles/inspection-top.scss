@@ -1,6 +1,6 @@
 @use "sass:math";
-@import "/src/utils/styles/base/mixins";
-@import "/src/utils/styles/base/colors";
+@import "/src/shared/styles/base/mixins";
+@import "/src/shared/styles/base/colors";
 .inspection-details {
   &__top {
     display: flex;

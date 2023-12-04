@@ -1,4 +1,4 @@
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .header-bottom {
   padding: rem(12) rem(0);
   &__body {
@@ -43,6 +43,8 @@
     }
   }
 }
+
+//Imports children components
 @import "../components/Navbar/styles/navbar";
 @import "../components/HeaderUtils/styles/header-utils";
 @import "../shared/Burger/burger";

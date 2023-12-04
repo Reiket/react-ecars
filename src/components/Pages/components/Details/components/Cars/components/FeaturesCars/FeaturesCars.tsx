@@ -1,7 +1,7 @@
 import React from 'react';
 import {BsCheck} from "react-icons/bs";
 import {features, FeaturesCarsTypes} from "./types/features-cars.types";
-import Title from "../../../../../../../Shared/components/Title";
+import Title from "../../../../../../../../shared/components/Title/Title";
 const splitFeatures = [
     [...features].slice(0, 1),
     [...features].slice(1)

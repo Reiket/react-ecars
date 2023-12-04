@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 
 .links-cars {
   padding-top: rem(32);
@@ -24,7 +24,7 @@
     }
   }
   &__link {
-    color: $greenColor;
+    color: $color-green;
     transition: all .3s linear;
     &:not(:last-child) {
       margin-bottom: rem(8);

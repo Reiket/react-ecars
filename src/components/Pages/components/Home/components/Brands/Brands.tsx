@@ -2,11 +2,11 @@ import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import BrandsCard from "./components/BrandsCard";
 import BrandsLoader from "../../../../../Other/Loader/BrandsLoader";
-import {AppDispatch} from "../../../../../../redux/store";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchBrands} from "../../../../../../redux/reducers/cars-reducer";
-import {selectBrands} from "../../../../../../redux/selectors/brands-selector";
-import Title from "../../../../../Shared/components/Title";
+import {selectBrands} from "./store/selector/brands-selector";
+import Title from "../../../../../../shared/components/Title/Title";
+import {fetchBrands} from "./store/thunks/fetchBrand";
+import {AppDispatch} from "../../../../../../app/store/types/store.types";
 const Brands: React.FC = () => {
     const [isShowAll, setIsShowAll] = React.useState(false);
     const brands = useSelector(selectBrands)

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .intro {
   background: url("../../../../../../../../public/assets/image/intro/intro.png") no-repeat center / cover;
   @include adaptiveValue("height", 600, 400);
@@ -39,7 +39,6 @@
     @media (max-width:$mobileSmall) {
       flex-direction: column;
     }
-
   }
   &__item {
     a {
@@ -51,7 +50,7 @@
       transition: color .3s ease-in;
       @media (any-hover: hover){
         &:hover {
-          color: $greenColor;
+          color: $color-green;
         }
       }
     }

@@ -1,6 +1,8 @@
 
-import {FiltersType} from "../../../../../../../../redux/reducers/offers-reducer";
 import {menuConfigsType} from "../../../../types/header.types";
+import {
+    FiltersType
+} from "../../../../../../../Pages/components/Home/components/Offers/store/types/offers-reducer.types";
 
 
 type OtherProps = {

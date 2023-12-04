@@ -2,6 +2,7 @@ import React from 'react';
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
+import NavigationBtn from "../../shared/components/NavigationBtn/NavigationBtn";
 
 const NewsPost = ({isMoving}) => {
     return (
@@ -59,10 +60,7 @@ const NewsPost = ({isMoving}) => {
                 <div className="news-post__slider">
                     <div className="news-post__top">
                         <h4 className="news-post__title">Featured posts</h4>
-                        <div className="news-post__navigation navigation">
-                            <button className="news-post__button slider-button news-post__prev"><MdOutlineKeyboardArrowLeft/></button>
-                            <button className="news-post__button slider-button news-post__next"><MdOutlineKeyboardArrowRight/></button>
-                        </div>
+                        <NavigationBtn classnames={"news-post"}/>
                     </div>
                     <Swiper
                         modules={[Navigation,  Autoplay]}

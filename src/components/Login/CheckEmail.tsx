@@ -1,5 +1,6 @@
 import React from 'react';
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const CheckEmail: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const CheckEmail: React.FC = () => {
                     </div>
                     <div className="auth__text">We sent a password reset link to user777@gmail.com</div>
                     <form className="auth__form">
-                        <a href={"https://mail.google.com/"} className="auth__button green-button green-button_big">Open email app</a>
+                        <GreenButton href={"https://mail.google.com/"} classnames={"auth__button green-button_big"} text={"Open email app"} type={"link"}/>
                     </form>
                     <div className="auth__content">Didn't receive the email? <a href={"/"} >Click to resend</a></div>
                 </div>

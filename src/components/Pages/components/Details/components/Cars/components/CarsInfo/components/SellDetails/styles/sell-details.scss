@@ -1,8 +1,8 @@
 @use "sass:math";
-@import "/src/utils/styles/base/mixins";
-@import "/src/utils/styles/base/colors";
+@import "/src/shared/styles/base/mixins";
+@import "/src/shared/styles/base/colors";
 .sell-details {
-  border: rem(1) solid $color-border-white;
+  border: rem(1) solid $border-white;
   border-radius: rem(8);
   &__top {
     border-radius: rem(8) rem(8) 0 0;
@@ -21,7 +21,7 @@
   &__price {
     font-size: rem(26);
     line-height: math.div(30 , 26);
-    color: $greenColor;
+    color: $color-green;
     font-weight: 600;
     &:not(:last-child) {
       margin-bottom: em(16, 26);

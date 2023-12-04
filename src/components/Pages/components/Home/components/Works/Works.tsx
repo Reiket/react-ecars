@@ -1,7 +1,7 @@
 import React from 'react';
 import WorksItem from "./components/WorksItem";
 import {worksItems} from "./types/works.types";
-import Title from "../../../../../Shared/components/Title";
+import Title from "../../../../../../shared/components/Title/Title";
 const Works: React.FC = () => {
     return (
         <section className="section__works works">

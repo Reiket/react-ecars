@@ -1,11 +1,8 @@
 @use "sass:math";
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 
 .communication {
-  background: $color-background-dark;
-  &__container {
-  }
-
+  background: $background-dark;
   &__body {
     display: flex;
     align-items: center;
@@ -15,7 +12,6 @@
       gap: rem(40);
     }
   }
-
   &__item {
     color: $color-white;
     @include adaptiveValue("padding-right", 104, 30);
@@ -26,14 +22,12 @@
       }
     }
   }
-
   &__icon {
     font-size: rem(38);
     &:not(:last-child) {
       margin-bottom: em(24, 38);
     }
   }
-
   &__title {
     font-size: rem(22);
     font-weight: 600;
@@ -42,7 +36,6 @@
       margin-bottom: em(24, 22);
     }
   }
-
   &__text {
     font-size: rem(16);
     line-height: math.div(24 , 16);
@@ -50,7 +43,6 @@
       margin-bottom: em(48, 16);
     }
   }
-
   &__button {
     @media (max-width:em(800)) {
       display: flex;

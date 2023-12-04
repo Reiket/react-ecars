@@ -2,15 +2,15 @@ import React from 'react';
 import {RiArrowRightLine} from "react-icons/ri";
 import OffersSlider from "./components/OffersSlider";
 import {Link} from "react-router-dom";
-import {fetchOffers} from "../../../../../../redux/reducers/offers-reducer";
-import {fetchFavorites} from "../../../../../../redux/reducers/favorites-reducer";
 import {useDispatch, useSelector} from "react-redux";
-import {selectFilters} from "../../../../../../redux/selectors/offers-selector";
-import {selectFavorites} from "../../../../../../redux/selectors/favorites-selector";
-import {AppDispatch} from "../../../../../../redux/store";
+import {selectFilters} from "./store/selector/offers-selector";
+import {selectFavorites} from "../../../Favorites/store/selector/favorites-selector";
 import {useFilters} from "../../../../../Layout/components/Header/hooks/useFilters";
-import NavigationBtn from "../../../../../Shared/components/NavigationBtn";
-import Title from "../../../../../Shared/components/Title";
+import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
+import Title from "../../../../../../shared/components/Title/Title";
+import {AppDispatch} from "../../../../../../app/store/types/store.types";
+import {fetchOffers} from "./store/thunks/fetchOffers";
+import {fetchFavorites} from "../../../Favorites/store/thunks/fetchFavorites";
 
 const Offers = () => {
     const {shipNumber, currency} = useSelector(selectFilters)

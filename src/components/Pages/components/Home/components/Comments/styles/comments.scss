@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .comments {
-  background: $color-background-white;
+  background: $background-white;
   &__top {
     display: flex;
     align-items: center;

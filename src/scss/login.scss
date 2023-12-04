@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../utils/styles/base";
+@import "../shared/styles/base";
 .auth {
   &__container {
     display: flex;
@@ -44,7 +44,7 @@
   }
   &__input {
     padding: rem(14) rem(12);
-    border: rem(1) solid $color-border-pale;
+    border: rem(1) solid $border-pale;
     border-radius: rem(8);
     outline: none;
     &::placeholder {
@@ -57,7 +57,7 @@
     justify-content: space-between;
   }
   &__link {
-    color: $greenColor;
+    color: $color-green;
     line-height: math.div(20 , 14);
     transition: color .3s linear;
     @media (any-hover: hover){
@@ -78,7 +78,7 @@
     a {
       gap: rem(6);
       font-weight: 600;
-      color: $greenColor;
+      color: $color-green;
       transition: color .3s linear;
       svg {
         transition: transform .3s linear;
@@ -108,7 +108,7 @@
         content:'';
         top: rem(33);
         position: absolute;
-        border: rem(1) solid $color-border-white;
+        border: rem(1) solid $border-white;
         width: rem(181);
     }
     &::before {
@@ -127,13 +127,13 @@
     font-weight: 600;
     line-height: math.div(24 , 14);
     justify-content: center;
-    border: rem(1) solid $color-border-white;
+    border: rem(1) solid $border-white;
     border-radius: rem(8);
     transition: background .3s linear;
     width: 100%;
     @media (any-hover: hover){
         &:hover {
-            background: $color-background-authorize;
+            background: $background-authorize;
         }
     }
   }

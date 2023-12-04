@@ -1,5 +1,6 @@
 import React from 'react';
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const NewPass: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const NewPass: React.FC = () => {
                             <span>Confirm password</span>
                             <input type="password" className="auth__input" placeholder={"Confirm password"}/>
                         </label>
-                        <button className="auth__button green-button green-button_big">Reset password</button>
+                        <GreenButton classnames={"auth__button green-button_big"} text={"Reset password"} type={"button"}/>
                     </form>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const Login: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const Login: React.FC = () => {
                             </div>
                             <input type="email" className="auth__input" placeholder={"example@mail.com"}/>
                         </label>
-                        <button className="auth__button green-button green-button_big">Login</button>
+                        <GreenButton classnames={"auth__button green-button_big"} text={"Login"} type={"button"}/>
                     </form>
                     <div className="auth__content">Don’t have an account? <a href={"/"}>Sign Up</a></div>
                     <div className="auth__or">or</div>

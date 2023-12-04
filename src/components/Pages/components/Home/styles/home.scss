@@ -1,4 +1,4 @@
-@import "../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base/mixins";
 .section {
   &__auth {
     @include adaptiveValue("padding-top", 48, 20);
@@ -45,6 +45,8 @@
   }
 }
 
+
+//Imports children components
 @import "../components/Blog/styles/blog";
 @import "../components/BottomIntro/styles/bottom-intro";
 @import "../components/Brands/styles/brands";

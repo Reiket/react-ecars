@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "jsx": "preserve",
+    "types": ["node"],
     "baseUrl": ".",
     "exclude": ["node_modules", ".nuxt", "dist"],
     "esModuleInterop": true,
@@ -19,6 +20,6 @@
     "noEmit": true,
   },
   "include": [
-    "src",
+      "src",
   ]
 }

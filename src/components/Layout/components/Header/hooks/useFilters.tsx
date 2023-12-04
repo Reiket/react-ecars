@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import qs from "qs";
-import {selectFilters, selectItemById} from "../../../../../redux/selectors/offers-selector";
-import { actions } from "../../../../../redux/reducers/offers-reducer";
-import { AppDispatch } from "../../../../../redux/store";
+import {selectFilters, selectItemById} from "../../../../Pages/components/Home/components/Offers/store/selector/offers-selector";
 import React from "react";
-import {useNavigateSearch} from "../../../../../utils/hooks/useSearchNavigate";
+import {useNavigateSearch} from "../../../../../shared/hooks/useSearchNavigate";
+import {AppDispatch} from "../../../../../app/store/types/store.types";
+import {actions} from "../../../../Pages/components/Home/components/Offers/store/actions/offers-actions";
 const symbolInURL = 1;
 export const useFilters = () => {
     const [isFilterLoading, setIsFilterLoading] = React.useState(true)

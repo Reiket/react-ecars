@@ -1,7 +1,6 @@
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .not-found-fav {
   display: flex;
-
   &__container {
     @include adaptiveValue("padding-top", 120, 80);
     @include adaptiveValue("padding-bottom", 120, 80);
@@ -20,7 +19,7 @@
     }
     span {
       font-weight: 700;
-      color: $greenColor;
+      color: $color-green;
     }
   }
   &__btn {

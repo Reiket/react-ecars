@@ -1,0 +1,118 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+.card {
+  box-shadow: 0 rem(8) rem(16) 0 $shadow;
+  display: flex;
+  flex-direction: column;
+  min-height: rem(318);
+  position: relative;
+  &.flex {
+    @media (min-width: $mobile) {
+      flex: 0 0 rem(300);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 rem(8) rem(16) 0 $shadow;
+  }
+  &__image {
+    position: relative;
+    img {
+      border-radius: rem(8) rem(8) 0 0;
+      height: rem(180);
+      width: 100%;
+      object-fit: cover;
+      @media (max-width:em(550)) {
+        @include adaptiveValue("height", 460, 200);
+
+      }
+    }
+  }
+  &__favorite {
+    position: absolute;
+    width: rem(32);
+    height: rem(32);
+    background: $color-black;
+    -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: rem(8);
+    right: rem(8);
+    z-index: 10;
+    svg {
+      color: $color-white;
+      font-size: rem(16);
+    }
+    .active {
+      svg {
+        background: $color-white;
+      }
+    }
+  }
+  &__info {
+    padding: rem(16);
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  &__name {
+    line-height: math.div(24 , 16);
+    font-size: rem(16);
+    &:not(:last-child) {
+      margin-bottom: em(4, 16);
+    }
+  }
+  &__description {
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+    color: $color-pale-gray;
+    flex: 1 1 auto;
+    &:not(:last-child) {
+      margin-bottom: em(36, 12);
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+  }
+  &__price {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: math.div(20 , 16);
+  }
+  &__discount {
+    flex: 1 1 auto;
+    text-decoration: line-through;
+    color: $color-pale-gray;
+    line-height: math.div(18 , 14);
+  }
+  &__details {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    color: $color-green;
+    font-weight: 600;
+    line-height: math.div(20 , 14);
+    transition: color .3s ease-in;
+    position: relative;
+    z-index: 10;
+    svg {
+      transition: transform .3s ease-in;
+    }
+    @media (any-hover: hover){
+      &:hover {
+        color: $hover-green-btn;
+        svg {
+          transform: translateX(20%);
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .works {
   &__top {
     display: grid;
@@ -7,13 +7,11 @@
     align-items: center;
     text-align: center;
   }
-
   &__title {
     &:not(:last-child) {
       margin-bottom: em(24, 38);
     }
   }
-
   &__text {
     color: $color-gray;
     font-size: rem(16);
@@ -29,7 +27,7 @@
     gap: rem(24);
   }
 }
-
+//Imports children components
 @import "../components/styles/works-item";
 
 

@@ -1,4 +1,4 @@
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .info-details {
   @media (max-width:$mobile) {
     padding-top: rem(20);
@@ -7,7 +7,6 @@
     padding-top: rem(24);
     color: $color-light-gray;
     text-align: center;
-
   }
 }
 //Imports children components

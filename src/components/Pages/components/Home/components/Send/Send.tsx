@@ -1,5 +1,5 @@
 import React from 'react';
-import GreenButton from "../../../../../Shared/components/GreenButton";
+import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
 
 const Send: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const Send: React.FC = () => {
                         <div className="send__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
                     </div>
                     <div className="send__get">
-                        <GreenButton classnames={"send__button green-button green-button_big"} text={"Get a quote"}/>
+                        <GreenButton type={"button"} classnames={"send__button green-button green-button_big"} text={"Get a quote"}/>
                     </div>
                 </div>
             </div>

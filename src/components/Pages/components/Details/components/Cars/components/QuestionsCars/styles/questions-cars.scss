@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .questions-cars {
-  box-shadow: 0 rem(8) rem(16) 0 $color-shadow;
+  box-shadow: 0 rem(8) rem(16) 0 $shadow;
   margin-top: rem(32);
   justify-content: space-between;
   padding: rem(16);

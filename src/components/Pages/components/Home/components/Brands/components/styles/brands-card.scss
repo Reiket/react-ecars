@@ -1,9 +1,8 @@
-
-@import "../../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .brands {
   &__item {
     background: $color-white;
-    box-shadow: 0 rem(8) rem(16) 0 #1C1E2214;
+    box-shadow: 0 rem(8) rem(16) 0 $shadow;
     border-radius: rem(8);
     padding: rem(16) rem(52);
     text-align: center;

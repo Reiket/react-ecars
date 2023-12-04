@@ -2,11 +2,11 @@ import React from 'react';
 import {RiArrowRightLine} from "react-icons/ri";
 import BlogItem from "./components/BlogItem";
 import NewsLoader from "../../../../../Other/Loader/NewsLoader";
-import {fetchNews} from "../../../../../../redux/reducers/news-reducer";
 import {useDispatch, useSelector} from "react-redux";
-import {selectNewsPosts} from "../../../../../../redux/selectors/news-selector";
-import {AppDispatch} from "../../../../../../redux/store";
-import Title from "../../../../../Shared/components/Title";
+import {selectNewsPosts} from "./store/selector/news-selector";
+import Title from "../../../../../../shared/components/Title/Title";
+import {AppDispatch} from "../../../../../../app/store/types/store.types";
+import {fetchNews} from "./store/thunks/fetchNews";
 
 const Blog: React.FC = () => {
     const posts = useSelector(selectNewsPosts)

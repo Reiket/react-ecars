@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 
 .list-cars {
   padding-top: rem(32);
@@ -20,7 +20,7 @@
     display: flex;
     padding: rem(10) 0;
     align-items: center;
-    border-bottom: 1px solid $color-border-white;
+    border-bottom: 1px solid $border-white;
     @media (max-width:$mobileSmall) {
       flex-direction: column;
       gap: rem(10);

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .nav-menu {
   &__bottom {
     position: relative;
@@ -14,7 +14,7 @@
   }
   &__contacts {
     padding-top: rem(24);
-    border-top: rem(1) solid $color-border-white;
+    border-top: rem(1) solid $border-white;
   }
   &__body {
     display: flex;
@@ -34,7 +34,7 @@
     font-weight: 500;
     font-size: rem(14);
     line-height: math.div(16 , 14);
-    color: $mainColor;
+    color: $main-color;
   }
   &__popup {
     display: flex;
@@ -49,11 +49,11 @@
     padding-bottom: rem(32);
     li {
       a {
-        color: $mainColor;
+        color: $main-color;
         transition: color .3s ease-in;
         @media (any-hover: hover){
           &:hover {
-            color: $greenColor;
+            color: $color-green;
           }
         }
         svg {

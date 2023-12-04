@@ -1,14 +1,15 @@
 import React from 'react';
-import {checkInFavorites} from "../../../../../../../../../../../../utils/checkInFavorites";
+import {checkInFavorites} from "../../../../../../../../../../shared/utils/checkInFavorites";
 import {AiFillHeart, AiOutlineHeart, AiOutlineShareAlt} from "react-icons/ai";
 import {CopyToClipboard} from "react-copy-to-clipboard/src";
 import {useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {selectFavorites, selectIsLoading} from "../../../../../../../../../../../../redux/selectors/favorites-selector";
-import {ItemsType} from "../../../../../../../../../../../../types/types";
-import {fetchAddToFav, fetchRemoveFromFav} from "../../../../../../../../../../../../redux/reducers/favorites-reducer";
-import {AppDispatch} from "../../../../../../../../../../../../redux/store";
+import {selectFavorites, selectIsLoading} from "../../../../../../../../../Favorites/store/selector/favorites-selector";
+import {ItemsType} from "../../../../../../../../../../../../shared/types/types";
 import {SellDetailsPropsType} from "../../types/sell-details.types";
+import {AppDispatch} from "../../../../../../../../../../../../app/store/types/store.types";
+import {fetchRemoveFromFav} from "../../../../../../../../../Favorites/store/thunks/fetchRemoveFromFav";
+import {fetchAddToFav} from "../../../../../../../../../Favorites/store/thunks/fetchAddToFav";
 
 const SellPossibility: React.FC<SellDetailsPropsType> = ({itemById}) => {
     const {pathname, search} = useLocation()

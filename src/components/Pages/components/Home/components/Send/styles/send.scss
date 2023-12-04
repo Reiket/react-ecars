@@ -1,10 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .send {
-  background: $color-background-dark;
-  &__container {
-  }
-
+  background: $background-dark;
   &__body {
     display: flex;
     justify-content: center;
@@ -16,7 +13,6 @@
       align-items: center;
     }
   }
-
   &__content {
     color: $color-white;
     @media (min-width:em(850)) {
@@ -38,12 +34,10 @@
       margin-bottom: em(24, 22);
     }
   }
-
   &__text {
     font-size: rem(16);
     line-height: math.div(24 , 16);
   }
-
   &__button {
     @media (max-width:em(850)) {
       width: 100%;

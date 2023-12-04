@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from 'react';
-import {useClickOutside} from "../../../../../../../utils/hooks/useClickOutside";
+import {useClickOutside} from "../../../../../../../shared/hooks/useClickOutside";
 import {PiMapPinFill} from "react-icons/pi";
 import {PopupPropsType} from "./types/menu.types";
 import {MdKeyboardArrowDown} from "react-icons/md";
@@ -10,7 +10,7 @@ const Menu: React.FC<PopupPropsType> = ({filters, type, onClickToFilters, isBurg
     const ref = React.useRef<HTMLDivElement>(null)
     const {shipNumber, currency} = filters
     const [isPopupOpen, setIsPopupOpen] = React.useState(false);
-    useClickOutside(ref, (e: ChangeEvent<HTMLDivElement>) => {
+    useClickOutside(ref, (e) => {
         if (e.target !== ref.current) {
             setIsPopupOpen(false);
         }

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 
 .section-offers__item {
   flex: 1 1 auto;

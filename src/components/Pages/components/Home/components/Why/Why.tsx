@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from "../../../../../Shared/components/Title";
+import Title from "../../../../../../shared/components/Title/Title";
 const amountItems = 3;
 const Why: React.FC = () => {
     return (

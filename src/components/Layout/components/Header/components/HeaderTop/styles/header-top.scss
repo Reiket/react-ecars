@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .header-top {
-  background: $color-background-dark;
+  background: $background-dark;
   &__body {
     display: flex;
     justify-content: space-between;
@@ -12,5 +12,6 @@
   }
 }
 
+//Imports children components
 @import "../components/HeaderTopList/styles/header-top-list";
 @import "../components/HeaderTopMenu/styles/header-top-menu";

@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import HeaderUtils from "./components/HeaderUtils/HeaderUtils";
-import Logo from "../../../../../Shared/components/Logo";
+import Logo from "../../../../../../shared/components/Logo/Logo";
 import Burger from "./shared/Burger/Burger";
-import GreenButton from "../../../../../Shared/components/GreenButton";
+import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
 import SearchForm from "./shared/SearchForm/SearchForm";
 import {MenuPropsType} from "../../shared/components/Menu/types/menu.types";
 
@@ -25,7 +25,7 @@ const HeaderBottom: React.FC<MenuPropsType> = ({filters, onClickToFilters, menuC
                     </div>
                     <Navbar onClickToFilters={onClickToFilters} menuConfigs={menuConfigs} filters={filters} isBurger={isBurger}/>
                     <HeaderUtils isSearch={isSearch} onClickToSearch={onClickToSearch}/>
-                    <GreenButton classnames={"header-bottom__btn green-button"} text={"Get a quote"}/>
+                    <GreenButton type={"button"} classnames={"header-bottom__btn green-button"} text={"Get a quote"}/>
                 </div>
             </div>
         </div>

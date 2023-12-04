@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .footer {
-  background: $color-background-white;
+  background: $background-white;
   @include adaptiveValue("padding-top", 80, 45);
   @include adaptiveValue("padding-bottom", 80, 45);
 

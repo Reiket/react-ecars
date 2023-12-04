@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import NewsList from "./NewsList";
 import NewsPost from "./NewsPost";
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
 
 const News = () => {
     const [isMoving, setIsMoving] = React.useState(false);

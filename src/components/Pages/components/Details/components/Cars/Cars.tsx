@@ -8,7 +8,7 @@ import QuestionsCars from "./components/QuestionsCars/QuestionsCars";
 import LinksCars from "./components/LinksCars/LinksCars";
 import {useWindowWidth} from "../../../../../../shared/hooks/useWindowWidth";
 import {useSelector} from "react-redux";
-import {selectItemById} from "../../../../../../redux/selectors/offers-selector";
+import {selectItemById} from "../../../Home/components/Offers/store/selector/offers-selector";
 import {CarsPropsType} from "./types/cars.types";
 const Cars: React.FC<CarsPropsType> = ({currency}) => {
     const itemById = useSelector(selectItemById)

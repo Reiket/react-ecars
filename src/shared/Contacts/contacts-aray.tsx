@@ -2,7 +2,11 @@ import React from "react";
 import { BiLogoFacebook } from "react-icons/bi";
 import {AiFillInstagram, AiFillYoutube, AiOutlineTwitter} from "react-icons/ai";
 import {RiMailFill, RiWhatsappFill} from "react-icons/ri";
-import {ContactsArrayType} from "./contacts-array.types";
+export type ContactsArrayType = {
+    url: string
+    icon?: React.JSX.Element
+    text?: string
+}
 export const contacts = [
     {url: "https://www.facebook.com/", icon: <BiLogoFacebook />},
     {url: "https://twitter.com/", icon: <AiOutlineTwitter />},

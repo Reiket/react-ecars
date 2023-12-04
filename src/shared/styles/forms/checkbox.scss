@@ -1,0 +1,46 @@
+@use "sass:math";
+@import "../base";
+.checkbox {
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: em(12);
+	}
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:checked + .checkbox__label .checkbox__check {
+			display: block;
+		}
+	}
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		gap: rem(10);
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 rem(20);
+			width: rem(20);
+			height: rem(20);
+			border-radius: rem(4);
+			border: rem(1) solid $border-pale;
+		}
+	}
+	&__check {
+		position: absolute;
+		left: rem(1);
+		font-size: rem(18);
+		color: $color-green;
+		display: none;
+	}
+	&__text {
+		line-height: math.div(20 , 14);
+		span {
+			color: $color-green;
+		}
+	}
+}

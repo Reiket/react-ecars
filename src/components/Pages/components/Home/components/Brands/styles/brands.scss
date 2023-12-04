@@ -1,7 +1,6 @@
-
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .brands {
-  background: $color-background-white;
+  background: $background-white;
   &__body {
     padding-top: rem(48);
     display: grid;
@@ -12,7 +11,6 @@
       justify-content: center;
     }
   }
-
   &__all {
     padding-top: rem(16);
     @media (any-hover: hover){
@@ -30,4 +28,5 @@
   }
 }
 
+//Imports children components
 @import "../components/styles/brands-card";

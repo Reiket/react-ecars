@@ -1,0 +1,25 @@
+@import "/src/shared/styles/base";
+.slider-button {
+  width: rem(40);
+  height: rem(40);
+  border-radius: 50%;
+  transition: all .3s ease-in;
+  @media (any-hover: hover){
+    &:hover {
+      color: $color-white;
+      background: $color-green;
+    }
+  }
+  @media (any-hover: none){
+    color: $color-white;
+    background: $color-green;
+  }
+  svg {
+    transform: translateY(10%);
+  }
+}
+.navigation {
+  font-size: rem(20);
+  display: flex;
+  gap: rem(16);
+}

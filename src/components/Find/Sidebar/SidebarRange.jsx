@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "rc-slider";
-import '../../../utils/styles/base/range.scss';
+import '../../../shared/styles/forms/range.scss';
 const SidebarRange = () => {
     const [rangeValue, setRangeValue] = React.useState([0, 120000]);
     const handleRangeValueChange = num => {

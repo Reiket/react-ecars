@@ -1,5 +1,4 @@
 import React from 'react';
-import "../scss/base/swiper.scss"
 import News from "../components/News/News";
 import Home from "../components/Pages/components/Home/Home";
 import Find from "../components/Find/Find";
@@ -7,7 +6,7 @@ import Login from "../components/Login/Login";
 import {Route, Routes} from "react-router-dom";
 import MainLayout from "../components/Layout/MainLayout";
 import {Provider} from "react-redux";
-import store from "../redux/store"
+import store from "./store/store"
 import Favorites from "../components/Pages/components/Favorites/Favorites";
 import Details from "../components/Pages/components/Details/Details";
 

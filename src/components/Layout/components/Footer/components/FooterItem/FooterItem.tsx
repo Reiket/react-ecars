@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../../../../../Shared/components/Logo";
+import Logo from "../../../../../../shared/components/Logo/Logo";
 import {FooterItemsType} from "../../types/footer.types";
 import {contacts} from "../../../../../../shared/Contacts/contacts-aray";
 

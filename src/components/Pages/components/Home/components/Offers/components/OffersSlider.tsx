@@ -4,9 +4,9 @@ import {Autoplay, Navigation} from "swiper/modules";
 import './styles/swiper.scss';
 import OfferLoader from "../../../../../../Other/Loader/OfferLoader";
 import {useSelector} from "react-redux";
-import {selectIsFetchingOffers, selectItems} from "../../../../../../../redux/selectors/offers-selector";
+import {selectIsFetchingOffers, selectItems} from "../store/selector/offers-selector";
 import {OffersSliderPropsType} from "./types/offers-slider.types";
-import Card from "../../../../../../Shared/components/CarsCard/Card";
+import Card from "../../../../../../../shared/components/Card/Card";
 
 const amountSlides = 4
 const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency, favorites }) => {

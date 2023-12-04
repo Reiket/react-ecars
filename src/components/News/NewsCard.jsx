@@ -3,7 +3,8 @@ import {AiFillLinkedin, AiOutlineCalendar, AiOutlineEye, AiOutlineLink, AiOutlin
 import {RiPriceTag3Line} from "react-icons/ri";
 import {BiLogoFacebook} from "react-icons/bi";
 import BlogItem from "../Pages/components/Home/components/Blog/components/BlogItem";
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const NewsCard = () => {
     return (
@@ -57,7 +58,7 @@ const NewsCard = () => {
                         <div className="stay-news__text">Don't miss the latest news, reviews and guides from our experts. Get updates in your inbox. No spam.</div>
                         <form action="" className="stay-news__form">
                             <input type="email" placeholder={"Email"} className="stay-news__input"/>
-                            <button className="stay-news__button green-button green-button_big">Subscribe</button>
+                            <GreenButton classnames={"stay-news__button green-button_big"} text={"Subscribe"} type={"button"}/>
                         </form>
                     </div>
                 </div>

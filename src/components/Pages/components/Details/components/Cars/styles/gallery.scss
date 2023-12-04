@@ -1,4 +1,4 @@
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 
 $ig-small-screen: rem(768) !default;
 $ig-xsmall-screen: rem(480) !default;
@@ -26,7 +26,7 @@ $ig-shadow: 0 rem(2) rem(2) lighten($color-black, 10%);
   filter: drop-shadow($ig-shadow);
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: $color-hover-svg;
+      color: $hover-svg;
       .image-gallery-svg {
         transform: scale(1.1);
       }

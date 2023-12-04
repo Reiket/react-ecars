@@ -1,18 +1,9 @@
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .blog {
-  &__container {
-  }
-
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  &__title {
-  }
-
-  &__all {
   }
   &__body {
     padding-top: rem(48);
@@ -24,4 +15,5 @@
   }
 }
 
+//Imports children components
 @import "../components/styles/blog-item";

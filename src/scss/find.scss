@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "../utils/styles/base";
+@import "../shared/styles/base";
 .find {
-  border-top: rem(1) solid $color-border-white;
+  border-top: rem(1) solid $border-white;
   padding-top: rem(48);
   &__body {
     padding-top: rem(24);
@@ -39,7 +39,7 @@
   }
   &__button {
     padding: rem(4) rem(8);
-    background: $color-find-background;
+    background: $background-find;
     font-weight: 500;
     font-size: rem(13);
     line-height: math.div(16 , 13);
@@ -49,11 +49,11 @@
     border-radius: rem(8);
     svg {
       font-size: rem(16);
-      color: $color-hover-svg;
+      color: $hover-svg;
       transition: color .3s linear;
       @media (any-hover: hover){
           &:hover {
-              color: $mainColor;
+              color: $main-color;
           }
       }
     }
@@ -68,7 +68,7 @@
     padding-top: rem(30);
     button {
       svg {
-        color: $mainColor;
+        color: $main-color;
       }
     }
   }
@@ -87,7 +87,7 @@
     align-items: center;
     gap: rem(5);
     cursor: pointer;
-    color: $mainColor;
+    color: $main-color;
     svg {
       font-size: rem(10);
     }
@@ -98,7 +98,7 @@
 }
 .find-item {
   display: flex;
-  box-shadow: 0 rem(8) rem(16) 0 #1C1E2214;
+  box-shadow: 0 rem(8) rem(16) 0 $shadow;
   background: $color-white;
   position: relative;
   @media (max-width:em(700)) {
@@ -165,7 +165,7 @@
 
 .sidebar {
   height: rem(1082);
-  border: rem(1) solid $color-border-white;
+  border: rem(1) solid $border-white;
   border-radius: rem(8);
   @media (max-width:$tablet) {
     position: fixed;
@@ -247,7 +247,7 @@
       background-color: $color-find-scroll;
     }
     &::-webkit-scrollbar-track {
-      background: $color-find-background;
+      background: $background-find;
       border-radius: rem(2);
     }
   }
@@ -260,7 +260,7 @@
   }
   &__range {
     outline: none;
-    border: rem(1) solid $color-border-pale;
+    border: rem(1) solid $border-pale;
     width: rem(124);
     line-height: math.div(20 , 14);
     border-radius: rem(8);
@@ -276,7 +276,7 @@
   }
 }
 .header-sidebar {
-  background: $color-find-background;
+  background: $background-find;
   padding: rem(16);
   display: flex;
   align-items: center;
@@ -292,7 +292,7 @@
     -webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
     @media (any-hover: hover){
         &:hover {
-            color: $color-hover-svg;
+            color: $hover-svg;
         }
     }
   }

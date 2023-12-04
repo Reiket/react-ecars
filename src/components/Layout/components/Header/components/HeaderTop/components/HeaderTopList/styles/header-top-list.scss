@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../../../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .header-contacts {
   &__social {
     display: flex;

@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .info-header-top {
   .info-header-top__item {
     @media (max-width:$mobile) {
@@ -8,7 +8,6 @@
       }
     }
   }
-
   &__item {
     display: flex;
     position: relative;
@@ -16,7 +15,7 @@
     gap: rem(6);
     &_burger {
       .info-header-top__text, svg {
-        color: $mainColor !important;
+        color: $main-color !important;
       }
     }
     svg {
@@ -83,9 +82,9 @@
     }
   }
   &_nav {
-    color: $mainColor;
+    color: $main-color;
     .header-menu__arrow {
-      color: $mainColor;
+      color: $main-color;
     }
   }
   &__arrow {
@@ -114,7 +113,7 @@
     }
   }
   &__point {
-    background: $color-background-dark;
+    background: $background-dark;
     &:first-child {
       border-radius: rem(8) rem(8) 0 0;
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const Reset: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const Reset: React.FC = () => {
                     </div>
                     <div className="auth__text">Your password has been successfully reset. Click the button below to log in.</div>
                     <form className="auth__form">
-                        <a href={"/"} className="auth__button green-button green-button_big">Login</a>
+                        <GreenButton classnames={"auth__button green-button_big"} text={"Login"} type={"button"}/>
                     </form>
                 </div>
             </div>

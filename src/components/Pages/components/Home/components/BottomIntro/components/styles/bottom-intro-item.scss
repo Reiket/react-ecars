@@ -1,6 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base/mixins";
-@import "/src/utils/styles/base/colors";
+@import "/src/shared/styles/base";
 .bottom-intro {
   &__item {
     display: flex;
@@ -20,7 +19,6 @@
       height: rem(20);
     }
   }
-  &__content {}
   &__title {
     font-weight: 600;
     font-size: rem(16);

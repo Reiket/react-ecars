@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .footer {
   &__copy {
     @include adaptiveValue("padding-top", 60, 40);

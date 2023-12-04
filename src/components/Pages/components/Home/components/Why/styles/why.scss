@@ -1,10 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .why {
-  border-top: rem(1) solid $color-border-white;
-  &__container {
-  }
-
+  border-top: rem(1) solid $border-white;
   &__body {
     display: flex;
     justify-content: space-between;
@@ -15,7 +12,6 @@
       gap: rem(35);
     }
   }
-
   &__image {
     @media (max-width:$tablet) {
       img {
@@ -24,7 +20,6 @@
       }
     }
   }
-
   &__content {
     @include adaptiveValue("padding-right", 104, 30, 1920, 991, 1);
     @include adaptiveValue("padding-left", 104, 30, 1920, 991, 1);
@@ -32,13 +27,11 @@
       flex: 0 0 rem(345);
     }
   }
-
   &__title {
     &:not(:last-child) {
       margin-bottom: em(24, 38);
     }
   }
-
   &__text {
     font-size: rem(16);
     line-height: math.div(24 , 16);
@@ -52,7 +45,6 @@
     }
   }
 }
-
 .advantages-why {
   &__item {
     margin-left: rem(20);
@@ -60,7 +52,6 @@
       margin-bottom: rem(24);
     }
   }
-
   &__title {
     font-weight: 600;
     font-size: rem(16);

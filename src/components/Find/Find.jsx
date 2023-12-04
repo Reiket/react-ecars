@@ -6,7 +6,7 @@ import {BsCheck} from "react-icons/bs";
 import Slider from "rc-slider";
 import FindCard from "./Card/FindCard";
 import Sidebar from "./Sidebar/Sidebar";
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
 
 const Find = () => {
     return (

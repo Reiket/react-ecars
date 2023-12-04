@@ -1,4 +1,4 @@
-import blog from "../../../../../../../../json/blogCategory.json";
+import blog from "../../json/blogCategory.json";
 
 
 export type BlogItemPropsType = {

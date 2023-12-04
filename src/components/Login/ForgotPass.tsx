@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaArrowLeftLong} from "react-icons/fa6";
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const ForgotPass: React.FC = () => {
     return (
@@ -16,7 +17,7 @@ const ForgotPass: React.FC = () => {
                             <span>Email address</span>
                             <input type="email" className="auth__input" placeholder={"example@mail.com"}/>
                         </label>
-                        <button className="auth__button green-button green-button_big">Reset password</button>
+                        <GreenButton classnames={"auth__button green-button_big"} text={"Reset password"} type={"button"}/>
                     </form>
                     <div className="auth__content"><a href={"/"} className={"auth_link"} ><FaArrowLeftLong/> Back to login</a></div>
                 </div>

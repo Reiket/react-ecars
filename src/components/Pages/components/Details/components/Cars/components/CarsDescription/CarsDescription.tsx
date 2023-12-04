@@ -1,7 +1,7 @@
 import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {CarsDescriptionPropsType} from "./types/cars-description.types";
-import Title from "../../../../../../../Shared/components/Title";
+import Title from "../../../../../../../../shared/components/Title/Title";
 
 const CarsDescription: React.FC<CarsDescriptionPropsType> = ({itemById}) => {
     const [isMoreOpen, setIsMoreOpen] = React.useState(false);

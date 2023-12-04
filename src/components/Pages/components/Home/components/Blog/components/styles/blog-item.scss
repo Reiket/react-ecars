@@ -1,7 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .item-blog {
-  box-shadow: 0 rem(8) rem(16) 0 #1C1E2214;
+  box-shadow: 0 rem(8) rem(16) 0 $shadow;
   background: $color-white;
   &_big {
     grid-column: span 2;
@@ -23,12 +23,12 @@
     font-weight: 600;
     line-height: math.div(16 , 12);
     &_blue {
-      background: #E6F4FF;
-      color: #0394FC;
+      background: $background-blogItem-blue;
+      color: $color-blogItem-blue;
     }
     &_orange {
-      background: #FFF1E8;
-      color: #DD7437;
+      background: $background-blogItem-orange;
+      color: $color-blogItem-orange;
     }
   }
   &__title {
@@ -43,6 +43,5 @@
   &__text {
     color: $color-gray;
     line-height: math.div(20 , 14);
-
   }
 }

@@ -1,9 +1,7 @@
 @use "sass:math";
-@import "/src/utils/styles/base/mixins";
-@import "/src/utils/styles/base/colors";
+@import "/src/shared/styles/base";
 .nav-menu {
   flex: 1 1 auto;
-
   &__list {
     @media (min-width: em(930)) {
       flex-wrap: wrap;
@@ -74,7 +72,6 @@
           visibility: visible;
           opacity: 1;
         }
-
         &::before {
           right: 0;
         }
@@ -98,10 +95,11 @@
     transition: color 0.3s ease 0s;
     @media (any-hover: hover){
       &:hover {
-        color: $greenColor;
+        color: $color-green;
       }
     }
   }
 }
 
+//Imports children components
 @import "../components/NavbarMenu/styles/navbar-menu";

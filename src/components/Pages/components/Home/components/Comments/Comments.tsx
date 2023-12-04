@@ -1,11 +1,11 @@
 import React from 'react';
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md";
 import CommentsSlider from "./components/CommentsSlider";
-import {fetchComments} from "../../../../../../redux/reducers/comments-reducer";
 import {useDispatch} from "react-redux";
-import {AppDispatch} from "../../../../../../redux/store";
-import NavigationBtn from "../../../../../Shared/components/NavigationBtn";
-import Title from "../../../../../Shared/components/Title";
+import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
+import Title from "../../../../../../shared/components/Title/Title";
+import {AppDispatch} from "../../../../../../app/store/types/store.types";
+import {fetchComments} from "./store/thunks/fetchComments";
 
 const Comments: React.FC = () => {
     const dispatch: AppDispatch = useDispatch()

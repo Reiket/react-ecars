@@ -1,6 +1,7 @@
 import React from 'react';
 import {BsCheck} from "react-icons/bs";
-import Title from "../Shared/components/Title";
+import Title from "../../shared/components/Title/Title";
+import GreenButton from "../../shared/components/GreenButton/GreenButton";
 
 const Register: React.FC = () => {
     return (
@@ -37,7 +38,7 @@ const Register: React.FC = () => {
                                     className="checkbox__text">I agree to the <span>Terms of Service</span> and <span>Privacy Policy</span></span></label>
                             </div>
                         </label>
-                        <button className="auth__button green-button green-button_big">Sign Up</button>
+                        <GreenButton classnames={"auth__button green-button_big"} text={"Sign Up"} type={"button"}/>
                     </form>
                     <div className="auth__content">Already have an account?<a href={"/"}> Login</a></div>
                     <div className="auth__or">or</div>

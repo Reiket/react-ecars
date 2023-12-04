@@ -1,7 +1,8 @@
 import React from 'react';
 import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
-import {useClickOutside} from "../../../../../../../../../../../../utils/hooks/useClickOutside";
+import {useClickOutside} from "../../../../../../../../../../../../shared/hooks/useClickOutside";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
+import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
 
 const SellBottom = () => {
     const [isOpenPopup, setIsPopupOpen] = React.useState(false)

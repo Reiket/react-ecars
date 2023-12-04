@@ -1,14 +1,12 @@
 @use "sass:math";
-@import "/src/utils/styles/base/mixins";
-@import "/src/utils/styles/base/colors";
+@import "/src/shared/styles/base";
 .comments-slider {
   &__item {
-    box-shadow: 0 8px 16px 0 #1C1E2214;
+    box-shadow: 0 rem(8) rem(16) 0 $shadow;
     padding: rem(32);
     background: $color-white;
 
   }
-
   &__top {
     display: flex;
     align-items: center;
@@ -18,26 +16,19 @@
       text-align: center;
     }
   }
-
-  &__avatar {
-  }
-
   &__info {
     flex: 1 1 auto;
   }
-
   &__fullname {
     font-weight: 600;
     line-height: math.div(20 , 14);
 
   }
-
   &__brand {
     color: $color-light-gray;
     font-size: rem(12);
     line-height: math.div(16 , 12);
   }
-
   &__rating {
     color: $color-yellow;
     font-size: rem(16);
@@ -45,7 +36,6 @@
     align-items: center;
     gap: rem(2);
   }
-
   &__text {
     padding-top: rem(24);
     font-size: rem(15);

@@ -1,9 +1,9 @@
 @use "sass:math";
-@import "/src/utils/styles/base";
+@import "/src/shared/styles/base";
 .details {
   padding-top: rem(24);
   @include adaptiveValue("padding-bottom", 96 , 50);
-  border-top: 1px solid $color-border-white;
+  border-top: 1px solid $border-white;
   &__path {
     color: $color-light-gray;
     padding-bottom: rem(16);

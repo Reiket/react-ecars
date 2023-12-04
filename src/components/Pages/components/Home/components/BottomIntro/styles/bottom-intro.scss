@@ -1,15 +1,14 @@
 @use "sass:math";
-@import "../../../../../../../utils/styles/base/mixins";
+@import "/src/shared/styles/base";
 .bottom-intro {
   &__container {
     background: $color-white;
     border-radius: rem(16);
-    box-shadow: 0 12px 32px 0 #1C1E2214;
+    box-shadow: 0 rem(12) rem(32) 0 $shadow;
     @media (min-width:em(820)) {
       transform: translateY(rem(-80));
     }
   }
-
   &__body {
     padding: rem(40);
     display: flex;
@@ -23,4 +22,6 @@
     }
   }
 }
+
+//Imports children components
 @import "../components/styles/bottom-intro-item";
