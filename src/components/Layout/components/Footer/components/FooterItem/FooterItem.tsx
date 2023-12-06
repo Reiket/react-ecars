@@ -11,8 +11,8 @@ const FooterItem: React.FC<Partial<FooterItemsType>> = ({isLogo, links, title}) 
             Nullam non nisi est sit amet. Arcu vitae elementum curabitur vitae nunc. Ut tellus elementum sagittis vitae et leo duis.
         </div>
         <ul className="footer__list">
-            {[...contacts].slice(0, 4).map(c => (
-                <li><a href={c.url} className="footer__social">{c.icon}</a></li>
+            {[...contacts].slice(0, 4).map((c, id) => (
+                <li key={id}><a href={c.url} className="footer__social">{c.icon}</a></li>
             ))}
         </ul>
     </div> : <div className="footer__item">

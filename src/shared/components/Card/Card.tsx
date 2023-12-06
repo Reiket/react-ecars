@@ -10,7 +10,7 @@ import {AppDispatch} from "../../../app/store/types/store.types";
 import {fetchRemoveFromFav} from "../../../components/Pages/components/Favorites/store/thunks/fetchRemoveFromFav";
 import {fetchAddToFav} from "../../../components/Pages/components/Favorites/store/thunks/fetchAddToFav";
 
-const Card: React.FC<CardPropsType> = ({classnames, favItems, item, currency}) => {
+const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, currency}) => {
     const dispatch: AppDispatch = useDispatch();
     const isLoading = useSelector(selectIsLoading)
     const onClickToFavorites = () => {
@@ -37,6 +37,6 @@ const Card: React.FC<CardPropsType> = ({classnames, favItems, item, currency}) =
             </div>
         </div>
     </div>
-}
+})
 
 export default Card;

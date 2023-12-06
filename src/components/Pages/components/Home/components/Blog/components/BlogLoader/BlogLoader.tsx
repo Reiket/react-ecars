@@ -1,7 +1,7 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const NewsLoader: React.FC = (props) => (
+const BlogLoader: React.FC = (props) => (
     <ContentLoader
         speed={2}
         width={500}
@@ -18,4 +18,4 @@ const NewsLoader: React.FC = (props) => (
     </ContentLoader>
 )
 
-export default NewsLoader;
+export default BlogLoader;

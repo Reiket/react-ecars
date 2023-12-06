@@ -1,6 +1,6 @@
 import React from 'react';
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md";
-import CommentsSlider from "./components/CommentsSlider";
+import CommentsSlider from "./components/CommentsSlider/CommentsSlider";
 import {useDispatch} from "react-redux";
 import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
 import Title from "../../../../../../shared/components/Title/Title";

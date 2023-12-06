@@ -1,7 +1,7 @@
 import React from 'react';
 import {RiArrowRightLine} from "react-icons/ri";
-import BlogItem from "./components/BlogItem";
-import NewsLoader from "../../../../../Other/Loader/NewsLoader";
+import BlogItem from "./components/BlogItem/BlogItem";
+import BlogLoader from "./components/BlogLoader/BlogLoader";
 import {useDispatch, useSelector} from "react-redux";
 import {selectNewsPosts} from "./store/selector/news-selector";
 import Title from "../../../../../../shared/components/Title/Title";
@@ -23,7 +23,7 @@ const Blog: React.FC = () => {
                 </div>
                 <div className="blog__body">
                     {posts.length === 0 ? (
-                        [...Array(3)].map((_, id) => <NewsLoader key={id}/>)
+                        [...Array(3)].map((_, id) => <BlogLoader key={id}/>)
                     ) : (
                         posts.map((item) => <BlogItem key={item.id} isMoving={true}
                                                       imageUrl={item.imageUrl}

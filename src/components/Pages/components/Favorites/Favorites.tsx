@@ -1,6 +1,5 @@
 import React from 'react';
 import NotFoundFav from "./components/NotFoundFav/NotFoundFav";
-import FavoritesLoader from "../../../Other/Loader/FavoritesLoader";
 import {useDispatch, useSelector} from "react-redux";
 import {selectFavorites, selectIsLoading} from "./store/selector/favorites-selector";
 import {selectFilters} from "../Home/components/Offers/store/selector/offers-selector";
@@ -8,6 +7,7 @@ import Title from "../../../../shared/components/Title/Title";
 import Card from "../../../../shared/components/Card/Card";
 import {AppDispatch} from "../../../../app/store/types/store.types";
 import {fetchFavorites} from "./store/thunks/fetchFavorites";
+import CardLoader from "../../../../shared/components/Card/components/CardLoader/CardLoader";
 
 const Favorites: React.FC = () => {
     const favItems = useSelector(selectFavorites)
@@ -16,12 +16,12 @@ const Favorites: React.FC = () => {
     const dispatch: AppDispatch = useDispatch();
     React.useEffect(() => {
         dispatch(fetchFavorites(shipNumber))
-    }, [dispatch, shipNumber]);
+    }, [shipNumber]);
     const renderFavoritesContent = () => {
         if (isLoading) {
             return (
                 <div className="favorites__body">
-                    {[...Array(4)].map((_, id) => <FavoritesLoader key={id}/>)}
+                    {[...Array(4)].map((_, id) => <CardLoader key={id}/>)}
                 </div>
             );
         }

@@ -1,18 +1,18 @@
 [
   {
     "name": "All Cars",
-    "url": "/catalog"
+    "url": "/"
   },
   {
     "name": "About Us",
-    "url": "/about"
+    "url": "/"
   },
   {
     "name": "Blog",
-    "url": "/news"
+    "url": "/"
   },
   {
     "name": "Contact",
-    "url": "/contact"
+    "url": "/"
   }
 ]

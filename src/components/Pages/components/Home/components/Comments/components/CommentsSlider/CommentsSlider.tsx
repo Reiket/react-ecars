@@ -2,10 +2,10 @@ import React from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
-import CommentLoader from "../../../../../../Other/Loader/CommentLoader";
-import '../../Offers/components/styles/swiper.scss';
+import CommentLoader from "../CommentsLoader/CommentLoader";
+import '../../../Offers/components/styles/swiper.scss';
 import {useSelector} from "react-redux";
-import {selectComments} from "../store/selector/comments-selector";
+import {selectComments} from "../../store/selector/comments-selector";
 
 const CommentsSlider = () => {
     const items = useSelector(selectComments)

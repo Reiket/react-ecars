@@ -4,7 +4,7 @@ import {NavbarPropsType} from "../../types/navbar.types";
 import Menu from "../../../../../../shared/components/Menu/Menu";
 import {contacts} from "../../../../../../../../../../shared/Contacts/contacts-aray";
 
-const NavbarMenu: React.FC<NavbarPropsType> = ({isBurger, menuConfigs, filters, onClickToFilters}) => {
+const NavbarMenu: React.FC<NavbarPropsType> = React.memo(({isBurger, menuConfigs, filters, onClickToFilters}) => {
 
     return (
         <div className={"nav-menu__bottom"}>
@@ -36,6 +36,6 @@ const NavbarMenu: React.FC<NavbarPropsType> = ({isBurger, menuConfigs, filters, 
             </div>
         </div>
     );
-};
+})
 
 export default NavbarMenu;

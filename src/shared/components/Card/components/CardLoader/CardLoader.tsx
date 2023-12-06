@@ -1,7 +1,7 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const OfferLoader: React.FC = (props) => (
+const CardLoader: React.FC = (props) => (
     <ContentLoader
         speed={2}
         width={400}
@@ -21,4 +21,4 @@ const OfferLoader: React.FC = (props) => (
     </ContentLoader>
 )
 
-export default OfferLoader;
+export default CardLoader;

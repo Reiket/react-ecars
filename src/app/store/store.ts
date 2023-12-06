@@ -5,6 +5,7 @@ import commentsReducer from "../../components/Pages/components/Home/components/C
 import newsReducer from "../../components/Pages/components/Home/components/Blog/store/news-reducer";
 import favoritesReducer from "../../components/Pages/components/Favorites/store/favorites-reducer";
 import brandsReducer from "../../components/Pages/components/Home/components/Brands/store/brands-reducer";
+import detailsReducer from "../../components/Pages/components/Details/store/details-reducer";
 
 export let rootReducers = combineReducers({
     offers: offersReducer,
@@ -12,6 +13,7 @@ export let rootReducers = combineReducers({
     comments: commentsReducer,
     news: newsReducer,
     favorites: favoritesReducer,
+    details: detailsReducer,
 })
 
 let store = createStore(rootReducers, applyMiddleware(thunkMiddleware));

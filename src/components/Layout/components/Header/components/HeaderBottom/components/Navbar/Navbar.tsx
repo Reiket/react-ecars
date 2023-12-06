@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import NavbarMenu from "./components/NavbarMenu/NavbarMenu";
 import {navbarMenu, NavbarPropsType} from "./types/navbar.types";
 
-const Navbar: React.FC<NavbarPropsType> = ({isBurger, onClickToFilters, filters, menuConfigs}) => {
+const Navbar: React.FC<NavbarPropsType> = React.memo(({isBurger, onClickToFilters, filters, menuConfigs}) => {
     return (
         <nav className="header-bottom__menu nav-menu">
             <ul className={isBurger ? "nav-menu__list active" : "nav-menu__list"}>
@@ -13,6 +13,6 @@ const Navbar: React.FC<NavbarPropsType> = ({isBurger, onClickToFilters, filters,
             </ul>
         </nav>
     );
-};
+})
 
 export default Navbar;

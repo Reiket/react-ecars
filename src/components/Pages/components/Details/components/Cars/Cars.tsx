@@ -8,26 +8,27 @@ import QuestionsCars from "./components/QuestionsCars/QuestionsCars";
 import LinksCars from "./components/LinksCars/LinksCars";
 import {useWindowWidth} from "../../../../../../shared/hooks/useWindowWidth";
 import {useSelector} from "react-redux";
-import {selectItemById} from "../../../Home/components/Offers/store/selector/offers-selector";
 import {CarsPropsType} from "./types/cars.types";
+import {selectDetail} from "../../store/selector/details-selector";
+
 const Cars: React.FC<CarsPropsType> = ({currency}) => {
-    const itemById = useSelector(selectItemById)
+    const detail = useSelector(selectDetail)
     const isMoving = useWindowWidth(991)
     const images = Array.from({ length: 6 }, (_) => ({
-        original: itemById.imageUrl,
-        thumbnail: itemById.imageUrl,
+        original: detail.imageUrl,
+        thumbnail: detail.imageUrl,
     }));
     return <>
         <div className="details__cars cars">
             <ImageGallery items={images} showIndex={true}/>
-            {isMoving && <CarsInfo itemById={itemById} currency={currency}/>}
-            <CarsList itemById={itemById}/>
-            <CarsDescription itemById={itemById}/>
+            {isMoving && <CarsInfo detail={detail} currency={currency}/>}
+            <CarsList detail={detail}/>
+            <CarsDescription detail={detail}/>
             <FeaturesCars/>
             <QuestionsCars/>
             <LinksCars/>
         </div>
-        { !isMoving && <CarsInfo itemById={itemById} currency={currency}/>}
+        { !isMoving && <CarsInfo detail={detail} currency={currency}/>}
     </>
 }
 

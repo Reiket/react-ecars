@@ -11,7 +11,7 @@ import {AppDispatch} from "../../../../../../../../../../../../app/store/types/s
 import {fetchRemoveFromFav} from "../../../../../../../../../Favorites/store/thunks/fetchRemoveFromFav";
 import {fetchAddToFav} from "../../../../../../../../../Favorites/store/thunks/fetchAddToFav";
 
-const SellPossibility: React.FC<SellDetailsPropsType> = ({itemById}) => {
+const SellPossibility: React.FC<SellDetailsPropsType> = ({detail}) => {
     const {pathname, search} = useLocation()
     const dispatch: AppDispatch = useDispatch()
     const favorites = useSelector(selectFavorites)
@@ -28,7 +28,7 @@ const SellPossibility: React.FC<SellDetailsPropsType> = ({itemById}) => {
         }
     };
     return <div className="sell-details__possibility">
-        <button disabled={isLoading} onClick={() => onClickToFavorite(itemById)} className="sell-details__item">{checkInFavorites(itemById.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}Save</button>
+        <button disabled={isLoading} onClick={() => onClickToFavorite(detail)} className="sell-details__item">{checkInFavorites(detail.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}Save</button>
         <CopyToClipboard text={`http://localhost:3001` + pathname + search }>
             <button onClick={onClickToShare} className="sell-details__item"><AiOutlineShareAlt/>{!copied ? "Share" : "Copied!"}</button>
         </CopyToClipboard>

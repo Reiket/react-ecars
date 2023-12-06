@@ -4,10 +4,9 @@ import HeaderUtils from "./components/HeaderUtils/HeaderUtils";
 import Logo from "../../../../../../shared/components/Logo/Logo";
 import Burger from "./shared/Burger/Burger";
 import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
-import SearchForm from "./shared/SearchForm/SearchForm";
 import {MenuPropsType} from "../../shared/components/Menu/types/menu.types";
 
-const HeaderBottom: React.FC<MenuPropsType> = ({filters, onClickToFilters, menuConfigs}) => {
+const HeaderBottom: React.FC<MenuPropsType> = React.memo(({filters, onClickToFilters, menuConfigs}) => {
     const [isBurger, setIsBurger] = React.useState(false);
     const [isSearch, setIsSearch] = React.useState(false);
     const onClickToSearch = () => {
@@ -30,6 +29,6 @@ const HeaderBottom: React.FC<MenuPropsType> = ({filters, onClickToFilters, menuC
             </div>
         </div>
     );
-};
+})
 
 export default HeaderBottom;

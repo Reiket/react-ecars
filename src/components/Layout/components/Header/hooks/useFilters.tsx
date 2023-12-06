@@ -1,11 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import qs from "qs";
-import {selectFilters, selectItemById} from "../../../../Pages/components/Home/components/Offers/store/selector/offers-selector";
+import {selectFilters} from "../../../../Pages/components/Home/components/Offers/store/selector/offers-selector";
 import React from "react";
 import {useNavigateSearch} from "../../../../../shared/hooks/useSearchNavigate";
 import {AppDispatch} from "../../../../../app/store/types/store.types";
 import {actions} from "../../../../Pages/components/Home/components/Offers/store/actions/offers-actions";
+import {selectDetail} from "../../../../Pages/components/Details/store/selector/details-selector";
 const symbolInURL = 1;
 export const useFilters = () => {
     const [isFilterLoading, setIsFilterLoading] = React.useState(true)
@@ -14,7 +15,7 @@ export const useFilters = () => {
     const navigateSearch = useNavigateSearch();
     const location = useLocation();
     const cardPathname = `/${Number(location.pathname.charAt(symbolInURL))}`;
-    const itemById = useSelector(selectItemById);
+    const detail = useSelector(selectDetail);
     React.useEffect(() => {
         setIsFilterLoading(true)
         const parsed = qs.parse(location.search.substring(1));
@@ -36,7 +37,7 @@ export const useFilters = () => {
                 currency: `${filters.currency}`
             });
         }
-    }, [filters, itemById]);
+    }, [filters, detail]);
 
     const onClickToFilters = (shipNumber: number, currency: number) => {
         dispatch(actions.setFilters({shipNumber, currency}));

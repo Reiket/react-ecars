@@ -1,6 +1,6 @@
 import {ItemsType} from "../../../../../../../../../shared/types/types";
 
 export type CarsInfoPropsType = {
-    itemById: ItemsType
+    detail: ItemsType
     currency: number
 }

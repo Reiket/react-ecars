@@ -12,7 +12,7 @@ import {AppDispatch} from "../../../../../../app/store/types/store.types";
 import {fetchOffers} from "./store/thunks/fetchOffers";
 import {fetchFavorites} from "../../../Favorites/store/thunks/fetchFavorites";
 
-const Offers = () => {
+const Offers = React.memo(() => {
     const {shipNumber, currency} = useSelector(selectFilters)
     const favorites = useSelector(selectFavorites)
     const filtersHook = useFilters();
@@ -35,7 +35,7 @@ const Offers = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Offers;
 
