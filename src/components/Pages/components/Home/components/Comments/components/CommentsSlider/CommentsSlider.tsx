@@ -6,14 +6,19 @@ import CommentLoader from "../CommentsLoader/CommentLoader";
 import '../../../Offers/components/styles/swiper.scss';
 import {useSelector} from "react-redux";
 import {selectComments} from "../../store/selector/comments-selector";
+import BlockTitle from "../../../../../../../../shared/components/Title/BlockTitle";
+import Text from "../../../../../../../../shared/components/Title/Text";
 
 const CommentsSlider = () => {
+    const previewSlidesCount = 3
+    const ratingStarCount = 5;
     const items = useSelector(selectComments)
     return (
         <Swiper
             modules={[Navigation,  Autoplay]}
             spaceBetween={24}
             autoplay
+            loop={true}
             slidesPerView={3}
             breakpoints={{
                 300: {
@@ -42,7 +47,7 @@ const CommentsSlider = () => {
                 nextEl: '.comments__next',
             }}
         >
-            {items.length === 0 ? [...Array(3)].map((_, id) => <SwiperSlide key={id}>
+            {items.length === 0 ? [...Array(previewSlidesCount)].map((_, id) => <SwiperSlide key={id}>
                 <CommentLoader />
             </SwiperSlide>) :  items.map((item) => <SwiperSlide key={item.id} className="comments__slider comments-slider">
                 <div className="comments-slider__item">
@@ -51,18 +56,16 @@ const CommentsSlider = () => {
                             <img src={item.avatar} alt="Avatar"/>
                         </div>
                         <div className="comments-slider__info">
-                            <div className="comments-slider__fullname">{item.fullName}</div>
-                            <div className="comments-slider__brand">{item.model}</div>
+                            <p className="comments-slider__fullname">{item.fullName}</p>
+                            <p className="comments-slider__brand">{item.model}</p>
                         </div>
                         <div className="comments-slider__rating">
-                            {[...Array(5)].map((_, id) => (
+                            {[...Array(ratingStarCount)].map((_, id) => (
                                 id < item.rating ? <AiFillStar key={id} /> : <AiOutlineStar key={id} />
                             ))}
                         </div>
                     </div>
-                    <p className="comments-slider__text">
-                        {item.comment}
-                    </p>
+                    <Text text={item.comment} classnames={"comments-slider__text"}/>
                 </div>
             </SwiperSlide>)}
 

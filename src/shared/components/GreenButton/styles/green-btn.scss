@@ -7,7 +7,7 @@
   color: $color-white;
   font-weight: 600;
   position: relative;
-  line-height: math.div(24 , 14);
+  line-height: math.div(24 , $fontSize);
   transition: background 0.3s ease 0s;
   @media (any-hover: hover){
     &:hover {

@@ -3,12 +3,15 @@
 .item-blog {
   box-shadow: 0 rem(8) rem(16) 0 $shadow;
   background: $color-white;
+  border-radius: rem(10);
+  transition: box-shadow .3s ease 0s;
   &_big {
     grid-column: span 2;
     grid-row: span 2;
   }
   &__image {
     img {
+      border-radius: rem(10) rem(10) 0 0;
       width: 100%;
       height: auto;
     }
@@ -19,29 +22,30 @@
   &__category {
     padding: rem(2) rem(6) rem(2) rem(6);
     border-radius: rem(4);
-    font-size: rem(12);
+    font-size: rem($font-size-desc);
     font-weight: 600;
-    line-height: math.div(16 , 12);
-    &_blue {
+    line-height: math.div(16 , $font-size-desc);
+    &_guides {
       background: $background-blogItem-blue;
       color: $color-blogItem-blue;
     }
-    &_orange {
+    &_news {
       background: $background-blogItem-orange;
       color: $color-blogItem-orange;
     }
   }
   &__title {
     padding-top: rem(12);
-    font-size: rem(18);
-    line-height: math.div(21.6 , 18);
-    font-weight: 600;
     &:not(:last-child) {
-      margin-bottom: em(12, 18);
+      margin-bottom: em(12, $font-size-item-title);
     }
   }
   &__text {
     color: $color-gray;
-    line-height: math.div(20 , 14);
+  }
+  @media (any-hover: hover){
+      &:hover {
+        box-shadow: rem(10) rem(30) rem(30) 0 $shadow;
+      }
   }
 }

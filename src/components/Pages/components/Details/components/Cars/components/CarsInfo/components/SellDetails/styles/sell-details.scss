@@ -1,6 +1,5 @@
 @use "sass:math";
-@import "/src/shared/styles/base/mixins";
-@import "/src/shared/styles/base/colors";
+@import "/src/shared/styles/base";
 .sell-details {
   border: rem(1) solid $border-white;
   border-radius: rem(8);
@@ -11,11 +10,8 @@
   }
   &__title {
     padding-top: rem(16);
-    font-size: rem(22);
-    font-weight: 600;
-    line-height: math.div(26.4 , 22);
     &:not(:last-child) {
-      margin-bottom: em(16, 22);
+      margin-bottom: em(16, $font-size-block-title);
     }
   }
   &__price {

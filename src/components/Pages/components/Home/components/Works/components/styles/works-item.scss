@@ -6,7 +6,8 @@
     display: grid;
     justify-items: center;
     position: relative;
-    @media (min-width:em(942)) {
+
+    @media (min-width:em(668)) {
       &:not(:last-child) {
         &::before {
           content:'';
@@ -17,6 +18,17 @@
           top: rem(27);
           left: 70%;
         }
+        @media (max-width:em(1254)) {
+          &:nth-child(2) {
+            &::before {
+              display: none;
+            }
+          }
+          &::before {
+            width: rem(300);
+            @include adaptiveValue("left", 450, 180, 1254, 665);
+          }
+        }
       }
     }
   }
@@ -25,9 +37,6 @@
     height: rem(56);
     border-radius: 50%;
     background: $color-yellow;
-    font-weight: 600;
-    font-size: rem(18);
-    line-height: math.div(24 , 18);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,11 +45,8 @@
     }
   }
   &__name {
-    font-size: rem(18);
-    line-height: math.div(21.6 , 18);
-    font-weight: 600;
     &:not(:last-child) {
-      margin-bottom: em(12, 18);
+      margin-bottom: em(12, $font-size-item-title);
     }
   }
 }

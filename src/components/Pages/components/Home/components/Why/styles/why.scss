@@ -32,12 +32,10 @@
       margin-bottom: em(24, 38);
     }
   }
-  &__text {
-    font-size: rem(16);
-    line-height: math.div(24 , 16);
+  &__paragraphs {
     @media (min-width:$mobile) {
       &:not(:last-child) {
-        margin-bottom: em(48, 16);
+        margin-bottom: em(48, $font-size-text);
       }
     }
     p {
@@ -53,12 +51,9 @@
     }
   }
   &__title {
-    font-weight: 600;
-    font-size: rem(16);
-    line-height: math.div(20 , 16);
     position: relative;
     &:not(:last-child) {
-      margin-bottom: em(8, 16);
+      margin-bottom: em(8, $font-size-text);
     }
     &::before {
       content:'';

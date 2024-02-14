@@ -21,45 +21,8 @@
     svg {
       color: $color-white;
       opacity: 70%;
-      font-size: rem(16);
+      font-size: rem($font-size-text);
       cursor: pointer;
-    }
-    &_help {
-      svg {
-        @media (any-hover: hover){
-          &:hover {
-            ~ .info-header-top__tippy {
-              visibility: visible;
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-  &__text {
-    color: $color-white;
-    opacity: 70%;
-    position: relative;
-
-  }
-  &__tippy {
-    position: absolute;
-    color: $color-white;
-    top: rem(25);
-    z-index: 5;
-    transition: all .3s linear;
-    background: $color-light-gray;
-    visibility: hidden;
-    opacity: 0;
-    right: -100%;
-    padding: rem(8);
-    width: rem(130);
-    border-radius: rem(8);
-    &.active {
-      visibility: visible;
-      opacity: 1;
-      right: 0;
     }
   }
 }
@@ -141,4 +104,43 @@
       cursor: not-allowed;
     }
   }
+}
+
+.help-info {
+  svg {
+
+    @media (any-hover: hover){
+      &:hover {
+        ~ .help-info__tippi {
+          visibility: visible;
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+  }
+  &__tippi {
+    position: absolute;
+    color: $color-white;
+    top: rem(25);
+    z-index: 5;
+    transition: all .3s linear;
+    background: $color-light-gray;
+    visibility: hidden;
+    opacity: 0;
+    right: -100%;
+    line-height: 1;
+    padding: rem(8);
+    min-width: rem(200);
+    border-radius: rem(8);
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      right: 0;
+    }
+  }
+}
+
+.info-text {
+  position: relative;
 }

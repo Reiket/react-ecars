@@ -21,17 +21,15 @@
   }
   &__fullname {
     font-weight: 600;
-    line-height: math.div(20 , 14);
-
   }
   &__brand {
     color: $color-light-gray;
-    font-size: rem(12);
-    line-height: math.div(16 , 12);
+    font-size: rem($font-size-desc);
+    line-height: math.div(16 , $font-size-desc);
   }
   &__rating {
     color: $color-yellow;
-    font-size: rem(16);
+    font-size: rem($font-size-text);
     display: flex;
     align-items: center;
     gap: rem(2);
@@ -39,6 +37,5 @@
   &__text {
     padding-top: rem(24);
     font-size: rem(15);
-    line-height: math.div(24 , 16);
   }
 }

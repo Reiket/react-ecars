@@ -13,6 +13,7 @@
     "@types/swiper": "^6.0.0",
     "ahooks": "^3.7.8",
     "axios": "^1.4.0",
+    "clsx": "^2.1.0",
     "json-server": "^0.17.3",
     "lodash.debounce": "^4.0.8",
     "qs": "^6.11.2",
@@ -64,6 +65,12 @@
     "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-custom-scroll": "^5.0.0",
     "@types/react-image-gallery": "^1.2.3",
+    "miragejs": "^0.1.48",
     "typescript": "^4.9.5"
-  }
+  },
+  "description": "react ecars",
+  "main": "index.tsx",
+  "repository": "https://github.com/Reiket/react-ecars",
+  "author": "Reiket <olinyko2607@gmail.com>",
+  "license": "MIT"
 }

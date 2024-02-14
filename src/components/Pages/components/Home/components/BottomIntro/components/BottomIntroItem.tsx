@@ -1,5 +1,6 @@
 import React from 'react';
 import {BottomIntroItemsType} from "../types/bottom-intro.types";
+import ItemTitle from "../../../../../../../shared/components/Title/ItemTitle";
 
 const BottomIntroItem: React.FC<BottomIntroItemsType> = ({imageUrl, title, text}) => {
     return (
@@ -8,7 +9,7 @@ const BottomIntroItem: React.FC<BottomIntroItemsType> = ({imageUrl, title, text}
                 <img src={imageUrl} alt="ImageIntro"/>
             </div>
             <div className="bottom-intro__content">
-                <h4 className="bottom-intro__title">{title}</h4>
+                <ItemTitle classnames={"bottom-intro__title"} text={title} size={"small"}/>
                 <div className="bottom-intro__text">{text}</div>
             </div>
         </div>

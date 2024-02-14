@@ -3,7 +3,7 @@
 .checkbox {
 	position: relative;
 	&:not(:last-child) {
-		margin-bottom: em(12);
+		margin-bottom: rem($font-size-desc);
 	}
 	&__input {
 		position: absolute;
@@ -38,7 +38,6 @@
 		display: none;
 	}
 	&__text {
-		line-height: math.div(20 , 14);
 		span {
 			color: $color-green;
 		}

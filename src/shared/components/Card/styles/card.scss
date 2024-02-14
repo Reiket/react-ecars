@@ -47,7 +47,7 @@
     z-index: 10;
     svg {
       color: $color-white;
-      font-size: rem(16);
+      font-size: rem($font-size-text);
     }
     .active {
       svg {
@@ -62,19 +62,17 @@
     flex-direction: column;
   }
   &__name {
-    line-height: math.div(24 , 16);
-    font-size: rem(16);
     &:not(:last-child) {
-      margin-bottom: em(4, 16);
+      margin-bottom: em(4, $font-size-text);
     }
   }
   &__description {
-    font-size: rem(12);
-    line-height: math.div(16 , 12);
+    font-size: rem($font-size-desc);
+    line-height: math.div(16 , $font-size-desc);
     color: $color-pale-gray;
     flex: 1 1 auto;
     &:not(:last-child) {
-      margin-bottom: em(36, 12);
+      margin-bottom: em(36, $font-size-desc);
     }
   }
   &__bottom {
@@ -82,16 +80,11 @@
     align-items: center;
     gap: rem(6);
   }
-  &__price {
-    font-weight: 600;
-    font-size: rem(16);
-    line-height: math.div(20 , 16);
-  }
   &__discount {
     flex: 1 1 auto;
     text-decoration: line-through;
     color: $color-pale-gray;
-    line-height: math.div(18 , 14);
+    line-height: math.div(18 , $fontSize);
   }
   &__details {
     display: flex;
@@ -99,7 +92,6 @@
     gap: rem(4);
     color: $color-green;
     font-weight: 600;
-    line-height: math.div(20 , 14);
     transition: color .3s ease-in;
     position: relative;
     z-index: 10;

@@ -11,13 +11,13 @@ const MainLayout: React.FC = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
-        <div className={"wrapper"}>
-            <Header/>
-                <main>
-                    <Outlet/>
-                </main>
-            <Footer/>
-        </div>
+       <>
+           <Header/>
+           <main>
+               <Outlet/>
+           </main>
+           <Footer/>
+       </>
     );
 };
 

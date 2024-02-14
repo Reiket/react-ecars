@@ -7,7 +7,7 @@ export type ActionsType = InferActionsType<typeof actions>
 export type PostType = {
     id: number
     imageUrl: string
-    category: number
+    category: string
     title: string
     text: string
 }

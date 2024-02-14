@@ -1,12 +1,14 @@
 import React from 'react';
 import {WorksItemPropsType} from "./types/works-item.types";
+import Text from "../../../../../../../shared/components/Title/Text";
+import ItemTitle from "../../../../../../../shared/components/Title/ItemTitle";
 
-const WorksItem: React.FC<WorksItemPropsType> = ({name, text, number}) => {
+const WorksItem: React.FC<WorksItemPropsType> = ({name, text, id}) => {
     return (
         <div className="works__item">
-            <div className="works__number">{number}</div>
-            <h3 className="works__name">{name}</h3>
-            <div className="works__text">{text}</div>
+            <ItemTitle size={"big"} text={id.toString()} classnames={"works__number"}/>
+            <ItemTitle size={"big"} text={name} classnames={"works__name"}/>
+            <Text text={text} classnames={"works__text"}/>
         </div>
     );
 };

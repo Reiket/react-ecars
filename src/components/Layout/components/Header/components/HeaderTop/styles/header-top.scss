@@ -8,7 +8,7 @@
     padding: rem(10) 0;
     font-weight: 500;
     font-size: rem(13);
-    line-height: math.div(13 , 16);
+    line-height: math.div(13 , $font-size-text);
   }
 }
 

@@ -17,18 +17,12 @@
     }
   }
   &__title {
-    font-size: rem(22);
-    font-weight: 600;
-    line-height: math.div(26.4 , 22);
     &:not(:last-child) {
-      margin-bottom: em(12, 22);
+      margin-bottom: em(12, $font-size-block-title);
     }
   }
-  &__text {
-    line-height: math.div(20 , 14);
-  }
   &__button {
-    font-size: rem(16);
+    font-size: rem($font-size-text);
     @media (max-width:em(1260)) {
       text-align: center;
       width: 100%;

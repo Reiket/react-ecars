@@ -20,14 +20,8 @@
     }
   }
   &__title {
-    font-weight: 600;
-    font-size: rem(16);
-    line-height: math.div(20 , 16);
     &:not(:last-child) {
-      margin-bottom: em(8, 16);
+      margin-bottom: em(8, $font-size-text);
     }
-  }
-  &__text {
-    line-height: math.div(20 , 14);
   }
 }

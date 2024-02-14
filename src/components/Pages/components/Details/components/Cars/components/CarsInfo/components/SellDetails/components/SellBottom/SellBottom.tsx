@@ -2,13 +2,15 @@ import React from 'react';
 import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
 import {useClickOutside} from "../../../../../../../../../../../../shared/hooks/useClickOutside";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
-import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
+import ItemTitle from "../../../../../../../../../../../../shared/components/Title/ItemTitle";
 
 const SellBottom = () => {
     const [isOpenPopup, setIsPopupOpen] = React.useState(false)
     const detailsRef = React.useRef<HTMLButtonElement | null>(null)
     const onClickToPopup = () => {
         document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+        document.body.style.scrollbarGutter = document.body.style.scrollbarGutter === "stable" ? '' : "stable";
+        document.documentElement.style.scrollbarGutter = document.body.style.scrollbarGutter === "stable" ? '' : "stable";
         setIsPopupOpen(prev => !prev);
     }
     useClickOutside(detailsRef, () => {
@@ -20,8 +22,7 @@ const SellBottom = () => {
     return <>
         <DetailsPopup isOpenPopup={isOpenPopup}/>
         <div className="sell-details__bottom bottom-sell">
-            <h5 className="bottom-sell__title">Interested in this car or want a personalized offer of the best
-                deals?</h5>
+            <ItemTitle classnames={"bottom-sell__title"} text={"Interested in this car or want a personalized offer of the best deals?"} size={"small"}/>
             <div className="bottom-sell__text">Contact us and our manager will give you all the information you need.
             </div>
             <button ref={detailsRef} onClick={onClickToPopup}

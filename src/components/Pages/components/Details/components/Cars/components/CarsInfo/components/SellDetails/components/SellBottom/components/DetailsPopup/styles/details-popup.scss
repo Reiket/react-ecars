@@ -1,4 +1,4 @@
-@import "../../../../../../../../../../../../../../../shared/styles/base/mixins";
+@import '/src/shared/styles/base';
 .popup {
   position: fixed;
   top: 0;
@@ -51,6 +51,6 @@
   }
   &__text {
     font-weight: 500;
-    font-size: rem(16);
+    font-size: rem($font-size-text);
   }
 }

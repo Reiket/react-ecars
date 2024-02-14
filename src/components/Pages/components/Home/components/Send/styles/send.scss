@@ -27,16 +27,9 @@
     }
   }
   &__title {
-    font-size: rem(22);
-    line-height: math.div(24.6 ,22 );
-    font-weight: 600;
     &:not(:last-child) {
-      margin-bottom: em(24, 22);
+      margin-bottom: em(24, $font-size-block-title);
     }
-  }
-  &__text {
-    font-size: rem(16);
-    line-height: math.div(24 , 16);
   }
   &__button {
     @media (max-width:em(850)) {

@@ -2,6 +2,8 @@ import React from 'react';
 import {AiOutlineMail} from "react-icons/ai";
 import {BiHelpCircle} from "react-icons/bi";
 import {CommItemsType} from "./types/communication.types";
+import BlockTitle from "../../../../../../shared/components/Title/BlockTitle";
+import Text from "../../../../../../shared/components/Title/Text";
 
 const items = [
     {
@@ -26,8 +28,8 @@ const Communication: React.FC = () => {
                     {items.map((item, id) => (
                         <div key={id} className="communication__item">
                             <div className="communication__icon">{item.icon}</div>
-                            <h3 className="communication__title">{item.title}</h3>
-                            <div className="communication__text">{item.text}</div>
+                            <BlockTitle classnames={"communication__title"} text={item.title}/>
+                            <Text text={item.text} classnames={"communication__text"}/>
                             <a href="/" className={item.btnText !== "Contact Us" ? attributes : attributes + " green-button_white"}>{item.btnText}</a>
                         </div>
                     ))}

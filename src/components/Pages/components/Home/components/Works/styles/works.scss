@@ -14,17 +14,22 @@
   }
   &__text {
     color: $color-gray;
-    font-size: rem(16);
-    line-height: math.div(24 , 16);
     &_width {
       max-width: rem(600);
     }
   }
   &__inner {
-    display: grid;
     padding-top: rem(48);
+    display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(rem(288), 1fr));
     gap: rem(24);
+    @media (max-width:em(1254)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 //Imports children components

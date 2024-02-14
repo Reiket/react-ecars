@@ -1,12 +1,11 @@
 @use "sass:math";
-@import "../../../../../../../../../../../../../shared/styles/base/mixins";
+@import "src/shared/styles/base";
 .sell-details {
   &__property {
     display: flex;
     align-items: center;
-    line-height: math.div(20 , 14);
     &:not(:last-child) {
-      margin-bottom: rem(12);
+      margin-bottom: rem($font-size-desc);
     }
   }
   &__name {

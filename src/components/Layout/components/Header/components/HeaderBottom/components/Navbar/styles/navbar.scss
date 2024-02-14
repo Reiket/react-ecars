@@ -73,7 +73,7 @@
           opacity: 1;
         }
         &::before {
-          right: 0;
+          right: rem(-1);
         }
       }
     }
@@ -90,8 +90,8 @@
     position: relative;
     z-index: 10;
     font-weight: 600;
-    line-height: math.div(24 , 16);
-    font-size: rem(16);
+    line-height: math.div(24 , $font-size-text);
+    font-size: rem($font-size-text);
     transition: color 0.3s ease 0s;
     @media (any-hover: hover){
       &:hover {

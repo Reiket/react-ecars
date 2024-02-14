@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     font-weight: 600;
-    line-height: math.div(20 , 14);
     transition: color .3s linear;
     @media (any-hover: hover){
       &:hover {
@@ -19,16 +18,10 @@
       font-size: rem(18);
     }
   }
-  &__text {
-    line-height: math.div(20 , 14);
-  }
   &__full {
-    font-size: rem(16);
     padding-top: rem(24);
-    font-weight: 600;
-    line-height: math.div(20 , 16);
     &:not(:last-child) {
-      margin-bottom: em(12, 16);
+      margin-bottom: em(12, $font-size-text);
     }
   }
   &__button {

@@ -11,6 +11,7 @@ import Title from "../../../../../../shared/components/Title/Title";
 import {AppDispatch} from "../../../../../../app/store/types/store.types";
 import {fetchOffers} from "./store/thunks/fetchOffers";
 import {fetchFavorites} from "../../../Favorites/store/thunks/fetchFavorites";
+import AllLink from "../../../../../../shared/components/Title/AllLink";
 
 const Offers = React.memo(() => {
     const {shipNumber, currency} = useSelector(selectFilters)
@@ -29,7 +30,9 @@ const Offers = React.memo(() => {
                 <div className="section-offers__top">
                     <Title text={"Special offers"}/>
                     <NavigationBtn classnames={"section-offers"}/>
-                    <Link to={"/catalog"} className="section-offers__all all">See all cars <RiArrowRightLine/></Link>
+                    <AllLink text={"See all cars"} link={"/catalog"}>
+                        <RiArrowRightLine/>
+                    </AllLink>
                 </div>
                 <OffersSlider favorites={favorites} currency={currency}/>
             </div>

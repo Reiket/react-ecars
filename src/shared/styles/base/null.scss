@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../base";
 * {
 	padding: 0;
@@ -24,9 +25,9 @@ body {
 }
 body {
 	color: $main-color;
-	line-height: 1;
+	line-height: math.div(20 , $fontSize);
 	font-family: $fontFamily;
-	font-size: $fontSize;
+	font-size: rem($fontSize);
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;

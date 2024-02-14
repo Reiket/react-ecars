@@ -6,7 +6,7 @@ const BottomIntro: React.FC = () => {
         <div className="intro__bottom bottom-intro">
             <div className="bottom-intro__container">
                 <div className="bottom-intro__body">
-                    {bottomIntroItems.map((item, id) => <BottomIntroItem key={id} title={item.title} text={item.text} imageUrl={item.imageUrl}/>)}
+                    {bottomIntroItems.map((item, id) => <BottomIntroItem key={id} {...item}/>)}
                 </div>
             </div>
         </div>

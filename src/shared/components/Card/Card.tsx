@@ -1,5 +1,4 @@
 import React from 'react';
-import {checkInFavorites} from "../../../components/Pages/shared/utils/checkInFavorites";
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import {MdOutlineKeyboardArrowRight} from "react-icons/md";
 import {useDispatch, useSelector} from "react-redux";
@@ -9,6 +8,9 @@ import {CardPropsType} from "./types/card.types";
 import {AppDispatch} from "../../../app/store/types/store.types";
 import {fetchRemoveFromFav} from "../../../components/Pages/components/Favorites/store/thunks/fetchRemoveFromFav";
 import {fetchAddToFav} from "../../../components/Pages/components/Favorites/store/thunks/fetchAddToFav";
+import {checkInFavorites} from "../../utils";
+import Text from "../Title/Text";
+import ItemTitle from "../Title/ItemTitle";
 
 const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, currency}) => {
     const dispatch: AppDispatch = useDispatch();
@@ -28,10 +30,10 @@ const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, c
             <img src={item.imageUrl} alt="CarImage" />
         </div>
         <div className="card__info">
-            <h4 className="card__name">{item.name}</h4>
+            <Text text={item.name} classnames={"card__name"}/>
             <div className="card__description">{item.description}</div>
             <div className="card__bottom">
-                <div className="card__price">{Object.values(item.price)[currency]}</div>
+                <ItemTitle text={Object.values(item.price)[currency]} size={"small"}/>
                 <div className="card__discount">{item.discount}</div>
                 <Link to={`/${item.id}`} className="card__details">Details <MdOutlineKeyboardArrowRight /></Link>
             </div>

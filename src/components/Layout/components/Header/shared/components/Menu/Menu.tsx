@@ -1,10 +1,11 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {useClickOutside} from "../../../../../../../shared/hooks/useClickOutside";
 import {PiMapPinFill} from "react-icons/pi";
 import {PopupPropsType} from "./types/menu.types";
 import {MdKeyboardArrowDown} from "react-icons/md";
-import {isMobile} from "react-device-detect";
 import {MenuEnums, shipItemType} from "../../../types/header.types";
+import {cn} from "../../../../../../../shared/utils";
+import MenuList from "./components/MenuList";
 
 const Menu: React.FC<PopupPropsType> = React.memo(({filters, type, onClickToFilters, isBurger, items, filter, text}) => {
         const ref = React.useRef<HTMLDivElement>(null)
@@ -26,26 +27,25 @@ const Menu: React.FC<PopupPropsType> = React.memo(({filters, type, onClickToFilt
                 onClickToFilters(shipNumber, id)
             }
         }
+        const itemClassNames = cn("info-header-top__item", {
+            "info-header-top__item_burger": isBurger
+        });
         return (
-            <div ref={ref} className={isBurger ? "info-header-top__item info-header-top__item_burger" : "info-header-top__item"}>
+            <div ref={ref} className={itemClassNames}>
                 {MenuEnums.selectShip === type && <PiMapPinFill/> }
-                <span className={"info-header-top__text"}>{text}</span>
+                <span className="info-header-top__text info-text menu-text">{text}</span>
                 {MenuEnums.selectShip === type && items[filter] && <img width={20} height={20} src={(items[filter] as shipItemType).img} alt="Flags"/>}
 
-                <div className={isBurger ? "header-menu header-menu_nav" : "header-menu"}>
-                    <>{MenuEnums.selectShip === type && items[filter] ? (items[filter] as shipItemType).country : items[filter]}</>
-                    <MdKeyboardArrowDown onClick={onClickToPopup} className={isPopupOpen ? "header-menu__arrow active" : "header-menu__arrow"}/>
-                    <ul className={  isPopupOpen && isMobile ? "header-menu__list header-menu__list_burger active" : "header-menu__list"}>
-                        {items.map((item, id) => <li key={id} onClick={() => onClickHandler(id)} className={id === filter ? "header-menu__point active" : "header-menu__point"}>
-                            { MenuEnums.selectShip === type ? (
-                                <>
-                                    {item && (item as shipItemType).img &&  <img src={(item as shipItemType).img} alt="Flags"/>}
-                                    {item && (item as shipItemType).country && (item as shipItemType).country}
-                                </>
-                            ) : (item) as string[]
-                            }
-                        </li>)}
-                    </ul>
+                <div className={cn("header-menu", {
+                    "header-menu_nav": isBurger,
+                })}>
+                    <>
+                        {MenuEnums.selectShip === type && items[filter] ? (items[filter] as shipItemType).country : items[filter]}
+                    </>
+                    <MdKeyboardArrowDown onClick={onClickToPopup} className={cn("header-menu__arrow", {
+                        "active": isPopupOpen
+                    })}/>
+                    <MenuList filter={filter} type={type} isPopupOpen={isPopupOpen} items={items} onClickHandler={onClickHandler}/>
                 </div>
             </div>
         )

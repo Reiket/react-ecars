@@ -17,9 +17,8 @@
     display: flex;
     align-items: center;
     gap: rem(4);
-    line-height: math.div(20 , 14);
     svg {
-      font-size: rem(16);
+      font-size: rem($font-size-text);
     }
   }
 }

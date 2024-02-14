@@ -7,8 +7,8 @@ const CommentLoader: React.FC = (props) => (
         width={392}
         height={344}
         viewBox="0 0 392 344"
-        backgroundColor="#f3f3f3"
-        foregroundColor="#ecebeb"
+        backgroundColor="#e0dfdf"
+        foregroundColor="#c9c9c9"
         {...props}
     >
         <rect x="0" y="396" rx="10" ry="10" width="95" height="30" />

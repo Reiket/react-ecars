@@ -12,6 +12,17 @@
     @media (min-width: $mobileSmall) {
       grid-template-columns: repeat(auto-fit, minmax(rem(392), 1fr));
     }
+    @media (max-width:em(850)) {
+       svg {
+         justify-self: center;
+       }
+    }
+    @media (max-width:em(414)) {
+        svg {
+          max-width: 100%;
+          height: auto;
+        }
+    }
   }
 }
 

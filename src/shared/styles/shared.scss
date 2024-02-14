@@ -13,7 +13,6 @@
   gap: rem(4);
   color: $color-green;
   font-weight: 600;
-  line-height: math.div(20 , 14);
   transition: color .3s ease-in;
   svg {
     transition: transform .3s ease-in;
@@ -27,6 +26,33 @@
 
     }
   }
+}
+
+.menu-text {
+  color: $color-white;
+  opacity: 70%;
+  transition: opacity 0.3s ease 0s;
+}
+.text {
+  font-size: rem($font-size-text);
+  line-height: math.div(24 , $font-size-text);
+}
+.block-title {
+  font-size: rem($font-size-block-title);
+  line-height: math.div(26.4 ,$font-size-block-title);
+  font-weight: 600;
+}
+
+.item-title_big {
+  font-size: rem($font-size-item-title);
+  line-height: math.div(21.6 , $font-size-item-title);
+  font-weight: 600;
+}
+
+.item-title_small {
+  font-weight: 600;
+  font-size: rem($font-size-text);
+  line-height: math.div(20 , $font-size-text);
 }
 
 //Imports children components

@@ -81,7 +81,7 @@
   top: rem(18);
   left: 0;
   width: 100%;
-  font-size: rem(12);
+  font-size: rem($font-size-desc);
 }
 .rc-slider-mark-text {
   position: absolute;
@@ -249,7 +249,7 @@
   height: rem(24);
   padding: rem(6) rem(2);
   color: $color-white;
-  font-size: rem(12);
+  font-size: rem($font-size-desc);
   line-height: 1;
   text-align: center;
   text-decoration: none;

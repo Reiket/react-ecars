@@ -10,8 +10,8 @@
   align-items: center;
   gap: rem(24);
   color: $color-light-gray;
-  font-size: rem(12);
-  line-height: math.div(16 , 12);
+  font-size: rem($font-size-desc);
+  line-height: math.div(16 , $font-size-desc);
   @media (max-width:$mobileSmall) {
     flex-direction: column;
     gap: rem(15);

@@ -3,8 +3,6 @@ import HeaderTop from "./components/HeaderTop/HeaderTop";
 import {useFilters} from "./hooks/useFilters";
 import {menuConfigsType, MenuEnums, shipItem} from "./types/header.types";
 import HeaderBottom from "./components/HeaderBottom/HeaderBottom";
-
-
 const Header: React.FC = () => {
     const { filters, onClickToFilters } = useFilters();
     const currencyItem: Array<string> = ["USD", "EUR", "GBP"];
@@ -22,6 +20,7 @@ const Header: React.FC = () => {
             type: MenuEnums.selectCurrency
         }
     ] as Array<menuConfigsType>
+
     return (
         <header className="header">
             <HeaderTop filters={filters} menuConfigs={menuConfigs} onClickToFilters={onClickToFilters}/>

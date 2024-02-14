@@ -13,7 +13,7 @@
     }
   }
   &__text {
-    font-size: rem(16);
+    font-size: rem($font-size-text);
     &:not(:last-child) {
       margin-bottom: rem(30);
     }

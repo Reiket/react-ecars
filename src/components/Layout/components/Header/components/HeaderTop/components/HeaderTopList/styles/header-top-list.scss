@@ -11,9 +11,6 @@
     display: flex;
     gap: rem(6);
     align-items: center;
-    color: $color-white;
-    opacity: 70%;
-    transition: opacity 0.3s ease 0s;
     svg {
       font-size: rem(20);
     }

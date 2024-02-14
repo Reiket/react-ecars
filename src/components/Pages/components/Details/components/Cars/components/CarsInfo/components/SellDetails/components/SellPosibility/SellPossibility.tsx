@@ -1,5 +1,4 @@
 import React from 'react';
-import {checkInFavorites} from "../../../../../../../../../../shared/utils/checkInFavorites";
 import {AiFillHeart, AiOutlineHeart, AiOutlineShareAlt} from "react-icons/ai";
 import {CopyToClipboard} from "react-copy-to-clipboard/src";
 import {useLocation} from "react-router-dom";
@@ -10,6 +9,7 @@ import {SellDetailsPropsType} from "../../types/sell-details.types";
 import {AppDispatch} from "../../../../../../../../../../../../app/store/types/store.types";
 import {fetchRemoveFromFav} from "../../../../../../../../../Favorites/store/thunks/fetchRemoveFromFav";
 import {fetchAddToFav} from "../../../../../../../../../Favorites/store/thunks/fetchAddToFav";
+import {checkInFavorites} from "../../../../../../../../../../../../shared/utils";
 
 const SellPossibility: React.FC<SellDetailsPropsType> = ({detail}) => {
     const {pathname, search} = useLocation()

@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         <footer className="footer">
             <div className="footer__container">
                 <div className="footer__body">
-                    <FooterItem isLogo />
+                    <FooterItem isLogo/>
                     <FooterItem title="Company" links={companyLinks}/>
                     <FooterItem title="Cars" links={carsLinks}/>
                     <FooterItem title="Contacts" links={[...contacts].slice(4, 6)}/>

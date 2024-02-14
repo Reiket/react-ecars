@@ -30,7 +30,6 @@
   &__title {
     flex: 1 1 auto;
     font-weight: 600;
-    line-height: math.div(20 , 14);
   }
   &__text {
     @media (min-width:$mobileSmall) {

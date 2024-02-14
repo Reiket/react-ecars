@@ -1,16 +1,8 @@
-import blog from "../../../json/blogCategory.json";
+import {PostType} from "../../../store/types/news-reducer.types";
 
-
-export type BlogItemPropsType = {
+type TBlogItem = {
     isMoving: boolean
-    imageUrl: string
-    category: number
-    title: string
-    text: string
 }
-type BlogType = {
-    name: string
-    color: string
-}
-export const blogCategory: Array<BlogType> = blog
+
+export type TBlogItemProps = TBlogItem & PostType
 

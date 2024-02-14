@@ -18,21 +18,17 @@
     }
   }
   &__name {
-    font-weight: 600;
     padding-top: rem(24);
-    font-size: rem(16);
-    line-height: math.div(20 , 16);
   }
   &__list {
     padding-top: rem(12);
   }
   &__item {
-    line-height: math.div(20 , 14);
     display: flex;
     align-items: center;
     gap: rem(8);
     &:not(:last-child) {
-      margin-bottom: em(4, 14);
+      margin-bottom: em(4, $fontSize);
     }
     svg {
       font-size: rem(20);
