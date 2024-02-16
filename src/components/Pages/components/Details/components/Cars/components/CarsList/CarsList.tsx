@@ -7,7 +7,7 @@ const CarsList: React.FC<CarsListPropsType> = ({detail}) => {
             {Object.entries(detail.properties).slice(0, 7).map(([key, value]) => (
                 <li className="list-cars__item" key={key}>
                     <h5 className="list-cars__title">{key.charAt(0).toUpperCase() + key.slice(1)}</h5>
-                    <div className="list-cars__text">{value}</div>
+                    <p className="list-cars__text">{value}</p>
                 </li>
             ))}
         </ul>}
@@ -16,7 +16,7 @@ const CarsList: React.FC<CarsListPropsType> = ({detail}) => {
             {items.map((item, id) => (
                 <li key={id} className="list-cars__item">
                     <h5 className="list-cars__title">{item.name}</h5>
-                    <div className="list-cars__text">{item.text}</div>
+                    <p className="list-cars__text">{item.text}</p>
                 </li>
             ))}
         </ul>

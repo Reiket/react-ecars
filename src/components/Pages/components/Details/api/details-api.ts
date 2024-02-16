@@ -1,9 +1,9 @@
-import axios from "axios";
 import {ItemsType} from "../../../../../shared/types/types";
+import {instance} from "../../../../../app/api/api";
 
 
 export const detailsAPI = {
-    getOfferCardById(id: number) {
-        return axios.get<ItemsType>("http://localhost:3000/offers/" + id);
+    async getOfferCardById(id: number) {
+        return await instance.get<ItemsType>("/offers/" + id)
     }
 }

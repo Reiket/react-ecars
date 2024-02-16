@@ -7,6 +7,7 @@ import Title from "../../../../../../shared/components/Title/Title";
 import {fetchBrands} from "./store/thunks/fetchBrand";
 import {AppDispatch} from "../../../../../../app/store/types/store.types";
 import Loader from "../../../../../../shared/components/Loader/Loader";
+import {cn} from "../../../../../../shared/utils";
 
 const Brands: React.FC = () => {
     const [isShowAll, setIsShowAll] = React.useState(false);
@@ -28,9 +29,11 @@ const Brands: React.FC = () => {
                     <Title text={"Browse by brand"}/>
                 </div>
                 <div className={brands.length === 0 ? "brands__body loader": "brands__body"}>
-                    {brands.length === 0 ? <Loader classnames={"brands__loader"}/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} name={item.name} imageUrl={item.imageUrl}/>)}
+                    {brands.length === 0 ? <Loader classnames={"brands__loader"}/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} {...item}/>)}
                 </div>
-                <button onClick={onClickToShowAll} className={isShowAll ? "brands__all brands__all_brands all less" : "brands__all brands__all_brands all"}>{isShowAll ? "Less" : "Show"} all brands <MdKeyboardArrowDown/></button>
+                <button onClick={onClickToShowAll} className={cn("brands__all all all_show", {
+                  "all_show_less": isShowAll
+                })}>{isShowAll ? "Less" : "Show"} all brands <MdKeyboardArrowDown/></button>
             </div>
         </section>
     );

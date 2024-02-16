@@ -3,9 +3,4 @@
 
 .section-offers__item {
   flex: 1 1 auto;
-  &.flex {
-    @media (min-width: $mobile) {
-      flex: 0 0 rem(300);
-    }
-  }
 }

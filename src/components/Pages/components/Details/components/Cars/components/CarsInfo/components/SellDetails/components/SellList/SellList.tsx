@@ -17,7 +17,7 @@ const SellList: React.FC<SellDetailsPropsType> = ({detail}) => {
         {Object.entries(detail.properties).slice(-4).map(([key, value]) => (
             <li key={key} className="sell-details__property">
                 <h5 className="sell-details__name">{typeof value === 'boolean' ? "Export type" : key.charAt(0).toUpperCase() + key.slice(1)}</h5>
-                <div className="sell-details__text">{checkValue(value)}</div>
+                <p className="sell-details__text">{checkValue(value)}</p>
             </li>
         ))}
     </ul>

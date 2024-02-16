@@ -1,7 +1,6 @@
 import React from 'react';
 import {RiArrowRightLine} from "react-icons/ri";
 import OffersSlider from "./components/OffersSlider";
-import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {selectFilters} from "./store/selector/offers-selector";
 import {selectFavorites} from "../../../Favorites/store/selector/favorites-selector";

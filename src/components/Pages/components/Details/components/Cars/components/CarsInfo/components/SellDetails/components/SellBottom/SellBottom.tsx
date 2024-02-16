@@ -9,8 +9,6 @@ const SellBottom = () => {
     const detailsRef = React.useRef<HTMLButtonElement | null>(null)
     const onClickToPopup = () => {
         document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
-        document.body.style.scrollbarGutter = document.body.style.scrollbarGutter === "stable" ? '' : "stable";
-        document.documentElement.style.scrollbarGutter = document.body.style.scrollbarGutter === "stable" ? '' : "stable";
         setIsPopupOpen(prev => !prev);
     }
     useClickOutside(detailsRef, () => {
@@ -23,15 +21,16 @@ const SellBottom = () => {
         <DetailsPopup isOpenPopup={isOpenPopup}/>
         <div className="sell-details__bottom bottom-sell">
             <ItemTitle classnames={"bottom-sell__title"} text={"Interested in this car or want a personalized offer of the best deals?"} size={"small"}/>
-            <div className="bottom-sell__text">Contact us and our manager will give you all the information you need.
-            </div>
+            <p className="bottom-sell__text">
+                Contact us and our manager will give you all the information you need.
+            </p>
             <button ref={detailsRef} onClick={onClickToPopup}
                     className="bottom-sell__button green-button green-button_big">Check availability
             </button>
             <div className="bottom-sell__contacts">
-                {[...contacts.slice(4, 6).map((c, id) => (
+                {[...contacts].slice(4, 6).map((c, id) => (
                     <a key={id} href={c.url} className="bottom-sell__link">{c.icon}{c.text}</a>
-                ))]}
+                ))}
             </div>
         </div>
     </>

@@ -184,11 +184,9 @@ $ig-shadow: 0 rem(2) rem(2) lighten($color-black, 10%);
     position: relative;
   }
   .image-gallery-image {
-    object-fit: contain;
-    width: rem(808);
-    @media (max-width: rem(760)) {
-      width: 100%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: auto;
   }
   .image-gallery-description {
     background: $ig-background-black;

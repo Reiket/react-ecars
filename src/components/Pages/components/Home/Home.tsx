@@ -15,8 +15,8 @@ const Home: React.FC = () => {
        <>
            <Intro/>
            <BottomIntro/>
-           {/*<Offers/>*/}
-           {/*<Brands/>*/}
+           <Offers/>
+           <Brands/>
            <Send/>
            <Works/>
            <Why/>

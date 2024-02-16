@@ -13,18 +13,6 @@
   }
   &__all {
     padding-top: rem(16);
-    @media (any-hover: hover){
-      &:hover {
-        svg {
-          transform: rotate(-90deg);
-        }
-      }
-    }
-    &.less {
-      svg {
-        transform: rotate(-180deg);
-      }
-    }
   }
 }
 

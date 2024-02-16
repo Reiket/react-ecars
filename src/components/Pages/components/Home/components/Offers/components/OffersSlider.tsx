@@ -7,14 +7,11 @@ import {useSelector} from "react-redux";
 import {selectIsFetchingOffers, selectItems} from "../store/selector/offers-selector";
 import {OffersSliderPropsType} from "./types/offers-slider.types";
 import Card from "../../../../../../../shared/components/Card/Card";
-import {useWhyDidYouUpdate} from "ahooks";
 
 const amountSlides = 4
 const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency, favorites }) => {
     const isFetching = useSelector(selectIsFetchingOffers)
     const items = useSelector(selectItems)
-    useWhyDidYouUpdate('OffersSlider', { currency, favorites })
-    const classes = items.length > 4 ? "section-offers__item" : "section-offers__item flex"
     return (
         <div className="section-offers__body">
 
@@ -52,8 +49,8 @@ const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency, favorites }) 
             >
                 {isFetching ? [...Array(amountSlides)].map((_, id) => <SwiperSlide key={id}><CardLoader /></SwiperSlide>) :
                     items.map((slide) => (
-                        <SwiperSlide key={slide.id} className={items.length > 4 ? "section-offers__item item-offers" : "section-offers__item item-offers flex"}>
-                            <Card classnames={classes} favItems={favorites} item={slide} currency={currency}/>
+                        <SwiperSlide key={slide.id}>
+                            <Card favItems={favorites} item={slide} currency={currency}/>
                         </SwiperSlide>
                     ))}
             </Swiper>

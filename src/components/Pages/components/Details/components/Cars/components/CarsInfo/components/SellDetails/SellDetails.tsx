@@ -13,7 +13,7 @@ const SellDetails: React.FC<SellDetailsPropsType> = ({detail}) => {
         <div className="sell-details__top">
             <SellPossibility detail={detail}/>
             <BlockTitle text={detail.name} classnames={"sell-details__title"}/>
-            <div className="sell-details__price">{Object.values(detail.price)[filters.currency]}</div>
+            <p className="sell-details__price">{Object.values(detail.price)[filters.currency]}</p>
             <SellList detail={detail}/>
         </div>
         <SellBottom/>

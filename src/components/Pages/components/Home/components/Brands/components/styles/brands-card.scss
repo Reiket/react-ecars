@@ -6,6 +6,12 @@
     border-radius: rem(8);
     padding: rem(16) rem(52);
     text-align: center;
+    transition: box-shadow .3s ease 0s;
+    @media (any-hover: hover){
+        &:hover {
+          box-shadow: rem(15) rem(30) rem(35) rem(10) $shadow;
+        }
+    }
   }
   &__image {
     img {

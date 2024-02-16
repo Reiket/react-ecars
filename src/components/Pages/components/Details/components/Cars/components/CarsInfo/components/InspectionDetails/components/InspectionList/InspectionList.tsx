@@ -7,7 +7,7 @@ const InspectionList = () =>{
         {inspectionItem.map((item, index) => (
             <li key={index} className="inspection-details__item">
                 <h4 className="inspection-details__name">{item.name}</h4>
-                <div className="inspection-details__text">{item.text}</div>
+                <p className="inspection-details__text">{item.text}</p>
             </li>
         ))}
     </ul>

@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     gap: rem(24);
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column;
     }
   }

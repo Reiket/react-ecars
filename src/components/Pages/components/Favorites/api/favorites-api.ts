@@ -1,14 +1,14 @@
-import axios from "axios";
 import {ItemsType} from "../../../../../shared/types/types";
+import {instance} from "../../../../../app/api/api";
 
 export const favoritesAPI = {
-    getFavorites(number = 0) {
-        return axios.get<Array<ItemsType>>(`http://localhost:3000/posts?ship=${number}`)
+    async getFavorites(number = 0) {
+        return instance.get<Array<ItemsType>>(`/favorites?ship=${number}`)
     },
     addToFavorites(item: ItemsType) {
-        return axios.post<Array<ItemsType>>(" http://localhost:3000/posts", item)
+        return instance.post<Array<ItemsType>>("/favorites", item)
     },
     removeToFavorites(id: number) {
-        return axios.delete(`http://localhost:3000/posts/${id}`)
+        return instance.delete(`/favorites/${id}`)
     }
 }

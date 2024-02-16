@@ -7,7 +7,7 @@ export const fetchAddToFav = (item: ItemsType): ThunkType => {
     return async (dispatch) => {
         try {
             dispatch(actions.toggleIsLoading(true))
-            let {data} = await favoritesAPI.addToFavorites(item);
+            let {data}= await favoritesAPI.addToFavorites(item);
             dispatch(actions.toggleIsLoading(false))
             dispatch(actions.addToFavorites(data));
         } catch (error) {

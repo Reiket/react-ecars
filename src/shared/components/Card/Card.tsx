@@ -11,8 +11,9 @@ import {fetchAddToFav} from "../../../components/Pages/components/Favorites/stor
 import {checkInFavorites} from "../../utils";
 import Text from "../Title/Text";
 import ItemTitle from "../Title/ItemTitle";
+import { v4 as uuidv4 } from 'uuid';
 
-const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, currency}) => {
+const Card: React.FC<CardPropsType> = React.memo(({favItems, item, currency}) => {
     const dispatch: AppDispatch = useDispatch();
     const isLoading = useSelector(selectIsLoading)
     const onClickToFavorites = () => {
@@ -22,7 +23,8 @@ const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, c
             dispatch(fetchAddToFav(item))
         }
     };
-    return <div className={classnames + "\ncard"}>
+    // @ts-ignore
+    return <div className={"section-offers__item card"}>
         <div className="card__image">
             <button disabled={isLoading} type={"button"} onClick={() => onClickToFavorites()} className="card__favorite">
                 {checkInFavorites(item.id, favItems) ? <AiFillHeart /> : <AiOutlineHeart />}
@@ -31,10 +33,10 @@ const Card: React.FC<CardPropsType> = React.memo(({classnames, favItems, item, c
         </div>
         <div className="card__info">
             <Text text={item.name} classnames={"card__name"}/>
-            <div className="card__description">{item.description}</div>
+            <p className="card__description">{item.description}</p>
             <div className="card__bottom">
                 <ItemTitle text={Object.values(item.price)[currency]} size={"small"}/>
-                <div className="card__discount">{item.discount}</div>
+                <p className="card__discount">{item.discount}</p>
                 <Link to={`/${item.id}`} className="card__details">Details <MdOutlineKeyboardArrowRight /></Link>
             </div>
         </div>

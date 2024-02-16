@@ -1,8 +1,8 @@
-import axios from "axios";
 import {ItemsType} from "../../../../../../../shared/types/types";
+import {instance} from "../../../../../../../app/api/api";
 
 export const offerAPI = {
-    getOffersCard(number = 0) {
-        return axios.get<Array<ItemsType>>(`http://localhost:3000/offers?ship=${number}`)
-    },
+    async getOffersCard(number = 0) {
+        return await instance.get<ItemsType[]>(`/offers?ship=${number}`)
+    }
 }

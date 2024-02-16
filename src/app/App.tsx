@@ -4,11 +4,11 @@ import MainLayout from "../components/Layout/MainLayout";
 import {Provider} from "react-redux";
 import store from "./store/store"
 import Loader from "../shared/components/Loader/Loader";
-import "./server/server"
 //React lazy-loading
 const Home = React.lazy(() => import("../components/Pages/components/Home/Home"))
 const Details = React.lazy(() => import("../components/Pages/components/Details/Details"))
 const Favorites = React.lazy(() => import("../components/Pages/components/Favorites/Favorites"))
+
 
 function App() {
   return (

@@ -26,6 +26,27 @@
 
     }
   }
+  &_show {
+    @media (any-hover: hover){
+        &:hover {
+          svg {
+            transform: rotate(-180deg);
+          }
+        }
+    }
+    &_less {
+      svg {
+        transform: rotate(-180deg);
+      }
+      @media (any-hover: hover){
+          &:hover {
+              svg {
+                transform: rotate(0deg);
+              }
+          }
+      }
+    }
+  }
 }
 
 .menu-text {

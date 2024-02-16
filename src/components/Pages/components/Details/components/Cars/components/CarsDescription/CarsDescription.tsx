@@ -2,6 +2,7 @@ import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {CarsDescriptionPropsType} from "./types/cars-description.types";
 import Title from "../../../../../../../../shared/components/Title/Title";
+import {cn} from "../../../../../../../../shared/utils";
 
 const CarsDescription: React.FC<CarsDescriptionPropsType> = ({detail}) => {
     const [isMoreOpen, setIsMoreOpen] = React.useState(false);
@@ -19,7 +20,10 @@ const CarsDescription: React.FC<CarsDescriptionPropsType> = ({detail}) => {
         {isMoreOpen && <div className="cars__text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eos fugit, inventore minus modi quos ratione. Aut enim illum modi neque nesciunt quasi qui quidem quo repellat rerum. Culpa, quas?</p>
         </div>}
-        <button onClick={onClickToMore} className="cars__link all">{isMoreOpen ? "Hide More" : "More"} <MdKeyboardArrowDown/></button>
+        <button onClick={onClickToMore} className={cn("cars__link all all_show", {
+            "all_show_less": isMoreOpen
+        })}>{`${isMoreOpen ? "Hide" : ""} More`} <MdKeyboardArrowDown/></button>
+
     </div>
 }
 

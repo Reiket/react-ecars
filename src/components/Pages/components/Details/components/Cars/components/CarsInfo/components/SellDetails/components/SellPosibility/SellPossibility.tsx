@@ -29,7 +29,7 @@ const SellPossibility: React.FC<SellDetailsPropsType> = ({detail}) => {
     };
     return <div className="sell-details__possibility">
         <button disabled={isLoading} onClick={() => onClickToFavorite(detail)} className="sell-details__item">{checkInFavorites(detail.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}Save</button>
-        <CopyToClipboard text={`http://localhost:3001` + pathname + search }>
+        <CopyToClipboard text={`http://localhost:3000` + pathname + search }>
             <button onClick={onClickToShare} className="sell-details__item"><AiOutlineShareAlt/>{!copied ? "Share" : "Copied!"}</button>
         </CopyToClipboard>
     </div>
