@@ -3,65 +3,52 @@
 .nav-menu {
   flex: 1 1 auto;
   &__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: rem(32);
+    row-gap: rem(10);
     @media (min-width: em(930)) {
       flex-wrap: wrap;
     }
-    display: flex;
-    column-gap: rem(32);
-    row-gap: rem(10);
-    align-items: center;
-    position: relative;
     @media (max-width: rem(930)) {
+      padding: rem(115) 0 0 rem(32);
       position: fixed;
       flex-direction: column;
       left: -100%;
       top: 0;
       gap: rem(15);
-      padding-top: rem(115);
+      z-index: 7;
       height: 100%;
       width: 100%;
       display: flex;
-      z-index: 7;
       align-items: flex-start;
-      padding-left: rem(32);
       overflow-y: auto;
-      -webkit-transition: all 0.3s ease 0s;
-      -moz-transition: all 0.3s ease 0s;
-      -ms-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s;
 
       &::after {
-        position: fixed;
         content: '';
-        height: 100%;
+        position: fixed;
         top: 0;
         left: -100%;
+        z-index: 2;
+        height: 100%;
         width: rem(360);
         background: $color-white;
-        z-index: 2;
-        visibility: hidden;
         opacity: 0;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -ms-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
+        visibility: hidden;
         transition: all 0.3s ease 0s;
       }
       &::before {
         content: '';
         position: fixed;
-        z-index: 2;
-        background: $color-black;
-        opacity: 60%;
-        width: 64%;
         top: 0;
         right: -100%;
+        z-index: 2;
+        width: 64%;
         height: 100%;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -ms-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
+        background: $color-black;
+        opacity: 60%;
         transition: all 0.3s ease 0s;
       }
       &.active {
@@ -89,9 +76,9 @@
   &__link {
     position: relative;
     z-index: 10;
-    font-weight: 600;
-    line-height: math.div(24 , $font-size-text);
     font-size: rem($font-size-text);
+    line-height: math.div(24 , $font-size-text);
+    font-weight: 600;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover){
       &:hover {

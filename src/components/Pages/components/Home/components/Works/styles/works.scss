@@ -21,7 +21,6 @@
   &__inner {
     padding-top: rem(48);
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(rem(288), 1fr));
     gap: rem(24);
     @media (max-width:em(1254)) {

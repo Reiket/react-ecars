@@ -2,10 +2,10 @@
 @import "/src/shared/styles/base";
 .sell-details {
   &__possibility {
-    color: $color-light-gray;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: $color-light-gray;
     transition: color .3s linear;
     @media (any-hover: hover){
       &:hover {

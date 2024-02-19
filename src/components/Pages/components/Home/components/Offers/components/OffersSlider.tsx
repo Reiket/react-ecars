@@ -9,7 +9,7 @@ import {OffersSliderPropsType} from "./types/offers-slider.types";
 import Card from "../../../../../../../shared/components/Card/Card";
 
 const amountSlides = 4
-const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency, favorites }) => {
+const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency}) => {
     const isFetching = useSelector(selectIsFetchingOffers)
     const items = useSelector(selectItems)
     return (
@@ -50,7 +50,7 @@ const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency, favorites }) 
                 {isFetching ? [...Array(amountSlides)].map((_, id) => <SwiperSlide key={id}><CardLoader /></SwiperSlide>) :
                     items.map((slide) => (
                         <SwiperSlide key={slide.id}>
-                            <Card favItems={favorites} item={slide} currency={currency}/>
+                            <Card classnames={"section-offers__item card"} item={slide} currency={currency}/>
                         </SwiperSlide>
                     ))}
             </Swiper>

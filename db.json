@@ -1,5 +1,58 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 18,
+      "imageUrl": "/assets/image/offers/18.jpg",
+      "name": "2018 Subaru Outback",
+      "description": "Used • 27,057 mi • Petrol",
+      "price": {
+        "USD": "$ 31,995",
+        "EUR": "€ 32,995",
+        "GBP": "£ 34,995"
+      },
+      "discount": "35,290",
+      "ship": 2
+    },
+    {
+      "id": 20,
+      "imageUrl": "/assets/image/offers/20.jpg",
+      "name": "2020 Toyota Land Cruiser 200",
+      "description": "Used • 27,057 mi • Petrol",
+      "price": {
+        "USD": "$ 35,995",
+        "EUR": "€ 37,995",
+        "GBP": "£ 38,995"
+      },
+      "discount": "40,290",
+      "ship": 2
+    },
+    {
+      "id": 21,
+      "imageUrl": "/assets/image/offers/21.jpg",
+      "name": "2022 Genesis G80",
+      "description": "Used • 27,057 mi • Petrol",
+      "price": {
+        "USD": "$ 36,995",
+        "EUR": "€ 38,995",
+        "GBP": "£ 40,995"
+      },
+      "discount": "41,290",
+      "ship": 2
+    },
+    {
+      "id": 22,
+      "imageUrl": "/assets/image/offers/22.jpg",
+      "name": "2022 Ford Ranger Raptor",
+      "description": "Used • 27,057 mi • Petrol",
+      "price": {
+        "USD": "$ 36,795",
+        "EUR": "€ 38,995",
+        "GBP": "£ 41,995"
+      },
+      "discount": "44,290",
+      "ship": 2
+    }
+  ],
   "offers": [
     {
       "id": 1,
@@ -314,7 +367,7 @@
     },
     {
       "id": 17,
-      "imageUrl": "/assets/image/offers/17.jpg",
+      "imageUrl": "/assets/image/offers/17.png",
       "name": "2023 Mitsubishi Lancer Evolution XII",
       "description": "Used • 27,057 mi • Petrol",
       "price": {

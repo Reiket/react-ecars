@@ -5,17 +5,17 @@
   background: $background-dark;
   &__body {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     @media (max-width:em(800)) {
       flex-direction: column;
       gap: rem(40);
     }
   }
   &__item {
-    color: $color-white;
     @include adaptiveValue("padding-right", 104, 30);
     @include adaptiveValue("padding-left", 104, 30);
+    color: $color-white;
     @media (min-width:em(800)) {
       &:not(:last-child) {
         border-right: rem(1) solid $color-white;
@@ -41,8 +41,8 @@
   &__button {
     @media (max-width:em(800)) {
       display: flex;
-      width: 100%;
       justify-content: center;
+      width: 100%;
     }
   }
 }

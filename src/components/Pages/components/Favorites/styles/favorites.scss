@@ -8,6 +8,9 @@
     align-items: center;
     gap: rem(24);
     flex-wrap: wrap;
+    &:has(> .favorites__loader) {
+      justify-content: center;
+    }
     @media (max-width:em(630)) {
       display: grid;
       svg {
@@ -15,22 +18,21 @@
       }
     }
   }
+  &__loader {
+    width: rem(200) !important;
+    height: rem(200) !important;
+  }
   &__item {
-    box-shadow: 0 rem(8) rem(16) 0 $shadow;
-    border-radius: rem(8);
     display: flex;
     flex-direction: column;
     flex: 0 0 rem(288);
+    box-shadow: 0 rem(8) rem(16) 0 $shadow;
+    border-radius: rem(8);
     @media (min-width:em(630)) {
-      min-height: rem(330);
+      min-height: rem(340);
     }
     .card__image {
       @media (max-width:em(630)) {
-        img {
-          height: rem(250);
-        }
-      }
-      @media (max-width:em(550)) {
         img {
           height: 100%;
         }

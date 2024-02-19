@@ -1,35 +1,25 @@
 import React from 'react';
-import {AiFillHeart, AiOutlineHeart, AiOutlineShareAlt} from "react-icons/ai";
+import {AiOutlineShareAlt} from "react-icons/ai";
 import {CopyToClipboard} from "react-copy-to-clipboard/src";
-import {useLocation} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {selectFavorites, selectIsLoading} from "../../../../../../../../../Favorites/store/selector/favorites-selector";
-import {ItemsType} from "../../../../../../../../../../../../shared/types/types";
 import {SellDetailsPropsType} from "../../types/sell-details.types";
-import {AppDispatch} from "../../../../../../../../../../../../app/store/types/store.types";
-import {fetchRemoveFromFav} from "../../../../../../../../../Favorites/store/thunks/fetchRemoveFromFav";
-import {fetchAddToFav} from "../../../../../../../../../Favorites/store/thunks/fetchAddToFav";
-import {checkInFavorites} from "../../../../../../../../../../../../shared/utils";
+import FavButton from "../../../../../../../../../../../../shared/components/FavButton/FavButton";
 
 const SellPossibility: React.FC<SellDetailsPropsType> = ({detail}) => {
-    const {pathname, search} = useLocation()
-    const dispatch: AppDispatch = useDispatch()
-    const favorites = useSelector(selectFavorites)
-    const isLoading = useSelector(selectIsLoading)
     const [copied, setCopied] = React.useState(false)
+    React.useEffect(() => {
+        if (copied) {
+            const copyTimeOut = setTimeout(() => {
+                setCopied(false)
+            }, 5000)
+            return () => clearTimeout(copyTimeOut)
+        }
+    }, [copied])
     const onClickToShare = () => {
         setCopied(prev => !prev)
     }
-    const onClickToFavorite = (item: ItemsType) => {
-        if (checkInFavorites(item.id, favorites)) {
-            dispatch(fetchRemoveFromFav(item.id))
-        } else {
-            dispatch(fetchAddToFav(item))
-        }
-    };
     return <div className="sell-details__possibility">
-        <button disabled={isLoading} onClick={() => onClickToFavorite(detail)} className="sell-details__item">{checkInFavorites(detail.id, favorites) ? <AiFillHeart /> : <AiOutlineHeart />}Save</button>
-        <CopyToClipboard text={`http://localhost:3000` + pathname + search }>
+        <FavButton item={detail} classnames={"sell-details__item"} text={"Save"}/>
+        <CopyToClipboard text={window.location.href}>
             <button onClick={onClickToShare} className="sell-details__item"><AiOutlineShareAlt/>{!copied ? "Share" : "Copied!"}</button>
         </CopyToClipboard>
     </div>

@@ -1,7 +1,7 @@
 @import "/src/shared/styles/base";
 .not-found-fav {
   display: flex;
-  &__container {
+  &__body {
     @include adaptiveValue("padding-top", 120, 80);
     @include adaptiveValue("padding-bottom", 120, 80);
     flex: 1 1 auto;
@@ -14,12 +14,12 @@
   }
   &__text {
     font-size: rem($font-size-text);
-    &:not(:last-child) {
-      margin-bottom: rem(30);
-    }
     span {
       font-weight: 700;
       color: $color-green;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(30);
     }
   }
   &__btn {

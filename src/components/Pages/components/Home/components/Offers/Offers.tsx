@@ -3,7 +3,6 @@ import {RiArrowRightLine} from "react-icons/ri";
 import OffersSlider from "./components/OffersSlider";
 import {useDispatch, useSelector} from "react-redux";
 import {selectFilters} from "./store/selector/offers-selector";
-import {selectFavorites} from "../../../Favorites/store/selector/favorites-selector";
 import {useFilters} from "../../../../../Layout/components/Header/hooks/useFilters";
 import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
 import Title from "../../../../../../shared/components/Title/Title";
@@ -14,7 +13,6 @@ import AllLink from "../../../../../../shared/components/Title/AllLink";
 
 const Offers = React.memo(() => {
     const {shipNumber, currency} = useSelector(selectFilters)
-    const favorites = useSelector(selectFavorites)
     const filtersHook = useFilters();
     const dispatch: AppDispatch = useDispatch()
     React.useEffect(() => {
@@ -33,7 +31,7 @@ const Offers = React.memo(() => {
                         <RiArrowRightLine/>
                     </AllLink>
                 </div>
-                <OffersSlider favorites={favorites} currency={currency}/>
+                <OffersSlider currency={currency}/>
             </div>
         </section>
     );

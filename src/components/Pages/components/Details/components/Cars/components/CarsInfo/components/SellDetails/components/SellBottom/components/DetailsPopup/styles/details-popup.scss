@@ -5,36 +5,27 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 100;
   padding: rem(20);
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transition: all .3s linear;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
   pointer-events: none;
+  transition: all .3s linear;
+  background-color: rgba(0, 0, 0, 0.5);
   &.active {
     opacity: 1;
-    pointer-events: auto;
     visibility: visible;
-  }
-  &__body {
-
+    pointer-events: auto;
   }
   &__content {
-    visibility: visible;
-    background-color: $color-white;
     padding: rem(20);
-    width: 100%;
-    max-width: rem(900);
+    background-color: $color-white;
     border-radius: rem(20);
     text-align: center;
-    .lock & {
-      visibility: visible;
-    }
   }
   &__check {
     img {
@@ -43,14 +34,14 @@
     }
   }
   &__title {
-    font-weight: 700;
     @include adaptiveValue("font-size", 25, 20);
+    font-weight: 700;
     &:not(:last-child) {
       margin-bottom: rem(10);
     }
   }
   &__text {
-    font-weight: 500;
     font-size: rem($font-size-text);
+    font-weight: 500;
   }
 }

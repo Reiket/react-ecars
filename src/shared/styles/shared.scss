@@ -71,9 +71,9 @@
 }
 
 .item-title_small {
-  font-weight: 600;
   font-size: rem($font-size-text);
   line-height: math.div(20 , $font-size-text);
+  font-weight: 600;
 }
 
 //Imports children components

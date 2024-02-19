@@ -11,15 +11,10 @@
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "@types/swiper": "^6.0.0",
-    "@types/uuid": "^9.0.8",
-    "ahooks": "^3.7.8",
     "axios": "^1.4.0",
     "clsx": "^2.1.0",
     "json-server": "^0.17.3",
     "lodash.debounce": "^4.0.8",
-    "msw": "^2.2.0",
-    "nock": "^13.5.1",
-    "pretender": "^3.4.7",
     "qs": "^6.11.2",
     "rc-slider": "^10.2.1",
     "react": "^18.2.0",
@@ -38,7 +33,6 @@
     "rm": "^0.1.8",
     "sass": "^1.63.6",
     "swiper": "^10.3.1",
-    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

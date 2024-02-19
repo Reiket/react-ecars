@@ -2,21 +2,21 @@
 @import "/src/shared/styles/base";
 .inspection-details {
   &__top {
+    padding-bottom: rem(30);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: rem(30);
   }
   &__check {
-    background: $color-yellow;
     padding: rem(4) rem(8);
-    border-radius: rem(8);
-    font-weight: 600;
-    font-size: rem($font-size-desc);
-    line-height: math.div(16 , $font-size-desc);
-    color: $color-black;
     display: flex;
     align-items: center;
+    border-radius: rem(8);
+    background: $color-yellow;
+    color: $color-black;
+    font-size: rem($font-size-desc);
+    line-height: math.div(16 , $font-size-desc);
+    font-weight: 600;
     svg {
       font-size: rem(20);
     }
