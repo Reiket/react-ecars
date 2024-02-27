@@ -1,13 +1,18 @@
 type PropertiesType = {
-    make: string
-    model: string
-    year: number
-    color: string
-    type: string
-    kilometers: string
-    wheels: string
-    location: string
-    isExport: boolean
+    model: string,
+    color: string,
+    make: string,
+    type: string,
+    year: number,
+    kilometers: number,
+    wheels: string,
+    location: string,
+    export_status: boolean,
+    gearbox: string,
+    fuel: string,
+    seats: number,
+    cylinders: number,
+    interior: string
 }
 export type ItemsType = {
     id: number
@@ -15,13 +20,13 @@ export type ItemsType = {
     name: string
     description: string
     price: {
-        USD: string
-        EUR: string
-        GBP: string
+        USD: number
+        EUR: number
+        GBP: number
     },
-    discount: string
+    discountPercent: number
     ship: number
     added: string
     views: number
-    "properties": PropertiesType
+    properties: PropertiesType
 }

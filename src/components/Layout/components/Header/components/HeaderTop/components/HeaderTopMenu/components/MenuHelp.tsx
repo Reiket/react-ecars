@@ -5,7 +5,6 @@ import {cn} from "../../../../../../../../../shared/utils";
 
 const MenuHelp: React.FC = () => {
     const [isPopupOpen, setIsPopupOpen] = React.useState(false);
-    console.log(isPopupOpen)
     return (
         <div onClick={() => setIsPopupOpen(prev => !prev)} className="info-header-top__item help-info">
             <BiSolidHelpCircle/>

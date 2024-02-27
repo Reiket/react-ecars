@@ -1,26 +1,29 @@
 import React from 'react';
-import {CarsListPropsType, items} from "./types/cars-list.types";
+import {CarsListPropsType} from "./types/cars-list.types";
 import {capitalizeFirstLetter} from "../../../../../../../../shared/utils";
+import {checkValue} from "../../../../shared";
 
 const CarsList: React.FC<CarsListPropsType> = ({detail}) => {
+    const items = [
+        Object.entries(detail.properties).slice(0, 7),
+        [
+            ...Object.entries(detail.properties).slice(9),
+            ...Object.entries(detail.properties).slice(7, 9)
+        ]
+    ]
     return <div className="cars__list list-cars">
-        {detail.properties && <ul className="list-cars__column">
-            {Object.entries(detail.properties).slice(0, 7).map(([key, value]) => (
-                <li className="list-cars__item" key={key}>
-                    <h5 className="list-cars__title">{capitalizeFirstLetter(key)}</h5>
-                    <p className="list-cars__text">{value}</p>
-                </li>
-            ))}
-        </ul>}
-
-        <ul className="list-cars__column">
-            {items.map((item, id) => (
-                <li key={id} className="list-cars__item">
-                    <h5 className="list-cars__title">{item.name}</h5>
-                    <p className="list-cars__text">{item.text}</p>
-                </li>
-            ))}
-        </ul>
+        {
+            items.map((item, id) => (
+                <ul key={id} className="list-cars__column">
+                    {item.map(([key, value]) => (
+                        <li className="list-cars__item" key={key}>
+                            <h5 className="list-cars__title">{capitalizeFirstLetter(key)}</h5>
+                            <p className="list-cars__text">{checkValue(value, key)}</p>
+                        </li>
+                    ))}
+                </ul>
+            ))
+        }
     </div>
 }
 

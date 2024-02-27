@@ -4,15 +4,14 @@ import {Autoplay, Navigation} from "swiper/modules";
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 import CommentLoader from "../CommentsLoader/CommentLoader";
 import '../../../Offers/components/styles/swiper.scss';
-import {useSelector} from "react-redux";
 import {selectComments} from "../../store/selector/comments-selector";
-import BlockTitle from "../../../../../../../../shared/components/Title/BlockTitle";
 import Text from "../../../../../../../../shared/components/Title/Text";
+import {useAppSelector} from "../../../../../../../../app/store/hooks";
 
 const CommentsSlider = () => {
     const previewSlidesCount = 3
     const ratingStarCount = 5;
-    const items = useSelector(selectComments)
+    const items = useAppSelector(selectComments)
     return (
         <Swiper
             modules={[Navigation,  Autoplay]}

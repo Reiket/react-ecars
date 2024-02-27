@@ -1,20 +1,26 @@
 import React from 'react';
 import {DetailsPopupPropsType} from "./types/details-popup.types";
-const DetailsPopup: React.FC<DetailsPopupPropsType> = ({isOpenPopup}) => {
-    return (
-        <div className={isOpenPopup ? "popup active": "popup"}>
-            <div className="popup__body">
-                <div className="popup__content">
-                    <div className="popup__check">
-                        <img src="/assets/image/other/check.jpg" alt="Check"/>
-                    </div>
-                    <h2 className="popup__title">Availability successfully checked!</h2>
-                    <div className="popup__text">Your car is ready for a road trip.</div>
-                </div>
-
+import Popup from "../../../../../../../../../../../../../../shared/components/Popup/Popup";
+import Text from "../../../../../../../../../../../../../../shared/components/Title/Text";
+import BlockTitle from "../../../../../../../../../../../../../../shared/components/Title/BlockTitle";
+import {useClickOutside} from "../../../../../../../../../../../../../../shared/hooks/useClickOutside";
+const DetailsPopup: React.FC<DetailsPopupPropsType> = ({isOpenPopup, setIsOpenPopup}) => {
+    const popupRef = React.useRef<HTMLDivElement | null>(null);
+    useClickOutside(popupRef, () => {
+        if (isOpenPopup) {
+            document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+        }
+        setIsOpenPopup(false)
+    })
+    return <Popup isOpenPopup={isOpenPopup}>
+        <div ref={popupRef} className="details-popup">
+            <div className="details-popup__check">
+                <img src="/assets/image/other/check.jpg" alt="Check"/>
             </div>
+            <BlockTitle text={"Availability successfully checked!"} classnames={"details-popup__title"}/>
+            <Text text={"Your car is ready for a road trip!"}/>
         </div>
-    );
+    </Popup>
 };
 
 export default DetailsPopup;

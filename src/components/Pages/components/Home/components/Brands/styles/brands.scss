@@ -6,10 +6,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(184), 1fr));
     gap: rem(24);
-    &.loader {
-      display: flex;
-      justify-content: center;
-    }
   }
   &__all {
     padding-top: rem(16);

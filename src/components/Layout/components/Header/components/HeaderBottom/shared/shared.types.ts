@@ -1,6 +1,6 @@
 export type BurgerPropsType = {
     isBurger: boolean
-    setIsBurger: (p: (prev: boolean) => boolean) => void
+    setIsBurger: (isBurger: boolean) => void
 }
 
 export type SearchFormPropsType = {

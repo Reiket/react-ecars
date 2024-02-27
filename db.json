@@ -1,473 +1,717 @@
 {
-  "favorites": [
-    {
-      "id": 18,
-      "imageUrl": "/assets/image/offers/18.jpg",
-      "name": "2018 Subaru Outback",
-      "description": "Used • 27,057 mi • Petrol",
-      "price": {
-        "USD": "$ 31,995",
-        "EUR": "€ 32,995",
-        "GBP": "£ 34,995"
-      },
-      "discount": "35,290",
-      "ship": 2
-    },
-    {
-      "id": 20,
-      "imageUrl": "/assets/image/offers/20.jpg",
-      "name": "2020 Toyota Land Cruiser 200",
-      "description": "Used • 27,057 mi • Petrol",
-      "price": {
-        "USD": "$ 35,995",
-        "EUR": "€ 37,995",
-        "GBP": "£ 38,995"
-      },
-      "discount": "40,290",
-      "ship": 2
-    },
-    {
-      "id": 21,
-      "imageUrl": "/assets/image/offers/21.jpg",
-      "name": "2022 Genesis G80",
-      "description": "Used • 27,057 mi • Petrol",
-      "price": {
-        "USD": "$ 36,995",
-        "EUR": "€ 38,995",
-        "GBP": "£ 40,995"
-      },
-      "discount": "41,290",
-      "ship": 2
-    },
-    {
-      "id": 22,
-      "imageUrl": "/assets/image/offers/22.jpg",
-      "name": "2022 Ford Ranger Raptor",
-      "description": "Used • 27,057 mi • Petrol",
-      "price": {
-        "USD": "$ 36,795",
-        "EUR": "€ 38,995",
-        "GBP": "£ 41,995"
-      },
-      "discount": "44,290",
-      "ship": 2
-    }
-  ],
+  "favorites": [],
   "offers": [
     {
       "id": 1,
       "imageUrl": "/assets/image/offers/01.png",
       "name": "2021 Genesis GV80 2.5T",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 15,232 mi • Gasoline",
       "price": {
-        "USD": "$ 45,995",
-        "EUR": "€ 46,995",
-        "GBP": "£ 50,995"
+        "USD": 45995,
+        "EUR": 46995,
+        "GBP": 50995
       },
-      "discount": "51,490",
+      "discountPercent": 5,
       "ship": 0,
       "added": "Aug 22, 2023",
       "views": 150,
       "properties": {
         "make": "Genesis",
         "model": "GV80 2.5T",
-        "year": 2021,
         "color": "Black",
         "type": "Crossover",
-        "kilometers": "15,000",
+        "year": 2021,
+        "kilometers": 15232,
         "wheels": "18´",
         "location": "Dubai",
-        "isExport": true
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 8,
+        "cylinders": 8,
+        "interior": "Black"
       }
     },
     {
       "id": 2,
       "imageUrl": "/assets/image/offers/02.png",
       "name": "2019 Mitsubishi Outlander Sport 2.0 SE",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 9,123 mi • Gasoline",
       "price": {
-        "USD": "$ 40,995",
-        "EUR": "€ 43,995",
-        "GBP": "£ 48,995"
+        "USD": 40995,
+        "EUR": 43995,
+        "GBP": 48995
       },
-      "discount": "48,490",
+      "discountPercent": 7,
       "ship": 0,
       "added": "Aug 15, 2023",
       "views": 200,
       "properties": {
         "make": "Mitsubishi",
         "model": "Outlander Sport",
-        "year": 2019,
         "color": "Black",
         "type": "Crossover",
-        "kilometers": "9,000",
-        "wheels": "18´",
+        "year": 2019,
+        "kilometers": 9123,
+        "wheels": "20´",
         "location": "Mexico",
-        "isExport": false
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 6,
+        "cylinders": 5,
+        "interior": "White"
       }
     },
     {
       "id": 3,
       "imageUrl": "/assets/image/offers/03.png",
       "name": "2019 BMW 640 Gran Turismo i xDrive",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 25,023 mi • Gasoline",
       "price": {
-        "USD": "$ 48,995",
-        "EUR": "€ 50,995",
-        "GBP": "£ 54,995"
+        "USD": 48995,
+        "EUR": 50995,
+        "GBP": 54995
       },
-      "discount": "57,490",
+      "discountPercent": 5,
       "ship": 0,
       "added": "Jun 22, 2023",
       "views": 170,
       "properties": {
         "make": "BMW",
         "model": "640 Gran Turismo",
-        "year": 2019,
         "color": "Black",
         "type": "Sedan",
-        "kilometers": "25,000",
-        "wheels": "18´",
+        "year": 2019,
+        "kilometers": 25023,
+        "wheels": "15´",
         "location": "Paris",
-        "isExport": true
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 4,
+        "cylinders": 10,
+        "interior": "White"
       }
     },
     {
       "id": 4,
       "imageUrl": "/assets/image/offers/04.png",
       "name": "2020 Subaru Ascent Touring 7-Passenger",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 32,121 mi • Diesel",
       "price": {
-        "USD": "$ 40,995",
-        "EUR": "€ 42,995",
-        "GBP": "£ 48,995"
+        "USD": 40995,
+        "EUR": 42995,
+        "GBP": 48995
       },
-      "discount": "48,490",
+      "discountPercent": 7,
       "ship": 0,
       "added": "Dec 22, 2023",
       "views": 420,
       "properties": {
         "make": "Subaru",
         "model": "Ascent Touring",
-        "year": 2020,
         "color": "White",
         "type": "Minivan",
-        "kilometers": "30,000",
-        "wheels": "18´",
+        "year": 2020,
+        "kilometers": 32121,
+        "wheels": "15´",
         "location": "Barcelona",
-        "isExport": false
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Diesel",
+        "seats": 8,
+        "cylinders": 8,
+        "interior": "Black"
       }
     },
     {
       "id": 5,
       "imageUrl": "/assets/image/offers/05.jpg",
       "name": "2022 Kia K5 GT",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 17,000 mi • Diesel",
       "price": {
-        "USD": "$ 41,995",
-        "EUR": "€ 43,995",
-        "GBP": "£ 48,995"
+        "USD": 41995,
+        "EUR": 43995,
+        "GBP": 48995
       },
-      "discount": "50,490",
+      "discountPercent": 10,
       "ship": 0,
       "added": "Jul 22, 2023",
       "views": 210,
       "properties": {
         "make": "Kia",
         "model": "K5 GT",
-        "year": 2022,
         "color": "Grey",
         "type": "Sedan",
-        "kilometers": "17, 000",
-        "wheels": "18´",
+        "year": 2022,
+        "kilometers": 17000,
+        "wheels": "19´",
         "location": "London",
-        "isExport": true
+        "export_status": true,
+        "gearbox": "Hybrid",
+        "fuel": "Diesel",
+        "seats": 8,
+        "cylinders": 10,
+        "interior": "Brown"
       }
     },
     {
       "id": 6,
       "imageUrl": "/assets/image/offers/06.jpg",
       "name": "2021 Toyota Camry 2.5 D-4S",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 25,000 mi • Gasoline",
       "price": {
-        "USD": "$ 42,995",
-        "EUR": "€ 44,995",
-        "GBP": "£ 47,995"
+        "USD": 42995,
+        "EUR": 44995,
+        "GBP": 47995
       },
-      "discount": "49,290",
+      "discountPercent": 12,
       "ship": 0,
       "added": "Jul 22, 2023",
       "views": 242,
       "properties": {
         "make": "Toyota",
         "model": "Camry",
-        "year": 2021,
         "color": "Black",
         "type": "Sedan",
-        "kilometers": "25,000",
-        "wheels": "18´",
+        "year": 2021,
+        "kilometers": 25200,
+        "wheels": "16´",
         "location": "Kiev",
-        "isExport": true
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 4,
+        "cylinders": 6,
+        "interior": "Black"
       }
     },
     {
       "id": 7,
       "imageUrl": "/assets/image/offers/07.jpg",
       "name": "2018 Lexus LX570",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 27,000 mi • Diesel",
       "price": {
-        "USD": "$ 38,995",
-        "EUR": "€ 40,995",
-        "GBP": "£ 45,995"
+        "USD": 38995,
+        "EUR": 40995,
+        "GBP": 45995
       },
-      "discount": "47,290",
+      "discountPercent": 14,
       "ship": 0,
       "added": "Sep 22, 2023",
       "views": 230,
       "properties": {
         "model": "LX570",
-        "year": 2018,
         "color": "Silver",
         "make": "Lexus",
         "type": "Crossover",
-        "kilometers": "27,000",
-        "wheels": "18´",
+        "year": 2018,
+        "kilometers": 27120,
+        "wheels": "15´",
         "location": "Dublin",
-        "isExport": false
+        "export_status": false,
+        "gearbox": "Hybrid",
+        "fuel": "Diesel",
+        "seats": 8,
+        "cylinders": 8,
+        "interior": "Black"
       }
     },
     {
       "id": 8,
       "imageUrl": "/assets/image/offers/08.jpg",
       "name": "2020 Tesla Model S",
-      "description": "Used • 27,057 mi • Electric",
+      "description": "Used • 20,172 mi • Electric",
       "price": {
-        "USD": "$ 43,995",
-        "EUR": "€ 48,995",
-        "GBP": "£ 50,995"
+        "USD": 43995,
+        "EUR": 48995,
+        "GBP": 50995
       },
-      "discount": "56,290",
+      "discountPercent": 5,
       "ship": 0,
       "added": "Dec 22, 2023",
       "views": 580,
       "properties": {
         "model": "Model S",
-        "year": 2020,
         "color": "Black",
         "make": "Tesla",
         "type": "Electric",
-        "kilometers": "2,000",
+        "year": 2020,
+        "kilometers": 20172,
+        "wheels": "15´",
         "location": "Rome",
-        "isExport": true
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Electric",
+        "seats": 6,
+        "cylinders": 8,
+        "interior": "White"
       }
     },
     {
       "id": 9,
       "imageUrl": "/assets/image/offers/09.jpg",
       "name": "2021 Tesla Model Y",
-      "description": "Used • 27,057 mi • Electric",
+      "description": "Used • 18,812 mi • Electric",
       "price": {
-        "USD": "$ 48,995",
-        "EUR": "€ 50,995",
-        "GBP": "£ 52,995"
+        "USD": 48995,
+        "EUR": 50995,
+        "GBP": 52995
       },
-      "discount": "54,290",
-      "ship": 1
+      "discountPercent": 12,
+      "ship": 1,
+      "properties": {
+        "model": "Model Y",
+        "color": "Red",
+        "make": "Tesla",
+        "type": "Electric",
+        "year": 2021,
+        "kilometers": 18812,
+        "wheels": "15´",
+        "location": "Dallas",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Electric",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "White"
+      }
     },
     {
       "id": 10,
       "imageUrl": "/assets/image/offers/10.jpg",
       "name": "2018 Volkswagen Passat B8",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 50,762 mi • Petrol",
       "price": {
-        "USD": "$ 37,995",
-        "EUR": "€ 39,995",
-        "GBP": "£ 41,995"
+        "USD": 37995,
+        "EUR": 39995,
+        "GBP": 41995
       },
-      "discount": "44,290",
-      "ship": 1
+      "discountPercent": 8,
+      "ship": 1,
+      "properties": {
+        "model": "Passat B8",
+        "color": "Black",
+        "make": "Volkswagen",
+        "type": "Petrol",
+        "year": 2018,
+        "kilometers": 50762,
+        "wheels": "14´",
+        "location": "Rome",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "Black"
+      }
     },
     {
       "id": 11,
       "imageUrl": "/assets/image/offers/11.jpg",
       "name": "2020 Volkswagen Touareg",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 20,643 mi • Petrol",
       "price": {
-        "USD": "$ 34,995",
-        "EUR": "€ 37,995",
-        "GBP": "£ 38,995"
+        "USD": 34995,
+        "EUR": 37995,
+        "GBP": 38995
       },
-      "discount": "40,290",
-      "ship": 1
+      "discountPercent": 14,
+      "ship": 1,
+      "properties": {
+        "model": "Touareg",
+        "color": "Blue",
+        "make": "Volksw50, 762",
+        "type": "SUV",
+        "year": 2020,
+        "kilometers": 20643,
+        "wheels": "18´",
+        "location": "Berlin",
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 6,
+        "interior": "Leather"
+      }
     },
     {
       "id": 12,
       "imageUrl": "/assets/image/offers/12.jpg",
       "name": "2024 Volvo EX90",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 1,598 mi • Petrol",
       "price": {
-        "USD": "$ 58,995",
-        "EUR": "€ 60,995",
-        "GBP": "£ 62,995"
+        "USD": 58995,
+        "EUR": 60995,
+        "GBP": 62995
       },
-      "discount": "65,290",
-      "ship": 1
+      "discountPercent": 2,
+      "ship": 1,
+      "properties": {
+        "model": "EX90",
+        "color": "Silver",
+        "make": "V20,643",
+        "type": "SUV",
+        "year": 2024,
+        "kilometers": 1598,
+        "wheels": "16´",
+        "location": "Stockholm",
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 7,
+        "cylinders": 4,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 13,
       "imageUrl": "/assets/image/offers/13.jpg",
       "name": "2022 Volvo S60",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 17,189 mi • Petrol",
       "price": {
-        "USD": "$ 38,995",
-        "EUR": "€ 40,995",
-        "GBP": "£ 45,995"
+        "USD": 38995,
+        "EUR": 40995,
+        "GBP": 45995
       },
-      "discount": "47,290",
-      "ship": 1
+      "discountPercent": 4,
+      "ship": 1,
+      "properties": {
+        "model": "S60",
+        "color": "White",
+        "make": "Volvo",
+        "type": "S1,598",
+        "year": 2022,
+        "kilometers": 17189,
+        "wheels": "17´",
+        "location": "London",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "Beige Leather"
+      }
     },
     {
       "id": 14,
       "imageUrl": "/assets/image/offers/14.jpg",
       "name": "2012 Land Rover Range Rover",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 40, 783 mi • Gasoline",
       "price": {
-        "USD": "$ 25,995",
-        "EUR": "€ 28,995",
-        "GBP": "£ 32,995"
+        "USD": 25995,
+        "EUR": 28995,
+        "GBP": 32995
       },
-      "discount": "33,290",
-      "ship": 1
+      "discountPercent": 20,
+      "ship": 1,
+      "properties": {
+        "model": "Range Rover",
+        "color": "17,189",
+        "make": "Land Rover",
+        "type": "SUV",
+        "year": 2012,
+        "kilometers": 40783,
+        "wheels": "20´",
+        "location": "Berlin",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 5,
+        "cylinders": 6,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 15,
       "imageUrl": "/assets/image/offers/15.jpg",
       "name": "2020 Land Rover Defender",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 15,112 mi • Petrol",
       "price": {
-        "USD": "$ 30,995",
-        "EUR": "€ 32,995",
-        "GBP": "£ 33,995"
+        "USD": 30995,
+        "EUR": 32995,
+        "GBP": 33995
       },
-      "discount": "34,290",
-      "ship": 1
+      "discountPercent": 12,
+      "ship": 1,
+      "properties": {
+        "model": "Range Rover",
+        "color": "Black",
+        "make": "Land Rover",
+        "type": "SUV",
+        "year": 2012,
+        "kilometers": 15112,
+        "wheels": "20´",
+        "location": "Manchester",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 6,
+        "cylinders": 8,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 16,
       "imageUrl": "/assets/image/offers/16.jpg",
       "name": "2022 BMW X6M",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 10,122 mi • Petrol",
       "price": {
-        "USD": "$ 42,995",
-        "EUR": "€ 43,995",
-        "GBP": "£ 45,995"
+        "USD": 42995,
+        "EUR": 43995,
+        "GBP": 45995
       },
-      "discount": "47,290",
-      "ship": 1
+      "discountPercent": 4,
+      "ship": 1,
+      "properties": {
+        "model": "X6M",
+        "color": "Blue-Green",
+        "make": "BMW",
+        "type": "SUV",
+        "year": 2022,
+        "kilometers": 10122,
+        "wheels": "18´",
+        "location": "Munich",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 6,
+        "cylinders": 10,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 17,
       "imageUrl": "/assets/image/offers/17.png",
       "name": "2023 Mitsubishi Lancer Evolution XII",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 5,021 mi • Petrol",
       "price": {
-        "USD": "$ 40,995",
-        "EUR": "€ 42,995",
-        "GBP": "£ 44,995"
+        "USD": 40995,
+        "EUR": 42995,
+        "GBP": 44995
       },
-      "discount": "45,290",
-      "ship": 2
+      "discountPercent": 6,
+      "ship": 2,
+      "properties": {
+        "model": "Lancer Evolution XII",
+        "color": "Dark Red",
+        "make": "Mitsubishi",
+        "type": "S10,122",
+        "year": 2023,
+        "kilometers": 5021,
+        "wheels": "15´",
+        "location": "Tokyo",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "Black Cloth"
+      }
     },
     {
       "id": 18,
       "imageUrl": "/assets/image/offers/18.jpg",
       "name": "2018 Subaru Outback",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 31,543 mi • Petrol",
       "price": {
-        "USD": "$ 31,995",
-        "EUR": "€ 32,995",
-        "GBP": "£ 34,995"
+        "USD": 31995,
+        "EUR": 32995,
+        "GBP": 34995
       },
-      "discount": "35,290",
-      "ship": 2
+      "discountPercent": 15,
+      "ship": 2,
+      "properties": {
+        "model": "Out515, 112",
+        "color": "Brown",
+        "make": "Subaru",
+        "type": "SUV",
+        "year": 2018,
+        "kilometers": 31543,
+        "wheels": "18´",
+        "location": "Osaka",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 4,
+        "cylinders": 6,
+        "interior": "Beige Cloth"
+      }
     },
     {
       "id": 19,
       "imageUrl": "/assets/image/offers/19.jpg",
       "name": "2018 Kia Stinger GT2",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 45,521 mi • Gasoline",
       "price": {
-        "USD": "$ 36,895",
-        "EUR": "€ 38,195",
-        "GBP": "£ 40,195"
+        "USD": 36895,
+        "EUR": 38195,
+        "GBP": 40195
       },
-      "discount": "42,290",
-      "ship": 2
+      "discountPercent": 20,
+      "ship": 2,
+      "properties": {
+        "model": "Stinger GT2",
+        "color": "Orange",
+        "make": "Kia",
+        "type": "Sedan",
+        "year": 2018,
+        "kilometers": 45521,
+        "wheels": "14´",
+        "location": "Seoul",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 4,
+        "cylinders": 8,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 20,
       "imageUrl": "/assets/image/offers/20.jpg",
       "name": "2020 Toyota Land Cruiser 200",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 30,245 mi • Petrol",
       "price": {
-        "USD": "$ 35,995",
-        "EUR": "€ 37,995",
-        "GBP": "£ 38,995"
+        "USD": 35995,
+        "EUR": 37995,
+        "GBP": 38995
       },
-      "discount": "40,290",
-      "ship": 2
+      "discountPercent": 20,
+      "ship": 2,
+      "properties": {
+        "model": "Land Cruiser 200",
+        "color": "Silver",
+        "make": "Toyota",
+        "type": "SUV",
+        "year": 2020,
+        "kilometers": 30245,
+        "wheels": "18´",
+        "location": "Tokyo",
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 8,
+        "cylinders": 8,
+        "interior": "Beige Leather"
+      }
     },
     {
       "id": 21,
       "imageUrl": "/assets/image/offers/21.jpg",
       "name": "2022 Genesis G80",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 20,122 mi • Petrol",
       "price": {
-        "USD": "$ 36,995",
-        "EUR": "€ 38,995",
-        "GBP": "£ 40,995"
+        "USD": 36995,
+        "EUR": 38995,
+        "GBP": 40995
       },
-      "discount": "41,290",
-      "ship": 2
+      "discountPercent": 8,
+      "ship": 2,
+      "properties": {
+        "model": "G80",
+        "color": "Silver",
+        "make": "Genesis",
+        "type": "Sedan",
+        "year": 2022,
+        "kilometers": 20122,
+        "wheels": "16´",
+        "location": "Seoul",
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 6,
+        "interior": "Beige Leather"
+      }
     },
     {
       "id": 22,
       "imageUrl": "/assets/image/offers/22.jpg",
       "name": "2022 Ford Ranger Raptor",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 18,341 mi • Gasoline",
       "price": {
-        "USD": "$ 36,795",
-        "EUR": "€ 38,995",
-        "GBP": "£ 41,995"
+        "USD": 36795,
+        "EUR": 38995,
+        "GBP": 41995
       },
-      "discount": "44,290",
-      "ship": 2
+      "discountPercent": 6,
+      "ship": 2,
+      "properties": {
+        "model": "Ranger Raptor",
+        "color": "Red",
+        "make": "Ford",
+        "type": "Pickup Truck",
+        "year": 2022,
+        "kilometers": 18341,
+        "wheels": "20´",
+        "location": "Detroit",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 5,
+        "cylinders": 6,
+        "interior": "Black Leather"
+      }
     },
     {
       "id": 23,
       "imageUrl": "/assets/image/offers/23.jpg",
       "name": "2020 Ford Focus ST",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 25,454 mi • Petrol",
       "price": {
-        "USD": "$ 33,995",
-        "EUR": "€ 35,995",
-        "GBP": "£ 37,995"
+        "USD": 33995,
+        "EUR": 35995,
+        "GBP": 37995
       },
-      "discount": "39,290",
-      "ship": 2
+      "discountPercent": 10,
+      "ship": 2,
+      "properties": {
+        "model": "Focus ST",
+        "color": "Orange",
+        "make": "Ford",
+        "type": "Hatchback",
+        "year": 2020,
+        "kilometers": 25454,
+        "wheels": "16´",
+        "location": "London",
+        "export_status": true,
+        "gearbox": "Manual",
+        "fuel": "Petrol",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "Black Cloth"
+      }
     },
     {
       "id": 24,
       "imageUrl": "/assets/image/offers/24.jpg",
       "name": "2018 Lexus LS",
-      "description": "Used • 27,057 mi • Petrol",
+      "description": "Used • 24,123 mi • Gasoline",
       "price": {
-        "USD": "$ 29,995",
-        "EUR": "€ 31,995",
-        "GBP": "£ 32,995"
+        "USD": 29995,
+        "EUR": 31995,
+        "GBP": 32995
       },
-      "discount": "34,560",
-      "ship": 2
+      "discountPercent": 15,
+      "ship": 2,
+      "properties": {
+        "model": "LS",
+        "color": "Silver",
+        "make": "Lexus",
+        "type": "Sedan",
+        "year": 2018,
+        "kilometers": 24123,
+        "wheels": "16´",
+        "location": "Tokyo",
+        "export_status": false,
+        "gearbox": "Automatic",
+        "fuel": "Gasoline",
+        "seats": 5,
+        "cylinders": 6,
+        "interior": "Beige Leather"
+      }
     }
   ],
   "brands": [

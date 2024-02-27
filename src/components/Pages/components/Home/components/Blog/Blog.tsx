@@ -2,17 +2,16 @@ import React from 'react';
 import {RiArrowRightLine} from "react-icons/ri";
 import BlogItem from "./components/BlogItem/BlogItem";
 import BlogLoader from "./components/BlogLoader/BlogLoader";
-import {useDispatch, useSelector} from "react-redux";
 import {selectNewsPosts} from "./store/selector/news-selector";
 import Title from "../../../../../../shared/components/Title/Title";
-import {AppDispatch} from "../../../../../../app/store/types/store.types";
 import {fetchNews} from "./store/thunks/fetchNews";
 import AllLink from "../../../../../../shared/components/Title/AllLink";
+import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";
 
 const Blog: React.FC = () => {
     const itemCount = 3;
-    const posts = useSelector(selectNewsPosts)
-    const dispatch: AppDispatch = useDispatch()
+    const posts = useAppSelector(selectNewsPosts)
+    const dispatch = useAppDispatch()
     React.useEffect(() => {
         dispatch(fetchNews())
     }, [])

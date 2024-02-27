@@ -1,19 +1,17 @@
-import React from 'react';
-type RefType = React.MutableRefObject<HTMLButtonElement | HTMLDivElement | null>;
-
-export const useClickOutside = (ref: RefType, callback: (e: MouseEvent) => void) => {
+import React, {RefObject} from 'react';
+export const useClickOutside = (ref: RefObject<HTMLElement>, callback: () => void) => {
     React.useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            const target = event.target as Node;
-
-            if (ref.current && !ref.current.contains(target)) {
-                callback(event);
+            if (ref.current && event.target) {
+                if (!ref.current.contains(event.target as Node)) {
+                    callback();
+                }
             }
-        }
-        document.body.addEventListener("click", handleClickOutside);
+        };
 
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            document.body.removeEventListener("click", handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [ref, callback]);
-}
+};

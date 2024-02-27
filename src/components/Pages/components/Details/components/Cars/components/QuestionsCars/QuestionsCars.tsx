@@ -8,7 +8,7 @@ const QuestionsCars: React.FC = () => {
             <BlockTitle classnames={"questions-cars__title"} text={"Do you still have questions? Contact us for answers."}/>
             <p className="questions-cars__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
-        <GreenButton type={"button"} classnames={"questions-cars__button green-button_big"} text={"Contact Us"}/>
+        <GreenButton href={"/contacts"} type={"link"} classnames={"questions-cars__button green-button_big"} text={"Contact Us"}/>
     </div>
 }
 

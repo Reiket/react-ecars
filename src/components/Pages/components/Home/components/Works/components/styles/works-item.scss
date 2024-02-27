@@ -12,14 +12,16 @@
           content:'';
           position: absolute;
           top: rem(27);
-          left: 70%;
+          left: 72%;
           display: inline-block;
           width: rem(184);
           border: rem(1) dashed $border-pale;
         }
         &::before {
-          @include adaptiveValue("left", 450, 180, 1254, 665);
-          width: rem(300);
+          @media (max-width:em(1254)) {
+            @include adaptiveValue("left", 400, 150, 1254, 665, 1);
+            @include adaptiveValue("width", 400, 350, 1254, 665, 1);
+          }
         }
         @media (max-width:em(1254)) {
           &:nth-child(2) {
@@ -32,6 +34,8 @@
     }
   }
   &__number {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,19 +1,18 @@
 import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import BrandsCard from "./components/BrandsCard";
-import {useDispatch, useSelector} from "react-redux";
 import {selectBrands} from "./store/selector/brands-selector";
 import Title from "../../../../../../shared/components/Title/Title";
 import {fetchBrands} from "./store/thunks/fetchBrand";
-import {AppDispatch} from "../../../../../../app/store/types/store.types";
-import Loader from "../../../../../../shared/components/Loader/Loader";
 import {cn} from "../../../../../../shared/utils";
+import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";
+import {Icons} from "../../../../../../shared/components/Icons/Icons";
 
 const Brands: React.FC = () => {
     const [isShowAll, setIsShowAll] = React.useState(false);
-    const brands = useSelector(selectBrands)
+    const brands = useAppSelector(selectBrands)
     const itemsToShow = isShowAll ? brands.length : 6;
-    const dispatch: AppDispatch = useDispatch()
+    const dispatch = useAppDispatch()
     React.useEffect(() => {
         dispatch(fetchBrands())
     }, [])
@@ -29,7 +28,7 @@ const Brands: React.FC = () => {
                     <Title text={"Browse by brand"}/>
                 </div>
                 <div className={brands.length === 0 ? "brands__body loader": "brands__body"}>
-                    {brands.length === 0 ? <Loader classnames={"brands__loader"}/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} {...item}/>)}
+                    {brands.length === 0 ? <Icons.loader/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} {...item}/>)}
                 </div>
                 <button onClick={onClickToShowAll} className={cn("brands__all all all_show", {
                   "all_show_less": isShowAll

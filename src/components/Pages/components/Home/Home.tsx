@@ -9,14 +9,19 @@ import Offers from "./components/Offers/Offers";
 import Comments from "./components/Comments/Comments";
 import Brands from "./components/Brands/Brands";
 import Blog from "./components/Blog/Blog";
+import {Element} from "react-scroll";
 
 const Home: React.FC = () => {
     return (
        <>
            <Intro/>
            <BottomIntro/>
-           <Offers/>
-           <Brands/>
+           <Element name={"offers"}>
+               <Offers/>
+           </Element>
+           <Element name={"brands"}>
+               <Brands/>
+           </Element>
            <Send/>
            <Works/>
            <Why/>

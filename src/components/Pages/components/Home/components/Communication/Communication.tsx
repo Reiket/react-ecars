@@ -4,6 +4,9 @@ import {BiHelpCircle} from "react-icons/bi";
 import {CommItemsType} from "./types/communication.types";
 import BlockTitle from "../../../../../../shared/components/Title/BlockTitle";
 import Text from "../../../../../../shared/components/Title/Text";
+import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
+import {cn} from "../../../../../../shared/utils";
+import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
 
 const items = [
     {
@@ -14,29 +17,33 @@ const items = [
     },
     {
         icon: <BiHelpCircle/>,
-        title: "Send an inquiry and our managers will offer you the best deals.",
+        title: "Do you still have questions? Contact us for answers.",
         text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
         btnText: "Contact Us"
     }
 ] as Array<CommItemsType>
 const Communication: React.FC = () => {
-    const attributes = "communication__button green-button green-button_big"
-    return (
-        <section className="section__communication communication">
-            <div className="communication__container">
-                <div className="communication__body">
-                    {items.map((item, id) => (
-                        <div key={id} className="communication__item">
-                            <div className="communication__icon">{item.icon}</div>
-                            <BlockTitle classnames={"communication__title"} text={item.title}/>
-                            <Text text={item.text} classnames={"communication__text"}/>
-                            <a href="/" className={item.btnText !== "Contact Us" ? attributes : attributes + " green-button_white"}>{item.btnText}</a>
-                        </div>
-                    ))}
-                </div>
+    const {togglePopup} = usePopupControl();
+
+    return <section className="section__communication communication">
+        <div className="communication__container">
+            <div className="communication__body">
+                {items.map((item, id) => {
+                    const isContactText = item.btnText === "Contact Us"
+                    return <div key={id} className="communication__item">
+                        <div className="communication__icon">{item.icon}</div>
+                        <BlockTitle classnames={"communication__title"} text={item.title}/>
+                        <Text text={item.text} classnames={"communication__text"}/>
+                        <GreenButton onClick={togglePopup}
+                            classnames={cn("communication__button green-button_big", {
+                                "green-button_white": isContactText
+                            })}
+                            text={item.btnText} href={"/contacts"} type={isContactText ? "link": "button"}/>
+                    </div>
+                })}
             </div>
-        </section>
-    );
+        </div>
+    </section>
 };
 
 export default Communication;

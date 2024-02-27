@@ -7,12 +7,12 @@ import FeaturesCars from "./components/FeaturesCars/FeaturesCars";
 import QuestionsCars from "./components/QuestionsCars/QuestionsCars";
 import LinksCars from "./components/LinksCars/LinksCars";
 import {useWindowWidth} from "../../../../../../shared/hooks/useWindowWidth";
-import {useSelector} from "react-redux";
 import {CarsPropsType} from "./types/cars.types";
 import {selectDetail} from "../../store/selector/details-selector";
+import {useAppSelector} from "../../../../../../app/store/hooks";
 
 const Cars: React.FC<CarsPropsType> = ({currency}) => {
-    const detail = useSelector(selectDetail)
+    const detail = useAppSelector(selectDetail)
     const isMoving = useWindowWidth(991)
     const images = Array.from({ length: 6 }, (_) => ({
         original: detail.imageUrl,

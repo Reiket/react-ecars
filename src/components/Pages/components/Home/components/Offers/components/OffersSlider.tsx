@@ -3,15 +3,15 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import './styles/swiper.scss';
 import CardLoader from "../../../../../../../shared/components/Card/components/CardLoader/CardLoader";
-import {useSelector} from "react-redux";
 import {selectIsFetchingOffers, selectItems} from "../store/selector/offers-selector";
 import {OffersSliderPropsType} from "./types/offers-slider.types";
 import Card from "../../../../../../../shared/components/Card/Card";
+import {useAppSelector} from "../../../../../../../app/store/hooks";
 
 const amountSlides = 4
 const OffersSlider: React.FC<OffersSliderPropsType> = ({ currency}) => {
-    const isFetching = useSelector(selectIsFetchingOffers)
-    const items = useSelector(selectItems)
+    const isFetching = useAppSelector(selectIsFetchingOffers)
+    const items = useAppSelector(selectItems)
     return (
         <div className="section-offers__body">
 

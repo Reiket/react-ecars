@@ -2,7 +2,7 @@
 .icon-menu {
   display: none;
   @media (max-width: em(930)) {
-    z-index: 10;
+    z-index: 20;
     display: block;
     position: relative;
     width: rem(15);

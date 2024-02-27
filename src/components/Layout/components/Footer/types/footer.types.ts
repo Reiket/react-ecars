@@ -1,12 +1,16 @@
-import {ContactsArrayType} from "../../../../../shared/Contacts/contacts-aray";
+import React from "react";
 
-export type FooterItemsType = {
-    isLogo: boolean
+export type TFooterItems = {
     title: string
-    links: Array<ContactsArrayType>
+    links: Array<TFooterLinks>
 }
 
-let sentence = "Hello, world! World is beautiful.";
-console.log(sentence.lastIndexOf("World")); // Повертає 13
+export type TFooterLinks = {
+    url: string
+    text?: string
+    scroll?: string
+    icon?: React.JSX.Element
+}
 
+export type FooterItemsLogo = TFooterItems & {isLogo: boolean}
 
