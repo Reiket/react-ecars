@@ -14,6 +14,7 @@
   overflow-y: auto;
   display: flex;
   justify-content: center;
+  transform: translateX(0);
   background-color: rgba(0, 0, 0, 0.5);
   @media (min-height:em(460)) {
     align-items: center;
@@ -22,6 +23,10 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+  &__body {
+    margin-right: calc(-1 * (100vw - 100%));
+    margin-left: rem(-40);
   }
   &__content {
     padding: rem(20);

@@ -13,7 +13,7 @@
       },
       "discountPercent": 5,
       "ship": 0,
-      "added": "Aug 22, 2023",
+      "added": "2023-08-22T00:00:00.000Z",
       "views": 150,
       "properties": {
         "make": "Genesis",
@@ -44,7 +44,7 @@
       },
       "discountPercent": 7,
       "ship": 0,
-      "added": "Aug 15, 2023",
+      "added": "2023-05-10T00:00:00.000Z",
       "views": 200,
       "properties": {
         "make": "Mitsubishi",
@@ -75,7 +75,7 @@
       },
       "discountPercent": 5,
       "ship": 0,
-      "added": "Jun 22, 2023",
+      "added": "2022-02-15T00:00:00.000Z",
       "views": 170,
       "properties": {
         "make": "BMW",
@@ -106,7 +106,7 @@
       },
       "discountPercent": 7,
       "ship": 0,
-      "added": "Dec 22, 2023",
+      "added": "2022-11-07T00:00:00.000Z",
       "views": 420,
       "properties": {
         "make": "Subaru",
@@ -137,7 +137,7 @@
       },
       "discountPercent": 10,
       "ship": 0,
-      "added": "Jul 22, 2023",
+      "added": "2023-07-04T00:00:00.000Z",
       "views": 210,
       "properties": {
         "make": "Kia",
@@ -168,7 +168,7 @@
       },
       "discountPercent": 12,
       "ship": 0,
-      "added": "Jul 22, 2023",
+      "added": "2022-01-01T00:00:00.000Z",
       "views": 242,
       "properties": {
         "make": "Toyota",
@@ -199,7 +199,7 @@
       },
       "discountPercent": 14,
       "ship": 0,
-      "added": "Sep 22, 2023",
+      "added": "2021-10-18T00:00:00.000Z",
       "views": 230,
       "properties": {
         "model": "LX570",
@@ -230,7 +230,7 @@
       },
       "discountPercent": 5,
       "ship": 0,
-      "added": "Dec 22, 2023",
+      "added": "2022-12-30T00:00:00.000Z",
       "views": 580,
       "properties": {
         "model": "Model S",
@@ -261,6 +261,8 @@
       },
       "discountPercent": 12,
       "ship": 1,
+      "added": "2022-09-03T00:00:00.000Z",
+      "views": 623,
       "properties": {
         "model": "Model Y",
         "color": "Red",
@@ -290,6 +292,8 @@
       },
       "discountPercent": 8,
       "ship": 1,
+      "added": "2021-11-12T00:00:00.000Z",
+      "views": 1124,
       "properties": {
         "model": "Passat B8",
         "color": "Black",
@@ -319,6 +323,8 @@
       },
       "discountPercent": 14,
       "ship": 1,
+      "added": "2021-07-11T00:00:00.000Z",
+      "views": 753,
       "properties": {
         "model": "Touareg",
         "color": "Blue",
@@ -348,6 +354,8 @@
       },
       "discountPercent": 2,
       "ship": 1,
+      "added": "2024-01-07T00:00:00.000Z",
+      "views": 565,
       "properties": {
         "model": "EX90",
         "color": "Silver",
@@ -377,6 +385,8 @@
       },
       "discountPercent": 4,
       "ship": 1,
+      "added": "2023-12-20T00:00:00.000Z",
+      "views": 753,
       "properties": {
         "model": "S60",
         "color": "White",
@@ -406,6 +416,8 @@
       },
       "discountPercent": 20,
       "ship": 1,
+      "added": "2021-06-05T00:00:00.000Z",
+      "views": 1312,
       "properties": {
         "model": "Range Rover",
         "color": "17,189",
@@ -435,6 +447,8 @@
       },
       "discountPercent": 12,
       "ship": 1,
+      "added": "2021-01-21T00:00:00.000Z",
+      "views": 956,
       "properties": {
         "model": "Range Rover",
         "color": "Black",
@@ -464,6 +478,8 @@
       },
       "discountPercent": 4,
       "ship": 1,
+      "added": "2022-12-11T00:00:00.000Z",
+      "views": 985,
       "properties": {
         "model": "X6M",
         "color": "Blue-Green",
@@ -493,6 +509,8 @@
       },
       "discountPercent": 6,
       "ship": 2,
+      "added": "2023-08-22T00:00:00.000Z",
+      "views": 454,
       "properties": {
         "model": "Lancer Evolution XII",
         "color": "Dark Red",
@@ -522,6 +540,8 @@
       },
       "discountPercent": 15,
       "ship": 2,
+      "added": "2021-03-27T00:00:00.000Z",
+      "views": 1521,
       "properties": {
         "model": "Out515, 112",
         "color": "Brown",
@@ -551,6 +571,8 @@
       },
       "discountPercent": 20,
       "ship": 2,
+      "added": "2021-10-09T00:00:00.000Z",
+      "views": 1231,
       "properties": {
         "model": "Stinger GT2",
         "color": "Orange",
@@ -580,6 +602,8 @@
       },
       "discountPercent": 20,
       "ship": 2,
+      "added": "2021-11-18T00:00:00.000Z",
+      "views": 675,
       "properties": {
         "model": "Land Cruiser 200",
         "color": "Silver",
@@ -609,6 +633,8 @@
       },
       "discountPercent": 8,
       "ship": 2,
+      "added": "2023-06-07T00:00:00.000Z",
+      "views": 743,
       "properties": {
         "model": "G80",
         "color": "Silver",
@@ -638,6 +664,8 @@
       },
       "discountPercent": 6,
       "ship": 2,
+      "added": "2022-08-11T00:00:00.000Z",
+      "views": 341,
       "properties": {
         "model": "Ranger Raptor",
         "color": "Red",
@@ -667,6 +695,8 @@
       },
       "discountPercent": 10,
       "ship": 2,
+      "added": "2021-02-28T00:00:00.000Z",
+      "views": 753,
       "properties": {
         "model": "Focus ST",
         "color": "Orange",
@@ -696,6 +726,8 @@
       },
       "discountPercent": 15,
       "ship": 2,
+      "added": "2021-03-12T00:00:00.000Z",
+      "views": 855,
       "properties": {
         "model": "LS",
         "color": "Silver",

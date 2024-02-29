@@ -8,6 +8,7 @@ const Burger: React.FC<BurgerPropsType> = ({isBurger, setIsBurger}) => {
     const location = useLocation()
     React.useEffect(() => {
         setIsBurger(false)
+        document.body.style.overflow = '';
     }, [location])
     const onClickBurger = () => {
         setIsBurger(!isBurger);

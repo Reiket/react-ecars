@@ -6,14 +6,18 @@ import GetQuotePopup from "../../shared/components/Popup/components/GetQuotePopu
 import {useAppDispatch, useAppSelector} from "../../app/store/hooks";
 import {selectFilters} from "../Pages/components/Home/components/Offers/store/selector/offers-selector";
 import {fetchFavorites} from "../Pages/components/Favorites/store/thunks/fetchFavorites";
+import {useFilters} from "./components/Header/hooks/useFilters";
 
 const MainLayout: React.FC = () => {
     const pathname = useParams();
     const {shipNumber} = useAppSelector(selectFilters)
     const dispatch = useAppDispatch();
+    const {isFilterLoading} = useFilters();
     React.useEffect(() => {
-        dispatch(fetchFavorites(shipNumber))
-    }, [shipNumber]);
+        if (!isFilterLoading) {
+            dispatch(fetchFavorites(shipNumber))
+        }
+    }, [shipNumber, isFilterLoading]);
 
     React.useEffect(() => {
         window.scrollTo(0, 0);

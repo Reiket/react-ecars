@@ -19,9 +19,24 @@ $responsiveType: 1;
 @import "../../shared/styles/base/null";
 
 // Style BODY ============================================================================================================================================================================================================================================================================================================================================================================================
-html, body {
-	scrollbar-gutter: stable
+html {
+	margin-right: calc(-1 * (100vw - 100%));
+	overflow-x: hidden;
+	::-webkit-scrollbar {
+		width: rem(10);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: $color-green;
+		cursor: pointer;
+	}
+
+	/* Додаємо кольори та товщину скролбару дорівнює кольоровому значенню */
+	::-webkit-scrollbar-track {
+		background-color: $color-pale-white;
+	}
 }
+
 
 body {
 	position: relative;

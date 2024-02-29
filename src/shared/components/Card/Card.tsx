@@ -6,9 +6,14 @@ import Text from "../Title/Text";
 import ItemTitle from "../Title/ItemTitle";
 import FavButton from "../FavButton/FavButton";
 import {usePrice} from "../../hooks/usePrice";
+import {useAppSelector} from "../../../app/store/hooks";
+import {
+    selectFilters
+} from "../../../components/Pages/components/Home/components/Offers/store/selector/offers-selector";
 
 const Card: React.FC<CardPropsType> = React.memo(({item, currency, classnames}) => {
-   const [price, discountedPrice] = usePrice(item, currency)
+    const [price, discountedPrice] = usePrice(item, currency)
+    const filters = useAppSelector(selectFilters);
     return <div className={classnames}>
         <div className="card__image">
             <FavButton item={item} classnames={"card__favorite"}/>
@@ -20,7 +25,7 @@ const Card: React.FC<CardPropsType> = React.memo(({item, currency, classnames}) 
             <div className="card__bottom">
                 <ItemTitle text={discountedPrice} size={"small"}/>
                 <p className="card__discount">{price}</p>
-                <Link to={`/${item.id}`} className="card__details">Details <MdOutlineKeyboardArrowRight /></Link>
+                <Link to={`/${item.id}?ship=${filters.shipNumber}&currency=${filters.currency}`} className="card__details">Details <MdOutlineKeyboardArrowRight /></Link>
             </div>
         </div>
     </div>
