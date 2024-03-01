@@ -1,8 +1,8 @@
 import React from 'react';
-import {CarsInfoPropsType} from "./types/cars-info.types";
-import SellDetails from "./components/SellDetails/SellDetails";
-import InspectionDetails from "./components/InspectionDetails/InspectionDetails";
-import {formatDate} from "../../../../../../../../shared/utils";
+import {CarsInfoPropsType} from "./Cars/components/CarsInfo/types/cars-info.types";
+import SellDetails from "./Cars/components/CarsInfo/components/SellDetails/SellDetails";
+import InspectionDetails from "./Cars/components/CarsInfo/components/InspectionDetails/InspectionDetails";
+import {formatDate} from "../../../../../shared/utils";
 
 const CarsInfo: React.FC<CarsInfoPropsType> = ({detail}) => {
 

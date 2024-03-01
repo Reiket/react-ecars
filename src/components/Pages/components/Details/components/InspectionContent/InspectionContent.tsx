@@ -1,7 +1,7 @@
 import React from 'react';
 import {BiDownload} from "react-icons/bi";
-import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
-import ItemTitle from "../../../../../../../../../../../../shared/components/Title/ItemTitle";
+import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
+import ItemTitle from "../../../../../../shared/components/Title/ItemTitle";
 
 const InspectionContent: React.FC = () => {
     return <>

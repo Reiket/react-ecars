@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
-import CarsInfo from "./components/CarsInfo/CarsInfo";
+import CarsInfo from "../CarsInfo";
 import CarsList from "./components/CarsList/CarsList";
 import CarsDescription from "./components/CarsDescription/CarsDescription";
 import FeaturesCars from "./components/FeaturesCars/FeaturesCars";
