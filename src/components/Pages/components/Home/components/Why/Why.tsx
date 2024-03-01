@@ -9,7 +9,7 @@ const Why: React.FC = () => {
             <div className="why__container">
                 <div className="why__body">
                     <div className="why__image">
-                        <img src="/assets/image/why/01.png" alt="whyImage"/>
+                        <img src="assets/image/why/01.png" alt="whyImage"/>
                     </div>
                     <div className="why__content">
                         <Title text={"Why choose us"} classnames={"why__title"}/>
