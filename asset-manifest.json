@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-ecars/static/css/main.edee1c56.css",
-    "main.js": "/react-ecars/static/js/main.fd09978f.js",
+    "main.js": "/react-ecars/static/js/main.c3dde3b0.js",
     "static/css/272.b6bc7f5b.chunk.css": "/react-ecars/static/css/272.b6bc7f5b.chunk.css",
     "static/js/272.d8f2043c.chunk.js": "/react-ecars/static/js/272.d8f2043c.chunk.js",
     "static/js/184.9f481846.chunk.js": "/react-ecars/static/js/184.9f481846.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/intro.png": "/react-ecars/static/media/intro.f2d489bfea2221bdd5a1.png",
     "index.html": "/react-ecars/index.html",
     "main.edee1c56.css.map": "/react-ecars/static/css/main.edee1c56.css.map",
-    "main.fd09978f.js.map": "/react-ecars/static/js/main.fd09978f.js.map",
+    "main.c3dde3b0.js.map": "/react-ecars/static/js/main.c3dde3b0.js.map",
     "272.b6bc7f5b.chunk.css.map": "/react-ecars/static/css/272.b6bc7f5b.chunk.css.map",
     "272.d8f2043c.chunk.js.map": "/react-ecars/static/js/272.d8f2043c.chunk.js.map",
     "184.9f481846.chunk.js.map": "/react-ecars/static/js/184.9f481846.chunk.js.map",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.edee1c56.css",
-    "static/js/main.fd09978f.js"
+    "static/js/main.c3dde3b0.js"
   ]
 }
