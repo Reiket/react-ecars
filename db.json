@@ -1,5 +1,68 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 15,
+      "imageUrl": "/assets/image/offers/15.jpg",
+      "name": "2020 Land Rover Defender",
+      "description": "Used • 15,112 mi • Petrol",
+      "price": {
+        "USD": 30995,
+        "EUR": 32995,
+        "GBP": 33995
+      },
+      "discountPercent": 12,
+      "ship": 1,
+      "added": "2021-01-21T00:00:00.000Z",
+      "views": 956,
+      "properties": {
+        "model": "Range Rover",
+        "color": "Black",
+        "make": "Land Rover",
+        "type": "SUV",
+        "year": 2012,
+        "kilometers": 15112,
+        "wheels": "20´",
+        "location": "Manchester",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Petrol",
+        "seats": 6,
+        "cylinders": 8,
+        "interior": "Black Leather"
+      }
+    },
+    {
+      "id": 9,
+      "imageUrl": "/assets/image/offers/09.jpg",
+      "name": "2021 Tesla Model Y",
+      "description": "Used • 18,812 mi • Electric",
+      "price": {
+        "USD": 48995,
+        "EUR": 50995,
+        "GBP": 52995
+      },
+      "discountPercent": 12,
+      "ship": 1,
+      "added": "2022-09-03T00:00:00.000Z",
+      "views": 623,
+      "properties": {
+        "model": "Model Y",
+        "color": "Red",
+        "make": "Tesla",
+        "type": "Electric",
+        "year": 2021,
+        "kilometers": 18812,
+        "wheels": "15´",
+        "location": "Dallas",
+        "export_status": true,
+        "gearbox": "Automatic",
+        "fuel": "Electric",
+        "seats": 5,
+        "cylinders": 4,
+        "interior": "White"
+      }
+    }
+  ],
   "offers": [
     {
       "id": 1,
