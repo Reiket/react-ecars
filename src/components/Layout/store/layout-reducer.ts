@@ -1,14 +1,20 @@
 import {ActionsType, TInitialState} from "./types/layout.types";
 
 export let initialState = {
-    isOpenPopup: false
+    isOpenGetPopup: false,
+    isOpenContactPopup: false
 }
 const layoutReducer = (state = initialState, action: ActionsType): TInitialState => {
     switch (action.type) {
-        case "TOGGLE_IS_POPUP_OPEN":
+        case "TOGGLE_IS_OPEN_GET_POPUP":
             return {
                 ...state,
-                isOpenPopup: action.isOpenPopup
+                isOpenGetPopup: action.isOpenGetPopup
+            }
+        case "TOGGLE_IS_OPEN_CONTACT_POPUP":
+            return {
+                ...state,
+                isOpenContactPopup: action.isOpenContactPopup
             }
         default: {
             return state

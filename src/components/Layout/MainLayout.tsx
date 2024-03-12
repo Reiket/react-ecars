@@ -7,6 +7,7 @@ import {useAppDispatch, useAppSelector} from "../../app/store/hooks";
 import {selectFilters} from "../Pages/components/Home/components/Offers/store/selector/offers-selector";
 import {fetchFavorites} from "../Pages/components/Favorites/store/thunks/fetchFavorites";
 import {useFilters} from "./components/Header/hooks/useFilters";
+import ContactUsPopup from "../../shared/components/Popup/components/ContactUsPopup/ContactUsPopup";
 
 const MainLayout: React.FC = () => {
     const pathname = useParams();
@@ -25,6 +26,7 @@ const MainLayout: React.FC = () => {
 
     return (
        <>
+           <ContactUsPopup/>
            <GetQuotePopup/>
            <Header/>
            <main>

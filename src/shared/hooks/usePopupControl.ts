@@ -1,15 +1,23 @@
-import {actions} from "../../components/Layout/store/actions/layout-actios";
-import {selectIsOpenPopup} from "../../components/Layout/store/selectors/layout-selector";
-import {useAppDispatch, useAppSelector} from "../../app/store/hooks";
+import {useAppDispatch} from "../../app/store/hooks";
+import {Action} from "redux";
+import {useClickOutside} from "./useClickOutside";
+import {useRef} from "react";
 
-const usePopupControl = () => {
+type CallbackFunction = (isOpenPopup: boolean) => Action;
+const usePopupControl = (isOpenPopup: boolean, callback: CallbackFunction) => {
     const dispatch = useAppDispatch();
-    const isOpenPopup = useAppSelector(selectIsOpenPopup);
+    const ref = useRef<HTMLDivElement | null>(null)
+    useClickOutside(ref,() => {
+        if (isOpenPopup) {
+            document.body.style.overflow = isOpenPopup ? '' : 'hidden';
+        }
+        dispatch(callback(false))
+    })
     const togglePopup = () => {
-        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
-        dispatch(actions.toggleIsPopupOpen(!isOpenPopup));
+        document.body.style.overflow = isOpenPopup ? '' : 'hidden';
+        dispatch(callback(!isOpenPopup));
     };
-    return { isOpenPopup, togglePopup };
+    return { togglePopup, ref };
 };
 
 export default usePopupControl;

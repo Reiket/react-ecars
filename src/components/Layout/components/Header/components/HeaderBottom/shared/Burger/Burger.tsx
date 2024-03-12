@@ -12,7 +12,7 @@ const Burger: React.FC<BurgerPropsType> = ({isBurger, setIsBurger}) => {
     }, [location])
     const onClickBurger = () => {
         setIsBurger(!isBurger);
-        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+        document.body.style.overflow = isBurger ? '' : 'hidden';
     }
     return <button onClick={onClickBurger} className={cn("icon-menu", {
         "_active": isBurger

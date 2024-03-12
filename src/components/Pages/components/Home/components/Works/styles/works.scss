@@ -9,7 +9,7 @@
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, 38);
+      margin-bottom: em(24, $font-size-title);
     }
   }
   &__text {

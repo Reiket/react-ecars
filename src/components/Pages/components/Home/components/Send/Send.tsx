@@ -3,9 +3,13 @@ import GreenButton from "../../../../../../shared/components/GreenButton/GreenBu
 import BlockTitle from "../../../../../../shared/components/Title/BlockTitle";
 import Text from "../../../../../../shared/components/Title/Text";
 import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
+import {useAppSelector} from "../../../../../../app/store/hooks";
+import {selectIsOpenGetPopup} from "../../../../../Layout/store/selectors/layout-selector";
+import {actions} from "../../../../../Layout/store/actions/layout-actios";
 
 const Send: React.FC = () => {
-    const {togglePopup} = usePopupControl();
+    const isOpenPopup = useAppSelector(selectIsOpenGetPopup)
+    const {togglePopup} = usePopupControl(isOpenPopup, actions.toggleIsOpenGetPopup);
     return <section className="section__send send">
         <div className="send__container">
             <div className="send__body">

@@ -2,21 +2,14 @@ import React from 'react';
 import Popup from "../../Popup";
 import Title from "../../../Title/Title";
 import GreenButton from "../../../GreenButton/GreenButton";
-import {selectIsOpenPopup} from "../../../../../components/Layout/store/selectors/layout-selector";
-import {useClickOutside} from "../../../../hooks/useClickOutside";
 import {actions} from "../../../../../components/Layout/store/actions/layout-actios";
-import {useAppDispatch, useAppSelector} from "../../../../../app/store/hooks";
+import {useAppSelector} from "../../../../../app/store/hooks";
+import {selectIsOpenGetPopup} from "../../../../../components/Layout/store/selectors/layout-selector";
+import usePopupControl from "../../../../hooks/usePopupControl";
 
 const GetQuotePopup: React.FC = () => {
-    const isOpenPopup = useAppSelector(selectIsOpenPopup)
-    const dispatch = useAppDispatch()
-    const ref = React.useRef<HTMLDivElement | null>(null)
-    useClickOutside(ref, () => {
-        if (isOpenPopup) {
-            document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
-        }
-        dispatch(actions.toggleIsPopupOpen(false));
-    })
+    const isOpenPopup = useAppSelector(selectIsOpenGetPopup)
+    const {ref} = usePopupControl(isOpenPopup, actions.toggleIsOpenGetPopup);
     return <Popup  isOpenPopup={isOpenPopup}>
         <div ref={ref} className="get-quote">
             <Title text={"Get a quote"}/>

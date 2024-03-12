@@ -7,6 +7,9 @@ import Text from "../../../../../../shared/components/Title/Text";
 import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
 import {cn} from "../../../../../../shared/utils";
 import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
+import {useAppSelector} from "../../../../../../app/store/hooks";
+import {selectIsOpenContactPopup, selectIsOpenGetPopup} from "../../../../../Layout/store/selectors/layout-selector";
+import {actions} from "../../../../../Layout/store/actions/layout-actios";
 
 const items = [
     {
@@ -23,7 +26,10 @@ const items = [
     }
 ] as Array<CommItemsType>
 const Communication: React.FC = () => {
-    const {togglePopup} = usePopupControl();
+    const isOpenGetPopup = useAppSelector(selectIsOpenGetPopup)
+    const isOpenContactPopup = useAppSelector(selectIsOpenContactPopup)
+    const getPopup= usePopupControl(isOpenGetPopup, actions.toggleIsOpenGetPopup);
+    const contactsPopup = usePopupControl(isOpenContactPopup, actions.toggleIsOpenContactPopup);
 
     return <section className="section__communication communication">
         <div className="communication__container">
@@ -34,11 +40,11 @@ const Communication: React.FC = () => {
                         <div className="communication__icon">{item.icon}</div>
                         <BlockTitle classnames={"communication__title"} text={item.title}/>
                         <Text text={item.text} classnames={"communication__text"}/>
-                        <GreenButton onClick={togglePopup}
+                        <GreenButton onClick={!isContactText ? getPopup.togglePopup : contactsPopup.togglePopup}
                             classnames={cn("communication__button green-button_big", {
                                 "green-button_white": isContactText
                             })}
-                            text={item.btnText} href={"/contacts"} type={isContactText ? "link": "button"}/>
+                            text={item.btnText} type={"button"}/>
                     </div>
                 })}
             </div>

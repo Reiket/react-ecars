@@ -40,7 +40,7 @@
     gap: rem(6);
     @media (any-hover: hover){
       &:hover {
-        background: #d5d3d3;
+        background: $background-contacts-btn;
         &:first-child {
           border-radius: rem(8) rem(8) 0 0;
         }

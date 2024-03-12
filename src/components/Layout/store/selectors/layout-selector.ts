@@ -1,5 +1,8 @@
 import {AppStateType} from "../../../../app/store/types/store.types";
 
-export const selectIsOpenPopup = (state: AppStateType) => {
-    return state.layout.isOpenPopup
+export const selectIsOpenGetPopup = (state: AppStateType) => {
+    return state.layout.isOpenGetPopup
+}
+export const selectIsOpenContactPopup = (state: AppStateType) => {
+    return state.layout.isOpenContactPopup
 }

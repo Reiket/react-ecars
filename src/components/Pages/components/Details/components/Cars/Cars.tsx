@@ -18,6 +18,9 @@ const Cars: React.FC<CarsPropsType> = ({currency}) => {
         original: detail.imageUrl,
         thumbnail: detail.imageUrl,
     }));
+    React.useEffect(() => {
+        document.title = detail.name
+    }, [window.location])
     return <>
         <div className="details__cars cars">
             <ImageGallery items={images} showIndex={true}/>

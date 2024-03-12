@@ -7,11 +7,15 @@ import GreenButton from "../../../../../../shared/components/GreenButton/GreenBu
 import {MenuPropsType} from "../../shared/components/Menu/types/menu.types";
 import {cn} from "../../../../../../shared/utils";
 import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
+import {useAppSelector} from "../../../../../../app/store/hooks";
+import {selectIsOpenGetPopup} from "../../../../store/selectors/layout-selector";
+import {actions} from "../../../../store/actions/layout-actios";
 
 const HeaderBottom: React.FC<MenuPropsType> = React.memo(({filters, onClickToFilters, menuConfigs}) => {
     const [isBurger, setIsBurger] = React.useState(false);
     const [isSearch, setIsSearch] = React.useState(false);
-    const {togglePopup} = usePopupControl();
+    const isOpenPopup = useAppSelector(selectIsOpenGetPopup)
+    const {togglePopup} = usePopupControl(isOpenPopup, actions.toggleIsOpenGetPopup);
     const onClickToSearch = () => {
         setIsSearch((prev) => !prev);
     }
@@ -24,7 +28,7 @@ const HeaderBottom: React.FC<MenuPropsType> = React.memo(({filters, onClickToFil
                     <Burger setIsBurger={setIsBurger} isBurger={isBurger}/>
                     <Logo classnames={"header-bottom__logo-img"}/>
                 </div>
-                <Navbar onClickToFilters={onClickToFilters} menuConfigs={menuConfigs} filters={filters} isBurger={isBurger}/>
+                <Navbar setIsBurger={setIsBurger} onClickToFilters={onClickToFilters} menuConfigs={menuConfigs} filters={filters} isBurger={isBurger}/>
                 <HeaderUtils isSearch={isSearch} onClickToSearch={onClickToSearch}/>
                 <GreenButton onClick={togglePopup} type={"button"} classnames={"header-bottom__btn"} text={"Get a quote"}/>
             </div>

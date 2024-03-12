@@ -8,7 +8,11 @@ type navbarType = {
 export const navbarMenu: Array<navbarType> = navbar
 
 type OwnPropsType = {
-    isBurger: boolean
+    isBurger: boolean,
+}
+
+export type TNavBar = {
+    setIsBurger: (isBurger: boolean) => void
 }
 
 export type NavbarPropsType = OwnPropsType & MenuPropsType
