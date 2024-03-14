@@ -8,12 +8,6 @@
     @include adaptiveValue("gap", 16, 8);
   }
   &__link {
-    display: flex;
-    gap: rem(6);
-    align-items: center;
-    svg {
-      font-size: rem(20);
-    }
     @media (max-width:em(850)) {
       span {
         display: none;

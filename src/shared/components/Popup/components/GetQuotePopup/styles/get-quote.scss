@@ -13,8 +13,9 @@
   &__label {
     display: flex;
     flex-direction: column;
+    text-align: left;
     &:not(:last-child) {
-      margin-bottom: rem(18);
+      margin-bottom: rem(5);
     }
     span {
       display: flex;
@@ -23,6 +24,9 @@
       &:not(:last-child) {
         margin-bottom: em(8, $fontSize);
       }
+    }
+    &._select {
+      margin-bottom: rem(35);
     }
   }
   &__input {
@@ -33,5 +37,12 @@
     &::placeholder {
       color: $color-pale-gray;
     }
+  }
+  &__error {
+    text-align: center;
+    padding-top: rem(15);
+    font-weight: 700;
+    color: $color-green;
+    height: rem(35);
   }
 }

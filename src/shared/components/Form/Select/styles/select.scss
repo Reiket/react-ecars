@@ -1,4 +1,4 @@
-@import "../base";
+@import "../../../../styles/base";
 @keyframes scaleIn {
 	0% {
 		opacity: 0;
@@ -23,9 +23,11 @@
 			border-color: $border-pale !important;
 			box-shadow: none !important;
 			 .select__indicator {
-				svg {
-					transform: rotate(180deg) !important;
-				}
+				 &:last-child {
+					 svg {
+						 transform: rotate(180deg) !important;
+					 }
+				 }
 			}
 		}
 	}
@@ -54,3 +56,4 @@
 		}
 	}
 }
+

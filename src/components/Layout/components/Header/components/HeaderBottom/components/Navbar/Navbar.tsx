@@ -10,10 +10,10 @@ import {actions} from "../../../../../../store/actions/layout-actios";
 
 const Navbar: React.FC<NavbarPropsType & TNavBar> = React.memo(({isBurger, onClickToFilters, filters, menuConfigs, setIsBurger}) => {
     const isOpenContactPopup = useAppSelector(selectIsOpenContactPopup)
-    const contactsPopup = usePopupControl(isOpenContactPopup, actions.toggleIsOpenContactPopup);
+    const {togglePopup} = usePopupControl(isOpenContactPopup, actions.toggleIsOpenContactPopup);
     const onClickToContact = () => {
         setIsBurger(false)
-        contactsPopup.togglePopup()
+        togglePopup()
     }
     return (
         <nav className="header-bottom__menu nav-menu">

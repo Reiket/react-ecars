@@ -27,15 +27,6 @@
     flex-direction: column;
     gap: rem(24);
   }
-  &__sign {
-    display: flex;
-    align-items: center;
-    gap: rem(6);
-    color: $main-color;
-    font-size: rem(14);
-    line-height: math.div(16 , $fontSize);
-    font-weight: 500;
-  }
   &__popup {
     display: flex;
     align-items: center;

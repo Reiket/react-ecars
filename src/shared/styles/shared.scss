@@ -48,7 +48,15 @@
     }
   }
 }
-
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: rem(6);
+  color: $main-color;
+  font-size: rem(14);
+  line-height: math.div(16 , $fontSize);
+  font-weight: 500;
+}
 .menu-text {
   color: $color-white;
   opacity: 70%;
@@ -84,4 +92,5 @@
 @import "../components/Popup/components/GetQuotePopup/styles/get-quote";
 @import "../components/Popup/components/ContactUsPopup/styles/contact-popup";
 @import "../components/Icons/styles/icons";
+@import "../components/Form/styles/form";
 

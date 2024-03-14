@@ -13,7 +13,7 @@ const NavbarMenu: React.FC<NavbarPropsType> = React.memo(({isBurger, menuConfigs
     return <div className={"nav-menu__bottom"}>
         <div className="nav-menu__info">
             <li className="nav-menu__item">
-                <a href="/" className={"nav-menu__sign"}><BiUserCircle className="header-bottom__icon"/>Sign in</a>
+                <a href="/" className={"nav-menu__sign icon-link"}><BiUserCircle className="header-bottom__icon"/>Sign in</a>
             </li>
             {menuConfigs.slice(location.pathname === `/${id}` ? 1 : 0, 2).map((item, id) => (
                 <li key={id} className="nav-menu__popup">
@@ -25,7 +25,7 @@ const NavbarMenu: React.FC<NavbarPropsType> = React.memo(({isBurger, menuConfigs
             <ul className="header-contacts__social nav-menu__body">
                 {[...contacts].slice(4, 6).map((c, index) => (
                     <li key={index} className="header-contacts__item">
-                        <a href={c.url} className="header-contacts__link nav-menu__link">{c.icon}
+                        <a href={c.url} className="header-contacts__link icon-link">{c.icon}
                             {c.text}
                         </a>
                     </li>

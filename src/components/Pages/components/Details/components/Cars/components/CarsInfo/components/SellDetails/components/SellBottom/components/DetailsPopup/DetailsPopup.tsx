@@ -4,11 +4,12 @@ import Popup from "../../../../../../../../../../../../../../shared/components/P
 import Text from "../../../../../../../../../../../../../../shared/components/Title/Text";
 import BlockTitle from "../../../../../../../../../../../../../../shared/components/Title/BlockTitle";
 import {useClickOutside} from "../../../../../../../../../../../../../../shared/hooks/useClickOutside";
+import {bodyOverflow} from "../../../../../../../../../../../../../../shared/utils";
 const DetailsPopup: React.FC<DetailsPopupPropsType> = ({isOpenPopup, setIsOpenPopup}) => {
     const popupRef = React.useRef<HTMLDivElement | null>(null);
     useClickOutside(popupRef, () => {
         if (isOpenPopup) {
-            document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+            bodyOverflow(isOpenPopup)
         }
         setIsOpenPopup(false)
     })

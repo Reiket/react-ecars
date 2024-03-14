@@ -16,8 +16,8 @@
   justify-content: center;
   transform: translateX(0);
   background-color: rgba(0, 0, 0, 0.5);
-  @media (min-height:em(460)) {
-    align-items: center;
+  @media (min-height:em(630)) {
+      align-items: center;
   }
   &.active {
     opacity: 1;

@@ -3,11 +3,12 @@ import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
 import ItemTitle from "../../../../../../../../../../../../shared/components/Title/ItemTitle";
 import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
+import {bodyOverflow} from "../../../../../../../../../../../../shared/utils";
 
 const SellBottom = () => {
     const [isOpenPopup, setIsOpenPopup] = React.useState(false)
     const onClickToPopup = () => {
-        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+        bodyOverflow(isOpenPopup)
         setIsOpenPopup(prev => !prev);
     }
     return <>
