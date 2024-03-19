@@ -2,10 +2,10 @@ import React from 'react';
 import NotFoundFav from "./components/NotFoundFav/NotFoundFav";
 import {selectFavorites, selectIsLoading} from "./store/selector/favorites-selector";
 import {selectFilters} from "../Home/components/Offers/store/selector/offers-selector";
-import Title from "../../../../shared/components/Title/Title";
-import Card from "../../../../shared/components/Card/Card";
+import Card from "../../shared/components/Card/Card";
 import {useAppSelector} from "../../../../app/store/hooks";
 import {Icons} from "../../../../shared/components/Icons/Icons";
+import {Title} from "../../../../shared/components/Title/Title";
 
 const Favorites: React.FC = () => {
     const favItems = useAppSelector(selectFavorites)
@@ -23,7 +23,7 @@ const Favorites: React.FC = () => {
     };
     return isLoading ? <Icons.loader/>  : <section className="section__favorites favorites">
         <div className="favorites__container">
-            {favItems.length > 0 && <Title text={"Favorites"}/>}
+            {favItems.length > 0 && <Title tag={"h1"} classnames={"page-title"} text={"Favorites"}/>}
             {renderFavoritesContent()}
         </div>
     </section>

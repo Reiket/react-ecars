@@ -1,6 +1,5 @@
 import React from 'react';
 import Popup from "../../Popup";
-import Title from "../../../Title/Title";
 import GreenButton from "../../../GreenButton/GreenButton";
 import {actions} from "../../../../../components/Layout/store/actions/layout-actios";
 import {useAppSelector} from "../../../../../app/store/hooks";
@@ -19,6 +18,7 @@ import {
 import Input from "../../../Form/Input/Input";
 import {shipItem} from "../../../../../components/Layout/components/Header/types/header.types";
 import Select from "../../../Form/Select/Select";
+import {Title} from "../../../Title/Title";
 
 const GetQuotePopup: React.FC = () => {
     const isOpenPopup = useAppSelector(selectIsOpenGetPopup)
@@ -41,10 +41,10 @@ const GetQuotePopup: React.FC = () => {
     }
     return <Popup  isOpenPopup={isOpenPopup}>
         <div ref={ref} className="get-quote">
-            <Title text={"Get a quote"}/>
+            <Title tag={"h2"} classnames={"home-title"} text={"Get a quote"}/>
             <form noValidate onSubmit={handleSubmit(onSubmit)} className="get-quote__form">
                 {inputFields.map((field, index) => (
-                    <Label key={index} classnames={"get-quote__label"} name={field.name} errors={field.errorsMessage}>
+                    <Label key={index} classnames={"label"} name={field.name} errors={field.errorsMessage}>
                         {field.items ? (
                             <Select
                                 placeholder={field.placeholder}

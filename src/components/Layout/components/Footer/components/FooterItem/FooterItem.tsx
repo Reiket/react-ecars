@@ -2,9 +2,9 @@ import React from 'react';
 import Logo from "../../../../../../shared/components/Logo/Logo";
 import {FooterItemsLogo, TFooterItems} from "../../types/footer.types";
 import {contacts} from "../../../../../../shared/Contacts/contacts-aray";
-import ItemTitle from "../../../../../../shared/components/Title/ItemTitle";
 import {Link} from "react-router-dom";
 import {scroller} from "react-scroll";
+import {Title} from "../../../../../../shared/components/Title/Title";
 
 const FooterItemCompany:React.FC<Partial<TFooterItems>> = ({links, title}) => {
     const scrollToBlock = (item: string) => {
@@ -15,7 +15,7 @@ const FooterItemCompany:React.FC<Partial<TFooterItems>> = ({links, title}) => {
         });
     };
     return <div className="footer__item">
-        <ItemTitle text={title as string} size={"small"} classnames={"footer__title"}/>
+        <Title tag={"h3"} text={title as string} classnames={"footer__title item-title_small"}/>
         <ul className="footer__nav nav-footer">
             {links?.map((link, index) => (
                 <li key={index} className="nav-footer__item">

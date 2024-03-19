@@ -1,4 +1,4 @@
-import {ItemsType} from "../../../types/types";
+import {ItemsType} from "../../../../components/Pages/shared/components/Card/types/card.types";
 
 export type TFavButton = {
     item: ItemsType

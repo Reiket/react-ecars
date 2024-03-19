@@ -36,9 +36,6 @@
   }
   &__title {
     padding-top: rem(12);
-    &:not(:last-child) {
-      margin-bottom: em(12, $font-size-item-title);
-    }
   }
   &__text {
     color: $color-gray;

@@ -7,11 +7,6 @@
   border-top: rem(1) solid $border-white;
   border-radius: 0 0 rem(8) rem(8);
   flex-direction: column;
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: em(8, $font-size-text);
-    }
-  }
   &__text {
     &:not(:last-child) {
       margin-bottom: rem($font-size-text);

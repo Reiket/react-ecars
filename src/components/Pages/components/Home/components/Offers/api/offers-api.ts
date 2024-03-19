@@ -1,5 +1,5 @@
-import {ItemsType} from "../../../../../../../shared/types/types";
 import {instance} from "../../../../../../../app/api/api";
+import {ItemsType} from "../../../../../shared/components/Card/types/card.types";
 
 export const offerAPI = {
     async getOffersCard(number = 0) {

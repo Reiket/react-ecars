@@ -3,10 +3,10 @@ import {RiArrowRightLine} from "react-icons/ri";
 import BlogItem from "./components/BlogItem/BlogItem";
 import BlogLoader from "./components/BlogLoader/BlogLoader";
 import {selectNewsPosts} from "./store/selector/news-selector";
-import Title from "../../../../../../shared/components/Title/Title";
 import {fetchNews} from "./store/thunks/fetchNews";
 import AllLink from "../../../../../../shared/components/Title/AllLink";
 import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";
+import {Title} from "../../../../../../shared/components/Title/Title";
 
 const Blog: React.FC = () => {
     const itemCount = 3;
@@ -19,7 +19,7 @@ const Blog: React.FC = () => {
         <section className="section__blog blog">
             <div className="blog__container">
                 <div className="blog__top">
-                    <Title text={"Read our blog"}/>
+                    <Title tag={"h2"} classnames={"home-title"} text={"Read our blog"}/>
                     <AllLink text={"All articles"} link={"/"} classnames={"blog__all"}>
                         <RiArrowRightLine/>
                     </AllLink>

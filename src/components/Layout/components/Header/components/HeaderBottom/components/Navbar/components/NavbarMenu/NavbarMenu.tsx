@@ -3,7 +3,7 @@ import { BiUserCircle} from "react-icons/bi";
 import {NavbarPropsType} from "../../types/navbar.types";
 import Menu from "../../../../../../shared/components/Menu/Menu";
 import {contacts} from "../../../../../../../../../../shared/Contacts/contacts-aray";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {useAppSelector} from "../../../../../../../../../../app/store/hooks";
 import {selectDetail} from "../../../../../../../../../Pages/components/Details/store/selector/details-selector";
 
@@ -13,7 +13,7 @@ const NavbarMenu: React.FC<NavbarPropsType> = React.memo(({isBurger, menuConfigs
     return <div className={"nav-menu__bottom"}>
         <div className="nav-menu__info">
             <li className="nav-menu__item">
-                <a href="/" className={"nav-menu__sign icon-link"}><BiUserCircle className="header-bottom__icon"/>Sign in</a>
+                <Link className={"nav-menu__sign icon-link"} to={"/login"}><BiUserCircle className="header-bottom__icon"/>Sign in</Link>
             </li>
             {menuConfigs.slice(location.pathname === `/${id}` ? 1 : 0, 2).map((item, id) => (
                 <li key={id} className="nav-menu__popup">
@@ -32,7 +32,7 @@ const NavbarMenu: React.FC<NavbarPropsType> = React.memo(({isBurger, menuConfigs
                 ))}
                 <ul className="nav-menu__social">
                     {[...contacts].slice(0, 4).map((c, index) => <li key={index} className="header-contacts__item">
-                        <a href={c.url} className="header-contacts__link">{c.icon}</a>
+                        <a href={c.url} className="header-contacts__link icon-link">{c.icon}</a>
                     </li>)}
                 </ul>
             </ul>

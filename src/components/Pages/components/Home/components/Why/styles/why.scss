@@ -29,7 +29,7 @@
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-title);
+      margin-bottom: em(24, $font-size-home-title);
     }
   }
   &__paragraphs {
@@ -52,9 +52,6 @@
   }
   &__title {
     position: relative;
-    &:not(:last-child) {
-      margin-bottom: em(8, $font-size-text);
-    }
     &::before {
       content:'';
       position: absolute;

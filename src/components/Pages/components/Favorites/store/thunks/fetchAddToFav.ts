@@ -1,7 +1,7 @@
-import {ItemsType} from "../../../../../../shared/types/types";
 import {favoritesAPI} from "../../api/favorites-api";
 import {ThunkType} from "../types/favorites-reducer.types";
 import {actions} from "../actions/favorites-actions";
+import {ItemsType} from "../../../../shared/components/Card/types/card.types";
 
 export const fetchAddToFav = (item: ItemsType): ThunkType => {
     return async (dispatch) => {

@@ -30,3 +30,8 @@ export type ItemsType = {
     views: number
     properties: PropertiesType
 }
+export type CardPropsType = {
+    item: ItemsType
+    currency: number
+    classnames?: string
+}

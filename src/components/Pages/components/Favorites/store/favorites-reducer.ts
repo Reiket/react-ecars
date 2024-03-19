@@ -1,5 +1,5 @@
-import {ItemsType} from "../../../../../shared/types/types";
 import {ActionsType, InitialStateType} from "./types/favorites-reducer.types";
+import {ItemsType} from "../../../shared/components/Card/types/card.types";
 
 export let initialState = {
     items: [] as Array<ItemsType>,

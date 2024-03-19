@@ -23,9 +23,9 @@
     }
   }
   &__icon {
-    font-size: rem($font-size-title);
+    font-size: rem($font-size-home-title);
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-title);
+      margin-bottom: em(24, $font-size-home-title);
     }
   }
   &__title {

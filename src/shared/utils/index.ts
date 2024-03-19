@@ -1,5 +1,6 @@
 import {ClassValue, clsx} from "clsx";
-import {ItemsType} from "../types/types";
+
+import {ItemsType} from "../../components/Pages/shared/components/Card/types/card.types";
 export const cn = (...inputs: ClassValue[]) => {
     return clsx(inputs)
 }

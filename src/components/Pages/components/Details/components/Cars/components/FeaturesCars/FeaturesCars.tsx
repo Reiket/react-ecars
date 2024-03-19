@@ -1,8 +1,8 @@
 import React from 'react';
 import {BsCheck} from "react-icons/bs";
 import {features, FeaturesCarsTypes} from "./types/features-cars.types";
-import Title from "../../../../../../../../shared/components/Title/Title";
-import ItemTitle from "../../../../../../../../shared/components/Title/ItemTitle";
+import {Title} from "../../../../../../../../shared/components/Title/Title";
+
 const splitFeatures = [
     [...features].slice(0, 1),
     [...features].slice(1)
@@ -12,7 +12,7 @@ const FeaturesCars = () => {
         <div className="features-cars__column">
             {items.map((feature, featureIndex) => (
                 <div key={featureIndex}>
-                    <ItemTitle classnames={"features-cars__name"} text={feature.name} size={"small"}/>
+                    <Title tag={"h3"} text={feature.name} classnames={"features-cars__name item-title_small"}/>
                     <ul className="features-cars__list">
                         {feature.items.map((name, id) => (
                             <li key={id} className="features-cars__item">
@@ -26,7 +26,7 @@ const FeaturesCars = () => {
         </div>
     );
     return <div className="cars__features features-cars">
-        <Title text={"Features"}/>
+        <Title tag={"h3"} classnames={"block-title"} text={"Features"}/>
         <div className="features-cars__body">
             {splitFeatures.map((items, index) => (
                 <React.Fragment key={index}>

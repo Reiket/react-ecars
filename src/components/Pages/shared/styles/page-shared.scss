@@ -1,0 +1,15 @@
+@import "../../../../shared/components/Title/styles/title";
+
+.benefits-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-yellow;
+  flex: 0 0 rem(52);
+  height: rem(52);
+  border-radius: 50%;
+  img {
+    width: rem(20);
+    height: rem(20);
+  }
+}

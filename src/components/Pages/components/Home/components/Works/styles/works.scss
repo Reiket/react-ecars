@@ -7,11 +7,6 @@
     align-items: center;
     text-align: center;
   }
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: em(24, $font-size-title);
-    }
-  }
   &__text {
     color: $color-gray;
     &_width {

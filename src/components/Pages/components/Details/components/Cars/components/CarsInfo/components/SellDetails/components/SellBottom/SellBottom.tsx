@@ -1,9 +1,9 @@
 import React from 'react';
 import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
-import ItemTitle from "../../../../../../../../../../../../shared/components/Title/ItemTitle";
 import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
 import {bodyOverflow} from "../../../../../../../../../../../../shared/utils";
+import {Title} from "../../../../../../../../../../../../shared/components/Title/Title";
 
 const SellBottom = () => {
     const [isOpenPopup, setIsOpenPopup] = React.useState(false)
@@ -14,7 +14,7 @@ const SellBottom = () => {
     return <>
         <DetailsPopup setIsOpenPopup={setIsOpenPopup} isOpenPopup={isOpenPopup}/>
         <div className="sell-details__bottom bottom-sell">
-            <ItemTitle classnames={"bottom-sell__title"} text={"Interested in this car or want a personalized offer of the best deals?"} size={"small"}/>
+            <Title tag={"h3"} classnames={"item-title_small"}  text={"Interested in this car or want a personalized offer of the best deals?"}/>
             <p className="bottom-sell__text">
                 Contact us and our manager will give you all the information you need.
             </p>

@@ -1,9 +1,9 @@
 import React, {RefObject} from 'react';
-export const useClickOutside = (ref: RefObject<HTMLElement>, callback: () => void) => {
+export const useClickOutside = (ref: RefObject<HTMLElement>, callback: (b: boolean) => void) => {
     React.useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (ref.current && !ref.current.contains(event.target as Node)) {
-                callback();
+                callback(false)
             }
         };
         document.addEventListener('mousedown', handleClickOutside);

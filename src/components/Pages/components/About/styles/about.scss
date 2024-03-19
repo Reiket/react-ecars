@@ -1,0 +1,42 @@
+@use "sass:math";
+@import "src/shared/styles/base";
+.about {
+  @include adaptiveValue("margin-top", 96, 50);
+  &__container {
+    max-width: rem(1016);
+  }
+  &__title {
+    &:not(:last-child) {
+        margin-bottom: em(40, $font-size-page-title);
+    }
+  }
+  &__benefits {
+    @include adaptiveValue("margin-top", 96, 50);
+  }
+  &__mission {
+    @include adaptiveValue("margin-top", 96, 50);
+  }
+  &__contacts {
+    @include adaptiveValue("margin-top", 96, 50);
+  }
+  &__imports {
+    @include adaptiveValue("margin-top", 96, 50);
+  }
+  &__send {
+    @include adaptiveValue("margin-top", 96, 50);
+    @include adaptiveValue("margin-bottom", 96, 50);
+  }
+}
+
+.about-text {
+  &:not(:last-child) {
+    margin-bottom: rem(35);
+  }
+}
+
+
+//Imports styles About components
+@import "../components/AboutBenefits/styles/about-benefins";
+@import "../components/AboutMission/styles/about-misson";
+@import "../components/AboutContacts/styles/about-contacts";
+@import "../components/AboutSend/styles/about-send";

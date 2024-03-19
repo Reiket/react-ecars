@@ -27,11 +27,8 @@
     }
   }
   &__title {
-    font-weight: 600;
-    font-size: rem($font-size-text);
-    line-height: math.div(22 , $font-size-text);
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-text);
+      margin-bottom: em(24, $font-size-text) !important;
     }
   }
 }
@@ -44,10 +41,13 @@
   }
   &__link {
     color: $color-gray;
-    transition: color .3s linear;
+    transition: color .3s ease 0s;
     display: flex;
     align-items: center;
     gap: rem(6);
+    svg {
+      font-size: rem(20);
+    }
     @media (any-hover: hover){
       &:hover {
         color: $color-green;

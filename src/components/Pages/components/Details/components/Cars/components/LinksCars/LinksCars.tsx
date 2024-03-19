@@ -1,9 +1,9 @@
 import React from 'react';
-import BlockTitle from "../../../../../../../../shared/components/Title/BlockTitle";
+import {Title} from "../../../../../../../../shared/components/Title/Title";
 
 const LinksCars = () => {
     return <div className="cars__links links-cars">
-        <BlockTitle text={"Quick links"}/>
+        <Title tag={"h3"} classnames={"block-title"} text={"Quick links"}/>
         <div className="links-cars__body">
             <div className="links-cars__column">
                 <a href="/" className="links-cars__link">Toyota Land Cruiser for sale in Dubai</a>

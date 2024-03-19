@@ -1,5 +1,6 @@
 import {discountPrice, formatPrice} from "../utils";
-import {ItemsType} from "../types/types";
+
+import {ItemsType} from "../../components/Pages/shared/components/Card/types/card.types";
 
 export const usePrice = (item: ItemsType, currency: number) => {
     const currencyKey = Object.keys(item.price)[currency] as "USD" | "EUR" | "GBP";

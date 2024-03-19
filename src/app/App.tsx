@@ -13,7 +13,7 @@ const About = React.lazy(() => import("../components/Pages/components/About/Abou
 const FAQ = React.lazy(() => import("../components/Pages/components/Faq/Faq"))
 const Catalog = React.lazy(() => import("../components/Pages/components/Catalog/Catalog"))
 const News = React.lazy(() => import("../components/Pages/components/News/News"))
-
+const Login = React.lazy(() => import("../components/Pages/components/Authorization/Login/Login"))
 function App() {
     const location = useLocation();
     const title = capitalizeFirstLetter(location.pathname.replace("/", ""))
@@ -32,6 +32,7 @@ function App() {
                       <Route element={<FAQ/>} path={"/faq"}/>
                       <Route element={<Catalog/>} path={"/catalog"}/>
                       <Route element={<News/>} path={"/news"}/>
+                      <Route element={<Login/>} path={"/login"}/>
                   </Route>
               </Routes>
           </React.Suspense>

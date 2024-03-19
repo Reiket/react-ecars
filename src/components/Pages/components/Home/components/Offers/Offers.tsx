@@ -4,10 +4,10 @@ import OffersSlider from "./components/OffersSlider";
 import {selectFilters} from "./store/selector/offers-selector";
 import {useFilters} from "../../../../../Layout/components/Header/hooks/useFilters";
 import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
-import Title from "../../../../../../shared/components/Title/Title";
 import {fetchOffers} from "./store/thunks/fetchOffers";
 import AllLink from "../../../../../../shared/components/Title/AllLink";
 import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";
+import {Title} from "../../../../../../shared/components/Title/Title";
 
 const Offers = React.memo(() => {
     const {shipNumber, currency} = useAppSelector(selectFilters)
@@ -21,7 +21,7 @@ const Offers = React.memo(() => {
     return <section className="section__offers section-offers">
         <div className="section-offers__container">
             <div className="section-offers__top">
-                <Title text={"Special offers"}/>
+                <Title tag={"h2"} classnames={"home-title"} text={"Special offers"}/>
                 <NavigationBtn classnames={"section-offers"}/>
                 <AllLink text={"See all cars"} link={"/catalog"}>
                     <RiArrowRightLine/>

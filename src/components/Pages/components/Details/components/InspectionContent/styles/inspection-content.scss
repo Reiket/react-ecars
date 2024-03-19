@@ -21,7 +21,7 @@
   &__full {
     padding-top: rem(24);
     &:not(:last-child) {
-      margin-bottom: em(12, $font-size-text);
+      margin-bottom: em(12, $font-size-text) !important;
     }
   }
   &__button {

@@ -1,6 +1,6 @@
 import React from 'react';
 import BottomIntroItem from "./components/BottomIntroItem";
-import {bottomIntroItems} from "./types/bottom-intro.types";
+import {bottomIntroItems} from "../../../../shared/types/benefints.types";
 const BottomIntro: React.FC = () => {
     return (
         <div className="intro__bottom bottom-intro">

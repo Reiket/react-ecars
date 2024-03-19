@@ -24,9 +24,7 @@ const usePopupControl = (isOpenPopup: boolean, callback: CallbackFunction) => {
             document.removeEventListener("keydown", handleEscKeyPress)
         }
     }, [isOpenPopup])
-    useClickOutside(ref,() => {
-        handleClosePopup()
-    })
+    useClickOutside(ref, handleClosePopup)
     const togglePopup = () => {
         dispatch(callback(!isOpenPopup));
     };

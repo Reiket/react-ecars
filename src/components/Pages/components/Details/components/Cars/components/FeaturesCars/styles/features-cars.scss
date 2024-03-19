@@ -19,6 +19,9 @@
   }
   &__name {
     padding-top: rem(24);
+    &:not(:last-child) {
+        margin-bottom: 0 !important;
+     }
   }
   &__list {
     padding-top: rem(12);

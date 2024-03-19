@@ -1,0 +1,35 @@
+@use "sass:math";
+@import "src/shared/styles/base";
+
+.contacts-about {
+  background: $background-white;
+  border-radius: rem(8);
+  &__body {
+    @include adaptiveValue("padding", 32, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(32);
+    font-weight: 600;
+    @media (max-width:em(700)) {
+      flex-direction: column;
+    }
+    @media (max-width:$mobileSmall) {
+      align-items: flex-start;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: rem(32);
+    @media (max-width:$tablet) and (min-width: em(700)) {
+      flex-direction: column;
+    }
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      gap: rem(15);
+    }
+  }
+  &__link {
+    font-weight: 600 !important;
+  }
+}

@@ -1,0 +1,125 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+.auth {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__body {
+    flex: 0 0 rem(392);
+    @media (max-width:$mobileSmall) {
+      flex: 1 1 auto;
+    }
+  }
+  &__top {
+    padding-bottom: rem(16);
+  }
+  &__title {
+    &_reset {
+      @include adaptiveValue("font-size", 32, 20);
+      line-height: math.div(36.8 , 32);
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+        margin-bottom: em(32, $fontSize);
+    }
+  }
+  &__input {
+    padding: rem(14) rem(12);
+    border: rem(1) solid $border-pale;
+    border-radius: rem(8);
+    outline: none;
+    &::placeholder {
+      color: $color-pale-gray;
+    }
+  }
+  &__forgot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link {
+    color: $color-green;
+    line-height: math.div(20 , 14);
+    transition: color .3s linear;
+    @media (any-hover: hover){
+        &:hover {
+            color: $color-dark-green;
+        }
+    }
+  }
+  &__button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  &__content {
+    padding-top: rem(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(6);
+    text-align: center;
+    a {
+      color: $color-green;
+      font-weight: 600;
+      transition: color .3s linear;
+      svg {
+        transition: transform .3s linear;
+      }
+      @media (any-hover: hover){
+          &:hover {
+              color: $color-dark-green;
+              svg {
+                transform: translateX(-10%);
+              }
+          }
+      }
+    }
+  }
+  &_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__or {
+    padding: rem(24) 0;
+    position: relative;
+    text-align: center;
+    color: $color-light-gray;
+    line-height: math.div(20 , 14);
+    &::before, &::after {
+        content:'';
+        position: absolute;
+        top: rem(33);
+        width: rem(181);
+        border: rem(1) solid $border-white;
+    }
+    &::before {
+      right: 0;
+    }
+    &::after {
+      left: 0;
+     }
+  }
+  &__authorize {
+    padding: rem(12) rem(24);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: rem(8);
+    font-weight: 600;
+    line-height: math.div(24 , 14);
+    border: rem(1) solid $border-white;
+    border-radius: rem(8);
+    transition: background .3s linear;
+    @media (any-hover: hover){
+        &:hover {
+            background: $background-authorize;
+        }
+    }
+  }
+}

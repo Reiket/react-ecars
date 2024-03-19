@@ -14,13 +14,11 @@ type PropsType = {
 const HeaderUtils: React.FC<PropsType> = ({isSearch, onClickToSearch}) => {
     const {shipNumber, currency} = useSelector(selectFilters);
 
-    return (
-        <div className="header-bottom__utils">
-            <AiOutlineSearch onClick={onClickToSearch} className="header-bottom__icon header-bottom__icon_none"/>
-            <Link to={`/favorites?ship=${shipNumber}&currency=${currency}`}><AiOutlineHeart className="header-bottom__icon header-bottom__icon_none"/></Link>
-            <Link to={"/login"}><BiUserCircle className="header-bottom__icon header-bottom__icon_none"/></Link>
-        </div>
-    );
+    return <div className="header-bottom__utils">
+        <AiOutlineSearch onClick={onClickToSearch} className="header-bottom__icon header-bottom__icon_none"/>
+        <Link to={`/favorites?ship=${shipNumber}&currency=${currency}`}><AiOutlineHeart className="header-bottom__icon header-bottom__icon_none"/></Link>
+        <Link to={"/login"}><BiUserCircle className="header-bottom__icon header-bottom__icon_none"/></Link>
+    </div>
 };
 
 export default HeaderUtils;

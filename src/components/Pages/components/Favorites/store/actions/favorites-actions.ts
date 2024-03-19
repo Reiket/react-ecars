@@ -1,4 +1,4 @@
-import {ItemsType} from "../../../../../../shared/types/types";
+import {ItemsType} from "../../../../shared/components/Card/types/card.types";
 
 export const actions = {
     setFavorites: (item: Array<ItemsType>) => ({type: "GET_FAVORITES", item} as const),

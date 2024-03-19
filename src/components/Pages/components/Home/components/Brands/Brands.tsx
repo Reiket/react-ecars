@@ -2,11 +2,11 @@ import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import BrandsCard from "./components/BrandsCard";
 import {selectBrands} from "./store/selector/brands-selector";
-import Title from "../../../../../../shared/components/Title/Title";
 import {fetchBrands} from "./store/thunks/fetchBrand";
 import {cn} from "../../../../../../shared/utils";
 import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";
 import {Icons} from "../../../../../../shared/components/Icons/Icons";
+import {Title} from "../../../../../../shared/components/Title/Title";
 
 const Brands: React.FC = () => {
     const [isShowAll, setIsShowAll] = React.useState(false);
@@ -25,7 +25,7 @@ const Brands: React.FC = () => {
         <section className="section__brands brands">
             <div className="brands__container">
                 <div className="brands__top">
-                    <Title text={"Browse by brand"}/>
+                    <Title tag={"h2"} classnames={"home-title"} text={"Browse by brand"}/>
                 </div>
                 <div className={brands.length === 0 ? "brands__body loader": "brands__body"}>
                     {brands.length === 0 ? <Icons.loader/> : [...brands].slice(0, itemsToShow).map((item) => <BrandsCard key={item.id} {...item}/>)}

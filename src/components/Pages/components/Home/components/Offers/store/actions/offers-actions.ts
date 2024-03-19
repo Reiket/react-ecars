@@ -1,5 +1,5 @@
-import {ItemsType} from "../../../../../../../../shared/types/types";
 import {FiltersType} from "../types/offers-reducer.types";
+import {ItemsType} from "../../../../../../shared/components/Card/types/card.types";
 
 export const actions = {
     setOffers: (items: Array<ItemsType>) => ({type: "SET_OFFERS", items} as const),

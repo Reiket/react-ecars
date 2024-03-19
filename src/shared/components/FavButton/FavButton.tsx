@@ -5,7 +5,7 @@ import {
     selectFavorites,
     selectIsLoading
 } from "../../../components/Pages/components/Favorites/store/selector/favorites-selector";
-import {useFavorites} from "../../hooks/useFavorites";
+import {useFavorites} from "../../../components/Pages/shared/hooks/useFavorites";
 import {TFavButton} from "./types/fav.btn.types";
 import {useAppSelector} from "../../../app/store/hooks";
 

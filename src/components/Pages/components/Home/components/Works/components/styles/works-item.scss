@@ -47,9 +47,4 @@
       margin-bottom: rem(24);
     }
   }
-  &__name {
-    &:not(:last-child) {
-      margin-bottom: em(12, $font-size-item-title);
-    }
-  }
 }

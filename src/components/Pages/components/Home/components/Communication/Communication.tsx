@@ -2,7 +2,6 @@ import React from 'react';
 import {AiOutlineMail} from "react-icons/ai";
 import {BiHelpCircle} from "react-icons/bi";
 import {CommItemsType} from "./types/communication.types";
-import BlockTitle from "../../../../../../shared/components/Title/BlockTitle";
 import Text from "../../../../../../shared/components/Title/Text";
 import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
 import {cn} from "../../../../../../shared/utils";
@@ -10,6 +9,7 @@ import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
 import {useAppSelector} from "../../../../../../app/store/hooks";
 import {selectIsOpenContactPopup, selectIsOpenGetPopup} from "../../../../../Layout/store/selectors/layout-selector";
 import {actions} from "../../../../../Layout/store/actions/layout-actios";
+import {Title} from "../../../../../../shared/components/Title/Title";
 
 const items = [
     {
@@ -38,7 +38,7 @@ const Communication: React.FC = () => {
                     const isContactText = item.btnText === "Contact Us"
                     return <div key={id} className="communication__item">
                         <div className="communication__icon">{item.icon}</div>
-                        <BlockTitle classnames={"communication__title"} text={item.title}/>
+                        <Title tag={"h3"}  classnames={"communication__title block-title"} text={item.title}/>
                         <Text text={item.text} classnames={"communication__text"}/>
                         <GreenButton onClick={!isContactText ? getPopup.togglePopup : contactsPopup.togglePopup}
                             classnames={cn("communication__button green-button_big", {

@@ -14,9 +14,10 @@ const theme = (theme: Theme) => ({
 });
 const Select: React.FC<TSelect> = ({control, rules, placeholder, items, name}) => {
     const animatedComponents = makeAnimated();
-    const getValue = (value: string) => {
+    const getValue = React.useMemo(() => (value: string) => {
         return value ? items.find((option) => option.value === value) : ''
-    }
+    }, [items]);
+
     return  <Controller
         control={control}
         rules={rules}

@@ -2,10 +2,10 @@ import React from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import './styles/swiper.scss';
-import CardLoader from "../../../../../../../shared/components/Card/components/CardLoader/CardLoader";
+import CardLoader from "../../../../../shared/components/Card/components/CardLoader/CardLoader";
 import {selectIsFetchingOffers, selectItems} from "../store/selector/offers-selector";
 import {OffersSliderPropsType} from "./types/offers-slider.types";
-import Card from "../../../../../../../shared/components/Card/Card";
+import Card from "../../../../../shared/components/Card/Card";
 import {useAppSelector} from "../../../../../../../app/store/hooks";
 
 const amountSlides = 4

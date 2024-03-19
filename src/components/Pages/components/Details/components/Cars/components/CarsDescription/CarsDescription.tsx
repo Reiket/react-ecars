@@ -1,8 +1,8 @@
 import React from 'react';
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {CarsDescriptionPropsType} from "./types/cars-description.types";
-import Title from "../../../../../../../../shared/components/Title/Title";
 import {cn} from "../../../../../../../../shared/utils";
+import {Title} from "../../../../../../../../shared/components/Title/Title";
 
 const CarsDescription: React.FC<CarsDescriptionPropsType> = ({detail}) => {
     const [isMoreOpen, setIsMoreOpen] = React.useState(false);
@@ -10,7 +10,7 @@ const CarsDescription: React.FC<CarsDescriptionPropsType> = ({detail}) => {
         setIsMoreOpen(prev => !prev)
     }
     return <div className="cars__description">
-        <Title text={"Description"}/>
+        <Title tag={"h2"} classnames={"block-title"} text={"Description"}/>
         <div className="cars__text">
             <p>{detail.name} Electric Leather Seats [RHD Japan Import] Premium Condition.</p>
             <p> ----------------------------------------------------------------------------------------------------------------------</p>

@@ -7,9 +7,7 @@ import {useClickOutside} from "../../../../../../../../../shared/hooks/useClickO
 const MenuHelp: React.FC = () => {
     const [isPopupOpen, setIsPopupOpen] = React.useState(false);
     const menuHelpRef = React.useRef<HTMLDivElement | null>(null);
-    useClickOutside(menuHelpRef, () => {
-        setIsPopupOpen(false)
-    })
+    useClickOutside(menuHelpRef, setIsPopupOpen)
     return <div ref={menuHelpRef} onClick={() => setIsPopupOpen(prev => !prev)} className="info-header-top__item help-info">
         <BiSolidHelpCircle/>
         <div className="help-info__text info-text menu-text">Help</div>

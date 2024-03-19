@@ -1,5 +1,5 @@
-import {ItemsType} from "../../../../../shared/types/types";
 import {ActionsType, InitialStateType} from "./types/details-reducer.types";
+import {ItemsType} from "../../../shared/components/Card/types/card.types";
 
 export let initialState = {
     detail: {} as ItemsType,

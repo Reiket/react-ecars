@@ -6,22 +6,4 @@
     align-items: center;
     gap: rem(16);
   }
-  &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $color-yellow;
-    flex: 0 0 rem(52);
-    height: rem(52);
-    border-radius: 50%;
-    img {
-      width: rem(20);
-      height: rem(20);
-    }
-  }
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: em(8, $font-size-text);
-    }
-  }
 }

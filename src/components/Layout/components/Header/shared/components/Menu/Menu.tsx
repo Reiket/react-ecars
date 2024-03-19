@@ -11,9 +11,7 @@ const Menu: React.FC<PopupPropsType> = React.memo(({filters, type, onClickToFilt
         const ref = React.useRef<HTMLDivElement>(null)
         const {shipNumber, currency} = filters
         const [isPopupOpen, setIsPopupOpen] = React.useState(false);
-        useClickOutside(ref, () => {
-            setIsPopupOpen(false);
-        })
+        useClickOutside(ref, setIsPopupOpen)
         const onClickToPopup = () => {
             setIsPopupOpen(prev => !prev);
         }
