@@ -29,7 +29,7 @@ $mediaQuerySend: em(850);
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-block-title);
+      margin-bottom: em(24, $fz-block-title-home);
     }
   }
   &__button {

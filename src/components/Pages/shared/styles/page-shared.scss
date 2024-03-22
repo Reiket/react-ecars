@@ -13,3 +13,13 @@
     height: rem(20);
   }
 }
+
+.section-text {
+  @include adaptiveValue("margin-top", 70, 40);
+  @include adaptiveValue("margin-bottom", 70, 40);
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+  }
+}

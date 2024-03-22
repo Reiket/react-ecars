@@ -73,8 +73,11 @@
   }
 }
 .text {
-  font-size: rem($font-size-text);
-  line-height: math.div(24 , $font-size-text);
+  font-size: rem($fz-text);
+  line-height: math.div(24 , $fz-text);
+  &_sub {
+    color: $color-gray;
+  }
 }
 
 

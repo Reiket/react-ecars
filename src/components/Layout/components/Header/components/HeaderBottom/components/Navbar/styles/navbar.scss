@@ -68,8 +68,8 @@
   &__link {
     position: relative;
     z-index: 10;
-    font-size: rem($font-size-text);
-    line-height: math.div(24 , $font-size-text);
+    font-size: rem($fz-text);
+    line-height: math.div(24 , $fz-text);
     font-weight: 600;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover){

@@ -29,13 +29,13 @@
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-home-title);
+      margin-bottom: em(24, $fz-home-title);
     }
   }
   &__paragraphs {
     @media (min-width:$mobile) {
       &:not(:last-child) {
-        margin-bottom: em(48, $font-size-text);
+        margin-bottom: em(48, $fz-text);
       }
     }
     p {

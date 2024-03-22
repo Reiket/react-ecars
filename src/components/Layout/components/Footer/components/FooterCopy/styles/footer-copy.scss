@@ -10,13 +10,21 @@
   align-items: center;
   gap: rem(24);
   color: $color-light-gray;
-  font-size: rem($font-size-desc);
-  line-height: math.div(16 , $font-size-desc);
+  font-size: rem($fz-desc);
+  line-height: math.div(16 , $fz-desc);
   @media (max-width:$mobileSmall) {
     flex-direction: column;
     gap: rem(15);
   }
   &__text {
     flex: 1 1 auto;
+  }
+  &__item {
+    transition: color .3s ease 0s;
+    @media (any-hover: hover){
+        &:hover {
+            color: $color-green;
+        }
+    }
   }
 }

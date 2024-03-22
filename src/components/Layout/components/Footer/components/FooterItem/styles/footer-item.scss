@@ -28,7 +28,7 @@
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-text) !important;
+      margin-bottom: em(24, $fz-text) !important;
     }
   }
 }
@@ -36,7 +36,7 @@
 .nav-footer {
   &__item {
     &:not(:last-child) {
-      margin-bottom: rem($font-size-desc);
+      margin-bottom: rem($fz-desc);
     }
   }
   &__link {

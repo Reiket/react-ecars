@@ -2,13 +2,13 @@ import React from 'react';
 import Popup from "../../Popup";
 import GreenButton from "../../../GreenButton/GreenButton";
 import {actions} from "../../../../../components/Layout/store/actions/layout-actios";
-import {useAppSelector} from "../../../../../app/store/hooks";
+import {useAppDispatch, useAppSelector} from "../../../../../app/store/hooks";
 import {selectIsOpenGetPopup} from "../../../../../components/Layout/store/selectors/layout-selector";
 import usePopupControl from "../../../../hooks/usePopupControl";
 import {SubmitHandler, useForm} from "react-hook-form";
 import Label from "../../../Form/Label/Label";
-import {Inputs, TName} from "./types/get-quote.types";
-import {brandsValidator, emailValidators, nameValidators, shipToValidator} from "./utils/validators";
+import {Inputs} from "./types/get-quote.types";
+import {brandsValidator, emailValidator, nameValidator, shipToValidator} from "../../../../utils/validators";
 import {
     selectBrands
 } from "../../../../../components/Pages/components/Home/components/Brands/store/selector/brands-selector";
@@ -19,22 +19,29 @@ import Input from "../../../Form/Input/Input";
 import {shipItem} from "../../../../../components/Layout/components/Header/types/header.types";
 import Select from "../../../Form/Select/Select";
 import {Title} from "../../../Title/Title";
+import {fetchBrands} from "../../../../../components/Pages/components/Home/components/Brands/store/thunks/fetchBrand";
+import {TFields} from "../../../Form/types/form.types";
 
 const GetQuotePopup: React.FC = () => {
     const isOpenPopup = useAppSelector(selectIsOpenGetPopup)
     const brands = useAppSelector(selectBrands)
+    const dispatch = useAppDispatch()
     const shipTo = shipItem.map((item) => ({value: item.country || "", label: item.country || ""}))
     const brandsOptions = brands.map((item: BrandsType) => ({ value: item.name || "", label: item.name || "" }));
     const {ref} = usePopupControl(isOpenPopup, actions.toggleIsOpenGetPopup);
     const {register, reset, control, handleSubmit, formState:{errors}} = useForm<Inputs>({
         mode: "onChange"
     });
+
     const inputFields = [
-        { name: "email" as TName, placeholder: "Your email", rules: emailValidators, errorsMessage: errors.email?.message },
-        { name: "name" as TName, placeholder: "Your name", rules: nameValidators, errorsMessage: errors.name?.message },
-        { name: "brands" as TName, placeholder: "Select brand...", rules: brandsValidator, errorsMessage: errors.brands?.message, items: brandsOptions },
-        { name: "shipTo" as TName, placeholder: "Select ship to...", rules: shipToValidator, errorsMessage: errors.shipTo?.message, items: shipTo }
-    ];
+        { name: "email", placeholder: "Your email", rules: emailValidator },
+        { name: "name", placeholder: "Your name", rules: nameValidator},
+        { name: "brands", placeholder: "Select brand...", rules: brandsValidator, items: brandsOptions },
+        { name: "shipTo", placeholder: "Select ship to...", rules: shipToValidator, items: shipTo }
+    ] as TFields<Inputs>[];
+    React.useEffect(() => {
+        dispatch(fetchBrands())
+    }, [])
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         console.log(data)
         reset()
@@ -44,7 +51,7 @@ const GetQuotePopup: React.FC = () => {
             <Title tag={"h2"} classnames={"home-title"} text={"Get a quote"}/>
             <form noValidate onSubmit={handleSubmit(onSubmit)} className="get-quote__form">
                 {inputFields.map((field, index) => (
-                    <Label key={index} classnames={"label"} name={field.name} errors={field.errorsMessage}>
+                    <Label key={index} name={field.name} errors={errors[field.name]?.message}>
                         {field.items ? (
                             <Select
                                 placeholder={field.placeholder}

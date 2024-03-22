@@ -1,54 +1,59 @@
 @use "sass:math";
 @import "/src/shared/styles/base";
 .home-title {
-  @include adaptiveValue("font-size", $font-size-home-title, 25);
+  @include adaptiveValue("font-size", $fz-home-title, 25);
   font-weight: 600;
-  line-height: math.div(43.7 , $font-size-home-title);
+  line-height: math.div(43.7 , $fz-home-title);
   flex: 1 1 auto;
   &:not(:last-child) {
-    margin-bottom: em(24, $font-size-home-title);
+    margin-bottom: em(24, $fz-home-title);
   }
 }
 
 .page-title {
-  @include adaptiveValue("font-size", $font-size-page-title, 35);
-  line-height: math.div(50.6 , $font-size-home-title);
+  @include adaptiveValue("font-size", $fz-title-page, 35);
+  line-height: math.div(50.6 , $fz-title-page);
   font-weight: 600;
   &:not(:last-child) {
-    margin-bottom: em(40, $font-size-page-title);
+    margin-bottom: em(40, $fz-title-page);
+  }
+  &_text {
+    &:not(:last-child) {
+      margin-bottom: em(16, $fz-title-page);
+    }
   }
 }
 
 .page-block-title {
-  @include adaptiveValue("font-size", $fz-page-block-title, 25);
-  line-height: math.div(36.8 , $fz-page-block-title);
+  @include adaptiveValue("font-size", $fz-block-title-page, 25);
+  line-height: math.div(36.8 , $fz-block-title-page);
   font-weight: 600;
   &:not(:last-child) {
-    margin-bottom: em(24, $fz-page-block-title);
+    margin-bottom: em(24, $fz-block-title-page);
   }
 }
 
 .block-title {
-  font-size: rem($font-size-block-title);
-  line-height: math.div(26.4 ,$font-size-block-title);
+  font-size: rem($fz-block-title-home);
+  line-height: math.div(26.4 , $fz-block-title-home);
   font-weight: 600;
 }
 
 .item-title_big {
-  font-size: rem($font-size-item-title);
-  line-height: math.div(21.6 , $font-size-item-title);
+  font-size: rem($fz-item-title);
+  line-height: math.div(21.6 , $fz-item-title);
   font-weight: 600;
   &:not(:last-child) {
-    margin-bottom: em(12, $font-size-item-title);
+    margin-bottom: em(12, $fz-item-title);
   }
 }
 
 .item-title_small {
-  font-size: rem($font-size-text);
-  line-height: math.div(20 , $font-size-text);
+  font-size: rem($fz-text);
+  line-height: math.div(20 , $fz-text);
   font-weight: 600;
   &:not(:last-child) {
-    margin-bottom: em(8, $font-size-text);
+    margin-bottom: em(8, $fz-text);
   }
 }
 

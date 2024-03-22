@@ -11,7 +11,7 @@
   &__title {
     padding-top: rem(16);
     &:not(:last-child) {
-      margin-bottom: em(16, $font-size-block-title);
+      margin-bottom: em(16, $fz-block-title-home);
     }
   }
   &__price {

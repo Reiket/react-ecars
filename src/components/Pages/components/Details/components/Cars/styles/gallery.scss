@@ -334,7 +334,7 @@ $ig-shadow: 0 rem(2) rem(2) lighten($color-black, 10%);
 .image-gallery-thumbnail-label {
   box-sizing: border-box;
   color: white;
-  font-size: rem($font-size-text);
+  font-size: rem($fz-text);
   left: 0;
   line-height: rem(16);
   padding: 5%;
@@ -355,7 +355,7 @@ $ig-shadow: 0 rem(2) rem(2) lighten($color-black, 10%);
   line-height: 1;
   padding: rem(6) rem(12);
   border-radius: rem(100);
-  font-size: rem($font-size-desc);
+  font-size: rem($fz-desc);
   position: absolute;
   right: 48%;
   z-index: 4;

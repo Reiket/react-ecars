@@ -1,25 +1,13 @@
-import {UseFormRegister} from "react-hook-form";
-import {Inputs} from "../../../Popup/components/GetQuotePopup/types/get-quote.types";
+import {FieldValues, Path, UseFormRegister} from "react-hook-form";
 
-export type TInputProps = {
-    name: "brands" | "shipTo" | "name" | "email"
-    register: UseFormRegister<Inputs>
-    placeholder: string
-    rules: {
-        required: string,
-        pattern?:TPattern,
-        maxLength?: TLength,
-        minLength?: TLength,
-    }
+export type TInputProps<T extends FieldValues> = {
+    name: Path<T>
+    id?: string
+    classnames?: string
+    register: UseFormRegister<T>
+    type?: string
+    placeholder?: string
+    rules: FieldValues,
 }
 
-type TLength = {
-    value: number ,
-    message: string
-}
-
-type TPattern = {
-    value: RegExp,
-    message: string
-}
 

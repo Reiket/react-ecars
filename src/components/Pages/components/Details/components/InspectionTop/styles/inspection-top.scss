@@ -14,8 +14,8 @@
     border-radius: rem(8);
     background: $color-yellow;
     color: $color-black;
-    font-size: rem($font-size-desc);
-    line-height: math.div(16 , $font-size-desc);
+    font-size: rem($fz-desc);
+    line-height: math.div(16 , $fz-desc);
     font-weight: 600;
     svg {
       font-size: rem(20);

@@ -24,12 +24,12 @@
   }
   &__brand {
     color: $color-light-gray;
-    font-size: rem($font-size-desc);
-    line-height: math.div(16 , $font-size-desc);
+    font-size: rem($fz-desc);
+    line-height: math.div(16 , $fz-desc);
   }
   &__rating {
     color: $color-yellow;
-    font-size: rem($font-size-text);
+    font-size: rem($fz-text);
     display: flex;
     align-items: center;
     gap: rem(2);

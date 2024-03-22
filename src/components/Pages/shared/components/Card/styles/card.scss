@@ -40,7 +40,7 @@
     align-items: center;
     svg {
       color: $color-white;
-      font-size: rem($font-size-text);
+      font-size: rem($fz-text);
     }
     .active {
       svg {
@@ -61,16 +61,16 @@
   }
   &__name {
     &:not(:last-child) {
-      margin-bottom: em(4, $font-size-text);
+      margin-bottom: em(4, $fz-text);
     }
   }
   &__description {
     flex: 1 1 auto;
     color: $color-pale-gray;
-    font-size: rem($font-size-desc);
-    line-height: math.div(16 , $font-size-desc);
+    font-size: rem($fz-desc);
+    line-height: math.div(16 , $fz-desc);
     &:not(:last-child) {
-      margin-bottom: em(36, $font-size-desc);
+      margin-bottom: em(36, $fz-desc);
     }
   }
   &__bottom {

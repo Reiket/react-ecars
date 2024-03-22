@@ -7,7 +7,7 @@
   }
   &__title {
     &:not(:last-child) {
-        margin-bottom: em(40, $font-size-page-title);
+        margin-bottom: em(40, $fz-title-page);
     }
   }
   &__benefits {

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     &:not(:last-child) {
-      margin-bottom: rem($font-size-desc);
+      margin-bottom: rem($fz-desc);
     }
   }
   &__name {

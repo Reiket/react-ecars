@@ -1,0 +1,21 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+
+.password-input {
+  display: flex;
+  input {
+    flex: 1 1 auto;
+    border-right: 0;
+    border-radius: rem(8) 0 0 rem(8);
+  }
+  &__btn {
+    flex: 0 0 rem(46);
+    border: rem(1) solid $border-pale;
+    border-left: 0;
+    border-radius: 0 rem(8) rem(8) 0;
+    svg {
+      color: $color-pale-gray;
+      font-size: rem(20);
+    }
+  }
+}

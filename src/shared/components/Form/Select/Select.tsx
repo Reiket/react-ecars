@@ -26,6 +26,7 @@ const Select: React.FC<TSelect> = ({control, rules, placeholder, items, name}) =
             <ReactSelect
                 placeholder={placeholder}
                 theme={theme}
+                className={"select"}
                 components={animatedComponents}
                 value={getValue(value)}
                 options={items}

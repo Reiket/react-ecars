@@ -4,7 +4,7 @@
 .contact-popup {
   &__title {
     &:not(:last-child) {
-        margin-bottom: em(15, $font-size-home-title);
+        margin-bottom: em(15, $fz-home-title);
     }
   }
   &__content {

@@ -23,19 +23,19 @@
     }
   }
   &__icon {
-    font-size: rem($font-size-home-title);
+    font-size: rem($fz-home-title);
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-home-title);
+      margin-bottom: em(24, $fz-home-title);
     }
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(24, $font-size-block-title);
+      margin-bottom: em(24, $fz-block-title-home);
     }
   }
   &__text {
     &:not(:last-child) {
-      margin-bottom: em(48, $font-size-text);
+      margin-bottom: em(48, $fz-text);
     }
   }
   &__button {

@@ -10,10 +10,10 @@
   }
   &__title {
     font-weight: 600;
-    @include adaptiveValue("font-size", $fz-home-title, 35);
-    line-height: math.div(69 , $fz-home-title);
+    @include adaptiveValue("font-size", $fz-main-title-home, 35);
+    line-height: math.div(69 , $fz-main-title-home);
     &:not(:last-child) {
-      margin-bottom: em(32, $fz-home-title);
+      margin-bottom: em(32, $fz-main-title-home);
     }
   }
   &__contacts {

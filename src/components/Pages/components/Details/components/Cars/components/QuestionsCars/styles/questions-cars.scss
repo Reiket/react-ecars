@@ -19,11 +19,11 @@
   }
   &__title {
     &:not(:last-child) {
-      margin-bottom: em(12, $font-size-block-title);
+      margin-bottom: em(12, $fz-block-title-home);
     }
   }
   &__button {
-    font-size: rem($font-size-text);
+    font-size: rem($fz-text);
     @media (max-width:em(1260)) {
       text-align: center;
       width: 100%;

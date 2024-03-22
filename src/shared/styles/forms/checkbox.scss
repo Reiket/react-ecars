@@ -3,7 +3,7 @@
 .checkbox {
 	position: relative;
 	&:not(:last-child) {
-		margin-bottom: rem($font-size-desc);
+		margin-bottom: rem($fz-desc);
 	}
 	&__input {
 		position: absolute;
@@ -16,13 +16,13 @@
 	}
 	&__label {
 		cursor: pointer;
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		position: relative;
 		gap: rem(10);
 		&:before {
 			content: "";
-			align-self: flex-start;
+			align-self: center;
 			flex: 0 0 rem(20);
 			width: rem(20);
 			height: rem(20);
@@ -37,9 +37,13 @@
 		color: $color-green;
 		display: none;
 	}
-	&__text {
-		span {
-			color: $color-green;
+	&__link {
+		color: $color-green;
+		transition: color .3s ease 0s;
+		@media (any-hover: hover){
+		    &:hover {
+		        color: $color-dark-green;
+		    }
 		}
 	}
 }

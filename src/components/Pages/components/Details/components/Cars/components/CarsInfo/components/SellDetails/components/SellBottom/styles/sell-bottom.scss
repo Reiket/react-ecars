@@ -9,13 +9,13 @@
   flex-direction: column;
   &__text {
     &:not(:last-child) {
-      margin-bottom: rem($font-size-text);
+      margin-bottom: rem($fz-text);
     }
   }
   &__button {
     text-align: center;
     width: 100%;
-    margin-bottom: rem($font-size-desc);
+    margin-bottom: rem($fz-desc);
   }
   &__contacts {
     border: rem(1) solid $border-pale;

@@ -29,20 +29,4 @@
       margin-bottom: rem(35);
     }
   }
-  &__input {
-    padding: rem(14) rem(12);
-    border: rem(1) solid $border-pale;
-    border-radius: rem(8);
-    outline: none;
-    &::placeholder {
-      color: $color-pale-gray;
-    }
-  }
-  &__error {
-    text-align: center;
-    padding-top: rem(15);
-    font-weight: 700;
-    color: $color-green;
-    height: rem(35);
-  }
 }

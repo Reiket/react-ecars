@@ -1,10 +1,15 @@
 import React from 'react';
 import {TInputProps} from "./types/input.types";
+import {FieldValues} from "react-hook-form";
 
-const Input: React.FC<TInputProps> = ({register,   placeholder, rules, name}) => {
-    const isType = name !== "email"  ? "text" : name
-    return <input placeholder={placeholder} {...register(name, rules)} type={isType}
-                  autoComplete={"off"} className="get-quote__input"/>
-};
+function Input<T extends FieldValues>({ register, placeholder, rules, name, type = "text", id, classnames = "input" }: TInputProps<T>) {
+    return <input
+        id={id}
+        placeholder={placeholder}
+        {...register(name, rules)}
+        type={type}
+        className={classnames}
+    />
+}
 
 export default Input;

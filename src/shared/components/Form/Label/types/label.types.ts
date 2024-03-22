@@ -4,7 +4,8 @@ export type TLabelProps = {
     name?: string
     errors?: string | undefined
     children: React.ReactNode
-    classnames: string
+    classnames?: string
+    htmlFor?: string
 }
 
 

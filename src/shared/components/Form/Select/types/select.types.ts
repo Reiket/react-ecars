@@ -1,17 +1,12 @@
-import {Control} from "react-hook-form";
+import {Control, FieldValues} from "react-hook-form";
 import {Inputs} from "../../../Popup/components/GetQuotePopup/types/get-quote.types";
+import {TOptions} from "../../types/form.types";
 
 export type TSelect = {
     control: Control<Inputs>
     items: TOptions[],
-    name: "brands" | "shipTo" | "name" | "email"
+    name: keyof Inputs
     placeholder: string
-    rules: {
-        required: string
-    }
-}
-
-export type TOptions = {
-    value: string
-    label: string
+    rules: FieldValues
+    errors?: string
 }

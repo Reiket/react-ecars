@@ -13,7 +13,11 @@ const About = React.lazy(() => import("../components/Pages/components/About/Abou
 const FAQ = React.lazy(() => import("../components/Pages/components/Faq/Faq"))
 const Catalog = React.lazy(() => import("../components/Pages/components/Catalog/Catalog"))
 const News = React.lazy(() => import("../components/Pages/components/News/News"))
-const Login = React.lazy(() => import("../components/Pages/components/Authorization/Login/Login"))
+const Login = React.lazy(() => import("../components/Pages/components/Authorization/components/Login/Login"))
+const Register = React.lazy(() => import("../components/Pages/components/Authorization/components/Register/Register"))
+const ForgotPass = React.lazy(() => import("../components/Pages/components/Authorization/components/ForgotPass/ForgotPass"))
+const PrivacyPolicy = React.lazy(() => import("../components/Pages/components/PrivacyPolicy/PrivacyPolicy"))
+const Terms = React.lazy(() => import("../components/Pages/components/Terms/Terms"))
 function App() {
     const location = useLocation();
     const title = capitalizeFirstLetter(location.pathname.replace("/", ""))
@@ -33,6 +37,10 @@ function App() {
                       <Route element={<Catalog/>} path={"/catalog"}/>
                       <Route element={<News/>} path={"/news"}/>
                       <Route element={<Login/>} path={"/login"}/>
+                      <Route element={<Register/>} path={"/register"}/>
+                      <Route element={<ForgotPass/>} path={"/forgot"}/>
+                      <Route element={<PrivacyPolicy/>} path={"/privacy"}/>
+                      <Route element={<Terms/>} path={"/terms"}/>
                   </Route>
               </Routes>
           </React.Suspense>
