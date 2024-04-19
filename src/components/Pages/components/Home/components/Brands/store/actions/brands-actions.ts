@@ -1,9 +1,7 @@
-import {BrandsType} from "../types/brands-reducer.types";
-
+import {Brands} from "../../../../../../../../app/api/types/brands.types";
 
 export const actions = {
-    setBrands: (brands: Array<BrandsType>) => ({type: "GET_BRANDS", brands} as const)
+    setBrands: (items: Brands[]) => ({type: "brands/items", items} as const),
+    toggleIsLoading: (isLoading: boolean) => ({type: "brands/loading", isLoading} as const),
+    toggleMore: (hasMore: boolean) => ({type: "brands/more", hasMore} as const),
 }
-
-
-

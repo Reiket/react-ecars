@@ -14,7 +14,6 @@ export const useFilters = () => {
     React.useEffect(() => {
         setIsFilterLoading(true)
         const parsed = qs.parse(location.search.substring(1));
-        console.log(parsed.ship)
         const actualFilters = {
             shipNumber: parsed.ship ? Number(parsed.ship) : 0,
             currency: parsed.currency ? Number(parsed.currency) : 0,

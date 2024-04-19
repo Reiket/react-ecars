@@ -4,10 +4,6 @@
   @include adaptiveValue("padding-bottom", 96 , 50);
   padding-top: rem(24);
   border-top: rem(1) solid $border-white;
-  &__path {
-    padding-bottom: rem(16);
-    color: $color-light-gray;
-  }
   &__body {
     display: flex;
     justify-content: space-between;

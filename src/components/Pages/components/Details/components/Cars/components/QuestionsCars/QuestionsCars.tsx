@@ -1,5 +1,5 @@
 import React from 'react';
-import GreenButton from "../../../../../../../../shared/components/GreenButton/GreenButton";
+import GreenButton from "../../../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import usePopupControl from "../../../../../../../../shared/hooks/usePopupControl";
 import {actions} from "../../../../../../../Layout/store/actions/layout-actios";
 import {useAppSelector} from "../../../../../../../../app/store/hooks";

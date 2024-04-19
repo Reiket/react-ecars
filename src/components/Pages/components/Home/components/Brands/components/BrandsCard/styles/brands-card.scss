@@ -1,0 +1,27 @@
+@use "/src/shared/styles/base";
+.brands {
+  &__item {
+    padding: base.rem(16) base.rem(52);
+    text-align: center;
+    background: base.$color-white;
+    border-radius: base.rem(8);
+    box-shadow: 0 base.rem(8) base.rem(16) 0 base.$shadow;
+    transition: box-shadow .3s ease 0s;
+    @media (any-hover: hover){
+        &:hover {
+          box-shadow: base.rem(15) base.rem(30) base.rem(35) base.rem(10) base.$shadow;
+        }
+    }
+  }
+  &__image {
+    img {
+      width: base.rem(80);
+      height: base.rem(70);
+      object-fit: contain;
+    }
+  }
+  &__name {
+    padding-top: base.rem(12);
+    font-weight: 600;
+  }
+}

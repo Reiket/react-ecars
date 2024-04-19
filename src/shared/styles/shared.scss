@@ -83,13 +83,16 @@
 
 
 //Imports children components
+@import "../components/Container/styles/container";
 @import "../../components/Pages/shared/components/Card/styles/card";
-@import "../components/GreenButton/styles/green-btn";
-@import "../components/NavigationBtn/styles/navigation-btn";
+@import "../components/buttons/GreenButton/styles/green-btn";
+@import "../components/buttons/NavigationBtn/styles/navigation-btn";
 @import "../components/Popup/styles/popup";
 @import "../components/Popup/components/GetQuotePopup/styles/get-quote";
 @import "../components/Popup/components/ContactUsPopup/styles/contact-popup";
 @import "../components/Icons/styles/icons";
-@import "../components/Form/styles/form";
+@import "../components/forms/Form/styles/form";
 @import "../components/Title/styles/title";
+@import "../components/Pagination/styles/pagination";
+@import "../components/BreadCrumbs/styles/breadcrumbs";
 

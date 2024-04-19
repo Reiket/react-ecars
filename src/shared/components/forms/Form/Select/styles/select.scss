@@ -1,0 +1,59 @@
+@import "../../../../../styles/base";
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.select {
+	&__control {
+		background: $color-white !important;
+		border: rem(1) solid $border-pale !important;
+		min-height: rem(40) !important;
+		outline: none !important;
+		box-shadow: none !important;
+		&--menu-is-open {
+			border-color: $border-pale !important;
+			box-shadow: none !important;
+			 .select__indicator {
+				 &:last-child {
+					 svg {
+						 transform: rotate(180deg) !important;
+					 }
+				 }
+			}
+		}
+	}
+	&__indicator {
+		svg {
+			-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
+		}
+		&-separator {
+			display: none !important;
+		}
+	}
+	&__menu {
+		background: $main-color !important;
+		color: $color-white !important;
+		animation: scaleIn 0.35s ease-in-out;
+	}
+	&__option {
+		-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+		    &:hover {
+				background: $menuActiveColor !important;
+		    }
+		}
+		&--is-selected {
+			background: #232323 !important;
+		}
+	}
+}
+

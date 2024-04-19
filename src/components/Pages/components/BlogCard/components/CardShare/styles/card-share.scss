@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+
+.card-share {
+  background: base.$background-white;
+  border-radius: base.rem(8);
+  &__list {
+    padding: base.rem(12) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include base.adaptiveValue("gap", 24, 10);
+    flex-wrap: wrap;
+    > button {
+      flex: 0 0 base.rem(85);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: base.rem(8);
+    color: base.$color-light-gray;
+    transition: color .3s ease 0s;
+    @media (any-hover: hover){
+      &:hover {
+        color: base.$color-news-link;
+      }
+    }
+  }
+}

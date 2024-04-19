@@ -1,16 +1,13 @@
-@import "/src/shared/styles/base";
+@use "/src/shared/styles/base";
 .brands {
-  background: $background-white;
+  background: base.$background-white;
   &__body {
-    padding-top: rem(48);
+    padding: base.rem(48) 0 base.rem(16);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(184), 1fr));
-    gap: rem(24);
-  }
-  &__all {
-    padding-top: rem(16);
+    grid-template-columns: repeat(auto-fit, minmax(base.rem(184), 1fr));
+    gap: base.rem(24);
   }
 }
 
 //Imports children components
-@import "../components/styles/brands-card";
+@import "../components/BrandsCard/styles/brands-card";

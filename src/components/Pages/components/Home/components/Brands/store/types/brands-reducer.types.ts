@@ -1,13 +1,9 @@
-import {actions} from "../actions/brands-actions";
 import {initialState} from "../brands-reducer";
-import {InferActionsType} from "../../../../../../../../app/store/types/store.types";
+import {BaseThunkType, InferActionsType} from "../../../../../../../../app/store/types/store.types";
+import {actions} from "../actions/brands-actions";
 
-export type ActionsType = InferActionsType<typeof actions>
+export type InitialState = typeof initialState;
 
-export type BrandsType = {
-    id: number
-    name: string
-    imageUrl: string
-}
+export type Actions = InferActionsType<typeof actions>
 
-export type InitialStateType = typeof initialState
+export type Thunk = BaseThunkType<Actions, void>

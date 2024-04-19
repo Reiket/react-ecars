@@ -1,0 +1,53 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+
+.pagination {
+  padding-top: rem(24);
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(4);
+  }
+  &__btn {
+    flex: 0 0 rem(32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(32);
+    border: rem(1) solid $border-white;
+    border-radius: rem(8);
+    color: $color-gray;
+    transition: all .5s ease 0s;
+    svg {
+      color: $color-gray;
+      font-size: rem(20);
+      transition: all .5s ease 0s;
+    }
+    &:disabled {
+      background: $color-pale-white;
+      cursor: none;
+      pointer-events: none;
+      color: $color-white;
+      svg {
+        color: $color-white;
+      }
+    }
+    &.active {
+      background: $color-green;
+      color: $color-white;
+      svg {
+        color: $color-white;
+      }
+    }
+    @media (any-hover: hover){
+        &:hover {
+          background: $color-green;
+          color: $color-white;
+          svg {
+            color: $color-white;
+          }
+        }
+    }
+  }
+}

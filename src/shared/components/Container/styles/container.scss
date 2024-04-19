@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "../../../styles/base";
+@import "../../../styles/base/mixins";
+//Container ======================================================================================================================================================================================================================
+@if (base.$responsiveType==1) {
+  [class*="__container"] {
+    @if (base.$maxWidthContainer>0) {
+      max-width: rem(base.$maxWidthContainer);
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+    @if (base.$containerPadding>0) {
+      padding: 0 rem(math.div(base.$containerPadding, 2));
+    }
+  }
+} @else {
+  [class*="__container"] {
+    margin: 0 auto;
+    @if (base.$maxWidthContainer>0) {
+      max-width: rem(base.$maxWidthContainer);
+      box-sizing: content-box;
+    } @else {
+      @if (base.$containerPadding>0) {
+        padding: 0 rem(math.div(base.$containerPadding, 2));
+      }
+    }
+    @media (max-width: base.$pc) {
+      max-width: rem(970);
+    }
+    @media (max-width: base.$tablet) {
+      max-width: rem(750);
+    }
+    @media (max-width: base.$mobile) {
+      max-width: none;
+      @if (base.$containerPadding>0 and base.$maxWidthContainer>0) {
+        padding: 0 rem(math.div(base.$containerPadding, 2));
+      }
+    }
+  }
+}

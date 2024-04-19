@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import HeaderUtils from "./components/HeaderUtils/HeaderUtils";
 import Logo from "../../../../../../shared/components/Logo/Logo";
 import Burger from "./shared/Burger/Burger";
-import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
+import GreenButton from "../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import {MenuPropsType} from "../../shared/components/Menu/types/menu.types";
 import {cn} from "../../../../../../shared/utils";
 import usePopupControl from "../../../../../../shared/hooks/usePopupControl";

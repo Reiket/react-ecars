@@ -16,6 +16,7 @@ type PropertiesType = {
 }
 export type ItemsType = {
     id: number
+    parentId?: number
     imageUrl: string
     name: string
     description: string

@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "src/shared/styles/base";
+.featured-posts {
+  flex: 0 0 base.rem(392);
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: base.rem(24);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__slider {
+    display: flex;
+  }
+  &__navigation {
+    @media (min-width:base.em(1161)) {
+      display: none !important;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: base.rem(24);
+  }
+}
+
+//Imports styles children components
+
+@import "../components/FeaturedPost/styles/featured-post";
+@import "../components/FeaturedPost/styles/featured-post-skeleton";
+

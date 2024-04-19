@@ -1,14 +1,14 @@
 import React from 'react';
-import {FaArrowLeftLong} from "react-icons/fa6";
-import Auth from "../../Auth";
-import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
-import Text from "../../../../../../shared/components/Title/Text";
-import Input from "../../../../../../shared/components/Form/Input/Input";
-import {emailValidator} from "../../../../../../shared/utils/validators";
-import Label from "../../../../../../shared/components/Form/Label/Label";
-import {SubmitHandler, useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
+import {SubmitHandler, useForm} from 'react-hook-form';
 import {TFormForgotPass} from "./types/forgot-pass.types";
+import Auth from "../../Auth";
+import Label from "../../../../../../shared/components/forms/Form/Label/Label";
+import Input from "../../../../../../shared/components/forms/Form/Input/Input";
+import GreenButton from "../../../../../../shared/components/buttons/GreenButton/GreenButton";
+import {Link} from "react-router-dom";
+import {FaArrowLeftLong} from "react-icons/fa6";
+import {emailValidator} from "../../../../../../shared/utils/validators";
+import Text from "../../../../../../shared/components/Title/Text";
 
 
 const ForgotPass: React.FC = () => {

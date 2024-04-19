@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 import store from "./store/store"
 import {Icons} from "../shared/components/Icons/Icons";
 import {capitalizeFirstLetter} from "../shared/utils";
+import BlogCard from "../components/Pages/components/BlogCard/BlogCard";
 //React lazy-loading
 const Home = React.lazy(() => import("../components/Pages/components/Home/Home"))
 const Details = React.lazy(() => import("../components/Pages/components/Details/Details"))
@@ -12,7 +13,7 @@ const Favorites = React.lazy(() => import("../components/Pages/components/Favori
 const About = React.lazy(() => import("../components/Pages/components/About/About"))
 const FAQ = React.lazy(() => import("../components/Pages/components/Faq/Faq"))
 const Catalog = React.lazy(() => import("../components/Pages/components/Catalog/Catalog"))
-const News = React.lazy(() => import("../components/Pages/components/News/News"))
+const Blog = React.lazy(() => import("../components/Pages/components/Blog/Blog"))
 const Login = React.lazy(() => import("../components/Pages/components/Authorization/components/Login/Login"))
 const Register = React.lazy(() => import("../components/Pages/components/Authorization/components/Register/Register"))
 const ForgotPass = React.lazy(() => import("../components/Pages/components/Authorization/components/ForgotPass/ForgotPass"))
@@ -30,17 +31,18 @@ function App() {
               <Routes>
                   <Route element={<MainLayout/>} path={"/"}>
                       <Route element={<Home/>} path={"/"}/>
-                      <Route element={<Details/>} path={"/:id"}/>
-                      <Route element={<Favorites/>} path={"/favorites"}/>
-                      <Route element={<About/>} path={"/about"}/>
-                      <Route element={<FAQ/>} path={"/faq"}/>
-                      <Route element={<Catalog/>} path={"/catalog"}/>
-                      <Route element={<News/>} path={"/news"}/>
-                      <Route element={<Login/>} path={"/login"}/>
-                      <Route element={<Register/>} path={"/register"}/>
-                      <Route element={<ForgotPass/>} path={"/forgot"}/>
-                      <Route element={<PrivacyPolicy/>} path={"/privacy"}/>
-                      <Route element={<Terms/>} path={"/terms"}/>
+                      {/*<Route element={<Details/>} path={"/details/:id"}/>*/}
+                      {/*<Route element={<Favorites/>} path={"/favorites"}/>*/}
+                      {/*<Route element={<About/>} path={"/about"}/>*/}
+                      {/*<Route element={<FAQ/>} path={"/faq"}/>*/}
+                      {/*<Route element={<Catalog/>} path={"/catalog"}/>*/}
+                      <Route element={<Blog/>} path={"/blog"}/>
+                      <Route element={<BlogCard/>} path={"/blog/:blogCardId"}/>
+                      {/*<Route element={<Login/>} path={"/login"}/>*/}
+                      {/*<Route element={<Register/>} path={"/register"}/>*/}
+                      {/*<Route element={<ForgotPass/>} path={"/forgot"}/>*/}
+                      {/*<Route element={<PrivacyPolicy/>} path={"/privacy"}/>*/}
+                      {/*<Route element={<Terms/>} path={"/terms"}/>*/}
                   </Route>
               </Routes>
           </React.Suspense>

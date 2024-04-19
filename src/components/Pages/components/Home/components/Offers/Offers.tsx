@@ -3,7 +3,7 @@ import {RiArrowRightLine} from "react-icons/ri";
 import OffersSlider from "./components/OffersSlider";
 import {selectFilters} from "./store/selector/offers-selector";
 import {useFilters} from "../../../../../Layout/components/Header/hooks/useFilters";
-import NavigationBtn from "../../../../../../shared/components/NavigationBtn/NavigationBtn";
+import NavigationBtn from "../../../../../../shared/components/buttons/NavigationBtn/NavigationBtn";
 import {fetchOffers} from "./store/thunks/fetchOffers";
 import AllLink from "../../../../../../shared/components/Title/AllLink";
 import {useAppDispatch, useAppSelector} from "../../../../../../app/store/hooks";

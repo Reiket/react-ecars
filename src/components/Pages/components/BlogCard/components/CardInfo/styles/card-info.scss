@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+
+.card-info {
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__list {
+    padding-bottom: base.rem(32);
+    display: flex;
+    align-items: center;
+    @include base.adaptiveValue("gap", 24, 12);
+    flex-wrap: wrap;
+  }
+  &__content {
+    padding-top: base.rem(35);
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: base.rem(8);
+    color: base.$color-light-gray;
+  }
+  &__description {
+    padding-top: base.rem(24);
+  }
+}

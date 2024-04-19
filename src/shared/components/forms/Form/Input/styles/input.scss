@@ -1,0 +1,13 @@
+@use "sass:math";
+@import "../../../../../styles/base";
+
+
+.input {
+  padding: rem(15) rem(12);
+  border: rem(1) solid $border-pale;
+  border-radius: rem(8);
+  outline: none;
+  &::placeholder {
+    color: $color-pale-gray;
+  }
+}

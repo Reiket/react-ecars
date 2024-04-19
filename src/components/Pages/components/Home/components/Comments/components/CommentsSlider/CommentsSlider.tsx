@@ -3,7 +3,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 import CommentLoader from "../CommentsLoader/CommentLoader";
-import '../../../Offers/components/styles/swiper.scss';
+import '../../../../../../../../shared/styles/swiper.scss';
 import {selectComments} from "../../store/selector/comments-selector";
 import Text from "../../../../../../../../shared/components/Title/Text";
 import {useAppSelector} from "../../../../../../../../app/store/hooks";

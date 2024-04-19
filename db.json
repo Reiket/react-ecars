@@ -3,6 +3,7 @@
   "offers": [
     {
       "id": 1,
+      "parentId": 1,
       "imageUrl": "/assets/image/offers/01.png",
       "name": "2021 Genesis GV80 2.5T",
       "description": "Used • 15,232 mi • Gasoline",
@@ -34,6 +35,7 @@
     },
     {
       "id": 2,
+      "parentId": 2,
       "imageUrl": "/assets/image/offers/02.png",
       "name": "2019 Mitsubishi Outlander Sport 2.0 SE",
       "description": "Used • 9,123 mi • Gasoline",
@@ -65,6 +67,7 @@
     },
     {
       "id": 3,
+      "parentId": 3,
       "imageUrl": "/assets/image/offers/03.png",
       "name": "2019 BMW 640 Gran Turismo i xDrive",
       "description": "Used • 25,023 mi • Gasoline",
@@ -96,6 +99,7 @@
     },
     {
       "id": 4,
+      "parentId": 4,
       "imageUrl": "/assets/image/offers/04.png",
       "name": "2020 Subaru Ascent Touring 7-Passenger",
       "description": "Used • 32,121 mi • Diesel",
@@ -127,6 +131,7 @@
     },
     {
       "id": 5,
+      "parentId": 6,
       "imageUrl": "/assets/image/offers/05.jpg",
       "name": "2022 Kia K5 GT",
       "description": "Used • 17,000 mi • Diesel",
@@ -790,7 +795,7 @@
     {
       "id": 9,
       "imageUrl": "/assets/image/brands/09.png",
-      "name": "Subaru"
+        "name": "Subaru"
     },
     {
       "id": 10,
@@ -861,24 +866,755 @@
   "news": [
     {
       "id": 1,
-      "imageUrl": "/assets/image/blog/01.png",
-      "category": "guides",
-      "title": "The rising cost of fuel in the UAE and how to avoid it",
-      "text": "Accumsan sit amet nulla facilisi morbi tempus iaculis. Nisl nunc mi ipsum faucibus. Pulvinar neque laoreet suspendisse interdum consectetur."
+      "imageUrl": "/assets/image/pages/news/blog-news/01.png",
+      "category": "news",
+      "added": "2023-09-10T00:00:00.000Z",
+      "views": 3120,
+      "title": "Electric Cupra Formentor and larger SUV",
+      "text": "Cupra has announced it will launch a battery-powered successor to the Formentor, along with a bigger electric SUV, later this decade",
+      "content": [
+        {
+          "title": "Announced to the Formentor SUV and electric SUV.",
+          "text": "Cupra CEO Wayne Griffiths confirmed these two models will be added to the brand's global portfolio and will eventually be sold in Australia – rather than being limited to the North American market."
+        },
+        {
+          "title": "The Scalable Systems Platform ",
+          "text": "Currently, the rear-drive Cupra Born and Tavascan EVs are based on the MEB platform, while the front-drive Raval electric city car due in 2025 will be based on the updated MEB+ platform.“I’m confirming today that Cupra will enter the US market by the end of the decade,” said Griffiths at the brand’s 2024 annual media conference."
+        },
+        {
+          "title": "Testing the brand",
+          "text": "We plan to enter initially with two electric models – a battery-electric version of the Formentor and a bigger electric crossover SUV.”Griffiths told Australian media, including Wheels, the large electric SUV would be sold in other markets – such as Australia and Europe."
+        },
+        {
+          "title": "Global volume",
+          "text": "That's important for feasibility and for the business case, particularly with the Inflation Regulation Act… and the incentive for local production that makes it essential.“I think if you want to sell cars in the US, you need to build – not all of them – but some of them in the US. Definitely the bigger SUV we're looking at for the US will also be sold globally in Europe and Australia."
+        }
+      ]
     },
     {
       "id": 2,
-      "imageUrl": "/assets/image/blog/02.png",
-      "category": "news",
-      "title": "These new EV pick up trucks are about to be all the rage",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "imageUrl": "/assets/image/pages/news/blog-news/02.png",
+      "category": "guides",
+      "added": "2023-12-22T00:00:00.000Z",
+      "views": 2812,
+      "title": "How to drive like an F1 pro",
+      "text": "What does it take to extract every last bit of performance from the world’s ultimate race car? Nico Rosberg explains the art of F1 driving on the limit.",
+      "content": [
+        {
+          "title": "Disseminate the skills",
+          "text": "I’m not sure he thinks he can, but he’s prepared to have a go.I start by asking what the driving environment is like and what he can see from his F1 car’s cockpit. “You can see the top of the tyres,” he says. “You can see maybe 20 metres ahead, and nothing before that. But you don’t notice that because you’re travelling so fast.”The HANS device doesn’t restrict your head movement at all, he says. “You can turn your head as much as you want to."
+        },
+        {
+          "title": "Braking, Rosberg explains",
+          "text": "But then, as you’re slowing down, the grip of the car is reducing at the same time. So you have to ease off the brakes to get maximum deceleration.”Do F1 drivers trail the brakes into the corner, gradually easing them off even as they turn? “Yeah, a lot. All the way to the point where you go on to the throttle, you’re holding [the brakes] in,” Rosberg says."
+        },
+        {
+          "title": "Hit it as hard as you can.",
+          "text": "But it’s those tyres again. “If you steer and brake, it’s a longitudinal deceleration and a lateral acceleration. It can easily overload the front tyres,” Rosberg says.All being well, you’re on the way to the apex. “We accelerate at the apex, but you have to be very careful feeding in the throttle,” says Rosberg. “As soon as you feel the rear going, you have to wait again.”"
+        }
+      ]
     },
     {
       "id": 3,
-      "imageUrl": "/assets/image/blog/03.png",
+      "imageUrl": "/assets/image/pages/news/blog-news/03.png",
+      "category": "reviews",
+      "added": "2024-03-01T00:00:00.000Z",
+      "views": 1092,
+      "title": "2024 GWM Tank 500 review",
+      "content": [
+        {
+          "title": "Serious assault on the large 4x4",
+          "text": "Set to go head-to-head with the likes of Ford Everest, Toyota Prado and Isuzu MU-X, the Tank 500 is a large SUV measuring 5078mm in length and 1934mm wide. To a lesser extent, some might even see it as an alternative to the LandCruiser 300 and Nissan Patrol."
+        },
+        {
+          "title": "The Tank 500 is available",
+          "text": "Both of the three-row, seven-seat models are powered by a 2.0-litre turbocharged petrol engine hybrid powertrain that produces a combined 255kW and 642Nm with a claimed combined fuel consumption of 8.5L/100km."
+        },
+        {
+          "title": "Offers a lot of features.",
+          "text": "Where it falls short is in the calibration of some of the key systems such as steering feel and autonomous steering, suspension refinement, and some of the switchgear and controls that are not as simple as they should be. The Tank brand is still emerging and we’re sure it will improve these shortcomings in future updates and new models."
+        }
+      ],
+      "text": "GWM expands it Tank 4x4 range with the luxurious 500 wagon"
+    },
+    {
+      "id": 4,
+      "imageUrl": "/assets/image/pages/news/blog-news/04.png",
       "category": "guides",
-      "title": "The rising cost of fuel in the UAE and how to avoid it",
-      "text": "Platea dictumst quisque sagittis purus sit amet volutpat consequat. Porta nibh venenatis cras sed felis eget."
+      "added": "2023-02-20T00:00:00.000Z",
+      "views": 3953,
+      "title": "New Car or Used Car: Pros and Cons to buying second-hand",
+      "content": [
+        {
+          "title": "Freedom of choice",
+          "text": "If you’re someone who knows what they want and is happy to pay (and wait) for it, buying a new car from a dealership allows for a multitude of options and a personalised buying experience. The car you buy will be exactly what you want."
+        },
+        {
+          "title": "Latest technology",
+          "text": "Given our lives are so tech-heavy now, it makes sense to keep up with the times. Plus, the latest engine technology will save you money at the fuel bowser."
+        },
+        {
+          "title": "Peace of mind",
+          "text": "Many carmakers now offer five-, seven- or even 10-year warranties, meaning the car may be covered for your entire ownership. The rise of capped-price servicing plans that paint a photo-realistic picture of ongoing costs makes it easier to budget.\n\n"
+        },
+        {
+          "title": "Financial freedoms",
+          "text": "Getting finance for a new car is a hell of a lot cheaper than used cars, with much lower interest rates, pre-paid servicing rolled into finance packages and guaranteed future values. It’s an ecosystem that makes new cars cheap and easy in the long run."
+        },
+        {
+          "title": "It’s yours, all yours!",
+          "text": "Consider: It'll be free from damage, stains, stenches and with barely any kilometres on the odometer."
+        }
+      ],
+      "text": "We help you weigh up the pros and cons of buying a brand new car against buying a used car"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/assets/image/pages/news/blog-news/05.png",
+      "category": "guides",
+      "added": "2023-05-18T00:00:00.000Z",
+      "views": 4501,
+      "title": "ENRIGHT: The trouble with buying and selling used cars in 2022",
+      "content": [
+        {
+          "title": "How would you like to earn an easy hundred grand?",
+          "text": " Simply subscribe to my newsletter and I’ll show you how! Alternatively, just buy a Ferrari 550 Maranello in the UK for the equivalent of $160K, ship it here (it’s allowable on the SEVS list), pay the taxman, undercut every other seller and pocket the change."
+        },
+        {
+          "title": "Where’s the catch, I hear you ask?",
+          "text": "All the numbers check out. Shipping and tax would make the car around $205,000 landed here in Australia and you’d do well to find one for sale for much under $400K. Money in the bank, right?"
+        },
+        {
+          "title": "At first, there doesn’t seem to be one.",
+          "text": "Then you realise that the examples you’ve been looking at to form your gauge for pricing were there last month and the month before that. They’re just not selling."
+        },
+        {
+          "title": "Become used to the narrative",
+          "text": "What’s more, the cars that are shifting aren’t the cheapest examples either. It seems that buyers are only willing to part with their money for vehicles with 24-carat service histories. Low mileage, locally-supplied, in the right colour. Preferably rare editions. Everybody knows that we’re operating in a pricing bubble at the moment and nobody wants to be the one left with a big liability when it goes pop."
+        }
+      ],
+      "text": "There are people buying used cars right now who are about to take an enormous bath."
+    },
+    {
+      "id": 6,
+      "imageUrl": "/assets/image/pages/news/blog-news/06.png",
+      "category": "news",
+      "added": "2023-02-08T00:00:00.000Z",
+      "views": 5921,
+      "title": "Why all-wheel drive is a must for performance EVs",
+      "content": [
+        {
+          "title": "We’ve seen it for a few decades now",
+          "text": "However, it seems evident that Porsche electric sports cars of the future will also sport AWD as a crucial component to the drive experience – and it’s not simply to boast a faster 0-100 time.Björn Förster, the project manager behind the Porsche GT4 e-Performance prototype racing EV, said AWD is going to be vital in fast EVs to help them go, but also to help them stop."
+        },
+        {
+          "title": "EV sports cars",
+          "text": "“There are some regulations that on a road car, you’re only allowed to recuperate until 0.3G. Everything with a higher brake acceleration has to be braked by mechanical brakes. So, it’s the law, at least in Europe, so it’s the same potential on a street car – but on a street car it’s not that relevant because most of the time you don’t brake [that hard]. For street cars, it’s absolutely okay to have a rear-wheel driven car."
+        },
+        {
+          "title": "Decision to go for all-wheel drive",
+          "text": "“The advantage is to save weight, but also to save batteries - because batteries are expensive, you also save money,” he said, suggesting that the GT4 e-Performance’s 450kg of batteries is notably less because it has dual-motor all-wheel drive than if it had been rear-wheel drive. “If you can reduce both of those by putting in an additional motor in the front which doubles the power of the car? It isn’t an option."
+        }
+      ],
+      "text": "Traction? Speed? Those are just some of the reasons to choose AWD."
+    },
+    {
+      "id": 7,
+      "imageUrl": "/assets/image/pages/news/blog-news/07.png",
+      "category": "news",
+      "added": "2024-01-20T00:00:00.000Z",
+      "views": 4921,
+      "title": "New Vehicle Efficiency Standard may not increase car prices as far as industry has Suggested",
+      "content": [
+        {
+          "title": "Australia’s major car brands",
+          "text": "The Federal Chamber of Automotive Industries (FCAI), however, has not been as supportive of the New Vehicle Efficiency Standard (NVES), outwardly at least."
+        }, {
+          "title": "The FCAI warned the NVES",
+          "text": "In 2022 the FCAI engaged S&P Global Research to model the future Australian car market. S&P advised FCAI that electric cars and utes will dominate the light vehicle market in Australia by 2030, even without an efficiency standard."
+        }, {
+          "title": "FCAI of misleading the community and politicians.",
+          "text": "Jafari said the FCAI's own report shows that the market, even without an emissions standard, will change dramatically by the end of this decade. And under that scenario, there will be minimal if any penalties received by the average car.”Climate Change and Energy Minister Chris Bowen claims the NVES would save drivers on average $1000 per year on fuel, but has not released modelling on the impact on prices."
+        }
+      ],
+      "text": "Car brands support NVES. FCAI not so much."
+    },
+    {
+      "id": 8,
+      "imageUrl": "/assets/image/pages/news/blog-news/08.png",
+      "category": "reviews",
+      "added": "2024-02-11T00:00:00.000Z",
+      "views": 2542,
+      "title": "Toyota LandCruiser 300 Series chopped and transformed into mind-blowing ute",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "They say that art is the application of human skill and imagination, and honestly, it’s difficult to come up with a better summation of this rig."
+        },
+        {
+          "title": "Meet Pete Newell",
+          "text": "Meet Pete Newell, who owns Offroad & Outback in Romsey, Victoria. Pete has a long history with Toyotas owning no fewer than 10 of them over the years, most well modified."
+        },
+        {
+          "title": "Pete's Vision",
+          "text": "Recently, he was shopping around for a new bus to turn into his version of the ideal tourer, so it was a no-brainer for him to grab this ex-demo 300 Series LandCruiser as a bit of a blank canvas. From there Pete got somewhat carried away, but the end result is nothing short of sensational."
+        },
+        {
+          "title": "Modifications",
+          "text": "Not only is his steed among the first 300s in the country to get modified into a ute (that number is growing daily), but it also has to be one of the neatest conversions we’ve seen. Ever."
+        },
+        {
+          "title": "Details Matter",
+          "text": "The details are often the difference between a hack job and something clean enough to eat off, and the longer you look at Pete’s Cruiser the more you start to appreciate the time taken and effort that’s gone into it."
+        },
+        {
+          "title": "Getting Started",
+          "text": "This was always going to be built into Pete’s perfect touring weapon, so the usual mods were quickly fitted up as soon as the ink was dry on the rego papers."
+        },
+        {
+          "title": "On the Chop",
+          "text": "As we already alluded to, there are chops and there are chops. Doing a ute conversion is not the most difficult thing in the world to do. But doing a ute conversion properly – well, that takes some serious skill and effort."
+        }
+      ],
+      "text": "Who said you can’t make a good thing much, much better?"
+    },
+    {
+      "id": 9,
+      "imageUrl": "/assets/image/pages/news/blog-news/09.png",
+      "category": "guides",
+      "added": "2023-07-12T00:00:00.000Z",
+      "views": 5421,
+      "title": "Opinion: Can a car ever truly be unsellable?",
+      "content": [
+        {
+          "title": "Unsettling Inquiry",
+          "text": "What happens in your head when someone unexpectedly enquires about buying a car you swore you’d never sell? If you’re as attached to a car as I am, it’s actually rather unsettling."
+        },
+        {
+          "title": "Brand Loyalty",
+          "text": "You see, for reasons that only now am I beginning to unpack, early on in my life I decided that Nissan was ‘my’ brand. Never had I really questioned it, either."
+        },
+        {
+          "title": "Influence of Family",
+          "text": "It wasn’t because of Gran Turismo (although shoutout to the Pennzoil R33 GT-R LM of GT2), or The Fast and the Furious, either. It was, like so many of these stories, down to my dad."
+        },
+        {
+          "title": "Family History",
+          "text": "Dad’s a car guy, and granddad was too. Part of me thinks it might actually be somewhat hereditary."
+        },
+        {
+          "title": "Heritage",
+          "text": "It’s only as I feel I’m beginning to get older, that I’m starting to reflect more on where I come from. I come from a family of immigrants."
+        },
+        {
+          "title": "Influence of Father",
+          "text": "Growing up in apartheid South Africa as the more globalised post-war car industry matured in tandem, dad has always placed German sports cars on the very highest pedestal."
+        },
+        {
+          "title": "Identity Formation",
+          "text": "All this means that the very notion of selling my GT-R involves some internal disentanglement from an identity I’ve unknowingly spent my whole life cultivating."
+        },
+        {
+          "title": "Emotional Attachment",
+          "text": "So when a polite message landed in my Facebook inbox a few weeks ago, raising the notion of relinquishing a car I swore I’d never sell, it felt something akin to cutting off my own finger."
+        },
+        {
+          "title": "Reflection",
+          "text": "After deep reflection, I did throw out a number – knowing it was far beyond market value."
+        }
+      ],
+      "text": "Affat ponders the emotional weight of being asked to sell the car he planned to own forever"
+    },
+    {
+      "id": 10,
+      "imageUrl": "/assets/image/pages/news/blog-news/10.png",
+      "category": "reviews",
+      "added": "2023-11-02T00:00:00.000Z",
+      "views": 1652,
+      "title": "2023 Ford Ranger build: Job done!",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "Our Ford Ranger Sport V6 has been our biggest build to date, and as always we leant on some of the best brands and aftermarket outfitters in the country to source all the gear to turn it into a capable touring rig."
+        },
+        {
+          "title": "Acquisition",
+          "text": "We bought the Ranger straight off the Ford press-vehicle fleet following the model launch, allowing us to get it sooner than buying it new, as there was a wait list for the new V6 Ranger at the time. It already had 6000km on it when we got it, so it was just run-in for us."
+        },
+        {
+          "title": "Popularity of the Ford Ranger",
+          "text": "The new Ford Ranger promised to be the most significant new 4x4 model from 2022 into 2023, becoming the best-selling new vehicle overall in Australia in 2023. Ford’s V6 turbo-diesel engine was a monumental addition to the midsize 4x4 ute market."
+        },
+        {
+          "title": "Choice of Model",
+          "text": "We chose the Sport model Ranger for its features including leather seats, LED lights, and chrome delete, which we preferred for a more modern look."
+        },
+        {
+          "title": "Canopy Installation",
+          "text": "Our plan was always to remove the factory cargo tub and fit a chassis-mounted canopy to the back of the Ranger. Trig Point Canopies provided us with an exceptional product and helped with various aspects of the build, including coordinating with other suppliers."
+        },
+        {
+          "title": "Electrical System",
+          "text": "The canopy houses a Projecta Intelli-Grid power system, managed by multiple sources including an inverter/charger, DC-DC charger, solar charge controller, and lithium battery monitor, providing comprehensive power for life on the road and off-grid touring."
+        },
+        {
+          "title": "Protection and Suspension",
+          "text": "We fitted the Ranger with a TJM Venturer bar, Torq 9.5 winch, underbody protection, and side steps for added durability and recovery capability. Tough Dog suspension was installed for a firmer and more controlled ride, along with an upgrade to handle increased weight."
+        },
+        {
+          "title": "Exhaust System",
+          "text": "A replacement exhaust system from Pacemaker Exhausts was installed to improve performance and extend the life of the diesel particulate filter (DPF)."
+        },
+        {
+          "title": "Lighting Upgrades",
+          "text": "We installed Narva LED driving lights on the TJM Venturer bar and Narva EX2 LED light bars on the Rola Titan Tray for improved visibility during night driving."
+        },
+        {
+          "title": "Rooftop Gear",
+          "text": "A pair of Rola MkIII Titan trays were fitted to carry additional gear, including Maxtrax mounts, an Australian-made 270° awning from Boss Aluminium, and solar panels for off-grid power."
+        }
+      ],
+      "text": "We wrap up the build of our Ford Ranger Sport and look back at all the awesome gear that’s been fitted to it"
+    },
+    {
+      "id": 11,
+      "imageUrl": "/assets/image/pages/news/blog-news/11.png",
+      "category": "guides",
+      "added": "2023-10-07T00:00:00.000Z",
+      "views": 4012,
+      "title": "Should you buy a used EV? Depreciation & checklist guide",
+      "content": [
+        {
+          "title": "Is it time to buy a second-hand EV?",
+          "text": "Well, yes, actually. They're not getting any cheaper as a brand-new option, and the waits can be long. Getting into a used EV right now could be just what you need."
+        },
+        {
+          "title": "Why do EVs depreciate more?",
+          "text": "Electric vehicles generally depreciate quicker than traditional internal combustion engine (ICE) models today, which is a win for would-be used EV buyers."
+        },
+        {
+          "title": "Electric car servicing explained: What do EVs cost to maintain?",
+          "text": "EVs still need some routine maintenance as they share many ‘consumables’ with petrol and diesel vehicles, including tyres, brakes, suspension, lights, electronics, and the 12-volt electronics battery."
+        },
+        {
+          "title": "Charging habits: AC or DC, 80% or full?",
+          "text": "How previous owners charge their electric car is also a sign of the battery condition. To maintain good battery health, it’s best practice to predominantly charge on slow AC power."
+        },
+        {
+          "title": "Tyre wear: Check tread depth",
+          "text": "Since EVs are naturally heavier and feature instant torque, their tyres are typically under more stress than the average car."
+        },
+        {
+          "title": "Brake corrosion",
+          "text": "Electric cars are more efficient than conventional ICE cars thanks in part to regenerative braking, but there is a downside. It's the EV version of engine braking and owners gain back some ‘fuel’ in return."
+        },
+        {
+          "title": "Charging plug and cables",
+          "text": "Most car brands have adopted the charging connector type as the universal standard in Australia and Europe, but some are outliers."
+        },
+        {
+          "title": "Are imported EVs worth buying?",
+          "text": "Some used electric cars are imported – primarily from Japan and the United Kingdom – where there is a larger EV market."
+        }
+      ],
+      "text": "Want to buy a cheaper electric car? A used example might be the answer, but there are a few things to consider first"
+    },
+    {
+      "id": 12,
+      "imageUrl": "/assets/image/pages/news/blog-news/12.png",
+      "category": "reviews",
+      "added": "2024-01-07T00:00:00.000Z",
+      "views": 1912,
+      "title": "2024 BMW M2 manual vs Toyota GR Supra manual comparison",
+      "content": [
+        {
+          "title": "Is it time to buy a second-hand EV?",
+          "text": "Well, yes, actually. They're not getting any cheaper as a brand-new option, and the waits can be long. Getting into a used EV right now could be just what you need."
+        },
+        {
+          "title": "Snapshot",
+          "text": "More affordable used EV options are slowly flowing into the market. But, pay attention to battery health, brake corrosion, tyres. Imported used EVs are an option, but buyer beware. Brand-new electric cars won’t be less than $30,000 anytime soon in Australia. But, as more new EVs are sold, the range of affordable used market EVs is growing. Despite EVs being cheaper overall to own, price remains the key barrier to adoption."
+        },
+        {
+          "title": "Used EV depreciation",
+          "text": "Electric vehicles generally depreciate quicker than traditional internal combustion engine (ICE) models today, which is a win for would-be used EV buyers."
+        },
+        {
+          "title": "Used EV checklist: Everything you need to know",
+          "text": "As with buying any used car, take the usual precautions. This includes; checking its roadworthiness, exterior and interior condition, history and servicing logbook records."
+        },
+        {
+          "title": "Battery health: Electric car batteries degrade over time",
+          "text": "EV batteries are designed to last beyond 10 years with minimal range loss. All new EVs are covered by a dedicated battery warranty."
+        },
+        {
+          "title": "Charging habits: AC or DC, 80% or full?",
+          "text": "Manufacturers generally recommend 80% everyday charging limits for lithium-ion batteries. LFP batteries can generally be fully charged everyday."
+        },
+        {
+          "title": "Tyre wear: Check tread depth",
+          "text": "EV-designed tyres reduce the stress and wear. Easy to check tread depth."
+        },
+        {
+          "title": "Brake corrosion",
+          "text": "Rare brake use can lead to corrosion. Electric cars are more efficient than conventional ICE cars thanks in part to regenerative braking, but there is a downside."
+        },
+        {
+          "title": "Charging plug and cables",
+          "text": "Most EVs and charging stations use Type 2/CCS2 plug standard. Adapters enable use on modern connectors."
+        },
+        {
+          "title": "Are imported EVs worth buying?",
+          "text": "Imported EVs generally bring the price down further than buying a locally-available used EV since they've already been used by a previous owner/s overseas, and the variant usually has less standard features or even a smaller battery than what’s typically sold here."
+        },
+        {
+          "title": "Is it time to buy a second-hand EV?",
+          "text": "Read the news and you’d think petrol is about to run out, everybody’s buying an electric SUV, replacing any overly bright and colourful clothes they own with varying shades of charcoal and slate, and that the rear-drive manual sports car is dead."
+        },
+        {
+          "title": "Which is more fun to drive?",
+          "text": "Both are great fun to drive – and seriously fast – but despite their on-paper similarities, feel very different."
+        },
+        {
+          "title": "Which is the better daily driver?",
+          "text": "The M2. The ride quality is nicer, it’s easier to see out of and it’s more practical with a rear seat you might even put adults in."
+        },
+        {
+          "title": "Any other things to consider?",
+          "text": "Both come with a five-year warranty and cost about the same to service over five years or five services."
+        },
+        {
+          "title": "The Wheels verdict",
+          "text": "The M2 is the better vehicle for driving thrills and daily living. It’s a lot faster, more practical, more fun, easier to trust and with its myriad modes, there’s more to play with."
+        }
+      ],
+      "text": "Straight-sixes, six-speed manuals and rear-wheel drive – it doesn’t get much better than this, especially when one costs quite a bit less than the other"
+    },
+    {
+      "id": 13,
+      "imageUrl": "/assets/image/pages/news/blog-news/13.png",
+      "category": "reviews",
+      "added": "2024-02-28T00:00:00.000Z",
+      "views": 3210,
+      "title": "2024 Toyota LandCruiser 70 towing comparison: V8 vs inline 4",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "When Toyota launched its all-new 70 Series toward the end of 2023, the legendary off-roader landed with a 1GD 2.8-litre four-cylinder 150kW/500Nm turbo-diesel engine for the first time. The inline-four joined Toyota’s venerable 1VD 4.5-litre V8 turbo-diesel, with many purists holding reservations about the I4’s towing ability. Following a test run in both vehicles towing a 3100kg Kedron off-road caravan, it’s safe to say those reservations are completely unwarranted."
+        },
+        {
+          "title": "Towing Specs",
+          "text": "2024 LandCruiser 79 GXL double-cab\nEngine: I4 turbo-diesel, V8 turbo-diesel\nTransmission: 6-speed automatic, 5-speed manual GCM: 7010kg Towing capacity: 3500kg Payload: 1325kg, 1270kg Final drive ratio: 4.3:1, 3.09:1"
+        },
+        {
+          "title": "Performance Comparison",
+          "text": "The four-cylinder engine feels lively compared to the V8. It’s more willing to get up and go, while the V8 likes to lope along and take its time to build speed when you put your foot down. The auto transmission not only has an extra ratio that benefits acceleration, but the final drive is a lower at 4.3:1 compared to the V8 model’s 3.09:1. Nowhere is this performance difference more evident than when towing with the two powertrains."
+        },
+        {
+          "title": "Impressions",
+          "text": "By comparison, the V8 picked up speed more lazily when rowing through the gears but it cruised just as nicely once up to speed. But it was significantly slower than the four-cylinder vehicle when accelerating out of washouts. The inclusion of an automatic transmission will entice those who want to tow, but convincing them that the four-cylinder engine is up to the job might be a hard task."
+        },
+        {
+          "title": "Conclusion",
+          "text": "The four-cylinder engine option, along with the automatic transmission, makes the 70 Series easier to drive. The 1GD engine is more enthusiastic than the V8 and with less weight over the front-end, it feels a touch more nimble in the handling department. That lighter weight also adds around 55kg to the vehicle’s payload capacity."
+        }
+        ],
+      "text": "Does the new four-cylinder LC70 have the pulling power to match the mighty V8?"
+    },
+    {
+      "id": 14,
+      "imageUrl": "/assets/image/pages/news/blog-news/14.png",
+      "category": "news",
+      "added": "2023-12-29T00:00:00.000Z",
+      "views": 2312,
+      "title": "Polestar secures $1.5b funding as Volvo reduces stake to 18%",
+      "content": [
+        {
+          "title": "Loan Acquisition by Polestar",
+          "text": "EV brand Polestar has secured a three-year, US$950 million loan from a consortium of 12 global banks, including BNP Paribas, Natixis, Standard Chartered, BBVA, HSBC, and SPDB. The company also reported a cash balance of approximately USD 770 million as of December 31, 2023."
+        },
+        {
+          "title": "Volvo's Response",
+          "text": "Volvo responded to an 83% fall in Polestar's share price by cutting the spinoff brand's funding. Volvo is evaluating a potential adjustment to its shareholding, with Geely Sweden Holding being the primary recipient. Geely and its subsidiary now hold the largest stakes in Polestar."
+        },
+        {
+          "title": "Geely's Role",
+          "text": "Geely CEO Daniel Li stated that Geely intends to retain its shares in Polestar and participate in future financing activities. Volvo will retain an 18% stake in Polestar and remain a strategic partner in various areas."
+        },
+        {
+          "title": "Ownership Structure and Outlook",
+          "text": "Polestar's new ownership structure positions it within the Geely group alongside other brands like Volvo, Lotus, and Zeekr. Despite layoffs and external investment conditions, Polestar expects improved fortunes with the market launch of Polestar 3 and Polestar 4 SUVs."
+        },
+        {
+          "title": "Product Pipeline",
+          "text": "Polestar anticipates volume growth and double-digit gross profit margin by the end of the year, driven by the launch of Polestar 3 and Polestar 4 SUVs. The brand also plans to introduce its halo models: Polestar 5 sedan and Polestar 6 convertible."
+        }
+      ],
+      "text": "Polestar gets a big boost with new funding and a longer-term commitment from parent Geely, now a direct shareholder"
+    },
+    {
+      "id": 15,
+      "imageUrl": "/assets/image/pages/news/blog-news/15.png",
+      "category": "news",
+      "added": "2024-01-10T00:00:00.000Z",
+      "views": 1891,
+      "title": "Monash University opens 45 EV chargers to the public across four campuses",
+      "content": [
+        {
+          "title": "Expansion of Charging Infrastructure",
+          "text": "Monash University is increasing the number of 'ultra fast' electric car chargers in Victoria's urban areas as part of its commitment to sustainability. The new sites offer a total of 20 x 150kW charging bays across various locations."
+        },
+        {
+          "title": "Charging Station Specifications",
+          "text": "The charging bays include 150kW units, 7kW bays, and 22kW bays, catering to different charging needs. These stations are accessible to Monash University staff, students, and the general public."
+        },
+        {
+          "title": "Funding and Installation",
+          "text": "Installed by Engie and operated on the Chargefox network, the new stations received partial funding from the Victorian Government's Zero Emissions Vehicles Commercial Sector Innovation Fund (CSIF)."
+        },
+        {
+          "title": "Green and Cost-Effective Charging",
+          "text": "By utilizing the solar power on the grid, individuals can charge their electric vehicles at Monash's stations in an environmentally friendly and cost-effective manner, according to Associate Professor Roger Dargaville, Director (Interim) of the Monash Energy Institute."
+        },
+        {
+          "title": "Charging Fees",
+          "text": "While the university's revenue from these locations is undisclosed, the charging fees are in line with Chargefox's pricing at many other locations across Australia. Fees vary based on charger type and duration of idle time."
+        }
+      ],
+      "text": "A host of new fast and standard EV chargers will be available to students and the public alike"
+    },
+    {
+      "id": 16,
+      "imageUrl": "/assets/image/pages/news/blog-news/16.png",
+      "category": "guides",
+      "added": "2023-09-19T00:00:00.000Z",
+      "views": 3982,
+      "title": "Holden VE Commodore SS: Buyer’s Guide",
+      "content": [
+        {
+          "title": "Background",
+          "text": "Holden invested heavily in the development of the VE Commodore, which was meant to secure the brand's future and support export opportunities. However, it fell short of expectations, leaving behind memorable models like the Calais and SS."
+        },
+        {
+          "title": "Structural Improvements",
+          "text": "The VE Commodore featured a new structure aimed at enhancing occupant safety, handling, and reducing NVH. This included a redesign of the front and rear suspensions to improve steering response and stability."
+        },
+        {
+          "title": "Engine and Transmission",
+          "text": "The VE Commodore offered various trim levels with V6 and V8 engines. The V8 variants, such as the SS and Calais V, were equipped with a 270kW 6.0-litre pushrod motor, paired with either a six-speed manual or automatic transmission."
+        },
+        {
+            "title": "Market Overview",
+          "text": "Original prices and trim levels are now secondary to the vehicle's overall condition and mileage. While low mileage examples are rare, they are highly desirable in today's market."
+        },
+        {
+          "title": "Buying Considerations",
+          "text": "Prospective buyers should inspect the vehicle for signs of poor quality crash repairs, engine issues, and suspension wear. Interior components, such as dash cracks and worn leather trim, should also be evaluated."
+        },
+        {
+          "title": "Specifications",
+          "text": "The VE Commodore was available as a four-door sedan and station wagon, powered by a 6.0-litre V8 engine producing 270kW of power and 530Nm of torque. It offered both automatic and manual transmissions."
+        }
+      ],
+      "text": "Everything you need to know about buying a VE-generation SS Commodore, including why they're the best bargain available for your next build"
+    },
+    {
+      "id": 17,
+      "imageUrl": "/assets/image/pages/news/blog-news/17.png",
+      "category": "reviews",
+      "added": "2023-12-29T00:00:00.000Z",
+      "views": 2672,
+      "title": "Supersize me: 2023 Chev Silverado 1500 ZR2 review and LTZ Premium tow test",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "The Chevrolet Silverado, imported by GMSV into Australia, has received a minor refresh for 2023, including a new front-end look and upgraded interior technology. The model lineup has been adjusted, with the LT Trail Boss discontinued and the ZR2 introduced alongside the LTZ Premium."
+        },
+        {
+          "title": "Model Lineup and Pricing",
+          "text": "The ZR2, positioned as the performance model, features enhanced suspension for both on- and off-road performance, along with a distinctive blacked-out styling. The entry price for the ZR2 is $133,000, while the LTZ Premium starts at $128,000."
+        },
+        {
+          "title": "Exterior Features",
+          "text": "The ZR2 comes with a black grille, LED headlights, and 18-inch black alloy wheels with mud-terrain tires. Optional features include premium paint, electric tonneau cover, round side steps, and black Chevrolet tailgate lettering."
+        },
+        {
+          "title": "Interior Comfort",
+          "text": "The interior of the Silverado offers ample space for both front and rear passengers, with leather seats featuring heating and cooling functions. The ZR2 includes a 13.4-inch color touchscreen and a 12.3-inch configurable instrument cluster."
+        },
+        {
+          "title": "Safety Features",
+          "text": "Passenger safety is ensured with features like low-speed AEB, rear cross-traffic alert, lane-keeping alert, and multiple exterior cameras. The Silverado provides subtle seat vibration warnings for lane departure, enhancing safety."
+        },
+        {
+          "title": "Powertrain and Suspension",
+          "text": "Both the ZR2 and LTZ Premium are powered by a 6.2L V8 engine producing 313kW and 624Nm, paired with a 10-speed automatic transmission. The ZR2's suspension features DSSV shock absorbers from Multimatic, enhancing both on- and off-road performance."
+        },
+        {
+          "title": "Towing Capabilities",
+          "text": "The Silverado demonstrates excellent towing capabilities, with the LTZ Premium towing a 2800kg caravan with ease. The ZR2 offers selectable front and rear locking differentials and multiple drive modes for off-road use."
+        },
+        {
+          "title": "Weights and Payloads",
+          "text": "The ZR2 has a payload of 717kg and a towing capacity of up to 4200kg with a 70mm tow ball. The LTZ Premium offers a higher payload of 757kg and a towing capacity of up to 4500kg with the same tow ball."
+        }
+      ],
+      "text": "We spend a week with the ZR2, and then take the LTZ Premium on a towing loop"
+    },
+    {
+      "id": 18,
+      "imageUrl": "/assets/image/pages/news/blog-news/18.png",
+      "category": "news",
+      "added": "2023-12-02T00:00:00.000Z",
+      "views": 2817,
+      "title": "Report cards: Ford, Mercedes, Tesla lead new survey on EV sustainability & human rights",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "Lead the Charge, a self-appointed watchdog for the car industry, released its 2024 report assessing the efforts of leading automotive manufacturers to ensure sustainability and human rights within their EV supply chains."
+        },
+        {
+          "title": "Methodology",
+          "text": "The assessment is based on publicly available reporting from 18 automotive manufacturers, focusing on sustainability and human rights aspects within their supply chains. The methodology has been updated for 2024, with improvements in precision and definitions."
+        },
+        {
+          "title": "Top 10 Brands",
+          "text": "Ford leads the scoreboard with a 42% score, followed by Mercedes and Tesla. Notably, all brands have failed on indigenous peoples' rights, with marked progress seen in reducing supply chain emissions."
+        },
+        {
+          "title": "Key Findings",
+          "text": "Tesla's significant improvement is attributed to disclosing scope 3 emissions and progress in responsible sourcing and indigenous peoples' rights. However, there's industry-wide inaction on ensuring a just and equitable transition across automotive supply chains."
+        },
+        {
+          "title": "Industry Observations",
+          "text": "The report highlights the urgent need for automakers to address supply chain emissions to meet climate goals. It also criticizes Toyota and others for insufficiently cleaning up their supply chains, risking their competitive edge."
+        },
+        {
+          "title": "Global Impact of EU Regulations",
+          "text": "EU regulations have positively influenced automakers worldwide, driving improvements in human rights due diligence and environmental practices."
+        },
+        {
+          "title": "Challenges Ahead",
+          "text": "Despite some progress, there's a significant lack of advancement in indigenous rights, with most major automakers showing no improvement. Transitioning to green steel and decarbonization remain key challenges for the industry."
+        }
+      ],
+      "text": "A coalition of integrity-focused groups has scored the world’s leading carmakers on their efforts to cut problematic supply out of EV manufacturing"
+    },
+    {
+      "id": 19,
+      "imageUrl": "/assets/image/pages/news/blog-news/19.png",
+      "category": "reviews",
+      "added": "2023-11-12T00:00:00.000Z",
+      "views": 3732,
+      "title": "2023 Ford Ranger build: 19,000km update",
+      "content": [
+        {
+          "title": "Introduction",
+          "text": "After a period of inactivity, the 2023 Ford Ranger V6 Project received updates and maintenance, including a fix for an oil leak issue under warranty."
+        },
+        {
+          "title": "Highway Trips",
+          "text": "The Ranger was used for highway trips to Sydney and back for 4x4 shows in 2023. Despite its comfortable cruising on highways, it exhibited high fuel consumption, especially with added accessories and weight."
+        },
+        {
+          "title": "Oil Leak Problem",
+          "text": "Prior to one of the highway runs, an oil leak issue from the oil return line on the turbocharger was reported by Street Machine magazine. This problem, known among Ranger owners, was promptly fixed under warranty by Chadstone Ford."
+        },
+        {
+          "title": "Fuel Consumption",
+          "text": "With accessories, raised ride height, heavy tires, and gear, the Ranger consumed 15.5L/100km on highway runs, resulting in less mileage per tank."
+        },
+        {
+          "title": "Camping Experience",
+          "text": "The Ranger was used for camping, showcasing its functionality and convenience for such purposes. The Boss Aluminium awning and Trig Point canopy proved useful in adverse weather conditions."
+        },
+        {
+          "title": "Accessory Appreciation",
+          "text": "The Trig Point canopy, MSA Powerslide, Projecta Intelli-Grid system, and Dometic fridge were highlighted for their functionality and convenience during camping trips."
+        }
+      ],
+      "text": "A run to the hills in our V6 Ranger"
+    },
+    {
+      "id": 20,
+      "imageUrl": "/assets/image/pages/news/blog-news/20.png",
+      "category": "news",
+      "added": "2024-02-01T00:00:00.000Z",
+      "views": 2019,
+      "title": "2025 Nissan Navara: New Triton-based ute imagined",
+      "content": [
+        {
+          "title": "February: New Navara, take two!",
+          "text": "With a few distinct styling themes across its global line-up, it's tricky to know just how the next Navara will look. How about this?\nLast year – see below – our mate and rendering wizard Theottle delivered a speculative look at the 2025(?) Navara with styling features borrowed from its latest passenger models."
+        },
+        {
+          "title": "August 2023: New Navara imagined",
+          "text": "The sixth-gen Triton, revealed globally last month and already on sale in Thailand, is built on a new, stronger ladder-frame chassis, and it’s bigger in every dimension than the outgoing model – 15mm longer, 50mm wider and a longer wheelbase that now measures 3130mm.Not only is it bigger and stronger, it’s also more lithe, thanks to the use of high-tensile steel."
+        },
+        {
+          "title": "Australia will receive Triton four variants",
+          "text": "A weakness of the outgoing model has also been rectified, with the Triton’s braked towing capacity now at the industry standard of 3500kg.Stylistically, the new Triton features a muscular front grille, broad shoulders, prominent fender flares, unique T-shaped tail-lights, and new alloy wheels - aspects of which have been employed in these renderings."
+        }
+      ],
+      "text": "It’ll share its DNA with the all-new Triton, so is this what the 2025 Navara will look like?"
+    }
+  ],
+  "recommended_news": [
+    {
+      "id": 1,
+      "imageUrl": "/assets/image/pages/news/featured-news/01.png",
+      "category": "news",
+      "added": "2023-03-12T00:00:00.000Z",
+      "views": 4312,
+      "title": "Best car news stories 2022"
+    },
+    {
+      "id": 2,
+      "imageUrl": "/assets/image/pages/news/featured-news/02.png",
+      "category": "news",
+      "added": "2024-02-11T00:00:00.000Z",
+      "views": 1241,
+      "title": "2025 Kia K4 hatchback: Cerato replacement revealed"
+    },
+    {
+      "id": 3,
+      "imageUrl": "/assets/image/pages/news/featured-news/03.png",
+      "category": "guides",
+      "added": "2024-01-12T00:00:00.000Z",
+      "views": 2024,
+      "title": "The Most Reliable SUV and Pickup Brands"
+    },
+    {
+      "id": 4,
+      "imageUrl": "/assets/image/pages/news/featured-news/04.png",
+      "category": "reviews",
+      "added": "2024-01-15T00:00:00.000Z",
+      "views": 2141,
+      "title": "2024 Best Electric Cars Under $80K"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/assets/image/pages/news/featured-news/05.png",
+      "category": "news",
+      "added": "2024-01-12T00:00:00.000Z",
+      "views": 1743,
+      "title": "Top 40 cars of 2024: 10 to 1"
+    },
+    {
+      "id": 6,
+      "imageUrl": "/assets/image/pages/news/featured-news/06.png",
+      "category": "guides",
+      "added": "2023-11-21T00:00:00.000Z",
+      "views": 1243,
+      "title": "April 2024 issue of 4X4 Australia is out now"
+    },
+    {
+      "id": 7,
+      "imageUrl": "/assets/image/pages/news/featured-news/07.png",
+      "category": "reviews",
+      "added": "2023-07-22T00:00:00.000Z",
+      "views": 1311,
+        "title": "Peugeot E-5008: 7-seat electric SUV revealed"
     }
   ]
 }

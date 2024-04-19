@@ -1,13 +1,13 @@
 import React from 'react';
-import Label from "../../../../../../shared/components/Form/Label/Label";
 import {Link} from "react-router-dom";
-import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
+import GreenButton from "../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import {SubmitHandler, useForm} from "react-hook-form";
-import Input from "../../../../../../shared/components/Form/Input/Input";
-import {emailValidator, passwordLoginValidator} from "../../../../../../shared/utils/validators";
-import {TLoginForm} from "./types/login.types";
+import { TLoginForm } from './types/login.types';
 import {usePathType} from "../../shared/hooks/usePathType";
+import Label from "../../../../../../shared/components/forms/Form/Label/Label";
+import Input from "../../../../../../shared/components/forms/Form/Input/Input";
 import AuthPass from "../../shared/AuthPass";
+import {emailValidator, passwordLoginValidator} from "../../../../../../shared/utils/validators";
 
 const LoginForm = () => {
     const {register, reset, handleSubmit, formState:{errors}} = useForm<TLoginForm>({

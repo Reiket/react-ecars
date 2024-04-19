@@ -8,7 +8,7 @@ export const fetchOffers = (shipNumber: number): ThunkType => {
             dispatch(actions.toggleIsFetching(true));
             let {data} = await offerAPI.getOffersCard(shipNumber);
             dispatch(actions.toggleIsFetching(false));
-            dispatch(actions.setOffers(data));
+            dispatch(actions.setOffers(data.data));
         } catch (err) {
             alert("Something went wrong.Please, try later! " + err);
             console.log("Error:" + err);

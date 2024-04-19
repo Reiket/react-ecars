@@ -1,7 +1,7 @@
 import React from 'react';
 import DetailsPopup from "./components/DetailsPopup/DetailsPopup";
 import {contacts} from "../../../../../../../../../../../../shared/Contacts/contacts-aray";
-import GreenButton from "../../../../../../../../../../../../shared/components/GreenButton/GreenButton";
+import GreenButton from "../../../../../../../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import {bodyOverflow} from "../../../../../../../../../../../../shared/utils";
 import {Title} from "../../../../../../../../../../../../shared/components/Title/Title";
 

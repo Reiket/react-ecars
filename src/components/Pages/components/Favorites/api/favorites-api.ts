@@ -1,14 +1,16 @@
 import {instance} from "../../../../../app/api/api";
 import {ItemsType} from "../../../shared/components/Card/types/card.types";
+import axios from "axios";
+import {API} from "../../../../../app/api/types/api.types";
 
 export const favoritesAPI = {
     async getFavorites(number = 0) {
-        return instance.get<Array<ItemsType>>(`/favorites?ship=${number}`)
+        return instance.get<API<ItemsType[]>>(`/favorites`,)
     },
     addToFavorites(item: ItemsType) {
-        return instance.post<Array<ItemsType>>("/favorites", item)
+        return instance.post<API<ItemsType[]>>("/favorites", item)
     },
     removeToFavorites(id: number) {
-        return instance.delete(`/favorites/${id}`)
+        return axios.delete(`/api/offers/${id}/remove-from-favorites`)
     }
 }

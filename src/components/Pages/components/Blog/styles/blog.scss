@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "src/shared/styles/base";
+.blog{
+  &__body {
+    padding-top: base.rem(32);
+    display: flex;
+    justify-content: space-between;
+    @include base.adaptiveValue("gap", 128, 20, 1920, 1100, 1);
+    @media (max-width:base.em(1160)) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
+
+//Imports styles children components
+@import "../components/FeaturedPosts/styles/featured-posts";
+@import "../components/BlogList/styles/blog-list";

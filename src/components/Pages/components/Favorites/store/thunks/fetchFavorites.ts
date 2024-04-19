@@ -8,7 +8,7 @@ export const fetchFavorites = (num: number): ThunkType => {
             dispatch(actions.toggleIsLoading(true))
             let {data} = await favoritesAPI.getFavorites(num);
             dispatch(actions.toggleIsLoading(false))
-            dispatch(actions.setFavorites(data))
+            dispatch(actions.setFavorites(data.data))
         } catch (error) {
             console.log("Error:" + error);
             alert("Something went wrong! Please, try again!")

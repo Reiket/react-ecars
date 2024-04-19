@@ -1,7 +1,7 @@
 import React from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
-import './styles/swiper.scss';
+import 'src/shared/styles/swiper.scss';
 import CardLoader from "../../../../../shared/components/Card/components/CardLoader/CardLoader";
 import {selectIsFetchingOffers, selectItems} from "../store/selector/offers-selector";
 import {OffersSliderPropsType} from "./types/offers-slider.types";

@@ -8,26 +8,26 @@ import Communication from "./components/Communication/Communication";
 import Offers from "./components/Offers/Offers";
 import Comments from "./components/Comments/Comments";
 import Brands from "./components/Brands/Brands";
-import Blog from "./components/Blog/Blog";
 import {Element} from "react-scroll";
+import Articles from "./components/Articles/Articles";
 
 const Home: React.FC = () => {
     return (
        <>
            <Intro/>
            <BottomIntro/>
-           <Element name={"offers"}>
-               <Offers/>
-           </Element>
+           {/*<Element name={"offers"}>*/}
+           {/*    <Offers/>*/}
+           {/*</Element>*/}
            <Element name={"brands"}>
                <Brands/>
            </Element>
-           <Send/>
-           <Works/>
-           <Why/>
-           <Comments/>
-           <Blog/>
-           <Communication/>
+           {/*<Send/>*/}
+           {/*<Works/>*/}
+           {/*<Why/>*/}
+           {/*<Comments/>*/}
+           <Articles/>
+           {/*<Communication/>*/}
        </>
     );
 };

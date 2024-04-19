@@ -1,0 +1,32 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.post-blog {
+  background: base.$color-white;
+  box-shadow: 0 base.rem(8) base.rem(16) 0 base.$shadow;
+  border-radius: base.rem(10);
+  transition: box-shadow .3s ease 0s;
+  &__image {
+    img {
+      border-radius: base.rem(10) base.rem(10) 0 0;
+      width: 100%;
+      height: auto;
+      @media (min-width: base.$pc) {
+        height: base.rem(220);
+      }
+    }
+  }
+  &__content {
+    padding: base.rem(16);
+  }
+  &__title {
+    padding-top: base.rem(12);
+  }
+  &__text {
+    color: base.$color-gray;
+  }
+  @media (any-hover: hover){
+      &:hover {
+        box-shadow: base.rem(10) base.rem(30) base.rem(30) 0 base.$shadow;
+      }
+  }
+}

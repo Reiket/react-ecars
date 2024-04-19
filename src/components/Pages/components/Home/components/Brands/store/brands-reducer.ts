@@ -1,21 +1,34 @@
-import {ActionsType, BrandsType, InitialStateType} from "./types/brands-reducer.types";
+import {Brands} from "../../../../../../../app/api/types/brands.types";
+import {Reducer} from "redux";
+import {Actions, InitialState} from "./types/brands-reducer.types";
 
-
-let initialState = {
-    brands: [] as Array<BrandsType>,
+export let initialState = {
+    items: [] as Brands[],
+    isLoading: true,
+    hasMore: false,
 }
-
-const brandsReducer = (state = initialState, action: ActionsType): InitialStateType => {
-    switch (action.type) {
-        case "GET_BRANDS":
-            return {
-                ...state,
-                brands: action.brands,
-            }
-        default: {
-            return state;
-        }
-    }
+const brandsReducer: Reducer<InitialState, Actions> = (state = initialState, action) => {
+   switch (action.type) {
+       case "brands/items":
+           return {
+               ...state,
+               items: action.items,
+               isLoading: false,
+           }
+       case "brands/loading":
+           return {
+               ...state,
+               isLoading: action.isLoading
+           }
+       case "brands/more":
+           return {
+               ...state,
+               hasMore: action.hasMore,
+           }
+       default: {
+           return state
+       }
+   }
 }
 
 

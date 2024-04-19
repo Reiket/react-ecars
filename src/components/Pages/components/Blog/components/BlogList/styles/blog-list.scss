@@ -1,0 +1,49 @@
+@use "sass:math";
+@use "src/shared/styles/base";
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    gap: base.rem(24);
+  }
+  &__posts {
+    padding-top: base.rem(24);
+    display: grid;
+    gap: base.rem(24);
+    @media (min-width: base.$mobileSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(base.rem(340) , 1fr));
+    }
+    a {
+      display: flex;
+      align-items: stretch;
+      &:first-child {
+        @media (min-width:base.em(1160)) {
+          grid-column: span 2;
+          grid-row: span 2;
+          .post-blog__image {
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__name {
+    font-weight: 600;
+  }
+  &__category {
+    color: base.$color-green;
+    font-weight: 500;
+    transition: color .3s linear;
+    @media (any-hover: hover){
+      &:hover {
+        color: base.$color-dark-green;
+      }
+    }
+  }
+}

@@ -1,10 +1,11 @@
-import {ActionsType, TInitialState} from "./types/layout.types";
+import {TActions, TInitialState} from "./types/layout.types";
+import {Reducer} from "redux";
 
 export let initialState = {
     isOpenGetPopup: false,
-    isOpenContactPopup: false
+    isOpenContactPopup: false,
 }
-const layoutReducer = (state = initialState, action: ActionsType): TInitialState => {
+const layoutReducer: Reducer<TInitialState, TActions> = (state = initialState, action) => {
     switch (action.type) {
         case "TOGGLE_IS_OPEN_GET_POPUP":
             return {

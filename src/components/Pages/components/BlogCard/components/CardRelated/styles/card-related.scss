@@ -1,0 +1,24 @@
+@use "sass:math";
+@import "/src/shared/styles/base";
+
+.card-related {
+  @include adaptiveValue("padding-top", 48, 20);
+  border-top: rem(1) solid $border-white;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(288), 1fr));
+    gap: rem(24);
+    align-items: stretch;
+    a {
+      display: grid;
+      align-items: stretch;
+      @media (min-width:em(1254)) {
+        .item-blog {
+          &__image img {
+            height: rem(160);
+          }
+        }
+      }
+    }
+  }
+}

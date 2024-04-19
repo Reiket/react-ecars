@@ -3,7 +3,7 @@ import {AiOutlineMail} from "react-icons/ai";
 import {BiHelpCircle} from "react-icons/bi";
 import {CommItemsType} from "./types/communication.types";
 import Text from "../../../../../../shared/components/Title/Text";
-import GreenButton from "../../../../../../shared/components/GreenButton/GreenButton";
+import GreenButton from "../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import {cn} from "../../../../../../shared/utils";
 import usePopupControl from "../../../../../../shared/hooks/usePopupControl";
 import {useAppSelector} from "../../../../../../app/store/hooks";

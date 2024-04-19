@@ -4,7 +4,15 @@
 @import "../components/About/styles/about";
 @import "../components/Authorization/styles/login";
 @import "../components/Authorization/styles/auth";
-@import "../components/News/styles/news";
+@import "../components/Blog/styles/blog";
+@import "../components/BlogCard/styles/blog-card";
 
 //Import shared styles
 @import "../shared/styles/page-shared";
+
+
+.page {
+  &__blog {
+    @include adaptiveValue("margin-top", 48, 30);
+  }
+}

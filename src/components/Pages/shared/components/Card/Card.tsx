@@ -3,7 +3,7 @@ import {MdOutlineKeyboardArrowRight} from "react-icons/md";
 import {Link} from "react-router-dom";
 import {CardPropsType} from "./types/card.types";
 import Text from "../../../../../shared/components/Title/Text";
-import FavButton from "../../../../../shared/components/FavButton/FavButton";
+import FavButton from "../../../../../shared/components/buttons/FavButton/FavButton";
 import {usePrice} from "../../../../../shared/hooks/usePrice";
 import {useAppSelector} from "../../../../../app/store/hooks";
 import {

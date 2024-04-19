@@ -11,10 +11,6 @@
   &__offers {
     @include adaptiveValue("padding-top", 66, 40);
   }
-  &__brands {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
   &__send {
     @include adaptiveValue("padding-top", 96, 50);
     @include adaptiveValue("padding-bottom", 96, 50);
@@ -45,6 +41,10 @@
   }
 }
 
+.section-home-page {
+  @include adaptiveValue("padding-top", 96, 50);
+  @include adaptiveValue("padding-bottom", 96, 50);
+}
 
 //Imports children components
 @import "../components/Blog/styles/blog";

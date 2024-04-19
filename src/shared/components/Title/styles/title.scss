@@ -39,6 +39,15 @@
   font-weight: 600;
 }
 
+.block-title-news {
+  font-size: rem($fz-block-title-news);
+  line-height: math.div(30 , $fz-block-title-news);
+  font-weight: 600;
+  &:not(:last-child) {
+    margin-bottom: em(32, $fz-block-title-news);
+  }
+}
+
 .item-title_big {
   font-size: rem($fz-item-title);
   line-height: math.div(21.6 , $fz-item-title);

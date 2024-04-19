@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.blog-card {
+  &__container {
+    max-width: base.rem(808) !important;
+  }
+  &__section {
+    margin-top: base.rem(32);
+    &_info {
+      margin-top: base.rem(24);
+    }
+    &_related {
+      margin-top: base.rem(48);
+    }
+  }
+}
+
+
+@import "../components/CardInfo/styles/card-info";
+@import "../components/CardShare/styles/card-share";
+@import "../components/CardSubscribe/styles/card-subscribe";
+@import "../components/CardRelated/styles/card-related";

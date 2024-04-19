@@ -1,0 +1,34 @@
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import MainLayout from "../../components/Layout/MainLayout";
+import React from "react";
+const Home = React.lazy(() => import("../../components/Pages/components/Home/Home"))
+const Blog = React.lazy(() => import("../../components/Pages/components/Blog/Blog"))
+const BlogCard = React.lazy(() => import("../../components/Pages/components/BlogCard/BlogCard"))
+
+export const ROUTES = {
+    layout: "/",
+    blog: "/blog",
+    blogCard: (id = null) => (id ? "/blog/:blogCardId" : `/blog/${id}`),
+}
+export const router = createBrowserRouter([
+    {
+        path: ROUTES.layout,
+        element: <MainLayout/>,
+        children: [
+            {
+                index: true,
+                element: <Home/>
+            },
+            {
+                path: ROUTES.blog,
+                element: <Blog/>
+            },
+            {
+                path: ROUTES.blogCard(),
+                element: <BlogCard/>
+            }
+
+        ]
+
+    }
+])
