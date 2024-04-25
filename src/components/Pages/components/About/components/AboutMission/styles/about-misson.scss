@@ -1,19 +1,19 @@
 @use "sass:math";
-@import "../../../../../../../shared/styles/base";
+@use "src/shared/styles/base";
 
 .mission-about {
   &__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: rem(24);
-    @media (max-width:em(920)) {
+    gap: base.rem(24);
+    @media (max-width:base.em(920)) {
       flex-direction: column;
     }
   }
-  &__item {
+  &__image {
     img {
-      @media (max-width:em(920)) {
+      @media (max-width:base.em(920)) {
         max-width: 100%;
         height: auto;
       }

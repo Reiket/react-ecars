@@ -12,7 +12,6 @@ const Slider: React.FC<TSlider> = ({children, classnames, spaceBetween, slidesPe
             modules={[Navigation, Autoplay]}
             spaceBetween={spaceBetween}
             slidesPerView={slidesPerView}
-            autoplay
             loop
             navigation={{
                 prevEl: `.${classnames}__prev`,

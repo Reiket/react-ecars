@@ -5,10 +5,11 @@ import AboutMission from "./components/AboutMission/AboutMission";
 import AboutContacts from "./components/AboutContacts/AboutContacts";
 import AboutSend from "./components/AboutSend/AboutSend";
 import AboutImports from "./components/AboutImports/AboutImports";
+import Container from "../../../../shared/components/Container/Container";
 
 const About: React.FC = () => {
-    return <section className="section__about about">
-        <div className="about__container">
+    return <div className="about">
+        <Container classnames={"about"}>
             <div className="about__body">
                 <AboutInfo/>
                 <AboutBenefits/>
@@ -17,8 +18,8 @@ const About: React.FC = () => {
                 <AboutImports/>
                 <AboutSend/>
             </div>
-        </div>
-    </section>
+        </Container>
+    </div>
 };
 
 export default About;

@@ -1,32 +1,32 @@
 @use "sass:math";
-@import "../../../../../../../shared/styles/base";
+@use "src/shared/styles/base";
 
 .contacts-about {
-  background: $background-white;
-  border-radius: rem(8);
+  background: base.$background-white;
+  border-radius: base.rem(8);
   &__body {
-    @include adaptiveValue("padding", 32, 20);
+    @include base.adaptiveValue("padding", 32, 20);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: rem(32);
+    gap: base.rem(32);
     font-weight: 600;
-    @media (max-width:em(700)) {
+    @media (max-width:base.em(700)) {
       flex-direction: column;
     }
-    @media (max-width:$mobileSmall) {
+    @media (max-width:base.$mobileSmall) {
       align-items: flex-start;
     }
   }
   &__social {
     display: flex;
-    gap: rem(32);
-    @media (max-width:$tablet) and (min-width: em(700)) {
+    gap: base.rem(32);
+    @media (max-width:base.$tablet) and (min-width: base.em(700)) {
       flex-direction: column;
     }
-    @media (max-width:$mobileSmall) {
+    @media (max-width:base.$mobileSmall) {
       flex-direction: column;
-      gap: rem(15);
+      gap: base.rem(15);
     }
   }
   &__link {

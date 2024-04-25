@@ -1,7 +1,18 @@
 @use "sass:math";
 @use "../../../styles/base";
 @import "../../../styles/base/mixins";
-//Container ======================================================================================================================================================================================================================
+
+[class*="__container-big"] {
+  max-width: rem(1080) !important;
+  margin: 0 auto;
+}
+
+[class*="__container-small"] {
+  max-width: rem(808) !important;
+  margin: 0 auto;
+}
+
+
 @if (base.$responsiveType==1) {
   [class*="__container"] {
     @if (base.$maxWidthContainer>0) {
@@ -14,7 +25,7 @@
     }
   }
 } @else {
-  [class*="__container"] {
+  [class*="__container-big"] {
     margin: 0 auto;
     @if (base.$maxWidthContainer>0) {
       max-width: rem(base.$maxWidthContainer);

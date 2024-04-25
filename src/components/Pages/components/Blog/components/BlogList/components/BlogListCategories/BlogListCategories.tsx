@@ -9,7 +9,7 @@ const BlogListCategories: React.FC<PBlogListCategories> = ({onClickToCategory}) 
     return  <ul className="blog-list__categories">
         <Title tag={"h5"} classnames={"blog-list__name"} text={"Categories:"}/>
         {categories.map((c, id) =>
-            <BlogListCategory key={id} category={c} onClickToCategory={onClickToCategory}/>
+            <BlogListCategory key={id} categoryBlog={c} onClickToCategory={onClickToCategory}/>
         )}
     </ul>
 };

@@ -1,0 +1,26 @@
+@use "src/shared/styles/base";
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: base.rem(16);
+  &__image {
+    margin: 0 auto;
+    width: base.rem(52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: base.$color-yellow;
+    height: base.rem(52);
+    border-radius: 50%;
+    img {
+      width: base.rem(20);
+      height: base.rem(20);
+    }
+  }
+}
+
+.benefits-about {
+  flex-direction: column;
+}

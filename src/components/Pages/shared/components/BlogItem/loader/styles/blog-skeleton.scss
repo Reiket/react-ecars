@@ -1,0 +1,88 @@
+@use "/src/shared/styles/base";
+
+.blog-skeleton {
+  &__category {
+    width: base.rem(53);
+    height: base.rem(20);
+    border-radius: base.rem(8);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+  &__content {
+    width: 100%;
+    padding: base.rem(16);
+  }
+  &__title {
+    margin-top: base.rem(8);
+    height: base.rem(45);
+    border-radius: base.rem(8);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+  &__text {
+    margin-top: base.rem(8);
+    border-radius: base.rem(8);
+    height: base.rem(60);
+    animation: skeleton-loading 2s linear infinite alternate;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 92%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 98%);
+  }
+}
+
+
+.post-blog-skeleton {
+  .blog-skeleton {
+    &__image {
+      border-radius: base.rem(8);
+      height: base.rem(220);
+      animation: skeleton-loading 2s linear infinite alternate;
+      @media (max-width: base.em(1254)) {
+        @include base.adaptiveValue("height", 400, 260, 1254, 840, 1);
+      }
+      @media (max-width: base.em(840)) {
+        @include base.adaptiveValue("height", 537, 193, 840, 320, 1);
+      }
+    }
+  }
+}
+
+
+.featured-post-skeleton {
+  display: flex;
+  &:first-child {
+    display: block;
+    .blog-skeleton__image {
+      border-radius: base.rem(8) base.rem(8) 0 0;
+      @media (min-width: base.em(1160)) {
+        height: base.rem(220);
+      }
+    }
+
+    .blog-skeleton__title {
+      width: 100%;
+    }
+  }
+  @media (max-width: base.em(1161)) {
+    display: block;
+    width: 100%;
+  }
+  .blog-skeleton {
+    &__image {
+      border-radius: base.rem(8) 0 0 base.rem(8);
+      @include base.adaptiveValue("height", 300, 150, 1160, 600, 1);
+      animation: skeleton-loading 2s linear infinite alternate;
+      @media (min-width: base.em(1160)) {
+        flex: 0 0 base.rem(160);
+        height: base.rem(120);
+      }
+      @media (max-width: base.em(600)) {
+        @include base.adaptiveValue("height", 300, 150, 600, 320, 1);
+      }
+    }
+  }
+}

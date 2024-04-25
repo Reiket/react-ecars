@@ -1,0 +1,11 @@
+@use "src/shared/styles/base";
+
+.faq {
+  @include base.adaptiveValue("margin-top", 48, 30);
+  @include base.adaptiveValue("margin-bottom", 48, 30);
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: base.rem(12);
+  }
+}

@@ -5,11 +5,12 @@ import BlogCategory from "./components/BlogCategory";
 import Image from "../../../../../shared/components/Image/Image";
 import {PBlogPost} from "./types/blog-item.types";
 import RouterLink from "../../../../../shared/components/links/RouterLink";
+import {ROUTES} from "../../../../../app/router/router";
 
 const BlogPost: React.FC<PBlogPost> = ({category, id, description, classnames, title, imageUrl}) => {
     const url = imageUrl.data.attributes.formats.medium!.url
     const isFeatured = classnames === "featured-post"
-    return <RouterLink url={`/blog/${id}`} classnames={classnames}>
+    return <RouterLink url={ROUTES.blogCard(id)} classnames={classnames}>
         <article className={cn(`${classnames}__article`)}>
             <Image classnames={cn({
                 "news-featured-image": isFeatured

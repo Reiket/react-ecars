@@ -27,10 +27,6 @@
     @include adaptiveValue("padding-top", 96, 50);
     @include adaptiveValue("padding-bottom", 96, 50);
   }
-  &__blog {
-    @include adaptiveValue("padding-top", 96, 50);
-    @include adaptiveValue("padding-bottom", 96, 50);
-  }
   &__communication {
     @include adaptiveValue("padding-top", 96, 50);
     @include adaptiveValue("padding-bottom", 96, 50);
@@ -47,7 +43,7 @@
 }
 
 //Imports children components
-@import "../components/Blog/styles/blog";
+@import "../components/Articles/styles/articles";
 @import "../components/BottomIntro/styles/bottom-intro";
 @import "../components/Brands/styles/brands";
 @import "../components/Comments/styles/comments";

@@ -6,6 +6,7 @@ import store from "./store/store"
 import {Icons} from "../shared/components/Icons/Icons";
 import {capitalizeFirstLetter} from "../shared/utils";
 import BlogCard from "../components/Pages/components/BlogCard/BlogCard";
+import {ROUTES} from "./router/router";
 //React lazy-loading
 const Home = React.lazy(() => import("../components/Pages/components/Home/Home"))
 const Details = React.lazy(() => import("../components/Pages/components/Details/Details"))
@@ -29,20 +30,20 @@ function App() {
       <Provider store={store}>
           <React.Suspense fallback={<Icons.loader/>}>
               <Routes>
-                  <Route element={<MainLayout/>} path={"/"}>
-                      <Route element={<Home/>} path={"/"}/>
+                  <Route element={<MainLayout/>} path={ROUTES.layout}>
+                      <Route element={<Home/>} path={ROUTES.layout}/>
                       {/*<Route element={<Details/>} path={"/details/:id"}/>*/}
                       {/*<Route element={<Favorites/>} path={"/favorites"}/>*/}
-                      {/*<Route element={<About/>} path={"/about"}/>*/}
-                      {/*<Route element={<FAQ/>} path={"/faq"}/>*/}
+                      <Route element={<About/>} path={ROUTES.about}/>
+                      <Route element={<FAQ/>} path={"/faq"}/>
                       {/*<Route element={<Catalog/>} path={"/catalog"}/>*/}
-                      <Route element={<Blog/>} path={"/blog"}/>
-                      <Route element={<BlogCard/>} path={"/blog/:blogCardId"}/>
+                      <Route element={<Blog/>} path={ROUTES.blog}/>
+                      <Route element={<BlogCard/>} path={ROUTES.blogCard(null)}/>
                       {/*<Route element={<Login/>} path={"/login"}/>*/}
                       {/*<Route element={<Register/>} path={"/register"}/>*/}
                       {/*<Route element={<ForgotPass/>} path={"/forgot"}/>*/}
-                      {/*<Route element={<PrivacyPolicy/>} path={"/privacy"}/>*/}
-                      {/*<Route element={<Terms/>} path={"/terms"}/>*/}
+                      <Route element={<PrivacyPolicy/>} path={ROUTES.privacy}/>
+                      <Route element={<Terms/>} path={ROUTES.terms}/>
                   </Route>
               </Routes>
           </React.Suspense>

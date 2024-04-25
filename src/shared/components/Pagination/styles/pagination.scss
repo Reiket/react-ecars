@@ -18,11 +18,11 @@
     border: rem(1) solid $border-white;
     border-radius: rem(8);
     color: $color-gray;
-    transition: all .5s ease 0s;
+    transition: all .8s ease 0s;
     svg {
       color: $color-gray;
       font-size: rem(20);
-      transition: all .5s ease 0s;
+      transition: all .8s ease 0s;
     }
     &:disabled {
       background: $color-pale-white;
@@ -40,14 +40,16 @@
         color: $color-white;
       }
     }
-    @media (any-hover: hover){
-        &:hover {
-          background: $color-green;
-          color: $color-white;
-          svg {
-            color: $color-white;
-          }
-        }
-    }
+   &:not(&.active) {
+     @media (any-hover: hover){
+       &:hover {
+         background: $color-page-green;
+         color: $color-white;
+         svg {
+           color: $color-white;
+         }
+       }
+     }
+   }
   }
 }

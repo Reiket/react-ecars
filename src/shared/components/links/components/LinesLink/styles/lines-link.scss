@@ -1,0 +1,48 @@
+@use "/src/shared/styles/base";
+.lines-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: base.rem(150);
+  @media (any-hover: hover) {
+    &:hover {
+      @include base.lines-link-styles
+    }
+  }
+  @media (pointer: coarse) {
+    @include base.lines-link-styles
+  }
+  &__circle {
+    position: relative;
+    width: base.rem(48);
+    height: base.rem(48);
+    background: base.$color-green;
+    border-radius: base.rem(26);
+    @include base.transition-articles();
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      font-size: base.rem(base.$fz-text);
+      transform: translate(base.rem(17.6), base.rem(-1));
+      margin: auto;
+      color: base.$color-white;
+      @include base.transition-articles()
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 base.rem(48);
+    text-align: center;
+    color: base.$color-green;
+    font-size: base.rem(16);
+    font-weight: 500;
+    @include base.transition-articles();
+  }
+}
+

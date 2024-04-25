@@ -6,11 +6,10 @@
 @import "../components/Authorization/styles/auth";
 @import "../components/Blog/styles/blog";
 @import "../components/BlogCard/styles/blog-card";
+@import "../components/Faq/styles/faq";
 
 //Import shared styles
 @import "../shared/styles/page-shared";
-
-
 .page {
   &__blog {
     @include adaptiveValue("margin-top", 48, 30);

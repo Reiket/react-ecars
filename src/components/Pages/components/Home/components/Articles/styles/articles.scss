@@ -1,0 +1,32 @@
+@use "/src/shared/styles/base";
+
+.articles {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: base.$mobileSmall) {
+      flex-direction: column;
+    }
+  }
+  &__body {
+    padding-top: base.rem(48);
+    display: grid;
+    gap: base.rem(24);
+    @media (min-width: base.$mobileSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(base.rem(392), 1fr));
+    }
+    @media (max-width:base.em(850)) {
+       svg {
+         justify-self: center;
+       }
+    }
+    @media (max-width:base.em(414)) {
+        svg {
+          max-width: 100%;
+          height: auto;
+        }
+    }
+  }
+
+}

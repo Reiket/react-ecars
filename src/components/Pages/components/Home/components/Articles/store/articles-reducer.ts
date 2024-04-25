@@ -13,6 +13,7 @@ const articlesReducer: Reducer<InitialState, Actions> = (state = initialState, a
             return {
                 ...state,
                 articlePosts: action.articlePosts,
+                isLoading: false,
             }
         case "articles/loading":
             return {

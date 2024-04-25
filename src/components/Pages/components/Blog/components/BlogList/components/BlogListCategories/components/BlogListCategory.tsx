@@ -1,17 +1,20 @@
 import React from 'react';
-import {capitalizeFirstLetter} from "../../../../../../../../../shared/utils";
+import {capitalizeFirstLetter, cn} from "../../../../../../../../../shared/utils";
 import {PBlogListCategory} from "../types/blog-list-categories.types";
 import {useAppSelector} from "../../../../../../../../../app/store/hooks";
 import {blogListSelectors} from "../../../store/selectors/blog-list-selectors";
 
-const BlogListCategory: React.FC<PBlogListCategory> = ({ category, onClickToCategory}) => {
-    const {isLoading} = useAppSelector(blogListSelectors)
+const BlogListCategory: React.FC<PBlogListCategory> = ({ categoryBlog, onClickToCategory}) => {
+    const {isLoading, category} = useAppSelector(blogListSelectors)
+    const isCategoryActive = category === categoryBlog
     const onClickHandler = () => {
-        onClickToCategory(category)
+        onClickToCategory(categoryBlog)
     }
-    return  <button disabled={isLoading} onClick={onClickHandler}
+    return  <button disabled={isLoading || isCategoryActive} onClick={onClickHandler}
                     type={"button"}
-                    className="blog-list__category">{capitalizeFirstLetter(category)}</button>
+                    className={cn("blog-list__category", {
+                        "active": isCategoryActive
+                    })}>{capitalizeFirstLetter(categoryBlog)}</button>
 };
 
 export default BlogListCategory;

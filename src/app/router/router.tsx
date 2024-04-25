@@ -1,6 +1,7 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../../components/Layout/MainLayout";
 import React from "react";
+
 const Home = React.lazy(() => import("../../components/Pages/components/Home/Home"))
 const Blog = React.lazy(() => import("../../components/Pages/components/Blog/Blog"))
 const BlogCard = React.lazy(() => import("../../components/Pages/components/BlogCard/BlogCard"))
@@ -8,7 +9,10 @@ const BlogCard = React.lazy(() => import("../../components/Pages/components/Blog
 export const ROUTES = {
     layout: "/",
     blog: "/blog",
-    blogCard: (id = null) => (id ? "/blog/:blogCardId" : `/blog/${id}`),
+    blogCard: ((id: null | number)  => (id ? `/blog/${id}` : "/blog/:blogCardId")),
+    privacy: "/privacy",
+    terms: "/terms",
+    about: "/about"
 }
 export const router = createBrowserRouter([
     {
@@ -24,7 +28,7 @@ export const router = createBrowserRouter([
                 element: <Blog/>
             },
             {
-                path: ROUTES.blogCard(),
+                path: ROUTES.blogCard(null),
                 element: <BlogCard/>
             }
 

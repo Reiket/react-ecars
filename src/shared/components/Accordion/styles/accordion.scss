@@ -1,0 +1,66 @@
+@use "src/shared/styles/base";
+
+.accordion {
+  border-radius: base.rem(8);
+  background: base.$background-white;
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    @include base.adaptiveValue("font-size", base.$fz-item-title, base.$fz-text);
+    flex: 1 1 auto;
+    padding: base.rem(19.2) 0 base.rem(19.2) base.rem(16);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    flex: 0 0 base.rem(60);
+    height: base.rem(60);
+    font-size: base.rem(18);
+    transition: color .3s ease 0s;
+    svg {
+      transition: transform .4s ease 0s;
+    }
+    @media (any-hover: hover){
+      &:hover {
+        color: base.$color-green;
+      }
+    }
+  }
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease 0s;
+    position: relative;
+    p {
+      padding: base.rem(16);
+    }
+    &::before {
+      content:'';
+      position: absolute;
+      height: base.rem(1);
+      width: 100%;
+      background: base.$border-white;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease 0s;
+
+    }
+  }
+  &.active {
+    .accordion__content {
+      height: auto;
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .accordion__button {
+      svg {
+        transform: scale(1, -1);
+      }
+    }
+  }
+}

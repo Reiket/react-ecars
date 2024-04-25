@@ -34,12 +34,29 @@
 }
 
 // Grids
-@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px, $sz: 480px) {
 	display: grid;
 	gap: $gap;
-	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	@media (min-width: $sz) {
+		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	}
 }
-
+@mixin transition-articles($duration: 0.5s, $timing-function: cubic-bezier(0.65, 0, 0.076, 1)) {
+	transition: all $duration $timing-function;
+}
+@mixin lines-link-styles {
+	.lines-link {
+		&__circle {
+			width: 100%;
+			svg {
+				transform: translate(rem(32), rem(-1));
+			}
+		}
+		&__text {
+			color: $color-white;
+		}
+	}
+}
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
 	@if ($startSize==0) {

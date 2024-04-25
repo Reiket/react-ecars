@@ -2,6 +2,10 @@
 @use "src/shared/styles/base";
 .featured-posts {
   flex: 0 0 base.rem(392);
+  @media (max-width:base.em(1161)) {
+    flex: 0;
+    padding-bottom: base.rem(20);
+  }
   &__body {
     display: flex;
     flex-direction: column;
@@ -27,7 +31,5 @@
 }
 
 //Imports styles children components
-
 @import "../components/FeaturedPost/styles/featured-post";
-@import "../components/FeaturedPost/styles/featured-post-skeleton";
 

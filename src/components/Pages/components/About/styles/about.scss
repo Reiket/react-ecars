@@ -1,33 +1,20 @@
 @use "sass:math";
 @import "../../../../../shared/styles/base";
 .about {
-  @include adaptiveValue("margin-top", 96, 50);
   &__container {
-    max-width: rem(1016);
+    max-width: rem(1016) !important;
   }
   &__title {
     &:not(:last-child) {
         margin-bottom: em(40, $fz-title-page);
     }
   }
-  &__benefits {
-    @include adaptiveValue("margin-top", 96, 50);
-  }
-  &__mission {
-    @include adaptiveValue("margin-top", 96, 50);
-  }
-  &__contacts {
-    @include adaptiveValue("margin-top", 96, 50);
-  }
-  &__imports {
-    @include adaptiveValue("margin-top", 96, 50);
-  }
-  &__send {
-    @include adaptiveValue("margin-top", 96, 50);
-    @include adaptiveValue("margin-bottom", 96, 50);
-  }
 }
 
+
+.about-section {
+  @include adaptiveValue("margin-top", 96, 50);
+}
 .about-text {
   &:not(:last-child) {
     margin-bottom: rem(35);
