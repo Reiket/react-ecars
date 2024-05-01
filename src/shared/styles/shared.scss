@@ -43,35 +43,6 @@
     }
   }
 }
-.icon-link {
-  display: flex;
-  align-items: center;
-  gap: rem(6);
-  color: $main-color;
-  font-size: rem(14);
-  line-height: math.div(16 , $fontSize);
-  font-weight: 500;
-  transition: color .3s ease 0s;
-  svg {
-    font-size: rem(20);
-  }
-  @media (any-hover: hover){
-    &:hover {
-      color: $color-green;
-    }
-  }
-}
-.menu-text {
-  color: $color-white;
-  opacity: 70%;
-  transition: opacity 0.3s ease 0s;
-  @media (any-hover: hover){
-      &:hover {
-          color: $color-white;
-          opacity: 100%;
-      }
-  }
-}
 .text {
   font-size: rem($fz-text);
   line-height: math.div(24 , $fz-text);

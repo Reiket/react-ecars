@@ -5,7 +5,7 @@ import React, {useRef} from "react";
 import {bodyOverflow} from "../utils";
 
 type CallbackFunction = (isOpenPopup: boolean) => Action;
-const usePopupControl = (isOpenPopup: boolean, callback: CallbackFunction) => {
+const usePopupControl = (isOpenPopup: boolean, callback: CallbackFunction, popupId = "popup") => {
     const dispatch = useAppDispatch();
     const ref = useRef<HTMLDivElement | null>(null)
     const handleClosePopup = () => {

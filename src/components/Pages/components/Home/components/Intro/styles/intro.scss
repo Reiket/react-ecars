@@ -1,33 +1,25 @@
 @use "sass:math";
-@import "/src/shared/styles/base";
+@use "/src/shared/styles/base";
 .intro {
   background: url("../../../../../../../../public/assets/image/intro/intro.png") no-repeat top / cover;
-  @include adaptiveValue("height", 600, 400);
+  @include base.adaptiveValue("height", 600, 400);
   &__body {
-    @include adaptiveValue("padding-top", 120, 40);
-    @include adaptiveValue("padding-bottom", 120, 40);
-    @include adaptiveValue("max-width",600 , 300);
-  }
-  &__title {
-    font-weight: 600;
-    @include adaptiveValue("font-size", $fz-main-title-home, 35);
-    line-height: math.div(69 , $fz-main-title-home);
-    &:not(:last-child) {
-      margin-bottom: em(32, $fz-main-title-home);
-    }
+    @include base.adaptiveValue("padding-top", 120, 40);
+    @include base.adaptiveValue("padding-bottom", 120, 40);
+    @include base.adaptiveValue("max-width", 600 , 300);
   }
   &__contacts {
     display: flex;
-    @include adaptiveValue("gap", 32, 20);
     align-items: center;
-    @media (max-width:$tablet) {
+    @include base.adaptiveValue("gap", 32, 20);
+    @media (max-width: base.$tablet) {
       align-items: flex-start;
       flex-direction: column;
-      max-width: rem(344);
+      max-width: base.rem(344);
     }
   }
   &__button {
-    @media (max-width:$tablet) {
+    @media (max-width: base.$tablet) {
       width: 100%;
       text-align: center;
     }
@@ -35,21 +27,16 @@
   &__info {
     display: flex;
     flex-wrap: wrap;
-    @include adaptiveValue("gap", 18, 10);
-    @media (max-width:$mobileSmall) {
+    @include base.adaptiveValue("gap", 18, 10);
+    @media (max-width: base.$mobileSmall) {
       flex-direction: column;
     }
   }
   &__item {
     a {
-      display: flex;
-      align-items: center;
-      gap: rem(6);
-      font-weight: 600;
-      transition: color .3s ease-in;
       @media (any-hover: hover){
         &:hover {
-          color: $color-green;
+          color: base.$color-green;
         }
       }
     }

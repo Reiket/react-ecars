@@ -1,16 +1,18 @@
 import React from "react";
 
-export type TFooterItems = {
+export interface PFooterItems  {
     title: string
-    links: Array<TFooterLinks>
+    links: FooterLinks[]
 }
 
-export type TFooterLinks = {
+export interface FooterLinks  {
     url: string
     text?: string
     scroll?: string
     icon?: React.JSX.Element
 }
 
-export type FooterItemsLogo = TFooterItems & {isLogo: boolean}
+export interface FooterItemsLogo extends PFooterItems {
+    isLogo: boolean
+}
 

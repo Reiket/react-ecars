@@ -1,5 +1,5 @@
 export type GreenBtnPropsType = {
-    classnames: string;
+    classnames?: string;
     text: string;
     type: "button" | "link";
     href?: string;

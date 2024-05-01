@@ -1,6 +1,6 @@
 import React from 'react';
 import {cn} from "../../../../../../../../shared/utils";
-import {MenuEnums, shipItemType} from "../../../../types/header.types";
+import {MenuEnums, ShipItem} from "../../../../types/header.types";
 import {TMenuItem} from "../types/menu.types";
 
 const MenuItem: React.FC<TMenuItem> = ({item, filter, onClickHandler, type, id}) => {
@@ -9,9 +9,9 @@ const MenuItem: React.FC<TMenuItem> = ({item, filter, onClickHandler, type, id})
     })}>
         {MenuEnums.selectShip === type ? (
             <>
-                {item && (item as shipItemType).img &&
-                    <img src={(item as shipItemType).img} alt="Flags"/>}
-                {item && (item as shipItemType).country && (item as shipItemType).country}
+                {item && (item as ShipItem).img &&
+                    <img src={(item as ShipItem).img} alt="Flags"/>}
+                {item && (item as ShipItem).country && (item as ShipItem).country}
             </>
         ) : (item) as string[]}
     </li>

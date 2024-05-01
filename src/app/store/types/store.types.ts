@@ -5,5 +5,5 @@ import {Actions} from "../../../components/Pages/components/Home/components/Bran
 
 export type InferActionsType<T> = T extends { [key: string]: (...args: any[]) => infer U } ? U : never
 export type AppStateType = ReturnType<typeof store.getState>
-export type AppDispatch = ThunkDispatch<AppStateType, undefined, Actions>;
+export type AppDispatch = ThunkDispatch<AppStateType, undefined, Action>;
 export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>

@@ -45,6 +45,16 @@
   }
 }
 
+.menu-text {
+  color: $color-white;
+  opacity: 70%;
+  @media (any-hover: hover){
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}
+
 //imports styles shared components
 @import "../components/BlogItem/styles/blog-item";
 @import "../components/Card/styles/card";

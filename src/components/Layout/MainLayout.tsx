@@ -1,5 +1,5 @@
 import React from 'react';
-import {Outlet, useParams} from "react-router-dom";
+import {Outlet, useLocation, useParams} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import GetQuotePopup from "../../shared/components/Popup/components/GetQuotePopup/GetQuotePopup";
@@ -9,12 +9,15 @@ import {fetchFavorites} from "../Pages/components/Favorites/store/thunks/fetchFa
 import {useFilters} from "./components/Header/hooks/useFilters";
 import ContactUsPopup from "../../shared/components/Popup/components/ContactUsPopup/ContactUsPopup";
 import {blogListSelectors} from "../Pages/components/Blog/components/BlogList/store/selectors/blog-list-selectors";
+import {actions} from "./store/actions/layout-actios";
+import {useDispatch} from "react-redux";
 const MainLayout: React.FC = () => {
     const pathname = useParams();
     const {shipNumber} = useAppSelector(selectFilters)
-    const dispatch = useAppDispatch();
+
     const {currentPage} = useAppSelector(blogListSelectors)
     const {isFilterLoading} = useFilters();
+    const location = useLocation();
     // React.useEffect(() => {
     //     if (!isFilterLoading) {
     //         dispatch(fetchFavorites(shipNumber))
@@ -26,7 +29,7 @@ const MainLayout: React.FC = () => {
     return (
        <>
            <ContactUsPopup/>
-           <GetQuotePopup/>
+           {/*<GetQuotePopup/>*/}
            <Header/>
            <main>
                <Outlet/>

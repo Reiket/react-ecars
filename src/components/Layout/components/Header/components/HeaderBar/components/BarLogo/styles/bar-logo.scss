@@ -1,0 +1,39 @@
+@use "src/shared/styles/base";
+
+.header-bar {
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: base.rem(16);
+    &_img {
+      img {
+        position: relative;
+        z-index: 20;
+      }
+    }
+    &::before {
+      content:'';
+      display: block;
+      width: 38%;
+      height: base.rem(110);
+      position: absolute;
+      background: base.$color-white;
+      top: 0;
+      left: -100%;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 17;
+      transition: all 0.3s ease 0s;
+      @media (max-width: base.em(500)) {
+        width: 70%;
+      }
+    }
+    &.active {
+      &::before {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

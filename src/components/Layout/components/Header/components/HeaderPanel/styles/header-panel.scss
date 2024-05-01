@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.header-panel {
+  background: base.$background-dark;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: base.rem(10) 0;
+    font-weight: 500;
+  }
+}
+
+//Imports children components
+@import "../components/PanelContacts/styles/panel-contacts";
+@import "../components/PanelMenu/styles/panel-menu";

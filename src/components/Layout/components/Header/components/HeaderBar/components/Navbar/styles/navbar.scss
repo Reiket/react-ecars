@@ -1,0 +1,117 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.navbar {
+  flex: 1 1 auto;
+  &__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: base.rem(32);
+    row-gap: base.rem(10);
+    @media (min-width: base.em(930)) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: base.rem(930)) {
+      padding-top: base.rem(115);
+      position: fixed;
+      flex-direction: column;
+      left: -100%;
+      top: 0;
+      gap: base.rem(15);
+      z-index: 15;
+      height: 100%;
+      min-width: base.rem(360);
+      display: flex;
+      align-items: center;
+      overflow-y: auto;
+      transition: all 0.3s ease 0s;
+
+      &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        height: 100%;
+        width: base.rem(360);
+        background: base.$color-white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 2;
+        width: 64%;
+        height: 100%;
+        background: base.$color-black;
+        opacity: 60%;
+        transition: all 0.3s ease 0s;
+      }
+      &.active {
+        left: 0;
+
+        &::after {
+          left: 0;
+          visibility: visible;
+          opacity: 1;
+        }
+        &::before {
+          right: base.rem(-1);
+        }
+      }
+    }
+  }
+}
+
+.navbar-item {
+  @media (min-width: base.$mobileSmall) {
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+  &__link {
+    position: relative;
+    z-index: 10;
+    font-weight: 600;
+    transition: color 0.3s ease 0s;
+    &::after {
+      content:'';
+      position: absolute;
+      bottom: base.rem(-5);
+      left: 0;
+      width: 100%;
+      height: base.rem(3);
+      border-radius: base.rem(8);
+      background: base.$color-green;
+      transform: scaleX(0);
+      transition: transform 0.3s linear;
+      transform-origin: bottom right;
+    }
+    @media (any-hover: hover){
+      &:hover {
+        color: base.$color-green;
+        &:after {
+          transform-origin: bottom left;
+          transform: scaleX(1);
+        }
+      }
+    }
+    @media (max-width: base.em(930)) {
+      font-size: base.rem(base.$fz-block-title-home) !important;
+    }
+    &.active {
+      color: base.$color-green;
+      &:after {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+//Imports children components
+@import "../components/NavbarMenu/styles/navbar-menu";

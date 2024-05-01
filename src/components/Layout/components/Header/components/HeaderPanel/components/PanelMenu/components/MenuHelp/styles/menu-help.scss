@@ -1,0 +1,38 @@
+@use "src/shared/styles/base";
+.menu-help {
+  &__list {
+    padding-top: base.rem(15);
+    position: absolute;
+    top: base.rem(20);
+    right: -100%;
+    z-index: 5;
+    min-width: base.rem(200);
+    color: base.$color-white;
+    line-height: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s linear;
+    &.active {
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__tippi {
+    padding: base.rem(8);
+    background: base.$color-light-gray;
+    border-radius: base.rem(8);
+  }
+  @media (any-hover: hover){
+    &:hover {
+      .icon-link {
+        opacity: 100%;
+      }
+      .menu-help__list {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
+}

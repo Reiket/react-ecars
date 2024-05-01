@@ -3,11 +3,9 @@
 .benefits {
   display: flex;
   justify-content: center;
-  text-align: center;
   gap: base.rem(16);
   &__image {
     margin: 0 auto;
-    width: base.rem(52);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,4 +21,14 @@
 
 .benefits-about {
   flex-direction: column;
+  text-align: center;
+  .benefits__image {
+    width: base.rem(52);
+  }
+}
+
+.benefits-intro {
+  .benefits__image {
+    flex: 0 0 base.rem(52);
+  }
 }

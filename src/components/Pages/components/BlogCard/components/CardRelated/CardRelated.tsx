@@ -5,6 +5,7 @@ import {isLoadingRelatedSelector, relatedPostsSelector} from "../../store/select
 import BlogPost from "../../../../shared/components/BlogItem/BlogPost";
 import Section from "../../../../../../shared/components/Section/Section";
 import Container from "../../../../../../shared/components/Container/Container";
+import BlogPostSkeleton from "../../../../shared/components/BlogItem/loader/BlogPostSkeleton";
 
 const CardRelated: React.FC = () => {
     const relatedPosts = useAppSelector(relatedPostsSelector);
@@ -13,12 +14,12 @@ const CardRelated: React.FC = () => {
         <Container classnames={"card-related"}>
             <Title tag={"h3"} text={"Related articles"} classnames={"block-title-news"}/>
             <div className="card-related__body">
-                {relatedPosts.map((item) => {
+                {isLoading ? relatedPosts.map((item) => {
                     let {id, attributes} = item
                     return <BlogPost classnames={"post-blog"} id={id}
                                      imageUrl={attributes.imageUrl!}
                                      key={id} category={attributes.category} title={attributes.title}/>
-                })}
+                }) : <BlogPostSkeleton classnames={"post-blog-skeleton"}/>}
             </div>
         </Container>
     </Section>

@@ -1,3 +1,15 @@
-//Imports all link styles
+@use "/src/shared/styles/base";
 
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: base.rem(6);
+  transition: all .5s linear;
+  font-weight: 500;
+  svg {
+    font-size: base.rem(20);
+  }
+}
+
+//Imports all link styles
 @import "../components/LinesLink/styles/lines-link";

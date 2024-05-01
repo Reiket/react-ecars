@@ -4,18 +4,24 @@ import {Reducer} from "redux";
 export let initialState = {
     isOpenGetPopup: false,
     isOpenContactPopup: false,
+    isBurger: false
 }
 const layoutReducer: Reducer<TInitialState, TActions> = (state = initialState, action) => {
     switch (action.type) {
-        case "TOGGLE_IS_OPEN_GET_POPUP":
+        case "layout/getPopup":
             return {
                 ...state,
                 isOpenGetPopup: action.isOpenGetPopup
             }
-        case "TOGGLE_IS_OPEN_CONTACT_POPUP":
+        case "layout/contactPopup":
             return {
                 ...state,
-                isOpenContactPopup: action.isOpenContactPopup
+                isOpenContactPopup: action.isOpenContactPopup,
+            }
+        case "layout/burger":
+            return {
+                ...state,
+                isBurger: action.isBurger
             }
         default: {
             return state

@@ -1,16 +1,15 @@
-import ship from "../json/shipItem.json"
-export type menuConfigsType = {
+
+export interface MenuConfigs  {
     text?: string
-    items: Array<shipItemType> | Array<string>
+    items: Array<ShipItem> | Array<string>
     filter: number
     type: MenuEnums.selectCurrency | MenuEnums.selectShip
 }
 
-export type shipItemType = {
+export interface ShipItem  {
     img?: string
     country?: string
 }
-export const shipItem: Array<shipItemType> = ship ;
 
 export enum MenuEnums {
     selectShip,

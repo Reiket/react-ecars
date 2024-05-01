@@ -12,27 +12,28 @@ export const ROUTES = {
     blogCard: ((id: null | number)  => (id ? `/blog/${id}` : "/blog/:blogCardId")),
     privacy: "/privacy",
     terms: "/terms",
-    about: "/about"
+    about: "/about",
+    faq: "/faq"
 }
-export const router = createBrowserRouter([
-    {
-        path: ROUTES.layout,
-        element: <MainLayout/>,
-        children: [
-            {
-                index: true,
-                element: <Home/>
-            },
-            {
-                path: ROUTES.blog,
-                element: <Blog/>
-            },
-            {
-                path: ROUTES.blogCard(null),
-                element: <BlogCard/>
-            }
-
-        ]
-
-    }
-])
+// export const router = createBrowserRouter([
+//     {
+//         path: ROUTES.layout,
+//         element: <MainLayout/>,
+//         children: [
+//             {
+//                 index: true,
+//                 element: <Home/>
+//             },
+//             {
+//                 path: ROUTES.blog,
+//                 element: <Blog/>
+//             },
+//             {
+//                 path: ROUTES.blogCard(null),
+//                 element: <BlogCard/>
+//             }
+//
+//         ]
+//
+//     }
+// ])

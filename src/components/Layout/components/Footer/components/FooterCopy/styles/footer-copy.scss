@@ -1,20 +1,20 @@
 @use "sass:math";
-@import "/src/shared/styles/base";
+@use "/src/shared/styles/base";
 .footer {
   &__copy {
-    @include adaptiveValue("padding-top", 60, 40);
+    @include base.adaptiveValue("padding-top", 60, 40);
   }
 }
 .copy {
   display: flex;
   align-items: center;
-  gap: rem(24);
-  color: $color-light-gray;
-  font-size: rem($fz-desc);
-  line-height: math.div(16 , $fz-desc);
-  @media (max-width:$mobileSmall) {
+  gap: base.rem(24);
+  color: base.$color-light-gray;
+  font-size: base.rem(base.$fz-desc);
+  line-height: math.div(16 , base.$fz-desc);
+  @media (max-width:base.$mobileSmall) {
     flex-direction: column;
-    gap: rem(15);
+    gap: base.rem(15);
   }
   &__text {
     flex: 1 1 auto;
@@ -23,7 +23,7 @@
     transition: color .3s ease 0s;
     @media (any-hover: hover){
         &:hover {
-            color: $color-green;
+            color: base.$color-green;
         }
     }
   }

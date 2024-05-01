@@ -1,0 +1,26 @@
+@use "/src/shared/styles/base";
+.bar-utils {
+  @include base.adaptiveValue("gap", 16, 10);
+  display: flex;
+  align-items: center;
+  > a {
+    height: base.rem(20);
+    @media (max-width:base.$mobileSmall) {
+      &:nth-child(2), &:last-child {
+        display: none;
+      }
+    }
+  }
+  &__icon {
+    font-size: base.rem(20);
+    transition: color 0.3s ease 0s;
+    cursor: pointer;
+    @media (any-hover: hover){
+      &:hover {
+        color: base.$color-green;
+      }
+    }
+  }
+}
+
+@import "../../../shared/Burger/burger";

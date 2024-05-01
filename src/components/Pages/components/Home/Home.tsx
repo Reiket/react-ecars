@@ -22,12 +22,12 @@ const Home: React.FC = () => {
            <Element name={"brands"}>
                <Brands/>
            </Element>
-           {/*<Send/>*/}
-           {/*<Works/>*/}
-           {/*<Why/>*/}
+           <Send/>
+           <Works/>
+           <Why/>
            {/*<Comments/>*/}
            <Articles/>
-           {/*<Communication/>*/}
+           <Communication/>
        </>
     );
 };

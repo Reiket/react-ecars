@@ -1,4 +1,5 @@
 export const actions = {
-    toggleIsOpenGetPopup: (isOpenGetPopup: boolean) => ({type: "TOGGLE_IS_OPEN_GET_POPUP", isOpenGetPopup} as const),
-    toggleIsOpenContactPopup: (isOpenContactPopup: boolean) => ({type: "TOGGLE_IS_OPEN_CONTACT_POPUP", isOpenContactPopup} as const),
+    toggleIsOpenGetPopup: (isOpenGetPopup: boolean) => ({type: "layout/getPopup", isOpenGetPopup} as const),
+    toggleIsOpenContactPopup: (isOpenContactPopup: boolean) => ({type: "layout/contactPopup", isOpenContactPopup} as const),
+    toggleIsBurger: (isBurger: boolean) => ({type: "layout/burger", isBurger} as const)
 }
