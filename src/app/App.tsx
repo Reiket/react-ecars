@@ -7,6 +7,11 @@ import {Icons} from "../shared/components/Icons/Icons";
 import {capitalizeFirstLetter} from "../shared/utils";
 import BlogCard from "../components/Pages/components/BlogCard/BlogCard";
 import {ROUTES} from "./router/router";
+import CheckboxBlock from "../shared/components/forms/Form/Checkbox/CheckboxBlock";
+import Checkbox from "../shared/components/forms/Form/Checkbox/components/Checkbox";
+import Label from "../shared/components/forms/Form/Label/Label";
+import Container from "../shared/components/Container/Container";
+import Button from "../shared/components/buttons/GreenButton/Button";
 //React lazy-loading
 const Home = React.lazy(() => import("../components/Pages/components/Home/Home"))
 const Details = React.lazy(() => import("../components/Pages/components/Details/Details"))
@@ -29,23 +34,26 @@ function App() {
   return (
       <Provider store={store}>
           <React.Suspense fallback={<Icons.loader/>}>
-              <Routes>
-                  <Route element={<MainLayout/>} path={ROUTES.layout}>
-                      <Route element={<Home/>} path={ROUTES.layout}/>
-                      {/*<Route element={<Details/>} path={"/details/:id"}/>*/}
-                      {/*<Route element={<Favorites/>} path={"/favorites"}/>*/}
-                      <Route element={<About/>} path={ROUTES.about}/>
-                      <Route element={<FAQ/>} path={"/faq"}/>
-                      {/*<Route element={<Catalog/>} path={"/catalog"}/>*/}
-                      <Route element={<Blog/>} path={ROUTES.blog}/>
-                      <Route element={<BlogCard/>} path={ROUTES.blogCard(null)}/>
-                      {/*<Route element={<Login/>} path={"/login"}/>*/}
-                      {/*<Route element={<Register/>} path={"/register"}/>*/}
-                      {/*<Route element={<ForgotPass/>} path={"/forgot"}/>*/}
-                      <Route element={<PrivacyPolicy/>} path={ROUTES.privacy}/>
-                      <Route element={<Terms/>} path={ROUTES.terms}/>
-                  </Route>
-              </Routes>
+              <Container classnames={"eeee"}>
+                  <Button theme={"white"} size={"big"}>Get a quote</Button>
+              </Container>
+              {/*<Routes>*/}
+              {/*    <Route element={</>} path={ROUTES.layout}>*/}
+              {/*        /!*<Route element={<Home/>} path={ROUTES.layout}/>*!/*/}
+              {/*        /!*<Route element={<Details/>} path={"/details/:id"}/>*!/*/}
+              {/*        /!*<Route element={<Favorites/>} path={"/favorites"}/>*!/*/}
+              {/*        <Route element={<About/>} path={ROUTES.about}/>*/}
+              {/*        <Route element={<FAQ/>} path={"/faq"}/>*/}
+              {/*        /!*<Route element={<Catalog/>} path={"/catalog"}/>*!/*/}
+              {/*        <Route element={<Blog/>} path={ROUTES.blog}/>*/}
+              {/*        <Route element={<BlogCard/>} path={ROUTES.blogCard(null)}/>*/}
+              {/*        /!*<Route element={<Login/>} path={"/login"}/>*!/*/}
+              {/*        /!*<Route element={<Register/>} path={"/register"}/>*!/*/}
+              {/*        /!*<Route element={<ForgotPass/>} path={"/forgot"}/>*!/*/}
+              {/*        <Route element={<PrivacyPolicy/>} path={ROUTES.privacy}/>*/}
+              {/*        <Route element={<Terms/>} path={ROUTES.terms}/>*/}
+              {/*    </Route>*/}
+              {/*</Routes>*/}
           </React.Suspense>
       </Provider>
   );

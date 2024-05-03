@@ -1,4 +1,4 @@
-@import "../../../../../styles/base";
+@use "../../../../../styles/base";
 @keyframes scaleIn {
 	0% {
 		opacity: 0;
@@ -14,13 +14,13 @@
 }
 .select {
 	&__control {
-		background: $color-white !important;
-		border: rem(1) solid $border-pale !important;
-		min-height: rem(40) !important;
+		background: base.$color-white !important;
+		border: base.rem(1) solid base.$border-pale !important;
+		min-height: base.rem(40) !important;
 		outline: none !important;
 		box-shadow: none !important;
 		&--menu-is-open {
-			border-color: $border-pale !important;
+			border-color: base.$border-pale !important;
 			box-shadow: none !important;
 			 .select__indicator {
 				 &:last-child {
@@ -40,15 +40,15 @@
 		}
 	}
 	&__menu {
-		background: $main-color !important;
-		color: $color-white !important;
+		background: base.$main-color !important;
+		color: base.$color-white !important;
 		animation: scaleIn 0.35s ease-in-out;
 	}
 	&__option {
 		-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;
 		@media (any-hover: hover){
 		    &:hover {
-				background: $menuActiveColor !important;
+				background: base.$menuActiveColor !important;
 		    }
 		}
 		&--is-selected {

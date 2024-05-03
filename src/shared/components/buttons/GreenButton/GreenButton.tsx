@@ -1,5 +1,5 @@
 import React from 'react';
-import {GreenBtnPropsType} from "./types/green-btn.types";
+import {GreenBtnPropsType} from "./types/button.types";
 
 const GreenButton: React.FC<GreenBtnPropsType> = ({classnames, text, type, href, onClick}) => {
     const className = `${classnames} green-button`;
