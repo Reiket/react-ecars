@@ -2,10 +2,13 @@ import React from "react";
 
 export interface DropdownMenuProps {
     classnames?: string
+    isOpen: boolean
+    onClick: () => void
     category: string
     arrowElement: React.ReactNode
-    Icon?: React.ElementType
+    icon?: React.ReactNode
     listItems: ListItems[]
+    name?: string
 }
 export interface ListItems {
     imageUrl?: string

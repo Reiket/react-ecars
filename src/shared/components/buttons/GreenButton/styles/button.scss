@@ -50,4 +50,11 @@
       background-color: base.$color-pale-white;
     }
   }
+  &.gray {
+    background: base.$background-dark-white;
+    color: base.$main-color;
+    &::after {
+      background-color: base.$color-pale-white;
+    }
+  }
 }

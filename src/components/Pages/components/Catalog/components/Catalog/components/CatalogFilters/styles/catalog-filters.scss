@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+
+.catalog-filters {
+  padding-top: base.rem(24);
+  &__buttons {
+    padding-top: base.rem(16);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: base.rem(4);
+  }
+}

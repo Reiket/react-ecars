@@ -1,35 +1,46 @@
 @use "sass:math";
 @use "/src/shared/styles/base";
-.dropdown-menu {
-  position: relative;
+@mixin dropdownActive() {
+  .dropdown-menu__category {
+    color: base.$color-green;
+    svg {
+      transform: scale(1, -1);
+      color: base.$color-green;
+    }
+  }
+  > .dropdown-menu__list {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.dropdown-menu-container {
   display: flex;
   align-items: center;
-  color: base.$color-white;
-  cursor: pointer;
+  gap: base.rem(6);
+}
+.dropdown-menu {
+  position: relative;
+  > svg {
+    color:  base.$main-color;
+    opacity: 70%;
+    font-size: base.rem(base.$fz-text);
+  }
   &__category {
     color: base.$main-color;
     svg {
       font-size: base.rem(10);
     }
   }
-  &__category, .dropdown-menu__category  svg {
+  &__category, .dropdown-menu__category svg {
     transition: all .4s linear;
   }
-  @media (any-hover: hover) {
-    &:hover {
-      .dropdown-menu__category {
-        color: base.$color-green;
-        svg {
-          transform: scale(1, -1);
-          color: base.$color-green;
-        }
+  @media (any-hover: hover){
+      &:hover {
+        @include dropdownActive
       }
-      > .dropdown-menu__list {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0%);
-      }
-    }
+  }
+   &.active {
+    @include dropdownActive
   }
   //&_nav {
   //  color: base.$main-color;
@@ -47,13 +58,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     opacity: 0;
-    transform: translateY(-10%);
     visibility: hidden;
     transition: all 0.3s ease 0s;
-    &.active {
-      visibility: visible;
-      opacity: 1;
-    }
   }
   &__point {
     padding: base.rem(10);

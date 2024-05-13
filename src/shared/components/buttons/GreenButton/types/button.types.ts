@@ -10,7 +10,7 @@ export type GreenBtnPropsType = {
 
 type ButtonType = "submit" | "button"
 type ButtonSize = "small" | "big"
-export type ButtonTheme = "green" | "white"
+export type ButtonTheme = "green" | "white" | "gray"
 export interface ButtonProps {
     children: React.ReactNode
     classnames?: string
