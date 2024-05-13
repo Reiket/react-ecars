@@ -18,7 +18,7 @@
       height: base.rem(110);
       position: absolute;
       background: base.$color-white;
-      top: 0;
+      top: base.rem(-40);
       left: -100%;
       visibility: hidden;
       opacity: 0;

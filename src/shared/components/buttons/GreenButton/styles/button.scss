@@ -47,12 +47,7 @@
     background: base.$color-white;
     color: base.$color-green;
     &::after {
-      background-color: base.$color-green;
-    }
-    @media (any-hover: hover){
-        &:hover {
-          color: base.$color-white;
-        }
+      background-color: base.$color-pale-white;
     }
   }
 }

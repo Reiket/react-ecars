@@ -9,11 +9,8 @@ export interface CheckboxProps {
     checkboxId: string
     name?: string
     value?: string
-    isDisabled: boolean
+    isDisabled?: boolean
+    isChecked?: boolean
     errors?: string
 }
 
-export interface CheckboxIndicatorProps {
-    isDisabled: boolean
-    withError: boolean
-}

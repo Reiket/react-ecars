@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+
+.catalog {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__amout {
+    display: flex;
+    align-items: center;
+    gap: base.rem(6);
+    color: base.$color-gray;
+    font-size: base.rem(16);
+    line-height: math.div(20 , 14);
+    span {
+      font-weight: 600;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: base.rem(4);
+    padding-top: base.rem(16);
+  }
+  &__button {
+    padding: base.rem(4) base.rem(8);
+    background: base.$background-dark-white;
+    font-weight: 500;
+    font-size: base.rem(13);
+    line-height: math.div(16 , 13);
+    display: flex;
+    align-items: center;
+    gap: base.rem(2);
+    border-radius: base.rem(8);
+    svg {
+      font-size: base.rem(16);
+      color: base.$hover-svg;
+      transition: color .3s linear;
+      @media (any-hover: hover){
+        &:hover {
+          color: base.$main-color;
+        }
+      }
+    }
+  }
+  &__body {
+    padding-top: base.rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: base.rem(16);
+  }
+  &__filter {
+    padding-top: base.rem(30);
+    button {
+      svg {
+        color: base.$main-color;
+      }
+    }
+  }
+}
+
+
+.find-sort {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  position: relative;
+  line-height: math.div(20, 14);
+  &__text {
+    color: $color-gray;
+  }
+  &__category {
+    color: $main-color;
+    svg {
+      font-size: rem(10);
+    }
+  }
+  &__point {
+    padding: 0.425rem;
+  }
+}

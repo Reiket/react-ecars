@@ -1,0 +1,88 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.dropdown-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: base.$color-white;
+  cursor: pointer;
+  &__category {
+    color: base.$main-color;
+    svg {
+      font-size: base.rem(10);
+    }
+  }
+  &__category, .dropdown-menu__category  svg {
+    transition: all .4s linear;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      .dropdown-menu__category {
+        color: base.$color-green;
+        svg {
+          transform: scale(1, -1);
+          color: base.$color-green;
+        }
+      }
+      > .dropdown-menu__list {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+      }
+    }
+  }
+  //&_nav {
+  //  color: base.$main-color;
+  //  .header-menu__arrow {
+  //    color: base.$main-color;
+  //  }
+  //}
+  &__list {
+    padding-top: base.rem(20);
+    position: absolute;
+    top: base.rem(15);
+    right: base.rem(8);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(-10%);
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__point {
+    padding: base.rem(10);
+    display: flex;
+    align-items: center;
+    gap: base.rem(5);
+    background: base.$background-dark;
+    color: base.$color-white;
+    cursor: pointer;
+    transition: background .3s linear;
+    img {
+      width: base.rem(20);
+      height: base.rem(20);
+      border-radius: base.rem(5);
+    }
+    &:first-child {
+      border-radius: base.rem(8) base.rem(8) 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 base.rem(8) base.rem(8);
+    }
+    @media (any-hover: hover){
+      &:hover {
+        background: base.$menuActiveColor;
+      }
+    }
+    &.active {
+      background: base.$menuActiveColor;
+      cursor: not-allowed;
+    }
+  }
+}

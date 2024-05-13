@@ -16,6 +16,12 @@
 		&:checked + .checkbox__indicator > svg {
 			display: block;
 		}
+		&:disabled + .checkbox__indicator {
+			cursor: default;
+			&::before {
+				border-color: base.$border-white;
+			}
+		}
 	}
 	&__indicator {
 		cursor: pointer;
@@ -40,19 +46,11 @@
         	color: base.$color-green;
         	display: none;
       	}
-		&:not(&.disabled) {
-			@media (any-hover: hover){
-				&:hover {
-					&::before {
-						border-color: base.$color-green;
-					}
+		@media (any-hover: hover){
+			&:hover {
+				&::before {
+					border-color: base.$color-green;
 				}
-			}
-		}
-		&.disabled {
-			cursor: default;
-			&::before {
-				border-color: base.$border-white;
 			}
 		}
 		&.error {

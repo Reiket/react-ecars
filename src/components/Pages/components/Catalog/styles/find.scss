@@ -1,0 +1,21 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.find {
+  &__body {
+    padding-top: base.rem(24);
+    display: flex;
+    gap: base.rem(24);
+  }
+  &__catalog {
+    flex: 1 1 auto;
+  }
+}
+
+.sidebar {
+  width: 288px;
+  background-color: base.$color-light-gray;
+}
+
+//Imports children styles
+
+@import "../components/Catalog/styles/catalog";

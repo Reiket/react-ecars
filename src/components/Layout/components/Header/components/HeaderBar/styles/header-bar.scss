@@ -2,21 +2,16 @@
 .header-bar {
   padding: base.rem(12) base.rem(0);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: base.rem(40);
   width: 100%;
   z-index: 999;
-  background-color: base.$background-dark-white;
+  background-color: base.$color-white;
   box-shadow: 0 0 base.rem(8) base.rem(10) base.$shadow;
-  opacity: 0;
-  transition: all .3s ease-in-out;
+  transition: padding .3s ease-in-out;
   &.sticky {
     top: 0;
-    opacity: 1;
-  }
-  &.static {
-    top: 5.4%;
-    opacity: 1;
+    background-color: base.$background-dark-white;
+    padding: base.rem(20) base.rem(0);
   }
   &__body {
     display: flex;
