@@ -11,11 +11,7 @@
   }
 }
 
-.sidebar {
-  width: 288px;
-  background-color: base.$color-light-gray;
-}
-
 //Imports children styles
 
 @import "../components/Catalog/styles/catalog";
+@import "../components/Sidebar/styles/sidebar";

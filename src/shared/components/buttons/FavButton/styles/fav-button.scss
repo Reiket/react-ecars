@@ -1,0 +1,53 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+
+.card-fav-button {
+  position: absolute;
+  top: base.rem(8);
+  right: base.rem(8);
+  z-index: 10;
+  width: base.rem(32);
+  height: base.rem(32);
+  background: base.$color-black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    color: base.$color-white;
+    font-size: base.rem(base.$fz-text);
+  }
+  .active {
+    svg {
+      background: base.$color-white;
+    }
+  }
+  &:disabled {
+
+  }
+}
+
+.catalog-card-fav-button {
+  flex: 0 0 base.rem(32);
+  height: base.rem(32);
+  svg {
+    color: base.$color-pale-gray;
+    font-size: base.rem(20);
+    transition: color .3s linear;
+  }
+  @media (any-hover: hover){
+    &:hover {
+      svg {
+        color: base.$color-yellow;
+      }
+    }
+  }
+  &.active {
+    svg {
+      color: base.$color-yellow;
+    }
+  }
+  &:disabled svg {
+    color: base.$color-pale-white;
+  }
+}

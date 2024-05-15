@@ -2,13 +2,31 @@
 @import "../../../../../styles/base";
 
 
+.label-container {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__hint {
+    transition: color .3s linear;
+    position: relative;
+    padding: rem(3) rem(7);
+    &_button {
+      color: $color-light-gray;
+      font-size: rem($fz-desc);
+      line-height: math.div(16 , $fz-desc);
+      @include buttonHover($color-gray, $color-white);
+
+    }
+  }
+}
+
 .label {
   display: flex;
   flex-direction: column;
   text-align: left;
-  &:not(:last-child) {
-    margin-bottom: rem(5);
-  }
+  margin-top: rem(8);
   span {
     display: flex;
     justify-content: flex-start;

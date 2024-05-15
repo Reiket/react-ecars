@@ -12,9 +12,11 @@ interface Props {
 const Page: FC<Props> = ({name, title, text, children}) => {
     return <div className={cn(`page page__${name}`, name)}>
         <Container classnames={name}>
-            <Title tag={"h1"} text={title} classnames={"page-title page-title_text"}/>
-            {!!text && <Text text={text} classnames={"text_sub"}/>}
-            {children}
+           <Container classnames={name} size={"big"}>
+               <Title tag={"h1"} text={title} classnames={"page-title page-title_text"}/>
+               {!!text && <Text text={text} classnames={"text_sub"}/>}
+               {children}
+           </Container>
         </Container>
     </div>
 };

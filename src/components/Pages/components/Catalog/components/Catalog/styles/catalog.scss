@@ -49,5 +49,12 @@
   }
 }
 
+.catalog-cards {
+  padding-top: base.rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: base.rem(16);
+}
+
 //Imports styles children components
 @import "../components/CatalogFilters/styles/catalog-filters";
