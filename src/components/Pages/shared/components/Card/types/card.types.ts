@@ -19,6 +19,7 @@ export type ItemsType = {
     parentId?: number
     imageUrl: string
     name: string
+    params: string
     description: string
     price: {
         USD: number
@@ -31,8 +32,9 @@ export type ItemsType = {
     views: number
     properties: PropertiesType
 }
-export type CardPropsType = {
+export type CardProps= {
     item: ItemsType
     currency: number
     classnames?: string
+    isCatalog?: boolean
 }

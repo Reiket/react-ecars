@@ -1,7 +1,7 @@
 import {ItemsType} from "../../../../../components/Pages/shared/components/Card/types/card.types";
 
-export type TFavButton = {
+export interface FavoriteButton  {
     item: ItemsType
-    classnames: string
+    classnames?: string
     text?: string
 }

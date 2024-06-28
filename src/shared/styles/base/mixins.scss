@@ -33,6 +33,84 @@
 	}
 }
 
+@mixin fixedMenu($mediaQuery, $padding) {
+	@media (max-width: $mediaQuery) {
+		padding-top: rem($padding);
+		position: fixed;
+		flex-direction: column;
+		left: -100%;
+		top: 0;
+		z-index: 999;
+		height: 100%;
+		overflow-y: auto;
+		transition: all 0.3s ease 0s;
+
+		&::after {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: -100%;
+			z-index: -2;
+			height: 100%;
+			background: $color-white;
+			opacity: 0;
+			width: rem(370);
+			visibility: hidden;
+			transition: all 0.3s ease 0s;
+		}
+		&::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			right: -100%;
+			z-index: -2;
+			width: 64%;
+			height: 100%;
+			background: $color-black;
+			opacity: 60%;
+			transition: all 0.3s ease 0s;
+		}
+		&.active {
+			left: rem(0);
+			&::after {
+				left: 0;
+				visibility: visible;
+				opacity: 1;
+			}
+			&::before {
+				right: rem(-1);
+			}
+		}
+	}
+}
+
+@mixin buttonHover($background, $color) {
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $background;
+		border-radius: 30px;
+		z-index: -1;
+		transform: scale(0.3, 1);
+		opacity: 0;
+		transition: all .25s linear 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $color;
+			&:before {
+				transform: scale(1, 1);
+				opacity: 1;
+			}
+		}
+	}
+}
+
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px, $sz: 480px) {
 	display: grid;

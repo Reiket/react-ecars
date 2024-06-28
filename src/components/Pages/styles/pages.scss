@@ -7,11 +7,11 @@
 @import "../components/Blog/styles/blog";
 @import "../components/BlogCard/styles/blog-card";
 @import "../components/Faq/styles/faq";
+@import "../components/Catalog/styles/find";
 
 //Import shared styles
 @import "../shared/styles/page-shared";
 .page {
-  &__blog {
-    @include adaptiveValue("margin-top", 48, 30);
-  }
+  @include adaptiveValue("margin-top", 108, 30);
+  @include adaptiveValue("margin-bottom", 48, 30);
 }

@@ -13,6 +13,7 @@ export const ROUTES = {
     privacy: "/privacy",
     terms: "/terms",
     about: "/about",
+    find: "/find",
     faq: "/faq"
 }
 // export const router = createBrowserRouter([
