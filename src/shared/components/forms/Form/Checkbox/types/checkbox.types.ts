@@ -10,7 +10,8 @@ export interface CheckboxProps {
     name?: string
     value?: string
     isDisabled?: boolean
-    isChecked?: boolean
+    isChecked: boolean
+    onChange: (checked: boolean) => void
     errors?: string
 }
 

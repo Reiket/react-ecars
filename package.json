@@ -11,6 +11,7 @@
     "@types/node": "^20.8.4",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
+    "@types/react-router-dom": "^5.3.3",
     "@types/react-scroll": "^1.8.10",
     "@types/swiper": "^6.0.0",
     "axios": "^1.4.0",

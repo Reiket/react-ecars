@@ -19,6 +19,14 @@
 		min-height: base.rem(40) !important;
 		outline: none !important;
 		box-shadow: none !important;
+		width: 100%;
+		.select__value-container {
+			padding: 0 !important;
+			margin-left: base.rem(5) !important;
+		}
+		.select__input-container {
+			overflow: hidden;
+		}
 		&--menu-is-open {
 			border-color: base.$border-pale !important;
 			box-shadow: none !important;
@@ -54,6 +62,9 @@
 		&--is-selected {
 			background: #232323 !important;
 		}
+	}
+	&__placeholder {
+		margin-left: base.rem(8) !important;
 	}
 }
 

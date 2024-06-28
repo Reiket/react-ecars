@@ -3,9 +3,13 @@ import CatalogFiltersButtons from "./components/CatalogFiltersButtons";
 import Button from "../../../../../../../../shared/components/buttons/GreenButton/Button";
 import {BsFilter} from "react-icons/bs";
 
-const CatalogFilters: FC = () => {
+interface CatalogFiltersProps {
+    onClick: () => void
+}
+
+const CatalogFilters: FC<CatalogFiltersProps> = ({onClick}) => {
     return <div className={"catalog__filters catalog-filters"}>
-        <Button classnames={"catalog__filter"} theme={"gray"}><BsFilter/>Filters</Button>
+        <Button type={"button"} onClick={onClick} classnames={"catalog__filter"} theme={"gray"}><BsFilter/>Filters</Button>
         <CatalogFiltersButtons />
     </div>
 };

@@ -34,16 +34,17 @@
       gap: base.rem(2);
       font-size: base.rem(13);
       padding: base.rem(1) base.rem(8) !important;
+      @media (any-hover: hover){
+        &:hover {
+         svg {
+           color: base.$main-color;
+         }
+        }
+      }
       svg {
         color: base.$color-pale-gray;
         font-size: base.rem(16);
         transition: color .3s linear;
-        @media (any-hover: hover){
-            &:hover {
-              color: base.$main-color;
-
-            }
-        }
       }
     }
   }

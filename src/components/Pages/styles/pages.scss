@@ -13,4 +13,5 @@
 @import "../shared/styles/page-shared";
 .page {
   @include adaptiveValue("margin-top", 108, 30);
+  @include adaptiveValue("margin-bottom", 48, 30);
 }

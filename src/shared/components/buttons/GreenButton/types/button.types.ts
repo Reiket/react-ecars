@@ -8,7 +8,7 @@ export type GreenBtnPropsType = {
     onClick?: () => void
 };
 
-type ButtonType = "submit" | "button"
+export type ButtonType = "submit" | "button"
 type ButtonSize = "small" | "big"
 export type ButtonTheme = "green" | "white" | "gray"
 export interface ButtonProps {

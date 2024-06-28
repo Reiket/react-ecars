@@ -23,7 +23,7 @@ const Select: React.FC<TSelect> = ({control, rules, placeholder, items, name}) =
                     components={animatedComponents}
                     value={getValue(value)}
                     options={items}
-                    classNamePrefix={"select"}
+                    C
                     onChange={newValue => onChange((newValue as TOptions).value)}
                 />
             )}

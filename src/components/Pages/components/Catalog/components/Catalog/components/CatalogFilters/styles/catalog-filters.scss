@@ -2,7 +2,14 @@
 @use "/src/shared/styles/base";
 
 .catalog-filters {
-  padding-top: base.rem(24);
+  @media (max-width: base.$tablet) {
+    padding-top: base.rem(24);
+  }
+  > button {
+    @media (min-width: base.$tablet) {
+      display: none !important;
+    }
+  }
   &__buttons {
     padding-top: base.rem(16);
     display: flex;

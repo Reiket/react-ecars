@@ -96,7 +96,7 @@
   display: flex;
   box-shadow: 0 8px 16px 0 base.$shadow;
   border-radius: base.rem(8);
-  @media (max-width: base.$mobile) {
+  @media (max-width: base.em(650)) {
     flex-direction: column;
   }
   .card {
@@ -107,9 +107,9 @@
     }
     &__image > img {
       height: auto;
-     @media (min-width: base.$mobile) {
+     @media (min-width: base.em(651)) {
        border-radius: base.rem(8) 0 0 base.rem(8);
-       height: base.rem(225);
+       height: 100%;
        width: base.rem(300);
      }
     }
