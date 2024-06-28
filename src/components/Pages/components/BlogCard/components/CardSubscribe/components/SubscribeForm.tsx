@@ -3,9 +3,9 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {TSubscribeForm} from "../types/card-subscribe.types";
 import Label from "../../../../../../../shared/components/forms/Form/Label/Label";
 import Input from "../../../../../../../shared/components/forms/Form/Input/Input";
-import GreenButton from "../../../../../../../shared/components/buttons/GreenButton/GreenButton";
 import {emailValidator} from "../../../../../../../shared/utils/validators";
 import Form from "../../../../../../../shared/components/forms/Form";
+import Button from "../../../../../../../shared/components/buttons/GreenButton/Button";
 
 const SubscribeForm = () => {
     const {register, handleSubmit, formState: {errors}} = useForm<TSubscribeForm>();
@@ -16,8 +16,7 @@ const SubscribeForm = () => {
         <Label errors={errors.email?.message}>
             <Input<TSubscribeForm> name={"email"} register={register} rules={emailValidator}/>
         </Label>
-        <GreenButton classnames={"card-subscribe__button green-button_big"} text={"Subscribe"}
-                     type={"button"}/>
+        <Button size={"big"} type={"button"} classnames={"card-subscribe__button"}>Subscribe</Button>
     </Form>
 };
 

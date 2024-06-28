@@ -3,12 +3,13 @@ import React from "react";
 
 const useStickyHeader = () => {
     const [isSticky, setIsSticky] = React.useState(false);
-    const [prevScrollPos, setPrevScrollPos] = React.useState(0);
     React.useEffect(() => {
         const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            setIsSticky(prevScrollPos > currentScrollPos && currentScrollPos !== 0);
-            setPrevScrollPos(currentScrollPos);
+            if (window.scrollY > 0) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -16,9 +17,9 @@ const useStickyHeader = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [prevScrollPos]);
+    }, []);
 
-    return {isSticky, prevScrollPos};
+    return isSticky;
 }
 
 export default useStickyHeader;

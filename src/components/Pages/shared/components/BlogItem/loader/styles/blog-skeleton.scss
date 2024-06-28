@@ -51,6 +51,26 @@
   }
 }
 
+.related-post-skeleton {
+  .blog-skeleton {
+    &__image {
+      border-radius: base.rem(8) 0 0 base.rem(8);
+      animation: skeleton-loading 2s linear infinite alternate;
+      @include base.adaptiveValue("height", 260, 192, 1250, 940, 1);
+      @media (min-width: base.em(1250)) {
+        height: base.rem(220);
+      }
+      @media (max-width:base.em(940)) {
+        @include base.adaptiveValue("height", 300, 192, 940, 630, 1);
+
+      }
+      @media (max-width: base.em(630)) {
+        @include base.adaptiveValue("height", 400, 193, 630, 320, 1);
+      }
+    }
+  }
+}
+
 
 .featured-post-skeleton {
   display: flex;

@@ -14,12 +14,12 @@ const CardRelated: React.FC = () => {
         <Container classnames={"card-related"}>
             <Title tag={"h3"} text={"Related articles"} classnames={"block-title-news"}/>
             <div className="card-related__body">
-                {isLoading ? relatedPosts.map((item) => {
+                {!isLoading ? relatedPosts.map((item) => {
                     let {id, attributes} = item
                     return <BlogPost classnames={"post-blog"} id={id}
                                      imageUrl={attributes.imageUrl!}
                                      key={id} category={attributes.category} title={attributes.title}/>
-                }) : <BlogPostSkeleton classnames={"post-blog-skeleton"}/>}
+                }) : [...Array(4)].map((_, i) =>  <BlogPostSkeleton key={i} classnames={"related-post-skeleton"}/>)}
             </div>
         </Container>
     </Section>

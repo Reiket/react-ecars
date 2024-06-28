@@ -1,0 +1,60 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.button {
+  position: relative;
+  line-height: math.div(24 , base.$fontSize);
+  font-weight: 600;
+  border: none;
+  display: inline-block;
+  outline: none;
+  transition: all .5s ease 0s;
+  border-radius: base.rem(8);
+  z-index: 1;
+  overflow: hidden;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: base.rem(8);
+    transition: all .5s ease;
+  }
+  @media (any-hover: hover){
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  &.small {
+    padding: base.rem(6) base.rem(12);
+  }
+  &.big {
+    padding: base.rem(12) base.rem(29.5);
+  }
+  &.green {
+    background: base.$color-green;
+    color: base.$color-white;
+    &::after {
+      background-color: base.$hover-green-btn;
+    }
+  }
+  &.white {
+    background: base.$color-white;
+    color: base.$color-green;
+    &::after {
+      background-color: base.$color-pale-white;
+    }
+  }
+  &.gray {
+    background: base.$background-dark-white;
+    color: base.$main-color;
+    &::after {
+      background-color: base.$color-pale-white;
+    }
+  }
+}

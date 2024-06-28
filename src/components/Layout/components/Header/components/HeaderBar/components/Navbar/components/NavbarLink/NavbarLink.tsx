@@ -9,7 +9,7 @@ interface PNavLink {
 }
 const NavbarLink: React.FC<PNavLink> = ({url, name, icon}) => {
     return <li className="navbar-item">
-        <NavLink className={({isActive}) => cn("navbar-item__link text", {"active": isActive})} to={url}>{icon} {name}</NavLink>
+        <NavLink className={({isActive}) => cn("navbar-item__link icon-link text", {"active": isActive})} to={url}>{icon} {name}</NavLink>
     </li>
 };
 
