@@ -1,4 +1,4 @@
-import React, {FC, forwardRef, useRef} from 'react';
+import React, {forwardRef} from 'react';
 import Label from "../../../../../../shared/components/forms/Form/Label/Label";
 import Select from "../../../../../../shared/components/forms/Form/Select/Select";
 import {useForm} from "react-hook-form";
@@ -10,7 +10,6 @@ import RangeSlider from "../../../../../../shared/components/sliders/RangeSlider
 import HeaderSidebar from "./components/HeaderSidebar";
 import {cn} from "../../../../../../shared/utils";
 import {MdKeyboardArrowDown} from "react-icons/md";
-import {useClickOutside} from "../../../../../../shared/hooks/useClickOutside";
 import {useWindowWidth} from "../../../../../../shared/hooks/useWindowWidth";
 import FooterSidebar from "./components/FooterSidebar";
 
