@@ -3,8 +3,7 @@
 .card {
   position: relative;
   display: flex;
-  flex-direction: column;
-  min-height: base.rem(318);
+  border-radius: base.rem(8);
   &::after {
     content: "";
     position: absolute;
@@ -14,11 +13,111 @@
     height: 100%;
     box-shadow: 0 base.rem(8) base.rem(16) 0 base.$shadow;
   }
+  &.row {
+    @media (max-width: base.em(650)) {
+      flex-direction: column;
+    }
+    .card {
+      &__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      &__image {
+        > img {
+          height: auto;
+          width: 100%;
+          @media (min-width: base.em(651)) {
+            border-radius: base.rem(8) 0 0 base.rem(8);
+            height: 100%;
+            width: base.rem(300);
+          }
+        }
+        span {
+          position: absolute;
+          left: 0;
+          top: base.rem(9);
+          color: base.$color-black;
+          font-weight: 600;
+          font-size: base.rem(12);
+          background: base.$color-yellow;
+          padding: base.rem(4) base.rem(8);
+          border-radius: base.rem(0) base.rem(8) base.rem(8) base.rem(0);
+        }
+      }
+    }
+    .card-fav-button {
+      flex: 0 0 base.rem(32);
+      height: base.rem(32);
+      position: relative;
+      z-index: 10;
+      svg {
+        color: base.$color-pale-gray;
+        font-size: base.rem(20);
+        transition: color 0.3s linear;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          svg {
+            color: base.$color-yellow;
+          }
+        }
+      }
+      &.active {
+        svg {
+          color: base.$color-yellow;
+        }
+        &:hover {
+          svg {
+            color: base.$color-pale-gray;
+          }
+        }
+      }
+      &:disabled svg {
+        color: base.$color-pale-white;
+      }
+    }
+  }
+  &.column {
+    flex-direction: column;
+    min-height: base.rem(318);
+    .card {
+      &__params {
+        flex: 1 1 auto;
+      }
+      &__image {
+        height: base.rem(180);
+        width: 100%;
+      }
+    }
+    .card-fav-button {
+      position: absolute;
+      top: base.rem(8);
+      right: base.rem(8);
+      z-index: 10;
+      width: base.rem(32);
+      height: base.rem(32);
+      background: base.$color-black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        color: base.$color-white;
+        font-size: base.rem(base.$fz-text);
+      }
+      .active {
+        svg {
+          background: base.$color-white;
+        }
+      }
+      &:disabled {
+      }
+    }
+  }
   &__image {
     position: relative;
     img {
-      height: base.rem(180);
-      width: 100%;
       object-fit: cover;
       border-radius: base.rem(8) base.rem(8) 0 0;
       @media (max-width: base.em(550)) {
@@ -33,8 +132,11 @@
     flex: 1 1 auto;
   }
   &__title {
-    &:not(:last-child) {
-        margin-bottom: 0;
+    &:not(+ .card__discount) {
+      flex: 1 1 auto;
+    }
+    &:not(:has(+ .card__discount)) {
+      flex: 1 1 auto;
     }
   }
   &__name {
@@ -43,10 +145,9 @@
     }
   }
   &__params {
-    flex: 1 1 auto;
     color: base.$color-pale-gray;
     font-size: base.rem(base.$fz-desc);
-    line-height: math.div(16 , base.$fz-desc);
+    line-height: math.div(16, base.$fz-desc);
     &:not(:last-child) {
       margin-bottom: base.em(12, base.$fz-desc);
     }
@@ -63,58 +164,31 @@
     gap: base.rem(6);
     > h3 {
       &:not(:last-child) {
-          margin-bottom: 0;
-       }
+        margin-bottom: 0;
+      }
+    }
+    > a {
+      position: relative;
+      z-index: 10;
+      color: base.$color-green;
+      font-weight: 600 !important;
+      svg {
+        transition: transform 0.3s ease-in;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: base.$hover-green-btn;
+          svg {
+            transform: translateX(20%);
+          }
+        }
+      }
     }
   }
   &__discount {
     flex: 1 1 auto;
     text-decoration: line-through;
     color: base.$color-pale-gray;
-    line-height: math.div(18 , base.$fontSize);
-  }
-  &__details {
-    position: relative;
-    z-index: 10;
-    color: base.$color-green;
-    font-weight: 600 !important;
-    svg {
-      transition: transform .3s ease-in;
-    }
-    @media (any-hover: hover){
-      &:hover {
-        color: base.$hover-green-btn;
-        svg {
-          transform: translateX(20%);
-        }
-      }
-    }
-  }
-}
-
-.catalog-card {
-  display: flex;
-  box-shadow: 0 8px 16px 0 base.$shadow;
-  border-radius: base.rem(8);
-  @media (max-width: base.em(650)) {
-    flex-direction: column;
-  }
-  .card {
-    &__name {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    &__image > img {
-      height: auto;
-     @media (min-width: base.em(651)) {
-       border-radius: base.rem(8) 0 0 base.rem(8);
-       height: 100%;
-       width: base.rem(300);
-     }
-    }
-    &__params {
-      flex: 0;
-    }
+    line-height: math.div(18, base.$fontSize);
   }
 }
