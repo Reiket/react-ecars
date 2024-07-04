@@ -1,9 +1,11 @@
 import React from 'react';
-import {TText} from "./types/title.types";
+import {TextProps} from "./types/title.types";
 import {cn} from "../../utils";
 
-const Text: React.FC<TText> = ({text, classnames}) => {
-    return  <p className={cn("text", classnames)}>{text}</p>
+const Text: React.FC<TextProps> = ({text, classnames, children}) => {
+    return  <p className={cn("text", classnames)}>{text}
+        {children}
+    </p>
 }
 
 

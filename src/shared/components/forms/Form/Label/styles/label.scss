@@ -2,13 +2,61 @@
 @import "../../../../../styles/base";
 
 
+.label-container {
+  &__info {
+    display: flex;
+    align-items: center;
+    > span {
+      flex: 1 1 auto;
+    }
+  }
+  &__hint {
+    padding: rem(3) rem(7);
+    position: relative;
+    transition: color .3s linear;
+    &:only-child, &:nth-child(1) {
+      margin-left: auto;
+    }
+    &_button {
+      color: $color-light-gray;
+      font-size: rem($fz-desc);
+      line-height: math.div(16 , $fz-desc);
+      @include buttonHover($color-gray, $color-white);
+    }
+  }
+  &__dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 rem(20);
+    svg {
+      font-size: rem(20);
+      color: $color-light-gray;
+      transition: all .3s linear;
+    }
+    &:only-child {
+      margin-left: auto;
+    }
+    @media (any-hover: hover){
+        &:hover {
+            svg {
+              animation: jump 0.5s infinite;
+              color: $main-color;
+            }
+        }
+    }
+    &.active {
+      color: $main-color;
+      transform: scale(-1, 1);
+    }
+  }
+}
+
 .label {
   display: flex;
   flex-direction: column;
   text-align: left;
-  &:not(:last-child) {
-    margin-bottom: rem(5);
-  }
+  margin-top: rem(8);
   span {
     display: flex;
     justify-content: flex-start;
@@ -43,4 +91,10 @@
       }
     }
   }
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(rem(-4)); }
+  100% { transform: translateY(0); }
 }

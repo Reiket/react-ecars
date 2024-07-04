@@ -10,25 +10,26 @@ import Comments from "./components/Comments/Comments";
 import Brands from "./components/Brands/Brands";
 import {Element} from "react-scroll";
 import Articles from "./components/Articles/Articles";
+import CheckboxBlock from "../../../../shared/components/forms/Form/Checkbox/CheckboxBlock";
 
 const Home: React.FC = () => {
     return (
-       <>
-           <Intro/>
-           <BottomIntro/>
-           {/*<Element name={"offers"}>*/}
-           {/*    <Offers/>*/}
-           {/*</Element>*/}
-           <Element name={"brands"}>
-               <Brands/>
-           </Element>
-           <Send/>
-           <Works/>
-           <Why/>
-           {/*<Comments/>*/}
-           <Articles/>
-           <Communication/>
-       </>
+        <>
+            <Intro/>
+            <BottomIntro/>
+            {/*<Element name={"offers"}>*/}
+            {/*    <Offers/>*/}
+            {/*</Element>*/}
+            <Element name={"brands"}>
+                <Brands/>
+            </Element>
+            <Send/>
+            <Works/>
+            <Why/>
+            {/*<Comments/>*/}
+            <Articles/>
+            <Communication/>
+        </>
     );
 };
 

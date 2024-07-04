@@ -13,7 +13,7 @@ const Details = React.lazy(() => import("../components/Pages/components/Details/
 const Favorites = React.lazy(() => import("../components/Pages/components/Favorites/Favorites"))
 const About = React.lazy(() => import("../components/Pages/components/About/About"))
 const FAQ = React.lazy(() => import("../components/Pages/components/Faq/Faq"))
-const Catalog = React.lazy(() => import("../components/Pages/components/Catalog/Catalog"))
+const Find = React.lazy(() => import("../components/Pages/components/Catalog/Find"))
 const Blog = React.lazy(() => import("../components/Pages/components/Blog/Blog"))
 const Login = React.lazy(() => import("../components/Pages/components/Authorization/components/Login/Login"))
 const Register = React.lazy(() => import("../components/Pages/components/Authorization/components/Register/Register"))
@@ -36,7 +36,7 @@ function App() {
                       {/*<Route element={<Favorites/>} path={"/favorites"}/>*/}
                       <Route element={<About/>} path={ROUTES.about}/>
                       <Route element={<FAQ/>} path={"/faq"}/>
-                      {/*<Route element={<Catalog/>} path={"/catalog"}/>*/}
+                      <Route element={<Find/>} path={ROUTES.find}/>
                       <Route element={<Blog/>} path={ROUTES.blog}/>
                       <Route element={<BlogCard/>} path={ROUTES.blogCard(null)}/>
                       {/*<Route element={<Login/>} path={"/login"}/>*/}

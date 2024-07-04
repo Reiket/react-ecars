@@ -1,0 +1,73 @@
+@use "sass:math";
+@use "../../../../../styles/base";
+.checkbox-block {
+	display: flex;
+	align-items: flex-start;
+	gap: base.rem(10);
+}
+
+.checkbox {
+	position: relative;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:checked + .checkbox__indicator > svg {
+			display: block;
+		}
+		&:disabled + .checkbox__indicator {
+			cursor: default;
+			&::before {
+				border-color: base.$border-white;
+			}
+		}
+	}
+	&__indicator {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		gap: base.rem(10);
+		&:before {
+			content: "";
+			align-self: center;
+			flex: 0 0 base.rem(20);
+			width: base.rem(20);
+			height: base.rem(20);
+			border-radius: base.rem(4);
+			border: base.rem(1) solid base.$border-pale;
+			transition: border-color .4s ease 0s;
+		}
+      	svg {
+        	position: absolute;
+        	left: base.rem(1);
+        	font-size: base.rem(18);
+        	color: base.$color-green;
+        	display: none;
+      	}
+		@media (any-hover: hover){
+			&:hover {
+				&::before {
+					border-color: base.$color-green;
+				}
+			}
+		}
+		&.error {
+			&::before {
+				border-color: base.$color-error;
+			}
+		}
+	}
+	&__link {
+		color: base.$color-green;
+		transition: color .3s ease 0s;
+		@media (any-hover: hover){
+		    &:hover {
+		        color: base.$color-dark-green;
+		    }
+		}
+	}
+}
+
+
