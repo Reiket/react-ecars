@@ -33,3 +33,9 @@ export const catalogCardItem = {
     interior: "Black",
   },
 };
+
+export const catalogSendPoints = [
+  "Professional approach to clients",
+  "Protect all payments",
+  "Real reviews from clients",
+];
