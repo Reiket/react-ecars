@@ -50,7 +50,7 @@
   }
 }
 
-.catalog-cards {
+.catalog-list {
   padding-top: base.rem(24);
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@
   column-gap: base.rem(10);
   row-gap: base.rem(25);
   > button {
-   @media (max-width:em(730)) {
+   @media (max-width: base.em(730)) {
      width: 100%;
    }
   }

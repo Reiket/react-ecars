@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import { CatalogCardProps } from "./types/catalog-card.types";
 
 const CatalogCard: FC<CatalogCardProps> = ({ item }) => {
-  return <Card type={"row"} item={item} currency={0} />;
+  return <Card cardType={"row"} item={item} currency={"USD"} />;
 };
 
 export default CatalogCard;

@@ -1,5 +1,5 @@
-import { ItemsType } from "../../Card/types/card.types";
+import { CarType } from "src/app/api/types/cars.types";
 
 export interface CatalogCardProps {
-  item: ItemsType;
+  item: CarType;
 }

@@ -7,6 +7,7 @@
   &::after {
     content: "";
     position: absolute;
+    border-radius: base.rem(8);
     top: 0;
     left: 0;
     width: 100%;
@@ -14,7 +15,7 @@
     box-shadow: 0 base.rem(8) base.rem(16) 0 base.$shadow;
   }
   &.row {
-    @media (max-width: base.em(650)) {
+    @media (max-width: base.$mobile) {
       flex-direction: column;
     }
     .card {
@@ -27,7 +28,7 @@
         > img {
           height: auto;
           width: 100%;
-          @media (min-width: base.em(651)) {
+          @media (min-width: base.$mobile) {
             border-radius: base.rem(8) 0 0 base.rem(8);
             height: 100%;
             width: base.rem(300);
@@ -192,3 +193,6 @@
     line-height: math.div(18, base.$fontSize);
   }
 }
+
+
+@import "card-skeleton";

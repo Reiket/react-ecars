@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import CatalogFilters from "./components/CatalogFilters/CatalogFilters";
 import CatalogInfo from "./components/CatalogInfo";
-import CatalogCards from "./components/CatalogCards";
+import CatalogList from "./components/CatalogList";
 import Section from "../../../../../../shared/components/Section/Section";
 import CatalogSend from "./components/CatalogSend";
 import { catalogSendPoints } from "./constants";
@@ -15,7 +15,7 @@ const Catalog: FC<CatalogProps> = ({ onClick }) => {
     <Section name={"catalog"}>
       <CatalogInfo />
       <CatalogFilters onClick={onClick} />
-      <CatalogCards />
+      <CatalogList />
       <CatalogSend points={catalogSendPoints} />
     </Section>
   );

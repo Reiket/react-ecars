@@ -3,8 +3,10 @@
 .find {
   &__body {
     padding-top: base.rem(24);
-    display: flex;
     gap: base.rem(24);
+    @media (min-width: base.$tablet) {
+      display: flex;
+    }
   }
   &__catalog {
     flex: 1 1 auto;
