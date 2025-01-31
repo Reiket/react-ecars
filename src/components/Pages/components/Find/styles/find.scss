@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "/src/shared/styles/base";
+.find {
+  &__body {
+    padding-top: base.rem(24);
+    gap: base.rem(24);
+    @media (min-width: base.$tablet) {
+      display: flex;
+    }
+  }
+  &__catalog {
+    flex: 1 1 auto;
+  }
+}
+
+//Imports children styles
+
+@import "../components/Catalog/styles/catalog";
+@import "../components/Sidebar/styles/sidebar";
