@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { cn } from "../../../../../shared/utils";
+import { cn } from "src/shared/utils";
 
 interface Props {
   cardType: "row" | "column";

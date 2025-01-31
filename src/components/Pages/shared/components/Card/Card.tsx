@@ -32,7 +32,7 @@ const Card: FC<CardProps> = memo(({ item, currency, cardType }) => {
   return (
     <div className={cn("card", cardType)}>
       <Image url={imageUrl} name={"card"} alt={"CardImage"}>
-        {renderFavButton(isCatalog, item)}
+        {renderFavButton(!isCatalog, item)}
         {item.attributes.isPremium && <span>Premium</span>}
       </Image>
       <div className="card__info">

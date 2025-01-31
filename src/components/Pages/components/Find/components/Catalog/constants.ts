@@ -34,6 +34,8 @@ export const catalogCardItem = {
   },
 };
 
+export const CATALOG_CARDS_COUNT = 12;
+
 export const catalogSendPoints = [
   "Professional approach to clients",
   "Protect all payments",

@@ -7,7 +7,7 @@ export const initialState = {
   isLoading: true,
   totalCarsCount: 0,
   currentPage: 1,
-  pageSize: 12,
+  pageSize: 11,
 };
 
 const findReducer: Reducer<InitialState, Actions> = (

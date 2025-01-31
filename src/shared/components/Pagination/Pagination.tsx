@@ -1,38 +1,57 @@
-import React from 'react';
-import {IoIosArrowRoundBack, IoIosArrowRoundForward} from "react-icons/io";
-import {cn} from "../../utils";
-import {TPagination} from "./types/pagination.types";
+import React from "react";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import { PaginationProps } from "./types/pagination.types";
 import Section from "../Section/Section";
+import { usePagination } from "./usePagination";
+import PaginationBtn from "./PaginationBtn";
 
-const Pagination: React.FC<TPagination> = ({currentPage, onClick, total, size, isLoading}) => {
-
-    const totalCountPage = Math.ceil(total / size)
-    const pages = [];
-    for (let i = 1; i<= totalCountPage; i++) {
-        pages.push(i)
-    }
-    const prevPageHandler = () => {
-        onClick(currentPage - 1)
-    }
-    const nextPageHandler = () => {
-        onClick(currentPage + 1)
-    }
-
-    const onClickPageHandler = (page: number) => {
-        onClick(page)
-    }
-    return <Section name={"pagination"}>
-        <div className="pagination__body">
-            <button disabled={currentPage === 1 || isLoading} onClick={prevPageHandler} className="pagination__btn">
-                <IoIosArrowRoundBack/></button>
-            {pages.map((page) => <button disabled={isLoading} key={page} onClick={() => onClickPageHandler(page)}
-                                         className={cn("pagination__btn", {
-                                             "active": currentPage === page && !isLoading
-                                         })}>{page}</button>)}
-            <button disabled={currentPage === totalCountPage || isLoading} onClick={nextPageHandler}
-                    className="pagination__btn"><IoIosArrowRoundForward/></button>
-        </div>
+const Pagination: React.FC<PaginationProps> = ({
+  currentPage,
+  onClick,
+  total,
+  size,
+  isLoading,
+}) => {
+  const {
+    pages,
+    totalCountPage,
+    prevPageHandler,
+    onClickPageHandler,
+    nextPageHandler,
+  } = usePagination(total, size, onClick, currentPage);
+  const isPrevButtonDisabled = currentPage === 1 || isLoading;
+  const isNextButtonDisabled = currentPage === totalCountPage || isLoading;
+  return (
+    <Section name={"pagination"}>
+      <div className="pagination__body">
+        <PaginationBtn
+          isDisabled={isPrevButtonDisabled}
+          onClick={prevPageHandler}
+        >
+          <IoIosArrowRoundBack />
+        </PaginationBtn>
+        {pages.map((page) => {
+          const isActiveButton = currentPage === page && !isLoading;
+          return (
+            <PaginationBtn
+              key={page}
+              isActiveButton={isActiveButton}
+              isDisabled={isLoading}
+              onClick={() => onClickPageHandler(page)}
+            >
+              {page}
+            </PaginationBtn>
+          );
+        })}
+        <PaginationBtn
+          isDisabled={isNextButtonDisabled}
+          onClick={nextPageHandler}
+        >
+          <IoIosArrowRoundForward />
+        </PaginationBtn>
+      </div>
     </Section>
+  );
 };
 
 export default Pagination;

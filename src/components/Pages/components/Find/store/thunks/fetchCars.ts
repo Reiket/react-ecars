@@ -6,9 +6,10 @@ export const fetchCars = (currentPage: number, pageSize: number): Thunk => {
   return async (dispatch) => {
     dispatch(actions.toggleIsLoading(true));
     dispatch(actions.setCurrentPage(currentPage));
-    dispatch(actions.setTotalCars(pageSize));
+    dispatch(actions.setPageSize(pageSize));
     let { data } = await findAPI.getCars(currentPage, pageSize);
     dispatch(actions.setCars(data.data));
-    dispatch(actions.setCurrentPage(data.meta!.pagination.total));
+    console.log(data.meta!.pagination.total);
+    dispatch(actions.setTotalCars(data.meta!.pagination.total));
   };
 };

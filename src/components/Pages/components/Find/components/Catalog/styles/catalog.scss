@@ -14,6 +14,9 @@
     color: base.$color-gray;
     span {
       font-weight: 600;
+      > span {
+        margin-right: base.rem(4);
+      }
     }
   }
   &__buttons {
