@@ -4,35 +4,44 @@ import { CardProps } from "./types/card.types";
 import { useAppSelector } from "src/app/store/hooks";
 import { selectFilters } from "../../../components/Home/components/Offers/store/selector/offers-selector";
 import { Title } from "src/shared/components/Title/Title";
-import { usePrice } from "src/shared/hooks/usePrice";
 import { cn, userLanguage } from "src/shared/utils";
 
 import Text from "src/shared/components/Title/Text";
 import FavButton from "src/shared/components/buttons/FavButton/FavButton";
 import Image from "src/shared/components/Image/Image";
 import LinkWithIcon from "src/shared/components/links/components/LinkWithIcon/LinkWithIcon";
+import { usePrice } from "src/shared/hooks/usePrice";
+import { CarType } from "src/app/api/types/cars.types";
 
-const Card: FC<CardProps> = memo(({ item, currency, type }) => {
+const Card: FC<CardProps> = memo(({ item, currency, cardType }) => {
   const [price, discountedPrice] = usePrice(item, currency);
-  const isCatalog = type === "row";
-  const { year, make, model, fuel, status, kilometers, location } =
-    item.properties;
+  const isCatalog = cardType === "row";
+  const imageUrl =
+    item.attributes.imageUrl?.data[0]?.attributes?.formats?.medium?.url || "";
+  const { year, make, model, fuel, type, kilometers, location } =
+    item.attributes.properties;
   const nameCard = `${year} ${make} ${model}`;
-  const paramsCard = `${location} • ${status} • ${userLanguage(kilometers)} km • ${fuel}`;
+  const paramsCard = `${location} • ${type} • ${userLanguage(kilometers)} km • ${fuel}`;
   const filters = useAppSelector(selectFilters);
+  const renderFavButton = (isCatalog: boolean, item: CarType) => {
+    if (isCatalog) {
+      return <FavButton item={item} />;
+    }
+    return null;
+  };
   return (
-    <div className={cn("card", type)}>
-      <Image url={item.imageUrl} name={"card"} alt={"CardImage"}>
-        {!isCatalog && <FavButton item={item} />}
-        {item.isPremium && <span>Premium</span>}
+    <div className={cn("card", cardType)}>
+      <Image url={imageUrl} name={"card"} alt={"CardImage"}>
+        {renderFavButton(!isCatalog, item)}
+        {item.attributes.isPremium && <span>Premium</span>}
       </Image>
       <div className="card__info">
         <Text text={nameCard} classnames={"card__name"}>
-          {isCatalog && <FavButton item={item} />}
+          {renderFavButton(isCatalog, item)}
         </Text>
         <p className="card__params">{paramsCard}</p>
-        {!!item.description && (
-          <p className="card__description">{item.description}</p>
+        {!!item.attributes.description && (
+          <p className="card__description">{item.attributes.description}</p>
         )}
         <div className="card__bottom">
           <Title
@@ -40,7 +49,9 @@ const Card: FC<CardProps> = memo(({ item, currency, type }) => {
             tag={"h3"}
             classnames={"item-title_small card__title"}
           />
-          {item.isSpecialOffer && <p className="card__discount">{price}</p>}
+          {item.attributes.isSpecialOffer && (
+            <p className="card__discount">{price}</p>
+          )}
           <LinkWithIcon
             url={`/${item.id}?ship=${filters.shipNumber}&currency=${filters.currency}`}
           >
